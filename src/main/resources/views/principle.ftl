@@ -4,12 +4,20 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<div class="row">
-		<div class="col">
-			<section class="jumbotron">
-			<h2><i class="fas fa-university"></i> ${p.sequence} ${p.getTitle(lang)}</h2>
+	<h1>Principle ${p.sequence} ${p.getTitle(lang)}</h1>
+	<h3>Recommendations</h3>
+	<div class="card-deck">
+		<#list recommendations>
+		<#items as r>
+			<section class="card bg-light col mb-4">
+				<div class="card-body">
+					<h5 class="card-title">${r.sequence}. ${r.getTitle(lang)}</h5>
+					<p class="card-text">${r.getDescription(lang)}</p>
+					<a href="/eif3/recommendation/${p.localId}" class="btn btn-primary stretched-link">More</a>
+				</div>
 			</section>
-		</div>
+		</#items>
+		</#list>
 	</div>
 </main>
 <#include "footer.ftl">

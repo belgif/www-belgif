@@ -5,13 +5,13 @@
 <#include "header.ftl">
 <main class="container-fluid">
 	<div class="row">
-		<div class="col">
+		<div class="col d-flex">
 			<section class="jumbotron" style="background-color: #6495ED; color: #FFFFFF">
 			<h2><i class="fas fa-balance-scale"></i> Legal</h2>
 			<p class="lead">${legal.getDescription(lang)}</p>
 			</section>
 		</div>
-		<div class="col">
+		<div class="col d-flex">
 			<section class="jumbotron" style="background-color: #BA55D3; color: #FFFFFF">
 			<h2><i class="fas fa-university"></i> Organisational</h2>
 			<p class="lead">${organisational.getDescription(lang)}</p>
@@ -19,13 +19,13 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col">
+		<div class="col d-flex">
 			<section class="jumbotron" style="background-color: #3CB371; color: #FFFFFF">
 			<h2><i class="far fa-file-code"></i> Semantic</h2>
 			<p class="lead">${semantic.getDescription(lang)}</p>
 			</section>
 		</div>
-		<div class="col">
+		<div class="col d-flex">
 			<section class="jumbotron" style="background-color: #FF8C00; color: #FFFFFF">
 			<h2><i class="fas fa-server"></i> Technical</h2>
 			<p class="lead">${technical.getDescription(lang)}</p>

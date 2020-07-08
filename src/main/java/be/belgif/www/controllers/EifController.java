@@ -28,6 +28,7 @@ package be.belgif.www.controllers;
 import be.belgif.www.Store;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
+import be.belgif.www.dao.Page;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -61,14 +62,19 @@ public class EifController {
 		List<EifPrinciple> list = store.getPrinciples().values().stream()
 												.sorted((a,b) -> a.getSequence() - b.getSequence())
 												.collect(Collectors.toUnmodifiableList());
-		return HttpResponse.ok(Map.of("lang", "en" ,"principles", list));
+		Page page = store.getPages().get("eif3");
+		return HttpResponse.ok(Map.of("lang", "en" ,"principles", list, "eif3", page));
 	}
 
 	@View("principle")
 	@Get("/principle/{id}")
 	public HttpResponse principle(String id) {
 		EifPrinciple eif = store.getPrinciples().get(id);
-		return HttpResponse.ok(Map.of("lang", "en" ,"p", eif));
+		List<EifRecommendation> list = eif.getRecommendations().stream()
+											.map(s -> store.getRecommendations().get(s))
+											.sorted((a,b) -> a.getSequence() - b.getSequence())
+											.collect(Collectors.toUnmodifiableList());
+		return HttpResponse.ok(Map.of("lang", "en" ,"p", eif, "recommendations", list));
 	}
 
 	@View("recommendations")
@@ -77,7 +83,8 @@ public class EifController {
 		List<EifRecommendation> list = store.getRecommendations().values().stream()
 												.sorted((a,b) -> a.getSequence() - b.getSequence())
 												.collect(Collectors.toUnmodifiableList());
-		return HttpResponse.ok(Map.of("lang", "en" ,"recommendations", list));
+		Page page = store.getPages().get("eif3");
+		return HttpResponse.ok(Map.of("lang", "en" ,"recommendations", list, "eif3", page));
 	}
 
 	@View("recommendation")

@@ -4,23 +4,21 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<#list principles>
-	<#items as p>
-		<#if p?is_odd_item>
-			<div class="row">
-		</#if>
-			<div class="col-sm">
-				<a href="/eif3/principle/${p.localId}">
-				<section class="jumbotron">
-				<h2><i class="far fa-compass"></i> ${p.sequence}. ${p.getTitle(lang)}</h2>
-				</section>
-				</a>
+	<h2>Principles</h2>
+	<div class="row row-cols-1 row-cols-md-3">
+		<#list principles>
+		<#items as p>
+			<div class="col mb-4">
+			<section class="card bg-light h-100">
+				<div class="card-body">
+					<h5 class="card-title">${p.sequence}. ${p.getTitle(lang)}</h5>
+					<a href="/eif3/principle/${p.localId}" class="btn btn-primary stretched-link">More</a>
+				</div>
+			</section>
 			</div>
-		<#if p?is_even_item>
-			</div>
-		</#if>
-	</#items>
-	</#list>
+		</#items>
+		</#list>
+	</div>
 </main>
 <#include "footer.ftl">
 </body>

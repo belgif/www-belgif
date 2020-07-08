@@ -46,7 +46,11 @@ public class EifPrinciple extends Dao {
 	public int getSequence() {
 		return seq;
 	}
-	
+
+	public List<String> getRecommendations() {
+		return recommendations;
+	}
+
 	public String getTitle(String lang) {
 		return title.getOrDefault(lang, "");
 	}
@@ -62,7 +66,7 @@ public class EifPrinciple extends Dao {
 
 		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
 			.map(IRI.class::cast)
-			.map(i -> i.stringValue())
+			.map(i -> i.getLocalName())
 			.collect(Collectors.toList());
 	}
 }
