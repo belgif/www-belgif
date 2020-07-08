@@ -37,16 +37,11 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  *
  * @author Bart.Hanssens
  */
-public class EifRecommendation {
-	private final String id;
+public class EifRecommendation extends Dao {
 	private final int seq;
 	private final Map<String, String> title;
 	private final Map<String, String> description;
 	private final String principle;	
-
-	public String id() {
-		return id;
-	}
 
 	public int getSequence() {
 		return seq;
@@ -66,7 +61,7 @@ public class EifRecommendation {
 
 	
 	public EifRecommendation(Model m, IRI iri) {
-		id = iri.toString();
+		super(m, iri);
 
 		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
 			.map(Literal.class::cast)
@@ -79,7 +74,7 @@ public class EifRecommendation {
 		description = m.filter(iri, SKOS.DEFINITION, null).objects().stream()
 			.map(Literal.class::cast)
 			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-	
+
 		principle = m.filter(iri, SKOS.RELATED, null).objects().stream().findFirst()
 			.map(IRI.class::cast)
 			.map(i -> i.stringValue()).orElse("");

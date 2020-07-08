@@ -64,10 +64,11 @@ public class EifController {
 		return HttpResponse.ok(CollectionUtils.mapOf("lang", "en" ,"principles", list));
 	}
 
-	@View("principles")
+	@View("principle")
 	@Get("/principle/{id}")
 	public HttpResponse principle(String id) {
-		return HttpResponse.ok();
+		EifPrinciple eif = store.getPrinciples().get(id);
+		return HttpResponse.ok(CollectionUtils.mapOf("lang", "en" ,"p", eif));
 	}
 
 	@View("recommendations")
@@ -82,6 +83,7 @@ public class EifController {
 	@View("recommendation")
 	@Get("/recommendation/{id}")
 	public HttpResponse recommendation(String id) {
-		return HttpResponse.ok();
+		EifRecommendation eif = store.getRecommendations().get(id);
+		return HttpResponse.ok(CollectionUtils.mapOf("lang", "en" ,"r", eif));
 	}	
 }

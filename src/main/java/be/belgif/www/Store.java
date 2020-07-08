@@ -27,7 +27,9 @@ package be.belgif.www;
 
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
+import be.belgif.www.dao.Page;
 import io.micronaut.context.annotation.Value;
+import io.micronaut.core.util.StringUtils;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -49,6 +51,7 @@ import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleIRI;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.rio.RDFFormat;
@@ -68,13 +71,13 @@ public class Store implements AutoCloseable {
 	@Value("${be.belgif.www.data:.}")
 	protected String dataPath;
 
-	
 	private final ValueFactory f = SimpleValueFactory.getInstance();
 	private final IRI principle = f.createIRI("http://www.belgif.be/id/eif3/principle/");
 	private final IRI recommendation = f.createIRI("http://www.belgif.be/id/eif3/recommendation/");
 
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
+	private Map<String,Page> pages = new HashMap<>();
 
 	public Map<String,EifPrinciple> getPrinciples() {
 		return principles;
@@ -84,6 +87,27 @@ public class Store implements AutoCloseable {
 		return recommendations;
 	}
 
+	private void loadPrinciples(Model m) {
+		principles = m.filter(null, SKOS.IN_SCHEME, principle).subjects().stream()
+						.map(IRI.class::cast)
+						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifPrinciple(m, s)));
+		LOG.info("EIF principles: {}", principles.size());
+	}
+
+	private void loadRecommendations(Model m) {
+		recommendations = m.filter(null, SKOS.IN_SCHEME, recommendation).subjects().stream()
+						.map(IRI.class::cast)
+						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifRecommendation(m, s)));
+		LOG.info("EIF recommendations: {} ", recommendations.size());
+	}
+
+	private void loadPages(Model m) {
+		pages = m.filter(null, RDF.TYPE, FOAF.DOCUMENT).subjects().stream()
+						.map(IRI.class::cast)
+						.collect(Collectors.toMap(IRI::getLocalName, s -> new Page(m, s)));
+		LOG.info("Pages: {} ", pages.size());
+	}
+	
 	@PostConstruct
 	public void load() throws Exception {
 		LOG.info("Loading data from directory {}", dataPath);
@@ -103,19 +127,10 @@ public class Store implements AutoCloseable {
 				LOG.error("Could not parse / load data", ioe.getMessage());
 			}
 		}
-		LOG.info("Statements: {}", m.size());
-
-		principles = m.filter(null, SKOS.IN_SCHEME, principle).subjects().stream()
-						.map(IRI.class::cast)
-						.collect(Collectors.toMap(IRI::toString, s -> new EifPrinciple(m, s)));
-		LOG.info("EIF principles: {}", principles.size());
-
-		recommendations = m.filter(null, SKOS.IN_SCHEME, recommendation).subjects().stream()
-						.map(IRI.class::cast)
-						.collect(Collectors.toMap(IRI::toString, s -> new EifRecommendation(m, s)));
-
-		LOG.info("EIF recommendations: {} ", recommendations.size());
-
+		
+		loadPrinciples(m);
+		loadRecommendations(m);
+		loadPages(m);
 	}
 
 	@PreDestroy

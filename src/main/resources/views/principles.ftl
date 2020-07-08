@@ -10,9 +10,11 @@
 			<div class="row">
 		</#if>
 			<div class="col-sm">
+				<a href="/eif3/principle/${p.localId}">
 				<section class="jumbotron">
 				<h2><i class="far fa-compass"></i> ${p.sequence}. ${p.getTitle(lang)}</h2>
 				</section>
+				</a>
 			</div>
 		<#if p?is_even_item>
 			</div>

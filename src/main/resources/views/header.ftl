@@ -23,6 +23,9 @@
 					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="/eif3">EIF3</a>
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="/specifications">Specifications</a>
 				</li>
 				<li class="nav-item">

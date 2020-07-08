@@ -32,39 +32,27 @@ import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
+
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class EifPrinciple extends Dao {
-	private final int seq;
-	private final Map<String, String> title;
-	private final List<String> recommendations;
+public class Dao {
+	private final String id;
+	private final String localId;
+	
 
-	public int getSequence() {
-		return seq;
+	public String getId() {
+		return id;
+	}
+
+	public String getLocalId() {
+		return localId;
 	}
 	
-	public String getTitle(String lang) {
-		return title.getOrDefault(lang, "");
-	}
-
-	public EifPrinciple(Model m, IRI iri) {
-		super(m, iri);
-
-		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
-			.map(Literal.class::cast)
-			.map(Literal::intValue).orElse(0);
-
-		title = m.filter(iri, SKOS.PREF_LABEL, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-
-		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
-			.map(IRI.class::cast)
-			.map(i -> i.stringValue())
-			.collect(Collectors.toList());
+	public Dao(Model m, IRI iri) {
+		id = iri.toString();
+		localId = iri.getLocalName();
 	}
 }

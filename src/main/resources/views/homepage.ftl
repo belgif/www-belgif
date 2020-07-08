@@ -30,6 +30,13 @@
 	</div>
 	<div class="row">
 		<div class="col">
+			<a href="/eif3/principle">
+			<section class="jumbotron" style="background-color: #993366; color: #FFFFFF">
+			<h2><i class="far fa-file-code"></i> Principles</h2>
+			</section>
+			</a>
+		</div>
+		<div class="col">
 			<a href="/eif3/recommendation">
 			<section class="jumbotron" style="background-color: #993366; color: #FFFFFF">
 			<h2><i class="far fa-file-code"></i> Recommendations</h2>

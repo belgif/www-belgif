@@ -32,39 +32,34 @@ import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class EifPrinciple extends Dao {
-	private final int seq;
+public class Page extends Dao {
 	private final Map<String, String> title;
-	private final List<String> recommendations;
+	private final Map<String, String> description;
 
-	public int getSequence() {
-		return seq;
-	}
-	
 	public String getTitle(String lang) {
 		return title.getOrDefault(lang, "");
 	}
+	
+	public String getDescription(String lang) {
+		return description.getOrDefault(lang, "");
+	}
 
-	public EifPrinciple(Model m, IRI iri) {
+	public Page(Model m, IRI iri) {
 		super(m, iri);
 
-		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
-			.map(Literal.class::cast)
-			.map(Literal::intValue).orElse(0);
-
-		title = m.filter(iri, SKOS.PREF_LABEL, null).objects().stream()
+		title = m.filter(iri, DCTERMS.TITLE, null).objects().stream()
 			.map(Literal.class::cast)
 			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
 
-		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
-			.map(IRI.class::cast)
-			.map(i -> i.stringValue())
-			.collect(Collectors.toList());
+		description = m.filter(iri, DCTERMS.DESCRIPTION, null).objects().stream()
+			.map(Literal.class::cast)
+			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
 	}
 }
