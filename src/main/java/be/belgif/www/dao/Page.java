@@ -25,15 +25,11 @@
  */
 package be.belgif.www.dao;
 
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import org.eclipse.rdf4j.model.IRI;
 
-import org.eclipse.rdf4j.model.Literal;
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
@@ -54,12 +50,7 @@ public class Page extends Dao {
 	public Page(Model m, IRI iri) {
 		super(m, iri);
 
-		title = m.filter(iri, DCTERMS.TITLE, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-
-		description = m.filter(iri, DCTERMS.DESCRIPTION, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
+		title = langMap(m, iri, DCTERMS.TITLE);
+		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 	}
 }

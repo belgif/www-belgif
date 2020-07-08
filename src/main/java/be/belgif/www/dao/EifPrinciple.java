@@ -58,9 +58,7 @@ public class EifPrinciple extends Dao {
 			.map(Literal.class::cast)
 			.map(Literal::intValue).orElse(0);
 
-		title = m.filter(iri, SKOS.PREF_LABEL, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
+		title = langMap(m, iri, SKOS.PREF_LABEL);
 
 		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
 			.map(IRI.class::cast)

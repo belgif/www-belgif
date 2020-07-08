@@ -32,32 +32,28 @@ import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class Dao {
-	private final String id;
-	private final String localId;
+public class EifLevel extends Dao {
+	private final Map<String, String> title;
+	private final Map<String, String> description;
 
-	public String getId() {
-		return id;
+	public String getTitle(String lang) {
+		return title.getOrDefault(lang, "");
 	}
 
-	public String getLocalId() {
-		return localId;
+	public String getDescription(String lang) {
+		return description.getOrDefault(lang, "");
 	}
 
-	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
-		return m.filter(iri, predicate, null).objects().stream()
-				.map(Literal.class::cast)
-				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-	}
-	
-	public Dao(Model m, IRI iri) {
-		id = iri.toString();
-		localId = iri.getLocalName();
+	public EifLevel(Model m, IRI iri) {
+		super(m, iri);
+
+		title = langMap(m, iri, SKOS.PREF_LABEL);
+		description = langMap(m, iri, SKOS.DEFINITION);
 	}
 }

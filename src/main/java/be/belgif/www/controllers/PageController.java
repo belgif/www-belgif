@@ -23,41 +23,32 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www.dao;
+package be.belgif.www.controllers;
 
-import java.util.List;
+import be.belgif.www.Store;
+import be.belgif.www.dao.Page;
+
+import io.micronaut.http.HttpResponse;
+import io.micronaut.http.annotation.Controller;
+import io.micronaut.http.annotation.Get;
+import io.micronaut.views.View;
 import java.util.Map;
-import java.util.stream.Collectors;
-import org.eclipse.rdf4j.model.IRI;
 
-import org.eclipse.rdf4j.model.Literal;
-import org.eclipse.rdf4j.model.Model;
-
+import javax.inject.Inject;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class Dao {
-	private final String id;
-	private final String localId;
+@Controller("/page")
+public class PageController {
+	@Inject
+	Store store;
 
-	public String getId() {
-		return id;
-	}
-
-	public String getLocalId() {
-		return localId;
-	}
-
-	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
-		return m.filter(iri, predicate, null).objects().stream()
-				.map(Literal.class::cast)
-				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-	}
-	
-	public Dao(Model m, IRI iri) {
-		id = iri.toString();
-		localId = iri.getLocalName();
+	@View("page")
+	@Get("/{id}")
+	public HttpResponse page(String id) {
+		Page page = store.getPages().get(id);
+		return HttpResponse.ok(Map.of("p", page, "lang", "en"));
 	}
 }

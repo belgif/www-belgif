@@ -7,7 +7,8 @@
 	<div class="row">
 		<div class="col">
 			<section class="jumbotron">
-			<h2><i class="fas fa-university"></i> ${r.sequence} ${r.getTitle(lang)}</h2>
+			<h2>${p.getTitle(lang)}</h2>
+			<p>${p.getDescription(lang)}</p>
 			</section>
 		</div>
 	</div>

@@ -23,13 +23,13 @@
 					<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/eif3">EIF3</a>
+					<a class="nav-link" href="/page/eif3">EIF3</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/specifications">Specifications</a>
+					<a class="nav-link" href="/page/specifications">Specifications</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/integrators">Integrators</a>
+					<a class="nav-link" href="/page/integrators">Integrators</a>
 				</li>
 			</ul>
 		</div>

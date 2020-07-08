@@ -25,10 +25,16 @@
  */
 package be.belgif.www.controllers;
 
+import be.belgif.www.Store;
+import be.belgif.www.dao.EifLevel;
+import io.micronaut.core.util.CollectionUtils;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.views.View;
+import java.util.Map;
+
+import javax.inject.Inject;
 
 /**
  *
@@ -36,9 +42,14 @@ import io.micronaut.views.View;
  */
 @Controller("/")
 public class HomeController {
+	@Inject
+	Store store;
+
 	@View("homepage")
 	@Get("/")
 	public HttpResponse index() {
-		return HttpResponse.ok();
+		Map map = store.getLevels();
+		map.put("lang", "en");
+		return HttpResponse.ok(map);
 	}
 }

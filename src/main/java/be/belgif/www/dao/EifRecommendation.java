@@ -67,13 +67,8 @@ public class EifRecommendation extends Dao {
 			.map(Literal.class::cast)
 			.map(Literal::intValue).orElse(0);
 
-		title = m.filter(iri, SKOS.PREF_LABEL, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
-
-		description = m.filter(iri, SKOS.DEFINITION, null).objects().stream()
-			.map(Literal.class::cast)
-			.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
+		title = langMap(m, iri, SKOS.PREF_LABEL);
+		description = langMap(m, iri, SKOS.DEFINITION);
 
 		principle = m.filter(iri, SKOS.RELATED, null).objects().stream().findFirst()
 			.map(IRI.class::cast)
