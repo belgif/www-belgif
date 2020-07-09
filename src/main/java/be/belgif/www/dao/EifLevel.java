@@ -25,12 +25,9 @@
  */
 package be.belgif.www.dao;
 
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import org.eclipse.rdf4j.model.IRI;
 
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 

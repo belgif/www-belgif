@@ -1,0 +1,180 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix eif: <http://www.belgif.be/id/eif3> .
+@prefix eif-level: <http://www.belgif.be/id/eif3/level/> .
+@prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
+@prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
+
+
+eif-level:legal a skos:Concept ;
+	skos:prefLabel "Legal"@en, "Juridisch"@nl ;
+	skos:definition "Legal interoperability is about ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
+	skos:inScheme eif-level:  .
+
+eif-level:organisational a skos:Concept ;
+	skos:prefLabel "Organisational"@en, "Organisatorisch"@nl ;
+	skos:definition "Organisational interoperability means documenting and integrating or aligning business processes and relevant information exchanged."@en ;
+	skos:inScheme eif-level:  .
+	
+eif-level:semantic a skos:Concept ;
+	skos:prefLabel "Semantic"@en, "Semantisch"@nl ;
+	skos:definition "Semantic interoperability ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
+	skos:inScheme eif-level:  .
+	
+eif-level:technical a skos:Concept ;
+	skos:prefLabel "Technical"@en, "Technisch"@nl ;
+	skos:definition "Technical interoperability includes interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
+	skos:inScheme eif-level:  .
+
+
+eif-principle:subsidiarity a skos:Concept ;
+	skos:prefLabel "Subsidiarity and proportionality"@en ;
+	skos:notation "1"^^xsd:integer ;
+	skos:related eif-recommendation:alignment ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:openness a skos:Concept ;
+	skos:prefLabel "Openness"@en ;
+	skos:notation "2"^^xsd:integer ;
+	skos:related eif-recommendation:opendata, eif-recommendation:opensource, eif-recommendation:openspecifications ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:transparency a skos:Concept ;
+	skos:prefLabel "Transparency"@en ;
+	skos:notation "3"^^xsd:integer ;
+	skos:related eif-recommendation:interfaces ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:reusability a skos:Concept ;
+	skos:prefLabel "Reusability"@en ;
+	skos:notation "4"^^xsd:integer ;
+	skos:related eif-recommendation:solutionreuse, eif-recommendation:datareuse ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:neutrality a skos:Concept ;
+	skos:prefLabel "Technological neutrality and data portability"@en ;
+	skos:notation "5"^^xsd:integer ;
+	skos:related eif-recommendation:neutrality, eif-recommendation:dataportability ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:usercentricity a skos:Concept ;
+	skos:prefLabel "User-centricity"@en ;
+	skos:notation "6"^^xsd:integer ;
+	skos:related eif-recommendation:multichannel, eif-recommendation:spoc, eif-recommendation:involvement, eif-recommendation:onceonly ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:inclusion a skos:Concept ;
+	skos:prefLabel "Inclusion and accessibility"@en ;
+	skos:notation "7"^^xsd:integer ;
+	skos:related eif-recommendation:accessibility ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:security a skos:Concept ;
+	skos:prefLabel "Security and privacy"@en ;
+	skos:notation "8"^^xsd:integer ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:multilingualism a skos:Concept ;
+	skos:prefLabel "Multilingualism"@en ;
+	skos:notation "9"^^xsd:integer ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:simplification a skos:Concept ;
+	skos:prefLabel "Administrative simplification"@en ;
+	skos:notation "10"^^xsd:integer ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:preservation a skos:Concept ;
+	skos:prefLabel "Preservation of information"@en ;
+	skos:notation "11"^^xsd:integer ;
+	skos:inScheme eif-principle:  .
+
+eif-principle:assessment a skos:Concept ;
+	skos:prefLabel "Assessment of effectiveness and efficiency"@en ;
+	skos:notation "12"^^xsd:integer ;
+	skos:inScheme eif-principle:  .
+
+
+eif-recommendation:alignment a skos:Concept ;
+	skos:prefLabel "NIFO alignment"@en ;
+	skos:notation "1"^^xsd:integer ;
+	skos:definition "Ensure that national interoperability frameworks and interoperability strategies are aligned with the EIF and, if needed, tailor and extend them to address the national context and needs."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:opendata a skos:Concept ;
+	skos:prefLabel "Open data"@en ;
+	skos:notation "2"^^xsd:integer ;
+	skos:definition "Publish the data you own as open data unless certain restrictions apply."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:opensource a skos:Concept ;
+	skos:prefLabel "Open source"@en ;
+	skos:notation "3"^^xsd:integer ;
+	skos:definition "Ensure a level playing field for open source software and demonstrate active and fair consideration of using open source software, taking into account the total cost of ownership of the solution."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:openspecifications a skos:Concept ;
+	skos:prefLabel "Open specifications"@en ;
+	skos:notation "4"^^xsd:integer ;
+	skos:definition "Give preference to open specifications, taking due account of the coverage of functional needs, maturity and market support and innovation."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:interfaces a skos:Concept ;
+	skos:prefLabel "External interfaces"@en ;
+	skos:notation "5"^^xsd:integer ;
+	skos:definition "Ensure internal visibility and provide external interfaces for European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:solutionreuse a skos:Concept ;
+	skos:prefLabel "Solution reuse"@en ;
+	skos:notation "6"^^xsd:integer ;
+	skos:definition "Reuse and share solutions, and cooperate in the development of joint solutions when implementing European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:datareuse a skos:Concept ;
+	skos:prefLabel "Solution reuse"@en ;
+	skos:notation "7"^^xsd:integer ;
+	skos:definition "Reuse and share information and data when implementing European public services, unless certain privacy or confidentiality restrictions apply."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:neutrality a skos:Concept ;
+	skos:prefLabel "Technological neutrality"@en ;
+	skos:notation "8"^^xsd:integer ;
+	skos:definition "Do not impose any technological solutions on citizens, businesses and other administrations that are technology-specific or disproportionate to their real needs."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:dataportability a skos:Concept ;
+	skos:prefLabel "Data portability"@en ;
+	skos:notation "9"^^xsd:integer ;
+	skos:definition "Ensure data portability, namely that data is easily transferable between systems and applications supporting the implementation and evolution of European public services without unjustified restrictions, if legally possible."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:multichannel a skos:Concept ;
+	skos:prefLabel "Multi-channel"@en ;
+	skos:notation "10"^^xsd:integer ;
+	skos:definition "Use multiple channels to provide the European public service, to ensure that users can select the channel that best suits their needs."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:spoc a skos:Concept ;
+	skos:prefLabel "SPOC"@en ;
+	skos:notation "11"^^xsd:integer ;
+	skos:definition "Provide a single point of contact in order to hide internal administrative complexity and facilitate users’ access to European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:involvement a skos:Concept ;
+	skos:prefLabel "User involvement"@en ;
+	skos:notation "12"^^xsd:integer ;
+	skos:definition "Put in place mechanisms to involve users in analysis, design, assessment and further development of European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:onceonly a skos:Concept ;
+	skos:prefLabel "Once-only"@en ;
+	skos:notation "13"^^xsd:integer ;
+	skos:definition "As far as possible under the legislation in force, ask users of European public services once-only and relevant-only information."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:accessibility a skos:Concept ;
+	skos:prefLabel "Accessibility"@en ;
+	skos:notation "14"^^xsd:integer ;
+	skos:definition "Ensure that all European public services are accessible to all citizens, including persons with disabilities, the elderly and other disadvantaged groups. For digital public services, public administrations should comply with e-accessibility specifications that are widely recognised at European or international level."@en ;
+	skos:inScheme eif-recommendation: .

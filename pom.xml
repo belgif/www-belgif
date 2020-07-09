@@ -15,8 +15,8 @@
 		<micronaut.version>2.0.0</micronaut.version>
 		<rdf4j.version>3.2.3</rdf4j.version>
 	</properties>
-	<name>WWW Belgif</name>
-	<description>Belgif website</description>
+	<name>Www Belgif</name>
+	<description>Www.Belgif website</description>
 	<dependencies>
 		<dependency>
 			<groupId>io.micronaut.views</groupId>

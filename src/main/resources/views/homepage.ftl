@@ -6,42 +6,42 @@
 <main class="container-fluid">
 	<div class="row">
 		<div class="col d-flex">
-			<section class="jumbotron" style="background-color: #6495ED; color: #FFFFFF">
-			<h2><i class="fas fa-balance-scale"></i> Legal</h2>
+			<section class="jumbotron be-legal">
+			<h2><i class="fas fa-balance-scale"></i> ${legal.getTitle(lang)}</h2>
 			<p class="lead">${legal.getDescription(lang)}</p>
 			</section>
 		</div>
 		<div class="col d-flex">
-			<section class="jumbotron" style="background-color: #BA55D3; color: #FFFFFF">
-			<h2><i class="fas fa-university"></i> Organisational</h2>
+			<section class="jumbotron be-organisational">
+			<h2><i class="fas fa-university"></i> ${organisational.getTitle(lang)}</h2>
 			<p class="lead">${organisational.getDescription(lang)}</p>
 			</section>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col d-flex">
-			<section class="jumbotron" style="background-color: #3CB371; color: #FFFFFF">
-			<h2><i class="far fa-file-code"></i> Semantic</h2>
+			<section class="jumbotron be-semantic">
+			<h2><i class="far fa-file-code"></i> ${semantic.getTitle(lang)}</h2>
 			<p class="lead">${semantic.getDescription(lang)}</p>
 			</section>
 		</div>
 		<div class="col d-flex">
-			<section class="jumbotron" style="background-color: #FF8C00; color: #FFFFFF">
-			<h2><i class="fas fa-server"></i> Technical</h2>
+			<section class="jumbotron be-technical">
+			<h2><i class="fas fa-server"></i> ${technical.getTitle(lang)}</h2>
 			<p class="lead">${technical.getDescription(lang)}</p>
 			</section>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col">
-			<a href="/eif3/principle">
+			<a href="/eif3/principle" class="text-decoration-none">
 			<section class="jumbotron" style="background-color: #993366; color: #FFFFFF">
 			<h2><i class="far fa-file-code"></i> Principles</h2>
 			</section>
 			</a>
 		</div>
 		<div class="col">
-			<a href="/eif3/recommendation">
+			<a href="/eif3/recommendation" class="text-decoration-none">
 			<section class="jumbotron" style="background-color: #993366; color: #FFFFFF">
 			<h2><i class="far fa-file-code"></i> Recommendations</h2>
 			</section>
