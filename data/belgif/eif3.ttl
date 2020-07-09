@@ -230,3 +230,164 @@ eif-recommendation:governance a skos:Concept ;
 	skos:definition "Ensure holistic governance of interoperability activities across administrative levels and sectors."@en ;
 	skos:inScheme eif-recommendation: .
 
+eif-recommendation:standardsprocess a skos:Concept ;
+	skos:prefLabel "Standards process"@en ;
+	skos:notation "21"^^xsd:integer ;
+	skos:definition "Put in place processes to select relevant standards and specifications, evaluate them, monitor their implementation, check compliance and test their interoperability."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:standardsassessment a skos:Concept ;
+	skos:prefLabel "Standards assessment"@en ;
+	skos:notation "22"^^xsd:integer ;
+	skos:definition "Use a structured, transparent, objective and common approach to assessing and selecting standards and specifications. Take into account relevant EU recommendations and seek to make the approach consistent across borders."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:standardscatalogus a skos:Concept ;
+	skos:prefLabel "Standards catalogues"@en ;
+	skos:notation "23"^^xsd:integer ;
+	skos:definition "Consult relevant catalogues of standards, specifications and guidelines at national and EU level, in accordance with your NIF and relevant DIFs, when procuring and developing ICT solutions."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:participation a skos:Concept ;
+	skos:prefLabel "Participation"@en ;
+	skos:notation "24"^^xsd:integer ;
+	skos:definition "Actively participate in standardisation work relevant to your needs to ensure your requirements are met."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:structure a skos:Concept ;
+	skos:prefLabel "Governance structure"@en ;
+	skos:notation "25"^^xsd:integer ;
+	skos:definition "Ensure interoperability and coordination over time when operating and delivering integrated public services by putting in place the necessary governance structure."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:agreements a skos:Concept ;
+	skos:prefLabel "Interoperability agreements"@en ;
+	skos:notation "26"^^xsd:integer ;
+	skos:definition "Establish interoperability agreements in all layers, complemented by operational agreements and change management procedures."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:legislation a skos:Concept ;
+	skos:prefLabel "Digital legislation"@en ;
+	skos:notation "27"^^xsd:integer ;
+	skos:definition "Ensure that legislation is screened by means of 'interoperability checks', to identify any barriers to interoperability. When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a ‘digital check’ and consider data protection requirements."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:processalignment a skos:Concept ;
+	skos:prefLabel "Process alignment"@en ;
+	skos:notation "28"^^xsd:integer ;
+	skos:definition "Document your business processes using commonly accepted modelling techniques and agree on how these processes should be aligned to deliver a European public service."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:relationships a skos:Concept ;
+	skos:prefLabel "Organisational relationships"@en ;
+	skos:notation "29"^^xsd:integer ;
+	skos:definition "Clarify and formalise your organisational relationships for establishing and operating European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:datamanagement a skos:Concept ;
+	skos:prefLabel "Data management"@en ;
+	skos:notation "30"^^xsd:integer ;
+	skos:definition "Perceive data and information as a public asset that should be appropriately generated, collected, managed, shared, protected and preserved."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:informationmanagement a skos:Concept ;
+	skos:prefLabel "Information management strategy"@en ;
+	skos:notation "31"^^xsd:integer ;
+	skos:definition "Put in place an information management strategy at the highest possible level to avoid fragmentation and duplication. Management of metadata, master data and reference data should be prioritised."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:communities a skos:Concept ;
+	skos:prefLabel "Communities"@en ;
+	skos:notation "32"^^xsd:integer ;
+	skos:definition "Support the establishment of sector-specific and cross-sectoral communities that aim to create open information specifications and encourage relevant communities to share their results on national and European platforms."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:openspecifications2 a skos:Concept ;
+	skos:prefLabel "Open specifications"@en ;
+	skos:notation "33"^^xsd:integer ;
+	skos:definition "Use open specifications, where available, to ensure technical interoperability when establishing European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:servicesmodel a skos:Concept ;
+	skos:prefLabel "Services model"@en ;
+	skos:notation "34"^^xsd:integer ;
+	skos:definition "Use the conceptual model for European public services to design new services or reengineer existing ones and reuse, whenever possible, existing service and data components."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:loosecoupling a skos:Concept ;
+	skos:prefLabel "Loose coupling"@en ;
+	skos:notation "35"^^xsd:integer ;
+	skos:definition "Decide on a common scheme for interconnecting loosely coupled service components and put in place and maintain the necessary infrastructure for establishing and maintaining European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:sharedservices a skos:Concept ;
+	skos:prefLabel "Shared services"@en ;
+	skos:notation "36"^^xsd:integer ;
+	skos:definition "Develop a shared infrastructure of reusable services and information sources that can be used by all public administrations."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:authenticsources a skos:Concept ;
+	skos:prefLabel "Authentic sources"@en ;
+	skos:notation "37"^^xsd:integer ;
+	skos:definition "Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:documentation a skos:Concept ;
+	skos:prefLabel "Documentation"@en ;
+	skos:notation "38"^^xsd:integer ;
+	skos:definition "Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:metadata a skos:Concept ;
+	skos:prefLabel "Metadata"@en ;
+	skos:notation "39"^^xsd:integer ;
+	skos:definition "Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:quality a skos:Concept ;
+	skos:prefLabel "Quality assurance"@en ;
+	skos:notation "40"^^xsd:integer ;
+	skos:definition "Create and follow data quality assurance plans for base registries and related master data."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:opendataprocesses a skos:Concept ;
+	skos:prefLabel "Open data processes"@en ;
+	skos:notation "41"^^xsd:integer ;
+	skos:definition "Establish procedures and processes to integrate the opening of data in your common business processes, working routines, and in the development of new information systems."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:machinereadable a skos:Concept ;
+	skos:prefLabel "Machine-readable data"@en ;
+	skos:notation "42"^^xsd:integer ;
+	skos:definition "Publish open data in machine-readable, non-proprietary formats. Ensure that open data is accompanied by high quality, machine-readable metadata in non-proprietary formats, including a description of their content, the way data is collected and its level of quality and the licence terms under which it is made available. The use of common vocabularies for expressing metadata is recommended."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:openlicenses a skos:Concept ;
+	skos:prefLabel "Open licenses"@en ;
+	skos:notation "43"^^xsd:integer ;
+	skos:definition "Communicate clearly the right to access and reuse open data. The legal regimes for facilitating access and reuse, such as licences, should be standardised as much as possible."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:publiccatalogues a skos:Concept ;
+	skos:prefLabel "Public catalogues"@en ;
+	skos:notation "44"^^xsd:integer ;
+	skos:definition "Put in place catalogues of public services, public data, and interoperability solutions and use common models for describing them."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:externalsources a skos:Concept ;
+	skos:prefLabel "External sources"@en ;
+	skos:notation "45"^^xsd:integer ;
+	skos:definition "Where useful and feasible to do so, use external information sources and services while developing European public services."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:riskmanagement a skos:Concept ;
+	skos:prefLabel "Risk management"@en ;
+	skos:notation "46"^^xsd:integer ;
+	skos:definition "Consider the specific security and privacy requirements and identify measures for the provision of each public service according to risk management plans."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:trustservices a skos:Concept ;
+	skos:prefLabel "Trust services"@en ;
+	skos:notation "47"^^xsd:integer ;
+	skos:definition "Use trust services according to the Regulation on eID and Trust Services as mechanisms that ensure secure and protected data exchange in public services."@en ;
+	skos:inScheme eif-recommendation: .
