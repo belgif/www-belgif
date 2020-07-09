@@ -26,8 +26,6 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
-import be.belgif.www.dao.EifLevel;
-import io.micronaut.core.util.CollectionUtils;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;

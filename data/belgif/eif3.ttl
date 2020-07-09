@@ -7,24 +7,34 @@
 
 
 eif-level:legal a skos:Concept ;
-	skos:prefLabel "Legal"@en, "Juridisch"@nl ;
-	skos:definition "Legal interoperability is about ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
+	skos:prefLabel "Legal Interoperability"@en, "Juridisch"@nl ;
+	skos:definition "Ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
 	skos:inScheme eif-level:  .
 
 eif-level:organisational a skos:Concept ;
-	skos:prefLabel "Organisational"@en, "Organisatorisch"@nl ;
-	skos:definition "Organisational interoperability means documenting and integrating or aligning business processes and relevant information exchanged."@en ;
-	skos:inScheme eif-level:  .
+	skos:prefLabel "Organisational Interoperability"@en, "Organisatorisch"@nl ;
+	skos:definition "Documenting and integrating or aligning business processes and relevant information exchanged."@en ;
+	skos:inScheme eif-level: .
 	
 eif-level:semantic a skos:Concept ;
-	skos:prefLabel "Semantic"@en, "Semantisch"@nl ;
-	skos:definition "Semantic interoperability ensures that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
-	skos:inScheme eif-level:  .
+	skos:prefLabel "Semantic Interoperability"@en, "Semantisch"@nl ;
+	skos:definition "Ensuring that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
+	skos:inScheme eif-level: .
 	
 eif-level:technical a skos:Concept ;
-	skos:prefLabel "Technical"@en, "Technisch"@nl ;
-	skos:definition "Technical interoperability includes interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
-	skos:inScheme eif-level:  .
+	skos:prefLabel "Technical Interoperability"@en, "Technisch"@nl ;
+	skos:definition "Interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
+	skos:inScheme eif-level: .
+
+eif-level:governance a skos:Concept ;
+	skos:prefLabel "Interoperability Governance"@en ;
+	skos:definition "Decisions on interoperability frameworks, roles and responsibilities, agreements and other aspects of ensuring and monitoring interoperability at national and EU levels."@en ;
+	skos:inScheme eif-level: .
+
+eif-level:integration a skos:Concept ;
+	skos:prefLabel "Service Integration"@en ;
+	skos:definition "Services should be governed to ensure integration, seamless execution, reuse of services and data, and development of new services and building blocks."@en ;
+	skos:inScheme eif-level: .
 
 
 eif-principle:subsidiarity a skos:Concept ;
@@ -72,26 +82,31 @@ eif-principle:inclusion a skos:Concept ;
 eif-principle:security a skos:Concept ;
 	skos:prefLabel "Security and privacy"@en ;
 	skos:notation "8"^^xsd:integer ;
+	skos:related eif-recommendation:privacy ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:multilingualism a skos:Concept ;
 	skos:prefLabel "Multilingualism"@en ;
 	skos:notation "9"^^xsd:integer ;
+	skos:related eif-recommendation:multilingualism ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:simplification a skos:Concept ;
 	skos:prefLabel "Administrative simplification"@en ;
 	skos:notation "10"^^xsd:integer ;
+	skos:related eif-recommendation:simplification ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:preservation a skos:Concept ;
 	skos:prefLabel "Preservation of information"@en ;
 	skos:notation "11"^^xsd:integer ;
+	skos:related eif-recommendation:preservation ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:assessment a skos:Concept ;
 	skos:prefLabel "Assessment of effectiveness and efficiency"@en ;
 	skos:notation "12"^^xsd:integer ;
+	skos:related eif-recommendation:assessment ;
 	skos:inScheme eif-principle:  .
 
 
@@ -178,3 +193,40 @@ eif-recommendation:accessibility a skos:Concept ;
 	skos:notation "14"^^xsd:integer ;
 	skos:definition "Ensure that all European public services are accessible to all citizens, including persons with disabilities, the elderly and other disadvantaged groups. For digital public services, public administrations should comply with e-accessibility specifications that are widely recognised at European or international level."@en ;
 	skos:inScheme eif-recommendation: .
+
+eif-recommendation:privacy a skos:Concept ;
+	skos:prefLabel "Privacy framework"@en ;
+	skos:notation "15"^^xsd:integer ;
+	skos:definition "Define a common security and privacy framework and establish processes for public services to ensure secure and trustworthy data exchange between public administrations and in interactions with citizens and businesses."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:multilingualism a skos:Concept ;
+	skos:prefLabel "Multilingualism"@en ;
+	skos:notation "16"^^xsd:integer ;
+	skos:definition "Use information systems and technical architectures that cater for multilingualism when establishing a European public service. Decide on the level of multilingualism support based on the needs of the expected users."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:simplification a skos:Concept ;
+	skos:prefLabel "Simplification"@en ;
+	skos:notation "17"^^xsd:integer ;
+	skos:definition "Simplify processes and use digital channels whenever appropriate for the delivery of European public services, to respond promptly and with high quality to users' requests and reduce the administrative burden on public administrations, businesses and citizens."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:preservation a skos:Concept ;
+	skos:prefLabel "Long-term preservation"@en ;
+	skos:notation "18"^^xsd:integer ;
+	skos:definition "Formulate a long-term preservation policy for information related to European public services and especially for information that is exchanged across borders."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:assessment a skos:Concept ;
+	skos:prefLabel "Assessment"@en ;
+	skos:notation "19"^^xsd:integer ;
+	skos:definition "Evaluate the effectiveness and efficiency of different interoperability solutions and technological options considering user needs, proportionality and balance between costs and benefits."@en ;
+	skos:inScheme eif-recommendation: .
+
+eif-recommendation:governance a skos:Concept ;
+	skos:prefLabel "Holistic governance"@en ;
+	skos:notation "20"^^xsd:integer ;
+	skos:definition "Ensure holistic governance of interoperability activities across administrative levels and sectors."@en ;
+	skos:inScheme eif-recommendation: .
+

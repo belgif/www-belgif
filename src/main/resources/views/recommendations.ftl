@@ -3,19 +3,23 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container">
+<main class="container-fluid">
 	<h2>Recommendations</h2>
-	<#list recommendations>
-	<div class="row">
+	<div class="row row-cols-1 row-cols-md-4">
+		<#list recommendations>
 		<#items as r>
-			<section class="card bg-light col mb-4">
+			<div class="col mb-4">
+			<section class="card bg-light h-100">
 				<div class="card-body">
-			<h2><i class="fas fa-university"></i> ${r.sequence} ${r.getTitle(lang)}</h2>
+					<h5 class="card-title">${r.sequence}. ${r.getTitle(lang)}</h5>
+					<p class="lead">${r.getDescription(lang)}</p>
+					<a href="/eif3/recommendation/${r.localId}" class="btn btn-primary stretched-link">More</a>
+				</div>
 			</section>
-		</div>
+			</div>
 		</#items>
+		</#list>
 	</div>
-	</#list>
 </main>
 <#include "footer.ftl">
 </body>
