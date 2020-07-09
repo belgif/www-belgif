@@ -25,9 +25,10 @@
  */
 package be.belgif.www.dao;
 
-import java.util.Map;
-import org.eclipse.rdf4j.model.IRI;
+import java.util.List;
+import java.util.stream.Collectors;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
@@ -35,22 +36,19 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  *
  * @author Bart.Hanssens
  */
-public class EifLevel extends Dao {
-	private final Map<String, String> title;
-	private final Map<String, String> description;
+public class EifLevel extends EifDao {
+	private final List<String> recommendations;
 
-	public String getTitle(String lang) {
-		return title.getOrDefault(lang, "");
-	}
-
-	public String getDescription(String lang) {
-		return description.getOrDefault(lang, "");
+	public List<String> getRecommendations() {
+		return recommendations;
 	}
 
 	public EifLevel(Model m, IRI iri) {
 		super(m, iri);
-
-		title = langMap(m, iri, SKOS.PREF_LABEL);
-		description = langMap(m, iri, SKOS.DEFINITION);
+		
+		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
+			.map(IRI.class::cast)
+			.map(i -> i.getLocalName())
+			.collect(Collectors.toList());
 	}
 }

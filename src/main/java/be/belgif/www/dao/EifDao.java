@@ -25,11 +25,9 @@
  */
 package be.belgif.www.dao;
 
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
@@ -38,19 +36,31 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  *
  * @author Bart.Hanssens
  */
-public class EifPrinciple extends EifDao {
-	private final List<String> recommendations;
+public class EifDao extends Dao {
+	private final int seq;
+	private final Map<String, String> title;
+	private final Map<String, String> description;
 
-	public List<String> getRecommendations() {
-		return recommendations;
+	public int getSequence() {
+		return seq;
 	}
 
-	public EifPrinciple(Model m, IRI iri) {
+	public String getTitle(String lang) {
+		return title.getOrDefault(lang, "");
+	}
+
+	public String getDescription(String lang) {
+		return description.getOrDefault(lang, "");
+	}
+
+	public EifDao(Model m, IRI iri) {
 		super(m, iri);
 
-		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
-			.map(IRI.class::cast)
-			.map(i -> i.getLocalName())
-			.collect(Collectors.toList());
+		title = langMap(m, iri, SKOS.PREF_LABEL);
+		description = langMap(m, iri, SKOS.DEFINITION);
+
+		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
+			.map(Literal.class::cast)
+			.map(Literal::intValue).orElse(0);
 	}
 }

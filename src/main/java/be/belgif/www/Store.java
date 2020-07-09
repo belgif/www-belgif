@@ -129,7 +129,7 @@ public class Store implements AutoCloseable {
 
 		Model m = new LinkedHashModel();
 		List<Path> files = Files.list(Path.of(dataPath))
-								.filter(f -> f.toFile().isFile())
+								.filter(p -> p.toFile().isFile())
 								.collect(Collectors.toList());
 
 		for (Path p: files ) {

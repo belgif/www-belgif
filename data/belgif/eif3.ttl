@@ -9,31 +9,37 @@
 eif-level:legal a skos:Concept ;
 	skos:prefLabel "Legal Interoperability"@en, "Juridisch"@nl ;
 	skos:definition "Ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
+	skos:related eif-recommendation:legislation ;
 	skos:inScheme eif-level:  .
 
 eif-level:organisational a skos:Concept ;
 	skos:prefLabel "Organisational Interoperability"@en, "Organisatorisch"@nl ;
 	skos:definition "Documenting and integrating or aligning business processes and relevant information exchanged."@en ;
+	skos:related eif-recommendation:processalignment, eif-recommendation:relationships ;
 	skos:inScheme eif-level: .
 	
 eif-level:semantic a skos:Concept ;
 	skos:prefLabel "Semantic Interoperability"@en, "Semantisch"@nl ;
 	skos:definition "Ensuring that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
+	skos:related eif-recommendation:datamanagement, eif-recommendation:informationmanagement, eif-recommendation:communities ;
 	skos:inScheme eif-level: .
 	
 eif-level:technical a skos:Concept ;
 	skos:prefLabel "Technical Interoperability"@en, "Technisch"@nl ;
 	skos:definition "Interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
+	skos:related eif-recommendation:openspecifications2 ;
 	skos:inScheme eif-level: .
 
 eif-level:governance a skos:Concept ;
 	skos:prefLabel "Interoperability Governance"@en ;
 	skos:definition "Decisions on interoperability frameworks, roles and responsibilities, agreements and other aspects of ensuring and monitoring interoperability at national and EU levels."@en ;
+	skos:related eif-recommendation:holisticgovernance, eif-recommendation:standardsprocess, eif-recommendation:standardsassessment, eif-recommendation:standardscatalogues, eif-recommendation:standardsparticipation ;
 	skos:inScheme eif-level: .
 
 eif-level:integration a skos:Concept ;
 	skos:prefLabel "Service Integration"@en ;
 	skos:definition "Services should be governed to ensure integration, seamless execution, reuse of services and data, and development of new services and building blocks."@en ;
+	skos:related eif-recommendation:governancestructure, eif-recommendation:agreements ;
 	skos:inScheme eif-level: .
 
 
@@ -70,7 +76,7 @@ eif-principle:neutrality a skos:Concept ;
 eif-principle:usercentricity a skos:Concept ;
 	skos:prefLabel "User-centricity"@en ;
 	skos:notation "6"^^xsd:integer ;
-	skos:related eif-recommendation:multichannel, eif-recommendation:spoc, eif-recommendation:involvement, eif-recommendation:onceonly ;
+	skos:related eif-recommendation:multichannel, eif-recommendation:spoc, eif-recommendation:userinvolvement, eif-recommendation:onceonly ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:inclusion a skos:Concept ;
@@ -176,7 +182,7 @@ eif-recommendation:spoc a skos:Concept ;
 	skos:definition "Provide a single point of contact in order to hide internal administrative complexity and facilitate users’ access to European public services."@en ;
 	skos:inScheme eif-recommendation: .
 
-eif-recommendation:involvement a skos:Concept ;
+eif-recommendation:userinvolvement a skos:Concept ;
 	skos:prefLabel "User involvement"@en ;
 	skos:notation "12"^^xsd:integer ;
 	skos:definition "Put in place mechanisms to involve users in analysis, design, assessment and further development of European public services."@en ;
@@ -224,7 +230,7 @@ eif-recommendation:assessment a skos:Concept ;
 	skos:definition "Evaluate the effectiveness and efficiency of different interoperability solutions and technological options considering user needs, proportionality and balance between costs and benefits."@en ;
 	skos:inScheme eif-recommendation: .
 
-eif-recommendation:governance a skos:Concept ;
+eif-recommendation:holisticgovernance a skos:Concept ;
 	skos:prefLabel "Holistic governance"@en ;
 	skos:notation "20"^^xsd:integer ;
 	skos:definition "Ensure holistic governance of interoperability activities across administrative levels and sectors."@en ;
@@ -242,19 +248,19 @@ eif-recommendation:standardsassessment a skos:Concept ;
 	skos:definition "Use a structured, transparent, objective and common approach to assessing and selecting standards and specifications. Take into account relevant EU recommendations and seek to make the approach consistent across borders."@en ;
 	skos:inScheme eif-recommendation: .
 
-eif-recommendation:standardscatalogus a skos:Concept ;
+eif-recommendation:standardscatalogues a skos:Concept ;
 	skos:prefLabel "Standards catalogues"@en ;
 	skos:notation "23"^^xsd:integer ;
 	skos:definition "Consult relevant catalogues of standards, specifications and guidelines at national and EU level, in accordance with your NIF and relevant DIFs, when procuring and developing ICT solutions."@en ;
 	skos:inScheme eif-recommendation: .
 
-eif-recommendation:participation a skos:Concept ;
+eif-recommendation:standardsparticipation a skos:Concept ;
 	skos:prefLabel "Participation"@en ;
 	skos:notation "24"^^xsd:integer ;
 	skos:definition "Actively participate in standardisation work relevant to your needs to ensure your requirements are met."@en ;
 	skos:inScheme eif-recommendation: .
 
-eif-recommendation:structure a skos:Concept ;
+eif-recommendation:governancestructure a skos:Concept ;
 	skos:prefLabel "Governance structure"@en ;
 	skos:notation "25"^^xsd:integer ;
 	skos:definition "Ensure interoperability and coordination over time when operating and delivering integrated public services by putting in place the necessary governance structure."@en ;
