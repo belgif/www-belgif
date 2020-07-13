@@ -25,27 +25,43 @@
  */
 package be.belgif.www.dao;
 
+import java.util.Map;
+
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class EifRecommendation extends EifDao {
-	private final String principle;	
+public class Organization extends Dao {
+	private final Map<String, String> name;
+	private final Map<String, String> description;
+	private final String logo;
 
-	public String getPrinciple() {
-		return principle;
+	public String getName(String lang) {
+		return name.getOrDefault(lang, "");
 	}
 	
-	public EifRecommendation(Model m, IRI iri) {
+	public String getDescription(String lang) {
+		return description.getOrDefault(lang, "");
+	}
+
+	public String getLogo() {
+		return logo;
+	}
+
+	public Organization(Model m, IRI iri) {
 		super(m, iri);
 
-		principle = m.filter(iri, SKOS.RELATED, null).objects().stream().findFirst()
-					.map(IRI.class::cast)
-					.map(i -> i.stringValue()).orElse("");
+		name = langMap(m, iri, SKOS.PREF_LABEL);
+		description = langMap(m, iri, DCTERMS.DESCRIPTION);
+		logo = m.filter(iri, FOAF.DEPICTION, null).objects().stream().findFirst()
+			.map(IRI.class::cast)
+			.map(IRI::stringValue).orElse("");
 	}
 }

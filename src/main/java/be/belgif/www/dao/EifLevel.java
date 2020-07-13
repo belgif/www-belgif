@@ -47,8 +47,8 @@ public class EifLevel extends EifDao {
 		super(m, iri);
 		
 		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
-			.map(IRI.class::cast)
-			.map(i -> i.getLocalName())
-			.collect(Collectors.toList());
+							.map(IRI.class::cast)
+							.map(i -> i.getLocalName())
+							.collect(Collectors.toList());
 	}
 }
