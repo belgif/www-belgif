@@ -30,6 +30,7 @@ import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Specification;
 
 import io.micronaut.context.annotation.Value;
 
@@ -41,6 +42,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Singleton;
@@ -76,12 +78,14 @@ public class Store implements AutoCloseable {
 	private final IRI level = f.createIRI("http://www.belgif.be/id/eif3/level/");
 	private final IRI principle = f.createIRI("http://www.belgif.be/id/eif3/principle/");
 	private final IRI recommendation = f.createIRI("http://www.belgif.be/id/eif3/recommendation/");
+	private final IRI specification = f.createIRI("http://usefulinc.com/ns/doap#Specification");
 	
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
 	private Map<String,Page> pages = new HashMap<>();
 	private Map<String,Organization> integrators = new HashMap<>();
+	private Map<String,Specification> specifications = new HashMap<>();
 	
 	public Map<String,EifLevel> getLevels() {
 		return levels;
@@ -103,39 +107,49 @@ public class Store implements AutoCloseable {
 		return integrators;
 	}
 
+	public Map<String,Specification> getSpecifications() {
+		return specifications;
+	}
+
+	
+	private Stream<IRI> load(Model m, IRI predicate, IRI object) {
+		return m.filter(null, predicate, object).subjects().stream().map(IRI.class::cast);
+	}
+
 	public void loadIntegrators(Model m) {
-		integrators = m.filter(null, RDF.TYPE, ORG.ORGANIZATION).subjects().stream()
-						.map(IRI.class::cast)
+		integrators = load(m, RDF.TYPE, ORG.ORGANIZATION)
 						.collect(Collectors.toMap(IRI::getLocalName, s -> new Organization(m, s)));
 		LOG.info("Integrators: {}", integrators.size());
 	}
 
 	private void loadLevels(Model m) {
-		levels = m.filter(null, SKOS.IN_SCHEME, level).subjects().stream()
-						.map(IRI.class::cast)
+		levels = load(m, SKOS.IN_SCHEME, level)
 						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifLevel(m, s)));
 		LOG.info("EIF levels: {}", levels.size());
 	}
 
 	private void loadPrinciples(Model m) {
-		principles = m.filter(null, SKOS.IN_SCHEME, principle).subjects().stream()
-						.map(IRI.class::cast)
+		principles = load(m, SKOS.IN_SCHEME, principle)
 						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifPrinciple(m, s)));
 		LOG.info("EIF principles: {}", principles.size());
 	}
 
 	private void loadRecommendations(Model m) {
-		recommendations = m.filter(null, SKOS.IN_SCHEME, recommendation).subjects().stream()
-						.map(IRI.class::cast)
+		recommendations = load(m, SKOS.IN_SCHEME, recommendation)
 						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifRecommendation(m, s)));
 		LOG.info("EIF recommendations: {} ", recommendations.size());
 	}
 
 	private void loadPages(Model m) {
-		pages = m.filter(null, RDF.TYPE, FOAF.DOCUMENT).subjects().stream()
-						.map(IRI.class::cast)
+		pages = load(m, RDF.TYPE, FOAF.DOCUMENT)
 						.collect(Collectors.toMap(IRI::getLocalName, s -> new Page(m, s)));
 		LOG.info("Pages: {} ", pages.size());
+	}
+
+	private void loadSpecifications(Model m) {
+		specifications = load(m, RDF.TYPE, specification)
+						.collect(Collectors.toMap(IRI::getLocalName, s -> new Specification(m, s)));
+		LOG.info("Specifications: {} ", specifications.size());
 	}
 	
 	@PostConstruct
@@ -163,6 +177,7 @@ public class Store implements AutoCloseable {
 		loadRecommendations(m);
 		loadPages(m);
 		loadIntegrators(m);
+		loadSpecifications(m);
 	}
 
 	@PreDestroy

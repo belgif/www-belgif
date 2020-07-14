@@ -3,11 +3,11 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container-fluid">
+<main class="container-fluid bg-light">
 	<div class="row">
 		<div class="col">
-			<section class="jumbotron">
-			<h2><i class="fas fa-university"></i> ${r.sequence} ${r.getTitle(lang)}</h2>
+			<section>
+			<h2>${r.sequence} ${r.getTitle(lang)}</h2>
 			<p class="lead">${r.getDescription(lang)}</p>
 			</section>
 		</div>

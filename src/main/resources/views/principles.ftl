@@ -11,8 +11,10 @@
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
 				<div class="card-body">
-					<h5 class="card-title">${p.sequence}. ${p.getTitle(lang)}</h5>
-					<a href="/eif3/principle/${p.localId}" class="btn btn-primary stretched-link">More</a>
+					<h5 class="card-title">
+					<a href="/eif3/principle/${p.localId}.html" class="stretched-link">
+					${p.sequence}. ${p.getTitle(lang)}</a>
+					</h5>
 				</div>
 			</section>
 			</div>

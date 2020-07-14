@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix spec: <http://www.belgif.be/id/spec/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+spec:rdf a doap:Specification ;
+	dcterms:title "RDF 1.1"@en ;
+	dcterms:subject "Semantic"@en ;
+	dcterms:description "Resource Description Framework"@en ;
+	dcterms:asbtract ""@en ;
+	foaf:homepage <https://www.w3.org/TR/rdf11-primer/> .
+
+spec:shacl a doap:Specification ;
+	dcterms:title "SHACL"@en ;
+	dcterms:subject "Semantic"@en ;
+	dcterms:description "SHapes Constraints Language"@en ;
+	dcterms:asbtract ""@en ;
+	foaf:homepage <https://www.w3.org/TR/shacl/> .

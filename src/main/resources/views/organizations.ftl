@@ -4,7 +4,7 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container-fluid">
+<main class="container-fluid bg-light">
 	<h2>Principles</h2>
 	<div class="row row-cols-1 row-cols-md-3">
 		<#list principles>

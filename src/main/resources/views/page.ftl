@@ -3,10 +3,10 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container-fluid">
+<main class="container-fluid bg-light">
 	<div class="row">
 		<div class="col">
-			<section class="jumbotron">
+			<section>
 			<h2>${p.getTitle(lang)}</h2>
 			<p>${p.getDescription(lang)}</p>
 			</section>

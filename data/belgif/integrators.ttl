@@ -5,7 +5,6 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix integrator: <http://www.belgif.be/id/org/> .
 
-
 integrator:bced a org:Organization ;
 	skos:prefLabel "BCED"@en, "BCED"@nl, "BCED"@fr ;
 	dcterms:description "The Banque Carrefour d’Échange de Données (BCED) is the regional service integrator for Wallonia"@en ;

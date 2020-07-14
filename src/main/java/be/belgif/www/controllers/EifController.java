@@ -54,8 +54,13 @@ public class EifController {
 	@Inject
 	Store store;
 
-	private <T extends EifDao> List<T> sortedList(Stream<T> stream) {
+	private <T extends EifDao> List<T> sortBySeq(Stream<T> stream) {
 		return stream.sorted((a,b) -> a.getSequence() - b.getSequence())
+												.collect(Collectors.toUnmodifiableList());
+	}
+	
+	private <T extends EifDao> List<T> sortBySeq(Map<String,T> map) {
+		return map.values().stream().sorted((a,b) -> a.getSequence() - b.getSequence())
 												.collect(Collectors.toUnmodifiableList());
 	}
 	
@@ -68,7 +73,7 @@ public class EifController {
 	@View("levels")
 	@Get("/levels.html{?lang}")
 	public HttpResponse levels(Optional<String> lang) {	
-		List<EifLevel> list = sortedList(store.getLevels().values().stream());
+		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
 		return HttpResponse.ok(Map.of("lang", lang.orElse("en"), "principles", list, "eif3", page));
 	}
@@ -77,7 +82,7 @@ public class EifController {
 	@Get("/level/{id}.html{?lang}")
 	public HttpResponse level(String id, Optional<String> lang) {
 		EifLevel eif = store.getLevels().get(id);
-		List<EifRecommendation> list = sortedList(eif.getRecommendations().stream()
+		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
 		return HttpResponse.ok(Map.of("lang", lang.orElse("en"), "p", eif, "recommendations", list));
 	}
@@ -85,7 +90,7 @@ public class EifController {
 	@View("principles")
 	@Get("/principles.html{?lang}")
 	public HttpResponse principles(Optional<String> lang) {	
-		List<EifPrinciple> list = sortedList(store.getPrinciples().values().stream());
+		List<EifPrinciple> list = sortBySeq(store.getPrinciples());
 		Page page = store.getPages().get("eif3");
 		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"principles", list, "eif3", page));
 	}
@@ -94,7 +99,7 @@ public class EifController {
 	@Get("/principle/{id}.html{?lang}")
 	public HttpResponse principle(String id, Optional<String> lang) {
 		EifPrinciple eif = store.getPrinciples().get(id);
-		List<EifRecommendation> list = sortedList(eif.getRecommendations().stream()
+		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
 		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"p", eif, "recommendations", list));
 	}
@@ -102,7 +107,7 @@ public class EifController {
 	@View("recommendations")
 	@Get("/recommendations.html{?lang}")
 	public HttpResponse recommendations(Optional<String> lang) {
-		List<EifRecommendation> list = sortedList(store.getRecommendations().values().stream());
+		List<EifRecommendation> list = sortBySeq(store.getRecommendations());
 		Page page = store.getPages().get("eif3");
 		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"recommendations", list, "eif3", page));
 	}

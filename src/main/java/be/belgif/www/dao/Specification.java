@@ -25,45 +25,46 @@
  */
 package be.belgif.www.dao;
 
+import static be.belgif.www.dao.Dao.firstString;
 import java.util.Map;
-import java.util.stream.Collectors;
+
 import org.eclipse.rdf4j.model.IRI;
-
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class Dao {
-	private final String id;
-	private final String localId;
+public class Specification extends Dao {
+	private final Map<String, String> title;
+	private final Map<String, String> description;
+	private final Map<String, String> longdesc;
+	private final String website;
 
-	public String getId() {
-		return id;
+	public String getTitle(String lang) {
+		return title.get(lang);
+	}
+	
+	public String getDescription(String lang) {
+		return description.get(lang);
 	}
 
-	public String getLocalId() {
-		return localId;
+	public String getAbstract(String lang) {
+		return longdesc.get(lang);
 	}
 
-	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
-		return m.filter(iri, predicate, null).objects().stream()
-				.map(Literal.class::cast)
-				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
+	public String getWebsite() {
+		return website;
 	}
 
-	protected static String firstString(Model m, IRI iri, IRI predicate) {
-		return m.filter(iri, predicate, null).objects().stream().findFirst()
-					.map(IRI.class::cast)
-					.map(IRI::stringValue)
-					.orElse("");
-	}
+	public Specification(Model m, IRI iri) {
+		super(m, iri);
 
-	public Dao(Model m, IRI iri) {
-		id = iri.toString();
-		localId = iri.getLocalName();
+		title = langMap(m, iri, DCTERMS.TITLE);
+		description = langMap(m, iri, DCTERMS.DESCRIPTION);
+		longdesc = langMap(m, iri, DCTERMS.ABSTRACT);
+		website = firstString(m, iri, FOAF.HOMEPAGE);
 	}
 }

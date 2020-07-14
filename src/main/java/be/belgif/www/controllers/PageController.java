@@ -28,6 +28,7 @@ package be.belgif.www.controllers;
 import be.belgif.www.Store;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Specification;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
@@ -38,7 +39,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.inject.Inject;
 
@@ -51,9 +51,13 @@ public class PageController {
 	@Inject
 	Store store;
 
+	private List<Organization> sortByName(Map<String,Organization> map, String lang) {
+		return map.values().stream().sorted((a,b) -> a.getName(lang).compareTo(b.getName(lang)))
+												.collect(Collectors.toUnmodifiableList());
+	}
 
-	private List<Organization> sortedList(Stream<Organization> stream, String lang) {
-		return stream.sorted((a,b) -> a.getName(lang).compareTo(b.getName(lang)))
+	private List<Specification> sortByTitle(Map<String,Specification> map, String lang) {
+		return map.values().stream().sorted((a,b) -> a.getTitle(lang).compareTo(b.getTitle(lang)))
 												.collect(Collectors.toUnmodifiableList());
 	}
 
@@ -68,7 +72,15 @@ public class PageController {
 	@Get("/integrators.html{?lang}")
 	public HttpResponse integrators(Optional<String> lang) {
 		Page page = store.getPages().get("integrators");
-		List<Organization> integrators = sortedList(store.getIntegrators().values().stream(), lang.orElse("en"));
+		List<Organization> integrators = sortByName(store.getIntegrators(), lang.orElse("en"));
 		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "integrators", integrators));
+	}
+	
+	@View("specifications")
+	@Get("/specifications.html{?lang}")
+	public HttpResponse specifications(Optional<String> lang) {
+		Page page = store.getPages().get("specifications");
+		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang.orElse("en"));
+		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "integrators", specifications));
 	}
 }

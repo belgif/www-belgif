@@ -66,7 +66,6 @@ public class Organization extends Dao {
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
 
-
 		logo = m.filter(iri, FOAF.DEPICTION, null).objects().stream().findFirst()
 			.map(IRI.class::cast)
 			.map(IRI::stringValue)
