@@ -81,6 +81,6 @@ public class PageController {
 	public HttpResponse specifications(Optional<String> lang) {
 		Page page = store.getPages().get("specifications");
 		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang.orElse("en"));
-		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "integrators", specifications));
+		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "specifications", specifications));
 	}
 }

@@ -15,11 +15,11 @@
 		</thead>
 		<tbody>
 			<#list specifications>
-			<#items as specs>
+			<#items as spec>
 			    <tr>
-					<td>${specs.getName(lang)}</td>
+					<td>${spec.getTitle(lang)}</td>
 					<td></td>
-					<td>${specs.getAbstract(lang)}</td>
+					<td>${spec.getAbstract(lang)}</td>
 				</tr>
 		</#items>
 		</#list>

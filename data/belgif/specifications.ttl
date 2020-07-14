@@ -7,12 +7,12 @@ spec:rdf a doap:Specification ;
 	dcterms:title "RDF 1.1"@en ;
 	dcterms:subject "Semantic"@en ;
 	dcterms:description "Resource Description Framework"@en ;
-	dcterms:asbtract ""@en ;
+	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/rdf11-primer/> .
 
 spec:shacl a doap:Specification ;
 	dcterms:title "SHACL"@en ;
 	dcterms:subject "Semantic"@en ;
 	dcterms:description "SHapes Constraints Language"@en ;
-	dcterms:asbtract ""@en ;
+	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/shacl/> .
