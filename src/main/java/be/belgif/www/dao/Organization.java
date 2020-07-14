@@ -28,7 +28,6 @@ package be.belgif.www.dao;
 import java.util.Map;
 
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
@@ -42,17 +41,22 @@ public class Organization extends Dao {
 	private final Map<String, String> name;
 	private final Map<String, String> description;
 	private final String logo;
+	private final String website;
 
 	public String getName(String lang) {
-		return name.getOrDefault(lang, "");
+		return name.get(lang);
 	}
 	
 	public String getDescription(String lang) {
-		return description.getOrDefault(lang, "");
+		return description.get(lang);
 	}
 
 	public String getLogo() {
 		return logo;
+	}
+
+	public String getWebsite() {
+		return website;
 	}
 
 	public Organization(Model m, IRI iri) {
@@ -60,8 +64,13 @@ public class Organization extends Dao {
 
 		name = langMap(m, iri, SKOS.PREF_LABEL);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
+		website = firstString(m, iri, FOAF.HOMEPAGE);
+
+
 		logo = m.filter(iri, FOAF.DEPICTION, null).objects().stream().findFirst()
 			.map(IRI.class::cast)
-			.map(IRI::stringValue).orElse("");
+			.map(IRI::stringValue)
+			.map(s -> s.replaceFirst("file:/", ""))
+			.orElse("");
 	}
 }

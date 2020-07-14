@@ -28,6 +28,7 @@ package be.belgif.www;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
+import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 
 import io.micronaut.context.annotation.Value;
@@ -50,6 +51,7 @@ import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
+import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 import org.eclipse.rdf4j.rio.RDFFormat;
@@ -70,15 +72,17 @@ public class Store implements AutoCloseable {
 	protected String dataPath;
 
 	private final ValueFactory f = SimpleValueFactory.getInstance();
+
 	private final IRI level = f.createIRI("http://www.belgif.be/id/eif3/level/");
 	private final IRI principle = f.createIRI("http://www.belgif.be/id/eif3/principle/");
 	private final IRI recommendation = f.createIRI("http://www.belgif.be/id/eif3/recommendation/");
-
+	
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
 	private Map<String,Page> pages = new HashMap<>();
-
+	private Map<String,Organization> integrators = new HashMap<>();
+	
 	public Map<String,EifLevel> getLevels() {
 		return levels;
 	}
@@ -93,6 +97,17 @@ public class Store implements AutoCloseable {
 
 	public Map<String,Page> getPages() {
 		return pages;
+	}
+
+	public Map<String,Organization> getIntegrators() {
+		return integrators;
+	}
+
+	public void loadIntegrators(Model m) {
+		integrators = m.filter(null, RDF.TYPE, ORG.ORGANIZATION).subjects().stream()
+						.map(IRI.class::cast)
+						.collect(Collectors.toMap(IRI::getLocalName, s -> new Organization(m, s)));
+		LOG.info("Integrators: {}", integrators.size());
 	}
 
 	private void loadLevels(Model m) {
@@ -147,6 +162,7 @@ public class Store implements AutoCloseable {
 		loadPrinciples(m);
 		loadRecommendations(m);
 		loadPages(m);
+		loadIntegrators(m);
 	}
 
 	@PreDestroy

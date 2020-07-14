@@ -40,11 +40,11 @@ public class Page extends Dao {
 	private final Map<String, String> description;
 
 	public String getTitle(String lang) {
-		return title.getOrDefault(lang, "");
+		return title.get(lang);
 	}
 	
 	public String getDescription(String lang) {
-		return description.getOrDefault(lang, "");
+		return description.get(lang);
 	}
 
 	public Page(Model m, IRI iri) {

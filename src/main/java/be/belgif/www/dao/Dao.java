@@ -55,7 +55,14 @@ public class Dao {
 				.map(Literal.class::cast)
 				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
 	}
-	
+
+	protected static String firstString(Model m, IRI iri, IRI predicate) {
+		return m.filter(iri, predicate, null).objects().stream().findFirst()
+					.map(IRI.class::cast)
+					.map(IRI::stringValue)
+					.orElse("");
+	}
+
 	public Dao(Model m, IRI iri) {
 		id = iri.toString();
 		localId = iri.getLocalName();

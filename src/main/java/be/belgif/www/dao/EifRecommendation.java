@@ -26,7 +26,6 @@
 package be.belgif.www.dao;
 
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
@@ -44,8 +43,6 @@ public class EifRecommendation extends EifDao {
 	public EifRecommendation(Model m, IRI iri) {
 		super(m, iri);
 
-		principle = m.filter(iri, SKOS.RELATED, null).objects().stream().findFirst()
-					.map(IRI.class::cast)
-					.map(i -> i.stringValue()).orElse("");
+		principle = firstString(m, iri, SKOS.RELATED);
 	}
 }

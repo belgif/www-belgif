@@ -26,13 +26,19 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
+import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.views.View;
+
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.inject.Inject;
 
@@ -45,10 +51,24 @@ public class PageController {
 	@Inject
 	Store store;
 
+
+	private List<Organization> sortedList(Stream<Organization> stream, String lang) {
+		return stream.sorted((a,b) -> a.getName(lang).compareTo(b.getName(lang)))
+												.collect(Collectors.toUnmodifiableList());
+	}
+
 	@View("page")
-	@Get("/{id}")
-	public HttpResponse page(String id) {
+	@Get("/{id}.html{?lang}")
+	public HttpResponse page(String id, Optional<String> lang) {
 		Page page = store.getPages().get(id);
-		return HttpResponse.ok(Map.of("p", page, "lang", "en"));
+		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en")));
+	}
+	
+	@View("integrators")
+	@Get("/integrators.html{?lang}")
+	public HttpResponse integrators(Optional<String> lang) {
+		Page page = store.getPages().get("integrators");
+		List<Organization> integrators = sortedList(store.getIntegrators().values().stream(), lang.orElse("en"));
+		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "integrators", integrators));
 	}
 }

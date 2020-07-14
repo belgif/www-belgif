@@ -2,13 +2,20 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix page: <http://www.belgif.be/id/page/> .
 
+page:integrators a foaf:Document ;
+	dcterms:title "What is a service integrator ?"@en ;
+	dcterms:description  """
+<p>According to the law of 15 August 2012, a service integrator is an institution which, by or under a law, is responsible for the integration of services at a given level of authority or in a given sector.  Integration of services' means the organisation of mutual exchanges of electronic data between bodies and the integrated provision of such data.  The mission of a federal service integrator is, with the agreement of the participating public services and other service integrators, to integrate data processing processes.  In this context, it provides access to data in an integrated way.<p>
+<p>Currently, there are 6 public service integrators operating in Belgium</p>
+"""@en .
+
 page:eif3 a foaf:Document ;
 	dcterms:title "EIF 3"@en ;
 	dcterms:description  """
-	<p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
-	<p>EIF is intended as a common core of the National Interoperability Frameworks (NIFs) and Domain Interoperability Frameworks (DIFs). For Belgium, BelgIF is the NIF. The federal government and the regions have agreed to use the <a href='/eif3/principle'>12 principles</a> of the EIF as the basis for defining their interoperability.</p>
-	<p>A number of <a href='/eif3/recommendation'>recommendations</a> are derived from these principles. In the new version these recommendations were amended and extended, especially to stay in line with the new EU directives and regulations such as the PSI, the eIDAS and the GDPR.</p>
-	<p>The 47 <a href='/eif3/recommendation'>recommendations</a> are also endorsed within the context of BelgIF as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>"""@en .
+<p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
+<p>EIF is intended as a common core of the National Interoperability Frameworks (NIFs) and Domain Interoperability Frameworks (DIFs). For Belgium, BelgIF is the NIF. The federal government and the regions have agreed to use the <a href='/eif3/principle'>12 principles</a> of the EIF as the basis for defining their interoperability.</p>
+<p>A number of <a href='/eif3/recommendation'>recommendations</a> are derived from these principles. In the new version these recommendations were amended and extended, especially to stay in line with the new EU directives and regulations such as the PSI, the eIDAS and the GDPR.</p>
+<p>The 47 <a href='/eif3/recommendation'>recommendations</a> are also endorsed within the context of BelgIF as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>"""@en .
 
 page:conditions a foaf:Document ;
 	dcterms:title "Conditions of use"@en ;

@@ -1,0 +1,44 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix integrator: <http://www.belgif.be/id/org/> .
+
+
+integrator:bced a org:Organization ;
+	skos:prefLabel "BCED"@en, "BCED"@nl, "BCED"@fr ;
+	dcterms:description "The Banque Carrefour d’Échange de Données (BCED) is the regional service integrator for Wallonia"@en ;
+	foaf:depiction <file:/bced.png> ;
+	foaf:homepage <http://www.ensemblesimplifions.be/node/20> .
+
+integrator:bcss a org:Organization ;
+	skos:prefLabel "CBSS"@en, "KSZ"@nl, "BCSS"@fr ;
+	dcterms:description "The Crossroads Bank for Social Security is the driver and coordinator of e-government in the social sector"@en ;
+	foaf:depiction <file:/cbss.png> ;
+	foaf:homepage <https://www.ksz-bcss.fgov.be/en> .
+
+integrator:bosa a org:Organization ;
+	skos:prefLabel "FPS BOSA"@en, "FOD BOSA"@nl, "SPF BOSA"@fr ;
+	dcterms:description "The FPS Bosa is the federal services integrator (except for the social security services)."@en ;
+	foaf:depiction <file:/bosa.png> ;
+	foaf:homepage <https://bosa.belgium.be/> .
+
+integrator:ehealth a org:Organization ;
+	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr ;
+	dcterms:description "EHealth portal"@en ;
+	foaf:depiction <file:/ehealth.png> ;
+	foaf:homepage <https://www.ehealth.fgov.be> .
+
+integrator:fidus a org:Organization ;
+	skos:prefLabel "Fidus"@en, "Fidus"@nl, "Fidus"@fr ;
+	dcterms:description "Fidus is the name given to the regional services integrator for the Brussels-Capital Region"@en ;
+	foaf:depiction <file:/fidus.png> ;
+	foaf:homepage <http://bric.brussels/en/our-solutions/authentic-sources/fidus> .
+
+integrator:vdi a org:Organization ;
+	skos:prefLabel "VDI"@en, "VDI"@nl, "VDI"@fr ;
+	dcterms:description "Flanders Information is is the regional service integrator for Flanders"@en ;
+	foaf:depiction <file:/vdi.png> ; ;
+	foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> .
+
