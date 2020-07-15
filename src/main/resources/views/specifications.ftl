@@ -15,11 +15,11 @@
 		</thead>
 		<tbody>
 			<#list specifications>
-			<#items as spec>
+			<#items as s>
 			    <tr>
-					<td>${spec.getTitle(lang)}</td>
+					<td><a href="/page/specification/${s.localId}.${lang}.html">${s.getTitle(lang)}</a></td>
 					<td></td>
-					<td>${spec.getAbstract(lang)}</td>
+					<td>${s.getAbstract(lang)}</td>
 				</tr>
 		</#items>
 		</#list>

@@ -30,9 +30,8 @@ import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.views.View;
-import java.util.Map;
-import java.util.Optional;
 
+import java.util.Map;
 import javax.inject.Inject;
 
 /**
@@ -44,11 +43,17 @@ public class HomeController {
 	@Inject
 	Store store;
 
+	@View("language")
+	@Get("/")
+	public HttpResponse language() {
+		return HttpResponse.ok();
+	}
+
 	@View("homepage")
-	@Get("/index.html{?lang}")
-	public HttpResponse index(Optional<String> lang) {
+	@Get("/index.{lang}.html")
+	public HttpResponse index(String lang) {
 		Map map = store.getLevels();
-		map.put("lang", lang.orElse("en"));
+		map.put("lang", lang);
 		return HttpResponse.ok(map);
 	}
 }

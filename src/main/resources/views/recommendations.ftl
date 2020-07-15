@@ -10,11 +10,14 @@
 		<#items as r>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
-				<div class="card-body">
+				<div class="card-header bg-dark">
 					<h5 class="card-title">
-						<a href="/eif3/recommendation/${r.localId}.html" class="stretched-link text-decoration-none">
+						<a href="/eif3/recommendation/${r.localId}.${lang}.html" class="stretched-link text-light text-decoration-none">
 						${r.sequence}. ${r.getTitle(lang)}</a>
 					</h5>
+				</div>
+				<div class="card-body">
+
 					<p class="lead">${r.getDescription(lang)}</p>
 				</div>
 			</section>

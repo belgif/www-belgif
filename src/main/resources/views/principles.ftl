@@ -12,7 +12,7 @@
 			<section class="card bg-light h-100">
 				<div class="card-body">
 					<h5 class="card-title">
-					<a href="/eif3/principle/${p.localId}.html" class="stretched-link">
+					<a href="/eif3/principle/${p.localId}.${lang}.html" class="stretched-link">
 					${p.sequence}. ${p.getTitle(lang)}</a>
 					</h5>
 				</div>

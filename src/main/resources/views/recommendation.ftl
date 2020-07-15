@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col">
 			<section>
-			<h2>${r.sequence} ${r.getTitle(lang)}</h2>
+			<h1>Recommendation ${r.sequence}: ${r.getTitle(lang)}</h1>
 			<p class="lead">${r.getDescription(lang)}</p>
 			</section>
 		</div>

@@ -39,7 +39,6 @@ import io.micronaut.views.View;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -49,7 +48,7 @@ import javax.inject.Inject;
  *
  * @author Bart.Hanssens
  */
-@Controller("/eif3")
+@Controller("/{lang}/eif3")
 public class EifController {
 	@Inject
 	Store store;
@@ -65,57 +64,59 @@ public class EifController {
 	}
 	
 	@View("eif3")
-	@Get("/about.html{?lang}")
-	public HttpResponse eif(Optional<String> lang) {
-		return HttpResponse.ok(Map.of("lang", lang.orElse("")));
+	@Get("/about.{lang}.html")
+	public HttpResponse eif(String lang) {
+		Map map = store.getLevels();
+		map.put("lang", lang);
+		return HttpResponse.ok(map);
 	}
 
 	@View("levels")
-	@Get("/levels.html{?lang}")
-	public HttpResponse levels(Optional<String> lang) {	
+	@Get("/levels.{lang}.html")
+	public HttpResponse levels(String lang) {	
 		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en"), "principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "principles", list, "eif3", page));
 	}
 
 	@View("level")
-	@Get("/level/{id}.html{?lang}")
-	public HttpResponse level(String id, Optional<String> lang) {
+	@Get("/level/{id}.{lang}.html")
+	public HttpResponse level(String id, String lang) {
 		EifLevel eif = store.getLevels().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en"), "p", eif, "recommendations", list));
+		return HttpResponse.ok(Map.of("lang", lang, "p", eif, "recommendations", list));
 	}
 
 	@View("principles")
-	@Get("/principles.html{?lang}")
-	public HttpResponse principles(Optional<String> lang) {	
+	@Get("/principles.{lang}.html")
+	public HttpResponse principles(String lang) {	
 		List<EifPrinciple> list = sortBySeq(store.getPrinciples());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "principles", list, "eif3", page));
 	}
 
 	@View("principle")
-	@Get("/principle/{id}.html{?lang}")
-	public HttpResponse principle(String id, Optional<String> lang) {
+	@Get("/principle/{id}.{lang}.html")
+	public HttpResponse principle(String id, String lang) {
 		EifPrinciple eif = store.getPrinciples().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"p", eif, "recommendations", list));
+		return HttpResponse.ok(Map.of("lang", lang, "p", eif, "recommendations", list));
 	}
 
 	@View("recommendations")
-	@Get("/recommendations.html{?lang}")
-	public HttpResponse recommendations(Optional<String> lang) {
+	@Get("/recommendations.{lang}.html")
+	public HttpResponse recommendations(String lang) {
 		List<EifRecommendation> list = sortBySeq(store.getRecommendations());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"recommendations", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "recommendations", list, "eif3", page));
 	}
 
 	@View("recommendation")
-	@Get("/recommendation/{id}.html{?lang}")
-	public HttpResponse recommendation(String id, Optional<String> lang) {
+	@Get("/recommendation/{id}.{lang}.html")
+	public HttpResponse recommendation(String id, String lang) {
 		EifRecommendation eif = store.getRecommendations().get(id);
-		return HttpResponse.ok(Map.of("lang", lang.orElse("en") ,"r", eif));
+		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif));
 	}	
 }

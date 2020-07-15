@@ -3,42 +3,38 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container-fluid">
-	<div class="row row-cols-1 row-cols-md-2">
-		<div class="col mb-2">
-		<section class="card be-legal>
+<main class="container-fluid bg-light">
+	<h1>EIF 3</h1>
+	
+	<h2>Interoperability Levels</h2>
+	<div class="card-deck">
+		<section class="card be-legal">
 			<div class="card-body">
 				<h3 class="card-title"><i class="fas fa-balance-scale"></i> ${legal.getTitle(lang)}</h3>
 				<p class="lead">${legal.getDescription(lang)}</p>
 			</div>
 		</section>
-		</div>
-		<div class="col mb-2">
-		<section class="card be-organisational h-100">
+		<section class="card be-organisational">
 			<div class="card-body">
 				<h3 class="card-title"><i class="fas fa-university"></i> ${organisational.getTitle(lang)}</h3>
 				<p class="lead">${organisational.getDescription(lang)}</p>
 			</div>
 		</section>
-		</div>
-		<div class="col mb-2">
-		<section class="card be-semantic h-100">
+		<section class="card be-semantic">
 			<div class="card-body">
 				<h3 class="card-title"><i class="far fa-file-code"></i> ${semantic.getTitle(lang)}</h3>
 				<p class="lead">${semantic.getDescription(lang)}</p>
 			</div>
 		</section>
-		</div>
-		<div class="col mb-2">
-		<section class="card be-technical h-100">
+		<section class="card be-technical">
 			<div class="card-body">
 				<h3 class="card-title"><i class="fas fa-server"></i> ${technical.getTitle(lang)}</h3>
 				<p class="lead">${technical.getDescription(lang)}</p>
 			</div>
 		</section>
-		</div>
 	</div>
 
+	<h2>Gov</h2>
 	<div class="card-deck">
 		<section class="card be-governance">
 			<div class="card-body">
@@ -53,6 +49,7 @@
 			</div>
 		</section>
 	</div>
+
 </main>
 <#include "footer.ftl">
 </body>

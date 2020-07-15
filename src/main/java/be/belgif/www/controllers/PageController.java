@@ -37,7 +37,6 @@ import io.micronaut.views.View;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -62,25 +61,32 @@ public class PageController {
 	}
 
 	@View("page")
-	@Get("/{id}.html{?lang}")
-	public HttpResponse page(String id, Optional<String> lang) {
+	@Get("/{id}.{lang}.html")
+	public HttpResponse page(String id, String lang) {
 		Page page = store.getPages().get(id);
-		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en")));
+		return HttpResponse.ok(Map.of("p", page, "lang", lang));
 	}
 	
 	@View("integrators")
-	@Get("/integrators.html{?lang}")
-	public HttpResponse integrators(Optional<String> lang) {
+	@Get("/integrators.{lang}.html")
+	public HttpResponse integrators(String lang) {
 		Page page = store.getPages().get("integrators");
-		List<Organization> integrators = sortByName(store.getIntegrators(), lang.orElse("en"));
-		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "integrators", integrators));
+		List<Organization> integrators = sortByName(store.getIntegrators(), lang);
+		return HttpResponse.ok(Map.of("p", page, "lang", lang, "integrators", integrators));
 	}
-	
+
+	@View("specification")
+	@Get("/specification/{id}.{lang}.html")
+	public HttpResponse specifications(String id, String lang) {
+		Specification specification = store.getSpecifications().get(id);
+		return HttpResponse.ok(Map.of("lang", lang, "specification", specification));
+	}
+
 	@View("specifications")
-	@Get("/specifications.html{?lang}")
-	public HttpResponse specifications(Optional<String> lang) {
+	@Get("/specifications.{lang}.html")
+	public HttpResponse specifications(String lang) {
 		Page page = store.getPages().get("specifications");
-		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang.orElse("en"));
-		return HttpResponse.ok(Map.of("p", page, "lang", lang.orElse("en"), "specifications", specifications));
+		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang);
+		return HttpResponse.ok(Map.of("p", page, "lang", lang, "specifications", specifications));
 	}
 }
