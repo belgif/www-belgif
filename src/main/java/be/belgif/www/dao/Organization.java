@@ -38,14 +38,9 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  * @author Bart.Hanssens
  */
 public class Organization extends Dao {
-	private final Map<String, String> name;
 	private final Map<String, String> description;
 	private final String logo;
 	private final String website;
-
-	public String getName(String lang) {
-		return name.get(lang);
-	}
 	
 	public String getDescription(String lang) {
 		return description.get(lang);
@@ -62,7 +57,6 @@ public class Organization extends Dao {
 	public Organization(Model m, IRI iri) {
 		super(m, iri);
 
-		name = langMap(m, iri, SKOS.PREF_LABEL);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
 

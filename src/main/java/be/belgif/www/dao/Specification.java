@@ -38,15 +38,10 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
  * @author Bart.Hanssens
  */
 public class Specification extends Dao {
-	private final Map<String, String> title;
 	private final Map<String, String> description;
 	private final Map<String, String> longdesc;
 	private final Map<String, String> subject;
 	private final String website;
-
-	public String getTitle(String lang) {
-		return title.get(lang);
-	}
 
 	public String getDescription(String lang) {
 		return description.get(lang);
@@ -65,9 +60,8 @@ public class Specification extends Dao {
 	}
 
 	public Specification(Model m, IRI iri) {
-		super(m, iri);
+		super(m, iri, DCTERMS.TITLE);
 
-		title = langMap(m, iri, DCTERMS.TITLE);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		longdesc = langMap(m, iri, DCTERMS.ABSTRACT);
 		subject = langMap(m, iri, DCTERMS.SUBJECT);

@@ -9,11 +9,13 @@ be-page:integrators a foaf:Document ;
 <p>Currently, there are 6 public service integrators operating in Belgium</p>
 """@en .
 
+be-page:legislations a foaf:Document ;
+	dcterms:title "Legislation and Agreements"@en ;
+	dcterms:description ""@en .
+
 be-page:specifications a foaf:Document ;
 	dcterms:title "Technical and semantic specifications"@en ;
-	dcterms:description  """
-
-"""@en .
+	dcterms:description ""@en .
 
 be-page:eif3 a foaf:Document ;
 	dcterms:title "EIF 3"@en ;

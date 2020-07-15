@@ -36,21 +36,15 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
  * @author Bart.Hanssens
  */
 public class Page extends Dao {
-	private final Map<String, String> title;
 	private final Map<String, String> description;
 
-	public String getTitle(String lang) {
-		return title.get(lang);
-	}
-	
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
 
 	public Page(Model m, IRI iri) {
-		super(m, iri);
+		super(m, iri, DCTERMS.TITLE);
 
-		title = langMap(m, iri, DCTERMS.TITLE);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 	}
 }

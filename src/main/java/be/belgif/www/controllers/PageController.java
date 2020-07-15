@@ -26,6 +26,8 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
+import be.belgif.www.dao.Dao;
+import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
@@ -50,13 +52,12 @@ public class PageController {
 	@Inject
 	Store store;
 
-	private List<Organization> sortByName(Map<String,Organization> map, String lang) {
-		return map.values().stream().sorted((a,b) -> a.getName(lang).compareTo(b.getName(lang)))
+	private <T extends Dao> List<T> sortByTitle(Map<String,T> map, String lang) {
+		return map.values().stream().sorted((a,b) -> a.getTitle(lang).compareTo(b.getTitle(lang)))
 												.collect(Collectors.toUnmodifiableList());
 	}
-
-	private List<Specification> sortByTitle(Map<String,Specification> map, String lang) {
-		return map.values().stream().sorted((a,b) -> a.getTitle(lang).compareTo(b.getTitle(lang)))
+	private List<Legislation> sortByDate(Map<String,Legislation> map, String lang) {
+		return map.values().stream().sorted((a,b) -> a.getDate().compareTo(b.getDate()))
 												.collect(Collectors.toUnmodifiableList());
 	}
 
@@ -71,10 +72,24 @@ public class PageController {
 	@Get("/integrators.{lang}.html")
 	public HttpResponse integrators(String lang) {
 		Page page = store.getPages().get("integrators");
-		List<Organization> integrators = sortByName(store.getIntegrators(), lang);
+		List<Organization> integrators = sortByTitle(store.getIntegrators(), lang);
 		return HttpResponse.ok(Map.of("p", page, "lang", lang, "integrators", integrators));
 	}
+	
+	@View("legislation")
+	@Get("/legislation/{id}.{lang}.html")
+	public HttpResponse legislation(String id, String lang) {
+		Legislation legislation = store.getLegislations().get(id);
+		return HttpResponse.ok(Map.of("lang", lang, "legislation", legislation));
+	}
 
+	@View("legislations")
+	@Get("/legislations.{lang}.html")
+	public HttpResponse legislations(String lang) {
+		Page page = store.getPages().get("legislations");
+		List<Legislation> legislations = sortByDate(store.getLegislations(), lang);
+		return HttpResponse.ok(Map.of("p", page, "lang", lang, "legislations", legislations));
+	}
 	@View("specification")
 	@Get("/specification/{id}.{lang}.html")
 	public HttpResponse specification(String id, String lang) {

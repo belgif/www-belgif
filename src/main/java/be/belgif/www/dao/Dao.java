@@ -32,6 +32,7 @@ import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 
 /**
@@ -41,6 +42,7 @@ import org.eclipse.rdf4j.model.Model;
 public class Dao {
 	private final String id;
 	private final String localId;
+	private final Map<String, String> title;
 
 	public String getId() {
 		return id;
@@ -48,6 +50,10 @@ public class Dao {
 
 	public String getLocalId() {
 		return localId;
+	}
+
+	public String getTitle(String lang) {
+		return title.get(lang);
 	}
 
 	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
@@ -70,8 +76,13 @@ public class Dao {
 							.collect(Collectors.toList());
 	}
 
-	public Dao(Model m, IRI iri) {
+	public Dao(Model m, IRI iri, IRI prop) {
 		id = iri.toString();
 		localId = iri.getLocalName();
+		title = langMap(m, iri, prop);
+	}
+	
+	public Dao(Model m, IRI iri) {
+		this(m, iri, SKOS.PREF_LABEL);
 	}
 }

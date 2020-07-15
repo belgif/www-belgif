@@ -38,15 +38,11 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  */
 public class EifDao extends Dao {
 	private final int seq;
-	private final Map<String, String> title;
+
 	private final Map<String, String> description;
 
 	public int getSequence() {
 		return seq;
-	}
-
-	public String getTitle(String lang) {
-		return title.get(lang);
 	}
 
 	public String getDescription(String lang) {
@@ -56,7 +52,6 @@ public class EifDao extends Dao {
 	public EifDao(Model m, IRI iri) {
 		super(m, iri);
 
-		title = langMap(m, iri, SKOS.PREF_LABEL);
 		description = langMap(m, iri, SKOS.DEFINITION);
 
 		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()

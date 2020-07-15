@@ -41,16 +41,11 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  * @author Bart.Hanssens
  */
 public class Legislation extends Dao {
-	private final Map<String, String> title;
 	private final Map<String, String> description;
 	private final String website;
 	private final String date;
 	private final List<String> recommendations;
 	private final List<String> organizations;
-	
-	public String getTitle(String lang) {
-		return title.get(lang);
-	}
 
 	public String getDescription(String lang) {
 		return description.get(lang);
@@ -73,9 +68,8 @@ public class Legislation extends Dao {
 	}
 
 	public Legislation(Model m, IRI iri) {
-		super(m, iri);
+		super(m, iri, DCTERMS.TITLE);
 
-		title = langMap(m, iri, DCTERMS.TITLE);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
 		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst().toString();
