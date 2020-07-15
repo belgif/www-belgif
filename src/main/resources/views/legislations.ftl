@@ -15,7 +15,7 @@
 				</div>
 				<div class="card-body">
 					<h5 class="card-title">
-					<a href="/legislation/${l.localId}.${lang}.html" class="stretched-link">
+					<a href="/page/legislation/${l.localId}.${lang}.html" class="stretched-link">
 					${l.getTitle(lang)}</a>
 					</h5>
 					<p class="lead">${l.getDescription(lang)}</p>

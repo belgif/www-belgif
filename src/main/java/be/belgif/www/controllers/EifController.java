@@ -30,6 +30,7 @@ import be.belgif.www.dao.EifDao;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
+import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Page;
 
 import io.micronaut.http.HttpResponse;
@@ -109,7 +110,10 @@ public class EifController {
 	@Get("/recommendation/{id}.{lang}.html")
 	public HttpResponse recommendation(String id, String lang) {
 		EifRecommendation eif = store.getRecommendations().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif));
+		List<Legislation> legislations = store.getLegislations().values().stream()
+											.filter(l -> l.getRecommendations().contains(id))
+											.collect(Collectors.toUnmodifiableList());
+		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif, "legislations", legislations));
 	}
 
 	@View("recommendations")

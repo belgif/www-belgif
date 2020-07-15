@@ -28,13 +28,12 @@ package be.belgif.www.dao;
 import static be.belgif.www.dao.Dao.firstString;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
@@ -72,7 +71,9 @@ public class Legislation extends Dao {
 
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
-		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst().toString();
+		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst()
+				.map(Literal.class::cast)
+				.map(Literal::stringValue).orElse("");
 		recommendations = listString(m, iri, DCTERMS.CONFORMS_TO);
 		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
 	}
