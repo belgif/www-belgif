@@ -13,10 +13,11 @@
 		</button>
 		<div id="menu" class="collapse navbar-collapse justify-content-end" >
 			<a class="nav-link font-weight-bold" href="/index.${lang}.html">Home</a>
-			<a class="nav-link font-weight-bold" href="/page/eif3/about.${lang}.html">EIF3</a>
 			<a class="nav-link font-weight-bold" href="/eif3/recommendations.${lang}.html">Recommendations</a>
-			<a class="nav-link font-weight-bold" href="/page/specifications.${lang}.html">Specifications</a>
+			<a class="nav-link font-weight-bold" href="/page/components.${lang}.html">Components</a>
+			<a class="nav-link font-weight-bold" href="/page/registries.${lang}.html">Registries</a>
 			<a class="nav-link font-weight-bold" href="/page/integrators.${lang}.html">Integrators</a>
+			<a class="nav-link font-weight-bold" href="/page/contact.${lang}.html">Contact</a>
 		</div>
 	</nav>
 </header>
