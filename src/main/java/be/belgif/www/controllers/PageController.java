@@ -77,7 +77,7 @@ public class PageController {
 
 	@View("specification")
 	@Get("/specification/{id}.{lang}.html")
-	public HttpResponse specifications(String id, String lang) {
+	public HttpResponse specification(String id, String lang) {
 		Specification specification = store.getSpecifications().get(id);
 		return HttpResponse.ok(Map.of("lang", lang, "specification", specification));
 	}

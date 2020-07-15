@@ -48,7 +48,7 @@ import javax.inject.Inject;
  *
  * @author Bart.Hanssens
  */
-@Controller("/{lang}/eif3")
+@Controller("/eif3")
 public class EifController {
 	@Inject
 	Store store;
@@ -105,6 +105,13 @@ public class EifController {
 		return HttpResponse.ok(Map.of("lang", lang, "p", eif, "recommendations", list));
 	}
 
+	@View("recommendation")
+	@Get("/recommendation/{id}.{lang}.html")
+	public HttpResponse recommendation(String id, String lang) {
+		EifRecommendation eif = store.getRecommendations().get(id);
+		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif));
+	}
+
 	@View("recommendations")
 	@Get("/recommendations.{lang}.html")
 	public HttpResponse recommendations(String lang) {
@@ -112,11 +119,5 @@ public class EifController {
 		Page page = store.getPages().get("eif3");
 		return HttpResponse.ok(Map.of("lang", lang, "recommendations", list, "eif3", page));
 	}
-
-	@View("recommendation")
-	@Get("/recommendation/{id}.{lang}.html")
-	public HttpResponse recommendation(String id, String lang) {
-		EifRecommendation eif = store.getRecommendations().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif));
-	}	
+	
 }
