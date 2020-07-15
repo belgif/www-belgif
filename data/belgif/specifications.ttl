@@ -1,18 +1,32 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
-@prefix spec: <http://www.belgif.be/id/spec/> .
+@prefix be-spec: <http://www.belgif.be/id/spec/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-spec:rdf a doap:Specification ;
+be-spec:rdf a doap:Specification ;
 	dcterms:title "RDF 1.1"@en ;
 	dcterms:subject "Semantic"@en ;
 	dcterms:description "Resource Description Framework"@en ;
 	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/rdf11-primer/> .
 
-spec:shacl a doap:Specification ;
+be-spec:shacl a doap:Specification ;
 	dcterms:title "SHACL"@en ;
 	dcterms:subject "Semantic"@en ;
 	dcterms:description "SHapes Constraints Language"@en ;
 	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/shacl/> .
+
+be-spec:skos a doap:Specification ;
+	dcterms:title "SKOS"@en ;
+	dcterms:subject "Semantic"@en ;
+	dcterms:description "Simple Knowledge Organization System"@en ;
+	dcterms:abstract "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Semantic Web."@en ;
+	foaf:homepage <https://www.w3.org/TR/skos-reference/> .
+
+be-spec:xml a doap:Specification ;
+	dcterms:title "XML"@en ;
+	dcterms:subject "Technical"@en ;
+	dcterms:description "Extensible Markup Language"@en ;
+	dcterms:abstract ""@en ;
+	foaf:homepage <https://www.w3.org/TR/xml/> .

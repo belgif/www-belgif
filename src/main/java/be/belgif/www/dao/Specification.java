@@ -41,18 +41,23 @@ public class Specification extends Dao {
 	private final Map<String, String> title;
 	private final Map<String, String> description;
 	private final Map<String, String> longdesc;
+	private final Map<String, String> subject;
 	private final String website;
 
 	public String getTitle(String lang) {
 		return title.get(lang);
 	}
-	
+
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
 
 	public String getAbstract(String lang) {
 		return longdesc.get(lang);
+	}
+
+	public String getSubject(String lang) {
+		return subject.get(lang);
 	}
 
 	public String getWebsite() {
@@ -65,6 +70,7 @@ public class Specification extends Dao {
 		title = langMap(m, iri, DCTERMS.TITLE);
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		longdesc = langMap(m, iri, DCTERMS.ABSTRACT);
+		subject = langMap(m, iri, DCTERMS.SUBJECT);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
 	}
 }

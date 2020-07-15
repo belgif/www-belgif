@@ -28,6 +28,7 @@ package be.belgif.www;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
+import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
@@ -41,6 +42,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
@@ -79,6 +81,7 @@ public class Store implements AutoCloseable {
 	private final IRI principle = f.createIRI("http://www.belgif.be/id/eif3/principle/");
 	private final IRI recommendation = f.createIRI("http://www.belgif.be/id/eif3/recommendation/");
 	private final IRI specification = f.createIRI("http://usefulinc.com/ns/doap#Specification");
+	private final IRI legislation = f.createIRI("http://schema.org/Legislation");
 	
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
@@ -86,6 +89,7 @@ public class Store implements AutoCloseable {
 	private Map<String,Page> pages = new HashMap<>();
 	private Map<String,Organization> integrators = new HashMap<>();
 	private Map<String,Specification> specifications = new HashMap<>();
+	private Map<String,Legislation> legislations = new HashMap<>();
 	
 	public Map<String,EifLevel> getLevels() {
 		return levels;
@@ -111,45 +115,49 @@ public class Store implements AutoCloseable {
 		return specifications;
 	}
 
-	
-	private Stream<IRI> load(Model m, IRI predicate, IRI object) {
-		return m.filter(null, predicate, object).subjects().stream().map(IRI.class::cast);
+	public Map<String,Legislation> getLegislations() {
+		return legislations;
+	}
+
+	private <T> Map<String,T> load(Model m, IRI predicate, IRI object, Function<IRI,T> func) {
+		return m.filter(null, predicate, object).subjects().stream()
+				.map(IRI.class::cast)
+				.collect(Collectors.toMap(IRI::getLocalName, func));
 	}
 
 	public void loadIntegrators(Model m) {
-		integrators = load(m, RDF.TYPE, ORG.ORGANIZATION)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new Organization(m, s)));
+		integrators = load(m, RDF.TYPE, ORG.ORGANIZATION, s -> new Organization(m, s));
 		LOG.info("Integrators: {}", integrators.size());
 	}
 
 	private void loadLevels(Model m) {
-		levels = load(m, SKOS.IN_SCHEME, level)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifLevel(m, s)));
+		levels = load(m, SKOS.IN_SCHEME, level, s -> new EifLevel(m, s));
 		LOG.info("EIF levels: {}", levels.size());
 	}
 
 	private void loadPrinciples(Model m) {
-		principles = load(m, SKOS.IN_SCHEME, principle)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifPrinciple(m, s)));
+		principles = load(m, SKOS.IN_SCHEME, principle, s -> new EifPrinciple(m, s));
 		LOG.info("EIF principles: {}", principles.size());
 	}
 
 	private void loadRecommendations(Model m) {
-		recommendations = load(m, SKOS.IN_SCHEME, recommendation)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new EifRecommendation(m, s)));
+		recommendations = load(m, SKOS.IN_SCHEME, recommendation, s -> new EifRecommendation(m, s));
 		LOG.info("EIF recommendations: {} ", recommendations.size());
 	}
 
 	private void loadPages(Model m) {
-		pages = load(m, RDF.TYPE, FOAF.DOCUMENT)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new Page(m, s)));
+		pages = load(m, RDF.TYPE, FOAF.DOCUMENT, s -> new Page(m, s));
 		LOG.info("Pages: {} ", pages.size());
 	}
 
 	private void loadSpecifications(Model m) {
-		specifications = load(m, RDF.TYPE, specification)
-						.collect(Collectors.toMap(IRI::getLocalName, s -> new Specification(m, s)));
+		specifications = load(m, RDF.TYPE, specification, s -> new Specification(m, s));
 		LOG.info("Specifications: {} ", specifications.size());
+	}
+	
+	private void loadLegislations(Model m) {
+		legislations = load(m, RDF.TYPE, legislation, s -> new Legislation(m, s));
+		LOG.info("Legislations: {} ", legislations.size());
 	}
 	
 	@PostConstruct
@@ -178,6 +186,7 @@ public class Store implements AutoCloseable {
 		loadPages(m);
 		loadIntegrators(m);
 		loadSpecifications(m);
+		loadLegislations(m);
 	}
 
 	@PreDestroy

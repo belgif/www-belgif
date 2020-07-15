@@ -7,8 +7,8 @@
 <main class="container-fluid bg-light">
 	<h2>Specifications</h2>
 	<div class="table-responsive">
-		<table class="table table-sm">
-		<thead>
+		<table class="table table-sm table-striped">
+		<thead class="bg-dark text-light">
 			<tr><th scope="col">Name</th>
 				<th scope="col">Version</th>
 				<th scope="col">Area</th></tr>
@@ -19,7 +19,7 @@
 			    <tr>
 					<td><a href="/page/specification/${s.localId}.${lang}.html">${s.getTitle(lang)}</a></td>
 					<td></td>
-					<td>${s.getAbstract(lang)}</td>
+					<td>${s.getSubject(lang)}</td>
 				</tr>
 		</#items>
 		</#list>

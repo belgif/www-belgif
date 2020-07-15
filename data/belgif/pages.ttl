@@ -1,21 +1,21 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix page: <http://www.belgif.be/id/page/> .
+@prefix be-page: <http://www.belgif.be/id/page/> .
 
-page:integrators a foaf:Document ;
+be-page:integrators a foaf:Document ;
 	dcterms:title "What is a service integrator ?"@en ;
 	dcterms:description  """
 <p>According to the law of 15 August 2012, a service integrator is an institution which, by or under a law, is responsible for the integration of services at a given level of authority or in a given sector.  Integration of services' means the organisation of mutual exchanges of electronic data between bodies and the integrated provision of such data.  The mission of a federal service integrator is, with the agreement of the participating public services and other service integrators, to integrate data processing processes.  In this context, it provides access to data in an integrated way.<p>
 <p>Currently, there are 6 public service integrators operating in Belgium</p>
 """@en .
 
-page:specifications a foaf:Document ;
+be-page:specifications a foaf:Document ;
 	dcterms:title "Technical and semantic specifications"@en ;
 	dcterms:description  """
 
 """@en .
 
-page:eif3 a foaf:Document ;
+be-page:eif3 a foaf:Document ;
 	dcterms:title "EIF 3"@en ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
@@ -23,7 +23,7 @@ page:eif3 a foaf:Document ;
 <p>A number of <a href='/eif3/recommendation'>recommendations</a> are derived from these principles. In the new version these recommendations were amended and extended, especially to stay in line with the new EU directives and regulations such as the PSI, the eIDAS and the GDPR.</p>
 <p>The 47 <a href='/eif3/recommendation'>recommendations</a> are also endorsed within the context of BelgIF as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>"""@en .
 
-page:conditions a foaf:Document ;
+be-page:conditions a foaf:Document ;
 	dcterms:title "Conditions of use"@en ;
 	dcterms:description  """
 <h3>Purpose of the site</h3>
@@ -55,7 +55,7 @@ page:conditions a foaf:Document ;
 <p>The use of the portal site is governed by certain general conditions which are described below. By accessing this portal site, you are understood to have accepted the general conditions of use.</p>"""@en .
 
 
-page:privacy a foaf:Document ;
+be-page:privacy a foaf:Document ;
 	dcterms:title "EIF 3"@en ;
 	dcterms:description  """
 	<h3>Privacy statement</h3>

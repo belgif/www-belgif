@@ -17,7 +17,6 @@
 					</h5>
 				</div>
 				<div class="card-body">
-
 					<p class="lead">${r.getDescription(lang)}</p>
 				</div>
 			</section>

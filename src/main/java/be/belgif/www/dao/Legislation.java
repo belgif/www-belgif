@@ -25,30 +25,61 @@
  */
 package be.belgif.www.dao;
 
+import static be.belgif.www.dao.Dao.firstString;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
  *
  * @author Bart.Hanssens
  */
-public class EifPrinciple extends EifDao {
+public class Legislation extends Dao {
+	private final Map<String, String> title;
+	private final Map<String, String> description;
+	private final String website;
+	private final String date;
 	private final List<String> recommendations;
+	private final List<String> organizations;
+	
+	public String getTitle(String lang) {
+		return title.get(lang);
+	}
+
+	public String getDescription(String lang) {
+		return description.get(lang);
+	}
+
+	public String getWebsite() {
+		return website;
+	}
+
+	public String getDate() {
+		return date;
+	}
 
 	public List<String> getRecommendations() {
 		return recommendations;
 	}
 
-	public EifPrinciple(Model m, IRI iri) {
+	public List<String> getOrganizations() {
+		return organizations;
+	}
+
+	public Legislation(Model m, IRI iri) {
 		super(m, iri);
 
-		recommendations = m.filter(iri, SKOS.RELATED, null).objects().stream()
-							.map(IRI.class::cast)
-							.map(i -> i.getLocalName())
-							.collect(Collectors.toList());
+		title = langMap(m, iri, DCTERMS.TITLE);
+		description = langMap(m, iri, DCTERMS.DESCRIPTION);
+		website = firstString(m, iri, FOAF.HOMEPAGE);
+		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst().toString();
+		recommendations = listString(m, iri, DCTERMS.CONFORMS_TO);
+		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
 	}
 }

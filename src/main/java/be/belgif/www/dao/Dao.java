@@ -25,6 +25,7 @@
  */
 package be.belgif.www.dao;
 
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import org.eclipse.rdf4j.model.IRI;
@@ -60,6 +61,13 @@ public class Dao {
 					.map(IRI.class::cast)
 					.map(IRI::stringValue)
 					.orElse("");
+	}
+
+	protected static List<String> listString(Model m, IRI iri, IRI predicate) {
+		return m.filter(iri, predicate, null).objects().stream()
+							.map(IRI.class::cast)
+							.map(i -> i.getLocalName())
+							.collect(Collectors.toList());
 	}
 
 	public Dao(Model m, IRI iri) {
