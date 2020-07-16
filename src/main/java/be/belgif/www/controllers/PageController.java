@@ -65,7 +65,7 @@ public class PageController {
 	@Get("/{id}.{lang}.html")
 	public HttpResponse page(String id, String lang) {
 		Page page = store.getPages().get(id);
-		return HttpResponse.ok(Map.of("p", page, "lang", lang));
+		return HttpResponse.ok(Map.of( "lang", lang, "name", id, "p", page));
 	}
 	
 	@View("integrators")
@@ -73,14 +73,14 @@ public class PageController {
 	public HttpResponse integrators(String lang) {
 		Page page = store.getPages().get("integrators");
 		List<Organization> integrators = sortByTitle(store.getIntegrators(), lang);
-		return HttpResponse.ok(Map.of("p", page, "lang", lang, "integrators", integrators));
+		return HttpResponse.ok(Map.of( "lang", lang, "p", page, "name", "integrators", "integrators", integrators));
 	}
 	
 	@View("legislation")
 	@Get("/legislation/{id}.{lang}.html")
 	public HttpResponse legislation(String id, String lang) {
 		Legislation legislation = store.getLegislations().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "legislation", legislation));
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "legislation", legislation));
 	}
 
 	@View("legislations")
@@ -88,13 +88,13 @@ public class PageController {
 	public HttpResponse legislations(String lang) {
 		Page page = store.getPages().get("legislations");
 		List<Legislation> legislations = sortByDate(store.getLegislations(), lang);
-		return HttpResponse.ok(Map.of("p", page, "lang", lang, "legislations", legislations));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "legislations", "p", page, "legislations", legislations));
 	}
 	@View("specification")
 	@Get("/specification/{id}.{lang}.html")
 	public HttpResponse specification(String id, String lang) {
 		Specification specification = store.getSpecifications().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "specification", specification));
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "specification", specification));
 	}
 
 	@View("specifications")
@@ -102,6 +102,6 @@ public class PageController {
 	public HttpResponse specifications(String lang) {
 		Page page = store.getPages().get("specifications");
 		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang);
-		return HttpResponse.ok(Map.of("p", page, "lang", lang, "specifications", specifications));
+		return HttpResponse.ok(Map.of("p", page, "lang", "name", "speficiations", lang, "specifications", specifications));
 	}
 }

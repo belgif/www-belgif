@@ -69,6 +69,7 @@ public class EifController {
 	public HttpResponse eif(String lang) {
 		Map map = store.getLevels();
 		map.put("lang", lang);
+		map.put("name", "about");
 		return HttpResponse.ok(map);
 	}
 
@@ -77,7 +78,7 @@ public class EifController {
 	public HttpResponse levels(String lang) {	
 		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "lang", "principles", list, "eif3", page));
 	}
 
 	@View("level")
@@ -86,7 +87,7 @@ public class EifController {
 		EifLevel eif = store.getLevels().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
-		return HttpResponse.ok(Map.of("lang", lang, "p", eif, "recommendations", list));
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "p", eif, "recommendations", list));
 	}
 
 	@View("principles")
@@ -94,7 +95,7 @@ public class EifController {
 	public HttpResponse principles(String lang) {	
 		List<EifPrinciple> list = sortBySeq(store.getPrinciples());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "principles", "principles", list, "eif3", page));
 	}
 
 	@View("principle")
@@ -103,7 +104,7 @@ public class EifController {
 		EifPrinciple eif = store.getPrinciples().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
 											.map(s -> store.getRecommendations().get(s)));
-		return HttpResponse.ok(Map.of("lang", lang, "p", eif, "recommendations", list));
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "p", eif, "recommendations", list));
 	}
 
 	@View("recommendation")
@@ -113,15 +114,15 @@ public class EifController {
 		List<Legislation> legislations = store.getLegislations().values().stream()
 											.filter(l -> l.getRecommendations().contains(id))
 											.collect(Collectors.toUnmodifiableList());
-		return HttpResponse.ok(Map.of("lang", lang, "recommendation", eif, "legislations", legislations));
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "recommendation", eif, "legislations", legislations));
 	}
 
 	@View("recommendations")
 	@Get("/recommendations.{lang}.html")
 	public HttpResponse recommendations(String lang) {
 		List<EifRecommendation> list = sortBySeq(store.getRecommendations());
-		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "recommendations", list, "eif3", page));
+		Page page = store.getPages().get("recommendations");
+		return HttpResponse.ok(Map.of("lang", lang, "name", "recommendations", "recommendations", list, "page", page));
 	}
 	
 }

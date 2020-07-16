@@ -17,7 +17,7 @@
 				</a>
 				</div>
 				<div class="card-body">
-					<h5 class="card-title">${org.getName(lang)}</h5>
+					<h5 class="card-title">${org.getTitle(lang)}</h5>
 					<p class="lead">${org.getDescription(lang)}</p>
 				</div>
 			</section>

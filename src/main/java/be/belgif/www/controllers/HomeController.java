@@ -49,11 +49,12 @@ public class HomeController {
 		return HttpResponse.ok();
 	}
 
-	@View("homepage")
+	@View("home")
 	@Get("/index.{lang}.html")
 	public HttpResponse index(String lang) {
 		Map map = store.getLevels();
 		map.put("lang", lang);
+		map.put("name", "index");
 		return HttpResponse.ok(map);
 	}
 }

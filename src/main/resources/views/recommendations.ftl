@@ -4,7 +4,8 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<h2>Recommendations</h2>
+	<h1>${page.getTitle(lang)}</h1>
+	<p>${page.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-4">
 		<#list recommendations>
 		<#items as r>
