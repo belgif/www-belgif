@@ -6,10 +6,21 @@
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
+be-legislation:inspire a schema:Legislation ;
+	dcterms:issued "2010-04-02"^^xsd:date ;
+	dcterms:title "Partial transposition INSPIRE directive"@en ;
+	dcterms:description """
+<p>Cooperation agreement of 2 April 2010 between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region for the coordination of an infrastructure for spatial information</p>
+<p>This cooperation agreement is the partial transposition of Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an infrastructure for spatial information in the Community (INSPIRE).</p>"""@en ;
+	dcterms:conformsTo eif-principle:reusability ;
+	dcterms:relation eif-recommendation:agreements ;
+	foaf:homepage <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> .
+
 be-legislation:iceg a schema:Legislation ;
 	dcterms:issued "2013-08-26"^^xsd:date ;
 	dcterms:title "Cooperation Agreement (ICEG) 2013"@en ;
 	dcterms:description "Cooperation agreement between the federal, regional and community administrations on the harmonization and alignment of initiatives aiming to realize an integrated e-government."@en ;
 	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
-	dcterms:relation eif-recommendation:alignment, eif-recommendation:agreements, eif-recommendation:opendata, ;
-	dcterms:contributor eif-recommendation:alignment .
+	dcterms:relation eif-recommendation:alignment, eif-recommendation:agreements, eif-recommendation:opendata ;
+	dcterms:contributor eif-recommendation:alignment;
+	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
