@@ -3,11 +3,13 @@
 @prefix schema: <http://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix be-legislation: <http://www.belgif.be/id/legislation/> .
+@prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
 be-legislation:iceg a schema:Legislation ;
 	dcterms:issued "2013-08-26"^^xsd:date ;
 	dcterms:title "Cooperation Agreement (ICEG) 2013"@en ;
 	dcterms:description "Cooperation agreement between the federal, regional and community administrations on the harmonization and alignment of initiatives aiming to realize an integrated e-government."@en ;
-	dcterms:conformsTo eif-recommendation:alignment ;
+	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
+	dcterms:relation eif-recommendation:alignment, eif-recommendation:agreements, eif-recommendation:opendata, ;
 	dcterms:contributor eif-recommendation:alignment .

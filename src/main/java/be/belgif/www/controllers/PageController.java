@@ -27,6 +27,9 @@ package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
 import be.belgif.www.dao.Dao;
+import be.belgif.www.dao.EifDao;
+import be.belgif.www.dao.EifPrinciple;
+import be.belgif.www.dao.EifRecommendation;
 import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
@@ -40,6 +43,7 @@ import io.micronaut.views.View;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import javax.inject.Inject;
 
@@ -52,13 +56,23 @@ public class PageController {
 	@Inject
 	Store store;
 
+	private <T extends EifDao> List<T> sortBySeq(Map<String,T> map) {
+		return map.values().stream().sorted((a,b) -> a.getSequence() - b.getSequence())
+												.collect(Collectors.toUnmodifiableList());
+	}
 	private <T extends Dao> List<T> sortByTitle(Map<String,T> map, String lang) {
 		return map.values().stream().sorted((a,b) -> a.getTitle(lang).compareTo(b.getTitle(lang)))
 												.collect(Collectors.toUnmodifiableList());
 	}
-	private List<Legislation> sortByDate(Map<String,Legislation> map, String lang) {
+	private List<Legislation> sortByDate(Map<String,Legislation> map) {
 		return map.values().stream().sorted((a,b) -> a.getDate().compareTo(b.getDate()))
 												.collect(Collectors.toUnmodifiableList());
+	}
+
+	private <T extends EifDao> Map<String,T> filter(Map<String,T> a, List<String> b) {
+		return a.values().stream()
+				.filter(f -> b.contains(f.getLocalId()))
+				.collect(Collectors.toMap(f -> f.getLocalId(), f -> f));
 	}
 
 	@View("page")
@@ -75,19 +89,25 @@ public class PageController {
 		List<Organization> integrators = sortByTitle(store.getIntegrators(), lang);
 		return HttpResponse.ok(Map.of( "lang", lang, "p", page, "name", "integrators", "integrators", integrators));
 	}
-	
+
 	@View("legislation")
 	@Get("/legislation/{id}.{lang}.html")
 	public HttpResponse legislation(String id, String lang) {
 		Legislation legislation = store.getLegislations().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "name", id, "legislation", legislation));
+
+		List<EifPrinciple> principles = sortBySeq(filter(store.getPrinciples(), legislation.getPrinciples()));	
+		List<EifRecommendation> recommendations = sortBySeq(filter(store.getRecommendations(), 
+																		legislation.getRecommendations()));
+
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "legislation", legislation, 
+										"principles", principles, "recommendations", recommendations));
 	}
 
 	@View("legislations")
 	@Get("/legislations.{lang}.html")
 	public HttpResponse legislations(String lang) {
 		Page page = store.getPages().get("legislations");
-		List<Legislation> legislations = sortByDate(store.getLegislations(), lang);
+		List<Legislation> legislations = sortByDate(store.getLegislations());
 		return HttpResponse.ok(Map.of("lang", lang, "name", "legislations", "p", page, "legislations", legislations));
 	}
 	@View("specification")

@@ -43,6 +43,7 @@ public class Legislation extends Dao {
 	private final Map<String, String> description;
 	private final String website;
 	private final String date;
+	private final List<String> principles;
 	private final List<String> recommendations;
 	private final List<String> organizations;
 
@@ -56,6 +57,10 @@ public class Legislation extends Dao {
 
 	public String getDate() {
 		return date;
+	}
+
+	public List<String> getPrinciples() {
+		return principles;
 	}
 
 	public List<String> getRecommendations() {
@@ -74,7 +79,8 @@ public class Legislation extends Dao {
 		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst()
 				.map(Literal.class::cast)
 				.map(Literal::stringValue).orElse("");
-		recommendations = listString(m, iri, DCTERMS.CONFORMS_TO);
+		principles = listString(m, iri, DCTERMS.CONFORMS_TO);
+		recommendations = listString(m, iri, DCTERMS.RELATION);
 		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
 	}
 }

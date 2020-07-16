@@ -1,9 +1,9 @@
 <header>
 	<nav id="lang-wrapper" class="nav nav-pills justify-content-end">
-		<a href="${name}.nl.html" hreflang="nl" class="nav-link">NL</a>
-		<a href="${name}.fr.html" hreflang="fr" class="nav-link">FR</a>
-		<a href="${name}.de.html" hreflang="de" class="nav-link">DE</a>
-		<a href="${name}.en.html" hreflang="en" class="nav-link active">EN</a>
+		<a href="#" hreflang="nl" class="nav-link">NL</a>
+		<a href="#" hreflang="fr" class="nav-link">FR</a>
+		<a href="#" hreflang="de" class="nav-link">DE</a>
+		<a href="#" hreflang="en" class="nav-link active">EN</a>
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a href="#" class="navbar-brand"><img id="logo" src="/public/belgif.png" alt="Belgif logo"/></a>

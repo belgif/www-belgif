@@ -9,24 +9,28 @@
 
 eif-level:legal a skos:Concept ;
 	skos:prefLabel "Legal Interoperability"@en, "Juridisch"@nl ;
+	skos:notation "1"^^xsd:integer ;
 	skos:definition "Ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
 	skos:related eif-recommendation:legislation ;
 	skos:inScheme eif-level:  .
 
 eif-level:organisational a skos:Concept ;
 	skos:prefLabel "Organisational Interoperability"@en, "Organisatorisch"@nl ;
+	skos:notation "2"^^xsd:integer ;
 	skos:definition "Documenting and integrating or aligning business processes and relevant information exchanged."@en ;
 	skos:related eif-recommendation:processalignment, eif-recommendation:relationships ;
 	skos:inScheme eif-level: .
 	
 eif-level:semantic a skos:Concept ;
 	skos:prefLabel "Semantic Interoperability"@en, "Semantisch"@nl ;
+	skos:notation "3"^^xsd:integer ;
 	skos:definition "Ensuring that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
 	skos:related eif-recommendation:datamanagement, eif-recommendation:informationmanagement, eif-recommendation:communities ;
 	skos:inScheme eif-level: .
 	
 eif-level:technical a skos:Concept ;
 	skos:prefLabel "Technical Interoperability"@en, "Technisch"@nl ;
+	skos:notation "4"^^xsd:integer ;
 	skos:definition "Interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
 	skos:related eif-recommendation:openspecifications2 ;
 	skos:inScheme eif-level: .
