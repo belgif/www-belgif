@@ -26,6 +26,7 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
+import be.belgif.www.dao.Page;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
@@ -52,9 +53,12 @@ public class HomeController {
 	@View("home")
 	@Get("/index.{lang}.html")
 	public HttpResponse index(String lang) {
-		Map map = store.getLevels();
-		map.put("lang", lang);
-		map.put("name", "index");
-		return HttpResponse.ok(map);
+		Page eif = store.getPages().get("home-eif");
+		Page activities = store.getPages().get("home-activities");
+		Page legal = store.getPages().get("home-legal");
+		Page specs = store.getPages().get("home-specs");
+
+		return HttpResponse.ok(Map.of("lang", lang, "name", "index", 
+							"eif", eif, "activities", activities, "legal", legal, "specs", specs));
 	}
 }

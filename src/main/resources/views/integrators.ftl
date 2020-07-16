@@ -13,8 +13,8 @@
 			<section class="card bg-light h-100">
 				<div class="card-img-top text-center">
 					<a href="${org.getWebsite()}" class="stretched-link">
-					<img src="/images/${org.getLogo()}" alt="logo"/>
-				</a>
+						<img src="/images/${org.getLogo()}" alt="logo"/>
+					</a>
 				</div>
 				<div class="card-body">
 					<h5 class="card-title">${org.getTitle(lang)}</h5>

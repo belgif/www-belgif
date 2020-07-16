@@ -2,6 +2,27 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix be-page: <http://www.belgif.be/id/page/> .
 
+be-page:home-eif a foaf:Document ;
+	dcterms:title "EIF 3"@en ;
+	dcterms:description "Third version of the European Interoperability Framework"@en .
+
+be-page:home-specs a foaf:Document ;
+	dcterms:title "Specifications"@en ;
+	dcterms:description "Technical and semantic specifications"@en .
+
+be-page:home-legal a foaf:Document ;
+	dcterms:title "Agreements"@en ;
+	dcterms:description "Agreements and laws supporting interoperability"@en .
+
+be-page:home-activities a foaf:Document ;
+	dcterms:title "Activities"@en ;
+	dcterms:description "Working groups, meetings and other initiatives"@en .
+	
+
+be-page:home-specifications a foaf:Document ;
+	dcterms:title "Specifications"@en ;
+	dcterms:description "Technical and semantic specifications"@en .
+	
 be-page:integrators a foaf:Document ;
 	dcterms:title "What is a service integrator ?"@en ;
 	dcterms:description  """

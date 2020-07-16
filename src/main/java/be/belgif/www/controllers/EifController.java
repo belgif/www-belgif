@@ -67,10 +67,9 @@ public class EifController {
 	@View("eif3")
 	@Get("/about.{lang}.html")
 	public HttpResponse eif(String lang) {
-		Map map = store.getLevels();
-		map.put("lang", lang);
-		map.put("name", "about");
-		return HttpResponse.ok(map);
+		List<EifLevel> levels = sortBySeq(store.getLevels());
+		List<EifPrinciple> principles = sortBySeq(store.getPrinciples());
+		return HttpResponse.ok(Map.of("lang", lang, "name", "about", "levels", levels, "principles", principles));
 	}
 
 	@View("levels")
@@ -78,7 +77,7 @@ public class EifController {
 	public HttpResponse levels(String lang) {	
 		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "name", "lang", "principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "lang", "levels", list, "eif3", page));
 	}
 
 	@View("level")

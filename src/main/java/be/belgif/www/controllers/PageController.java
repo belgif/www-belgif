@@ -102,6 +102,6 @@ public class PageController {
 	public HttpResponse specifications(String lang) {
 		Page page = store.getPages().get("specifications");
 		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang);
-		return HttpResponse.ok(Map.of("p", page, "lang", "name", "speficiations", lang, "specifications", specifications));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "specifications", "p", page, "specifications", specifications));
 	}
 }
