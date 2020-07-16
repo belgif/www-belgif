@@ -2,6 +2,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix eif: <http://www.belgif.be/id/eif3> .
 @prefix eif-level: <http://www.belgif.be/id/eif3/level/> .
+@prefix eif-governance: <http://www.belgif.be/id/eif3/level/> .
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
@@ -30,13 +31,13 @@ eif-level:technical a skos:Concept ;
 	skos:related eif-recommendation:openspecifications2 ;
 	skos:inScheme eif-level: .
 
-eif-level:governance a skos:Concept ;
+eif-governance:governance a skos:Concept ;
 	skos:prefLabel "Interoperability Governance"@en ;
 	skos:definition "Decisions on interoperability frameworks, roles and responsibilities, agreements and other aspects of ensuring and monitoring interoperability at national and EU levels."@en ;
 	skos:related eif-recommendation:holisticgovernance, eif-recommendation:standardsprocess, eif-recommendation:standardsassessment, eif-recommendation:standardscatalogues, eif-recommendation:standardsparticipation ;
 	skos:inScheme eif-level: .
 
-eif-level:integration a skos:Concept ;
+eif-governance:integration a skos:Concept ;
 	skos:prefLabel "Service Integration"@en ;
 	skos:definition "Services should be governed to ensure integration, seamless execution, reuse of services and data, and development of new services and building blocks."@en ;
 	skos:related eif-recommendation:governancestructure, eif-recommendation:agreements ;

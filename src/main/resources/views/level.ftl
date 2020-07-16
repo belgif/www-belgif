@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<h1>Principle ${p.sequence} ${p.getTitle(lang)}</h1>
+	<h1>Level ${p.getTitle(lang)}</h1>
 	<h3>Recommendations</h3>
 	<div class="row row-cols-1 row-cols-md-4">
 		<#list recommendations>
