@@ -29,7 +29,7 @@ be-page:integrators a foaf:Document ;
 <p>Currently, there are 6 public service integrators operating in Belgium</p>
 """@en .
 
-be-page:activities foaf:Document ;
+be-page:activities a foaf:Document ;
 	dcterms:title "Activities"@en ;
 	dcterms:description "Workgroups, meetings and other activities"@en .
 

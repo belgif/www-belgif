@@ -120,7 +120,7 @@ public class Store implements AutoCloseable {
 		Map<String,T> map = m.filter(null, predicate, object).subjects().stream()
 							.map(IRI.class::cast)
 							.collect(Collectors.toMap(IRI::getLocalName, func));
-		LOG.info("{} : {}", name, integrators.size());
+		LOG.info("{} : {}", name, map.size());
 		return map;
 	}
 
