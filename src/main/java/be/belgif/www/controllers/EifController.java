@@ -26,6 +26,7 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
+import be.belgif.www.dao.Activity;
 import be.belgif.www.dao.DaoEif;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
@@ -114,7 +115,11 @@ public class EifController {
 		List<Legislation> legislations = store.getLegislations().values().stream()
 											.filter(l -> l.getRecommendations().contains(id))
 											.collect(Collectors.toUnmodifiableList());
-		return HttpResponse.ok(Map.of("lang", lang, "name", id, "recommendation", eif, "legislations", legislations));
+		List<Activity> activities = store.getActivities().values().stream()
+											.filter(l -> l.getRecommendations().contains(id))
+											.collect(Collectors.toUnmodifiableList());
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "recommendation", eif, 
+								"legislations", legislations, "activities", activities));
 	}
 
 	@View("recommendations")

@@ -128,7 +128,7 @@ public class PageController {
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), activity.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		activity.getRecommendations()));
-		return HttpResponse.ok(Map.of("lang", lang, "name", id, "legislation", activity, 
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "activity", activity, 
 										"principles", principles, "recommendations", recommendations));
 	}
 
