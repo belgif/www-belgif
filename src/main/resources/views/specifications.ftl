@@ -5,7 +5,8 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h2>Specifications</h2>
+	<h2>${p.getTitle(lang)}</h2>
+	<p>${p.getDescription(lang)}</p>
 	<div class="table-responsive">
 		<table class="table table-sm table-striped">
 		<thead class="bg-dark text-light">

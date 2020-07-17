@@ -5,7 +5,7 @@
 <#include "header.ftl">
 <main class="container-fluid">
 	<h2>${p.getTitle(lang)}</h2>
-	<p>${p.getDescription(lann)}</p>
+	<p>${p.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
 		<#list legislations>
 		<#items as l>
