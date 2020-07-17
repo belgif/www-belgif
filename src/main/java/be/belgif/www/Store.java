@@ -25,6 +25,7 @@
  */
 package be.belgif.www;
 
+import be.belgif.www.dao.Activity;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
@@ -44,16 +45,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Singleton;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.ValueFactory;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
-import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -65,7 +63,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * Simple data store, based upon reading a series of RDF data files
+ * 
  * @author Bart.Hanssens
  */
 @Singleton
@@ -74,15 +73,8 @@ public class Store implements AutoCloseable {
 
 	@Value("${be.belgif.www.data:.}")
 	protected String dataPath;
-
-	private final ValueFactory f = SimpleValueFactory.getInstance();
-
-	private final IRI level = f.createIRI("http://www.belgif.be/id/eif3/level/");
-	private final IRI principle = f.createIRI("http://www.belgif.be/id/eif3/principle/");
-	private final IRI recommendation = f.createIRI("http://www.belgif.be/id/eif3/recommendation/");
-	private final IRI specification = f.createIRI("http://usefulinc.com/ns/doap#Specification");
-	private final IRI legislation = f.createIRI("http://schema.org/Legislation");
 	
+	/** Various types of data */
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
@@ -90,6 +82,7 @@ public class Store implements AutoCloseable {
 	private Map<String,Organization> integrators = new HashMap<>();
 	private Map<String,Specification> specifications = new HashMap<>();
 	private Map<String,Legislation> legislations = new HashMap<>();
+	private Map<String,Activity> activities = new HashMap<>();
 	
 	public Map<String,EifLevel> getLevels() {
 		return levels;
@@ -119,45 +112,32 @@ public class Store implements AutoCloseable {
 		return legislations;
 	}
 
-	private <T> Map<String,T> load(Model m, IRI predicate, IRI object, Function<IRI,T> func) {
-		return m.filter(null, predicate, object).subjects().stream()
-				.map(IRI.class::cast)
-				.collect(Collectors.toMap(IRI::getLocalName, func));
+	public Map<String,Activity> getActivities() {
+		return activities;
 	}
 
-	public void loadIntegrators(Model m) {
-		integrators = load(m, RDF.TYPE, ORG.ORGANIZATION, s -> new Organization(m, s));
-		LOG.info("Integrators: {}", integrators.size());
+	private <T> Map<String,T> filter(String name, Model m, IRI predicate, IRI object, Function<IRI,T> func) {
+		Map<String,T> map = m.filter(null, predicate, object).subjects().stream()
+							.map(IRI.class::cast)
+							.collect(Collectors.toMap(IRI::getLocalName, func));
+		LOG.info("{} : {}", name, integrators.size());
+		return map;
 	}
 
-	private void loadLevels(Model m) {
-		levels = load(m, SKOS.IN_SCHEME, level, s -> new EifLevel(m, s));
-		LOG.info("EIF levels: {}", levels.size());
-	}
-
-	private void loadPrinciples(Model m) {
-		principles = load(m, SKOS.IN_SCHEME, principle, s -> new EifPrinciple(m, s));
-		LOG.info("EIF principles: {}", principles.size());
-	}
-
-	private void loadRecommendations(Model m) {
-		recommendations = load(m, SKOS.IN_SCHEME, recommendation, s -> new EifRecommendation(m, s));
-		LOG.info("EIF recommendations: {} ", recommendations.size());
-	}
-
-	private void loadPages(Model m) {
-		pages = load(m, RDF.TYPE, FOAF.DOCUMENT, s -> new Page(m, s));
-		LOG.info("Pages: {} ", pages.size());
-	}
-
-	private void loadSpecifications(Model m) {
-		specifications = load(m, RDF.TYPE, specification, s -> new Specification(m, s));
-		LOG.info("Specifications: {} ", specifications.size());
-	}
-	
-	private void loadLegislations(Model m) {
-		legislations = load(m, RDF.TYPE, legislation, s -> new Legislation(m, s));
-		LOG.info("Legislations: {} ", legislations.size());
+	/**
+	 * Extract various data types / objects from the RDF model
+	 * 
+	 * @param m model containing all data
+	 */
+	private void processAll(Model m) {
+		integrators = filter("Integrators", m, RDF.TYPE, ORG.ORGANIZATION, s -> new Organization(m, s));
+		levels = filter("EIF levels", m, SKOS.IN_SCHEME, StoreHelper.level, s -> new EifLevel(m, s));
+		principles = filter("EIF principles", m, SKOS.IN_SCHEME, StoreHelper.principle, s -> new EifPrinciple(m, s));
+		recommendations = filter("EIF recommendations", m, SKOS.IN_SCHEME, StoreHelper.recommendation, s -> new EifRecommendation(m, s));
+		pages = filter("Pages", m, RDF.TYPE, FOAF.DOCUMENT, s -> new Page(m, s));
+		specifications = filter("Specifications", m, RDF.TYPE, StoreHelper.specification, s -> new Specification(m, s));
+		legislations = filter("Legislations", m, RDF.TYPE, StoreHelper.legislation, s -> new Legislation(m, s));
+		activities = filter("Activities", m, RDF.TYPE, FOAF.PROJECT, s -> new Activity(m, s));
 	}
 	
 	@PostConstruct
@@ -165,10 +145,11 @@ public class Store implements AutoCloseable {
 		LOG.info("Loading data from directory {}", dataPath);
 
 		Model m = new LinkedHashModel();
+		
+		/** Load all files from the data directory into a memory model */
 		List<Path> files = Files.list(Path.of(dataPath))
 								.filter(p -> p.toFile().isFile())
 								.collect(Collectors.toList());
-
 		for (Path p: files ) {
 			LOG.info("Loading data from {}", p);
 			
@@ -179,14 +160,7 @@ public class Store implements AutoCloseable {
 				LOG.error("Could not parse / load data", ioe.getMessage());
 			}
 		}
-	
-		loadLevels(m);
-		loadPrinciples(m);
-		loadRecommendations(m);
-		loadPages(m);
-		loadIntegrators(m);
-		loadSpecifications(m);
-		loadLegislations(m);
+		processAll(m);
 	}
 
 	@PreDestroy

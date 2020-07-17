@@ -33,10 +33,11 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
- *
+ * EIF 3 "Interoperability Level"
+ * 
  * @author Bart.Hanssens
  */
-public class EifLevel extends EifDao {
+public class EifLevel extends DaoEif {
 	private final List<String> recommendations;
 
 	public List<String> getRecommendations() {

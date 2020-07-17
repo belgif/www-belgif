@@ -1,0 +1,18 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix be-action: <http://www.belgif.be/id/spec/> .
+@prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
+@prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
+
+be-action:opendataportals a foaf:Project ;
+	dcterms:title "Open data portals meeting"@en ;
+	dcterms:description """
+Open data meeting with Regions, Federal State and other stakeholders.
+
+Meeting reports are only available in French and Dutch.
+"""@en ;
+	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
+	dcterms:relation eif-recommendation:opendata ;
+	foaf:website <https://data.gov.be/nl/dcat-werkgroep> .

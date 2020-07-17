@@ -25,25 +25,54 @@
  */
 package be.belgif.www.dao;
 
+import static be.belgif.www.dao.Dao.firstString;
+import java.util.List;
+import java.util.Map;
+
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
- *  EIF 3 "Recommendation"
- * 
+ *
  * @author Bart.Hanssens
  */
-public class EifRecommendation extends DaoEif {
-	private final String principle;	
+public class DaoRelated extends Dao {
+	private final Map<String, String> description;
+	private final String website;
+	private final List<String> principles;
+	private final List<String> recommendations;
+	private final List<String> organizations;
 
-	public String getPrinciple() {
-		return principle;
+	public String getDescription(String lang) {
+		return description.get(lang);
 	}
-	
-	public EifRecommendation(Model m, IRI iri) {
-		super(m, iri);
 
-		principle = firstString(m, iri, SKOS.RELATED);
+	public String getWebsite() {
+		return website;
+	}
+
+	public List<String> getPrinciples() {
+		return principles;
+	}
+
+	public List<String> getRecommendations() {
+		return recommendations;
+	}
+
+	public List<String> getOrganizations() {
+		return organizations;
+	}
+
+	public DaoRelated(Model m, IRI iri) {
+		super(m, iri, DCTERMS.TITLE);
+
+		description = langMap(m, iri, DCTERMS.DESCRIPTION);
+		website = firstString(m, iri, FOAF.HOMEPAGE);
+		principles = listString(m, iri, DCTERMS.CONFORMS_TO);
+		recommendations = listString(m, iri, DCTERMS.RELATION);
+		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
 	}
 }

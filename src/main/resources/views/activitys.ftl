@@ -7,19 +7,16 @@
 	<h2>${p.getTitle(lang)}</h2>
 	<p>${p.getDescription(lann)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
-		<#list legislations>
-		<#items as l>
+		<#list activities>
+		<#items as a>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
-				<div class="card-header">
-					${l.getDate()}
-				</div>
 				<div class="card-body">
 					<h5 class="card-title">
-					<a href="/page/legislation/${l.localId}.${lang}.html" class="stretched-link">
-					${l.getTitle(lang)}</a>
+					<a href="/page/legislation/${a.localId}.${lang}.html" class="stretched-link">
+					${a.getTitle(lang)}</a>
 					</h5>
-					<p class="lead">${l.getDescription(lang)}</p>
+					<p class="lead">${a.getDescription(lang)}</p>
 				</div>
 			</section>
 			</div>

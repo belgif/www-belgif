@@ -25,62 +25,30 @@
  */
 package be.belgif.www.dao;
 
-import static be.belgif.www.dao.Dao.firstString;
-import java.util.List;
-import java.util.Map;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
-import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
- *
+ * Legislation or agreement
+ * 
  * @author Bart.Hanssens
  */
-public class Legislation extends Dao {
-	private final Map<String, String> description;
-	private final String website;
+public class Legislation extends DaoRelated {
 	private final String date;
-	private final List<String> principles;
-	private final List<String> recommendations;
-	private final List<String> organizations;
-
-	public String getDescription(String lang) {
-		return description.get(lang);
-	}
-
-	public String getWebsite() {
-		return website;
-	}
 
 	public String getDate() {
 		return date;
 	}
 
-	public List<String> getPrinciples() {
-		return principles;
-	}
-
-	public List<String> getRecommendations() {
-		return recommendations;
-	}
-
-	public List<String> getOrganizations() {
-		return organizations;
-	}
 
 	public Legislation(Model m, IRI iri) {
-		super(m, iri, DCTERMS.TITLE);
+		super(m, iri);
 
-		description = langMap(m, iri, DCTERMS.DESCRIPTION);
-		website = firstString(m, iri, FOAF.HOMEPAGE);
 		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst()
 				.map(Literal.class::cast)
 				.map(Literal::stringValue).orElse("");
-		principles = listString(m, iri, DCTERMS.CONFORMS_TO);
-		recommendations = listString(m, iri, DCTERMS.RELATION);
-		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
 	}
 }

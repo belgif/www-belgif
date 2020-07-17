@@ -34,7 +34,8 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
- *
+ * Technical or semantic specification
+ * 
  * @author Bart.Hanssens
  */
 public class Specification extends Dao {

@@ -36,7 +36,8 @@ import java.util.Map;
 import javax.inject.Inject;
 
 /**
- *
+ * Language page and homepage controller
+ * 
  * @author Bart.Hanssens
  */
 @Controller("/")

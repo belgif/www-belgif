@@ -26,7 +26,7 @@
 package be.belgif.www.controllers;
 
 import be.belgif.www.Store;
-import be.belgif.www.dao.EifDao;
+import be.belgif.www.dao.DaoEif;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
@@ -54,12 +54,12 @@ public class EifController {
 	@Inject
 	Store store;
 
-	private <T extends EifDao> List<T> sortBySeq(Stream<T> stream) {
+	private <T extends DaoEif> List<T> sortBySeq(Stream<T> stream) {
 		return stream.sorted((a,b) -> a.getSequence() - b.getSequence())
 												.collect(Collectors.toUnmodifiableList());
 	}
 	
-	private <T extends EifDao> List<T> sortBySeq(Map<String,T> map) {
+	private <T extends DaoEif> List<T> sortBySeq(Map<String,T> map) {
 		return map.values().stream().sorted((a,b) -> a.getSequence() - b.getSequence())
 												.collect(Collectors.toUnmodifiableList());
 	}

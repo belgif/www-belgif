@@ -18,7 +18,6 @@ be-page:home-activities a foaf:Document ;
 	dcterms:title "Activities"@en ;
 	dcterms:description "Working groups, meetings and other initiatives"@en .
 	
-
 be-page:home-specifications a foaf:Document ;
 	dcterms:title "Specifications"@en ;
 	dcterms:description "Technical and semantic specifications"@en .
@@ -30,13 +29,17 @@ be-page:integrators a foaf:Document ;
 <p>Currently, there are 6 public service integrators operating in Belgium</p>
 """@en .
 
+be-page:activities foaf:Document ;
+	dcterms:title "Activities"@en ;
+	dcterms:description "Workgroups, meetings and other activities"@en .
+
 be-page:legislations a foaf:Document ;
 	dcterms:title "Legislation and Agreements"@en ;
-	dcterms:description ""@en .
+	dcterms:description "Laws, decrees, formal and informal agreements"@en .
 
 be-page:specifications a foaf:Document ;
-	dcterms:title "Technical and semantic specifications"@en ;
-	dcterms:description ""@en .
+	dcterms:title "Specifications"@en ;
+	dcterms:description "Technical and semantic specifications"@en .
 
 be-page:components a foaf:Document ;
 	dcterms:title "Components"@en ;

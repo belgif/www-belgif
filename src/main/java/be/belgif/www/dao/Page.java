@@ -32,7 +32,8 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 
 /**
- *
+ * A (part of a) webpage
+ * 
  * @author Bart.Hanssens
  */
 public class Page extends Dao {

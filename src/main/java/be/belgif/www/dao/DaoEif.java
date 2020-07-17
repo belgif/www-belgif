@@ -25,25 +25,37 @@
  */
 package be.belgif.www.dao;
 
+import java.util.Map;
+
 import org.eclipse.rdf4j.model.IRI;
+import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
- *  EIF 3 "Recommendation"
- * 
+ *
  * @author Bart.Hanssens
  */
-public class EifRecommendation extends DaoEif {
-	private final String principle;	
+public class DaoEif extends Dao {
+	private final int seq;
 
-	public String getPrinciple() {
-		return principle;
+	private final Map<String, String> description;
+
+	public int getSequence() {
+		return seq;
 	}
-	
-	public EifRecommendation(Model m, IRI iri) {
+
+	public String getDescription(String lang) {
+		return description.get(lang);
+	}
+
+	public DaoEif(Model m, IRI iri) {
 		super(m, iri);
 
-		principle = firstString(m, iri, SKOS.RELATED);
+		description = langMap(m, iri, SKOS.DEFINITION);
+
+		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
+			.map(Literal.class::cast)
+			.map(Literal::intValue).orElse(0);
 	}
 }

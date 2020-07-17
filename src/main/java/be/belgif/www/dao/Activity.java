@@ -25,37 +25,18 @@
  */
 package be.belgif.www.dao;
 
-import java.util.Map;
 
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
- *
+ * An activity like a meeting, workgroup, ...
+ * 
  * @author Bart.Hanssens
  */
-public class EifDao extends Dao {
-	private final int seq;
+public class Activity extends DaoRelated {
 
-	private final Map<String, String> description;
-
-	public int getSequence() {
-		return seq;
-	}
-
-	public String getDescription(String lang) {
-		return description.get(lang);
-	}
-
-	public EifDao(Model m, IRI iri) {
+	public Activity(Model m, IRI iri) {
 		super(m, iri);
-
-		description = langMap(m, iri, SKOS.DEFINITION);
-
-		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
-			.map(Literal.class::cast)
-			.map(Literal::intValue).orElse(0);
 	}
 }
