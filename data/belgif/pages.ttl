@@ -3,66 +3,154 @@
 @prefix be-page: <http://www.belgif.be/id/page/> .
 
 be-page:home-eif a foaf:Document ;
-	dcterms:title "EIF 3"@en ;
-	dcterms:description "Third version of the European Interoperability Framework"@en .
+	dcterms:title "EIF 3"@en, "EIF 3"@nl, "EIF 3"@fr, "EIF 3"@de ;
+	dcterms:description "Third version of the European Interoperability Framework"@en ,
+		"Derde versie van het European Interoperability Framework"@nl , 
+		"Troisième version de l'European Interoperability Framework"@fr,
+		"Dritte Version des European Interoperability Framework"@de	.
 
 be-page:home-specs a foaf:Document ;
-	dcterms:title "Specifications"@en ;
-	dcterms:description "Technical and semantic specifications"@en .
+	dcterms:title "Specifications"@en, "Specificaties"@nl, "Spécifications"@fr, "Spezifikationen"@de ;
+	dcterms:description "Technical and semantic specifications"@en ,
+		"Technische en semantische specificaties"@nl ,
+		"Spécifications techniques et sémantiques"@fr,
+		"Technische und semantische Spezifikationen"@de	.
 
 be-page:home-legal a foaf:Document ;
-	dcterms:title "Agreements"@en ;
-	dcterms:description "Agreements and laws supporting interoperability"@en .
+	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Vereinbarungen"@de ;
+	dcterms:description "Agreements and laws supporting interoperability"@en ,
+		"Overeenkomsten en wetten ter ondersteuning van interoperabiliteit"@nl ,
+		"Accords et lois soutenant l'interopérabilité"@fr,
+		"Vereinbarungen und Gesetze zur Unterstützung der Interoperabilität"@de .
 
 be-page:home-activities a foaf:Document ;
-	dcterms:title "Activities"@en ;
-	dcterms:description "Working groups, meetings and other initiatives"@en .
-	
-be-page:home-specifications a foaf:Document ;
-	dcterms:title "Specifications"@en ;
-	dcterms:description "Technical and semantic specifications"@en .
+	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
+	dcterms:description "Working groups, meetings and other initiatives"@en ,
+		"Werkgroepen, vergaderingen en andere initiatieven"@nl , 
+		"Groupes de travail, réunions et autres initiatives"@fr,
+		"Arbeitsgruppen, Treffen und andere Initiativen"@de	.
+
 	
 be-page:integrators a foaf:Document ;
-	dcterms:title "What is a service integrator ?"@en ;
+	dcterms:title "What is a service integrator ?"@en, "Wat is een dienstenintegrator ?"@nl, "Qu'est-ce qu'un intégrateur de services ?"@fr, "Was ist ein Service Integrator ?"@de ;
 	dcterms:description  """
-<p>According to the law of 15 August 2012, a service integrator is an institution which, by or under a law, is responsible for the integration of services at a given level of authority or in a given sector.  Integration of services' means the organisation of mutual exchanges of electronic data between bodies and the integrated provision of such data.  The mission of a federal service integrator is, with the agreement of the participating public services and other service integrators, to integrate data processing processes.  In this context, it provides access to data in an integrated way.<p>
-<p>Currently, there are 6 public service integrators operating in Belgium</p>
-"""@en .
+<p>According to the law of 15 August 2012, a service integrator is an institution which, by or under a law, is responsible for the integration of services at a given level of authority or in a given sector. 
+"Integration of services" means the organisation of mutual exchanges of electronic data between bodies and the integrated provision of such data. 
+The mission of a federal service integrator is, with the agreement of the participating public services and other service integrators, to integrate data processing processes. 
+In this context, it provides access to data in an integrated way.<p>
+<p>Currently, there are 6 public service integrators operating in Belgium.</p>
+"""@en ,
+ """
+<p>Volgens de wet van 15 augustus 2012 is een diensten integrator een instelling die door of krachtens de wet belast is, binnen een bepaald overheidsniveau of in een bepaalde sector met dienstenintegratie.  
+Onder "integratie van diensten" wordt verstaan het organiseren van elektronische gegevensuitwisseling over instanties heen en de geïntegreerde ontsluiting van deze gegevens .
+De missie van een federale diensten integrator is om, met instemming van de deelnemende overheidsdiensten en andere service integratoren, de gegevensverwerkingsprocessen te integreren. 
+In deze context biedt het op een geïntegreerde manier toegang tot gegevens.</p>
+<p>Momenteel zijn er 6 publieke dienstenintegratoren actief in België.</p>
+"""@nl ,
+ """
+<p>Selon la loi du 15 août 2012, un intégrateur de services est une institution qui, par ou en vertu d'une loi, est chargée de l'intégration de services à un niveau de pouvoir ou dans un secteur déterminé. 
+Par "intégration de services" il faut entendre l'organisation d'échanges mutuels de données électroniques entre instances et la mise à disposition intégrée de ces données. 
+Un intégrateur de services fédéral a pour mission, avec l'accord des services publics participants et des autres intégrateurs de services, d'intégrer les processus de traitement des données.  
+Dans ce cadre, il donne accès aux données de manière intégrée.</p>
+<p>Actuellement, il y a 6 intégrateurs de services publics qui opèrent en Belgique.<./p>
+"""@fr,
+ """
+<p>Nach dem Gesetz vom 15. August 2012 ist ein Service Integrator eine Institution, die durch oder nach einem Gesetz für die Integration von Dienstleistungen auf einer bestimmten Machtebene oder in einem bestimmten Sektor verantwortlich ist.
+"Integration von Diensten" bezeichnet die Organisation des gegenseitigen Austauschs elektronischer Daten zwischen Behörden und die integrierte Bereitstellung dieser Daten. 
+Die Aufgabe eines Bundesdienstintegrators ist es, mit Zustimmung der beteiligten Versorgungsunternehmen und anderer Dienstintegratoren Datenverarbeitungsprozesse zu integrieren. 
+In diesem Zusammenhang bietet sie einen integrierten Zugriff auf Daten.</p>
+<p>Gegenwärtig sind in Belgien 6 Integratoren des öffentlichen Dienstes tätig.</p>
+"""@de .
+
 
 be-page:activities a foaf:Document ;
-	dcterms:title "Activities"@en ;
-	dcterms:description "Workgroups, meetings and other activities"@en .
+	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
+	dcterms:description "Working groups, meetings and other initiatives"@en ,
+		"Werkgroepen, vergaderingen en andere initiatieven"@nl , 
+		"Groupes de travail, réunions et autres initiatives"@fr ,
+		"Arbeitsgruppen, Treffen und andere Initiativen"@de	.
 
 be-page:legislations a foaf:Document ;
-	dcterms:title "Legislation and Agreements"@en ;
-	dcterms:description "Laws, decrees, formal and informal agreements"@en .
+	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Vereinbarungen"@de ;
+	dcterms:description "Formal and informal agreements, laws, decrees... supporting interoperability"@en ,
+		"Formele en informele overeenkomsten en wetten, decreten... ter ondersteuning van interoperabiliteit"@nl ,
+		"Accords (formels et informels) et lois, décrets... soutenant l'interopérabilité"@fr ,
+		"Formelle und informelle Vereinbarungen, Gesetze, Dekrete... zur Unterstützung der Interoperabilität"@de .
 
 be-page:specifications a foaf:Document ;
-	dcterms:title "Specifications"@en ;
-	dcterms:description "Technical and semantic specifications"@en .
+	dcterms:title "Specifications"@en, "Specificaties"@nl, "Spécifications"@fr, "Spezifikationen"@de ;
+	dcterms:description "Technical and semantic specifications"@en ,
+		"Technische en semantische specificaties"@nl ,
+		"Spécifications techniques et sémantiques"@fr ,
+		"Technische und semantische Spezifikationen"@de	.
 
 be-page:components a foaf:Document ;
-	dcterms:title "Components"@en ;
-	dcterms:description "The <a href='https://ict-reuse.be/'>catalogue</a> contains an overview of existing reusable components, it is an initiative of the Belgian social security institutions."@en .
-
+	dcterms:title "Components"@en, "Componenten"@nl, "Composants"@fr, "Komponenten"@de ;
+	dcterms:description 
+		"The <a href='https://ict-reuse.be'>ICT Reuse catalogue</a> contains an overview of existing reusable components, it is an initiative of the Belgian social security institutions."@en ,
+		"De <a href='https://ict-reuse.be'>ICT Reuse catalogus</a>  bevat een overzicht van bestaande herbruikbare compontent, het is een initiatief van de Belgische instellingen van de sociale zekerheid"@nl ,
+		"Le <a href='https://ict-reuse.be'>ICT Reuse catalogue</a> contient un aperçu des composants réutilisables existants, c'est une initiative des institutions de sécurité sociale belges."@fr ,
+		"Der <a href='https://ict-reuse.be'>ICT Reuse Katalog</a> enthält eine Übersicht der vorhandenen wiederverwendbaren Komponenten, er ist eine Initiative der belgischen Institutionen der Sozialen Sicherheit."@de .
+	
 be-page:registries a foaf:Document ;
-	dcterms:title "Base Registries and Authentic Sources"@en ;
-	dcterms:description "FPS BOSA maintains a <a href='https://sources-authentiques.belgium.be/'>catalogue</a> providing an overview of the data contained in authoritative sources and other administrative data sources."@en .
-
+	dcterms:title "Base Registries and Authentic Sources"@en, "Basisregisters en authentieke bronnen"@nl, "Registres de base et sources authentiques"@fr, "Basisregister und authentische Quellen"@de ;
+	dcterms:description 
+		"FPS BOSA maintains a <a href='https://sources-authentiques.belgium.be'>catalogue</a> providing an overview of the data contained in authentic sources and other administrative data sources."@en ,
+		"De FOD BOSA onderhoudt een <a href='https://sources-authentiques.belgium.be/'>catalogus</a> die een overzicht geeft van de gegevens in authentieke bronnen en andere administratieve gegevensbronnen."@nl ,
+		"Le SPF BOSA tient un <a href='https://sources-authentiques.belgium.be/'>catalogue</a> qui donne un aperçu des données contenues dans les sources authentiques et d'autres sources de données administratives."@fr ,
+		"FPS BOSA unterhält einen <a href='https://sources-authentiques.belgium.be'>Katalog</a>, der einen Überblick über die in authentische Quellen und anderen administrativen Datenquellen enthaltenen Daten bietet."@de .
+	
 be-page:contact a foaf:Document ;
-	dcterms:title "Contact us"@en ;
-	dcterms:description "<p>The website is hosted by the FPS BOSA, DG Digital Transformation.</p><p>Please send your questions and comments to <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@en .
+	dcterms:title "Contact"@en, "Contact"@nl, "Contact"@fr, "Kontakt"@de ;
+	dcterms:description 
+		"<p>This website is hosted by the FPS BOSA, DG Digital Transformation.</p><p>Please send your questions and comments to <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@en ,
+		"<p>Deze website wordt beheerd door de FOD BOSA, DG Digital Transformatie.</p><p>Zend uw vragen en opmerkingen naar <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@nl ,
+		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@fr ,
+		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@fr ,
+		"<p>Diese Website wird vom FÖD BOSA, GD Digitale Transformation.</p><p>Bitte senden Sie Ihre Fragen und Kommentare an <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@de .
 
 be-page:recommendations a foaf:Document ;
-	dcterms:title "Recommendations"@en ;
+	dcterms:title "Recommendations"@en, "Aanbevelingen"@nl, "Recommandations"@fr, "Empfehlungen"@de ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
-<p>The 47 recommendations are also endorsed within the context of the Belgian Interoperability Framework, as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>"""@en .
+<p>The 47 recommendations are also endorsed within the context of the Belgian Interoperability Framework, as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>
+"""@en ,
+ """
+<p>Het Europees Interoperabiliteitskader (EIF) is een reeks aanbevelingen voor nationale overheden om digitale overheidsdiensten binnen de EU interoperabel te maken - en te houden.<p>
+<p>De 47 aanbevelingen worden ook onderschreven in het kader van het Belgisch Interoperabiliteitskader, als een waardevolle basis voor de definitie van architectuur, toepassingen en oplossingen voor gegevensuitwisseling en interoperabiliteit binnen en tussen de federale overheid en de gemeenschappen en gewesten.</p>
+"""@nl ,
+ """
+<p>Le cadre européen d'interopérabilité (EIF) est un ensemble de recommandations à l'intention des gouvernements nationaux visant à rendre - et à maintenir - l'interopérabilité des services publics numériques au sein de l'UE.
+<p>Les 47 recommandations sont également approuvées dans le contexte du cadre d'interopérabilité belge, comme une base précieuse pour la définition de l'architecture, des applications et des solutions pour l'échange de données et l'interopérabilité au sein et entre le gouvernement fédéral et les communautés et régions.</p>
+"""@fr ,
+ """
+ <p>Das Europäische Interoperabilitätsrahmenwerk (EIF) ist eine Reihe von Empfehlungen für nationale Regierungen, die darauf abzielen, digitale öffentliche Dienste innerhalb der EU interoperabel zu machen - und zu erhalten.<p>
+<p>Die 47 Empfehlungen werden auch im Rahmen des belgischen Interoperabilitätsrahmens als wertvolle Grundlage für die Definition von Architektur, Anwendungen und Lösungen für den Datenaustausch und die Interoperabilität innerhalb und zwischen der föderalen Regierung und den Gemeinschaften und Regionen gebilligt.</p>
+"""@de .
 
 be-page:eif3 a foaf:Document ;
 	dcterms:title "EIF 3"@en ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
 <p>EIF is intended as a common core of the National Interoperability Frameworks (NIFs) and Domain Interoperability Frameworks (DIFs). For Belgium, BelgIF is the NIF. The federal government and the regions have agreed to use the <a href='/eif3/principle'>12 principles</a> of the EIF as the basis for defining their interoperability.</p>
-<p>A number of <a href='/eif3/recommendation'>recommendations</a> are derived from these principles. In the new version these recommendations were amended and extended, especially to stay in line with the new EU directives and regulations such as the PSI, the eIDAS and the GDPR.</p>
-<p>The 47 <a href='/eif3/recommendation'>recommendations</a> are also endorsed within the context of BelgIF as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>"""@en .
+<p>A number of <a href='/eif3/recommendation.en.html'>recommendations</a> are derived from these principles. In the new version these recommendations were amended and extended, especially to stay in line with the new EU directives and regulations such as the PSI, the eIDAS and the GDPR.</p>
+<p>The 47 <a href='/eif3/recommendation.en.html'>recommendations</a> are also endorsed within the context of BelgIF as a valuable foundation for the definition of architecture, applications and solutions for data exchange and interoperability within and between the federal government and the communities and regions.</p>
+"""@en ,
+  """
+ <p>Het Europees Interoperabiliteitskader (EIF) is een reeks aanbevelingen voor nationale overheden om digitale overheidsdiensten binnen de EU interoperabel te maken - en te houden.<p>
+<p>EIF is bedoeld als een gemeenschappelijke kern van de Nationale Interoperabiliteitskaders (NIF's) en Domein Interoperabiliteitskaders (DIF's). Voor België is BelgIF de NIF. De federale overheid en de gewesten zijn overeengekomen om de <a href='/eif3/principe'>12 van het EIF te gebruiken als basis voor het definiëren van hun interoperabiliteit.</p>
+<p>Een aantal <a href='/eif3/recommendation.nl.html'>aanbevelingen</a> zijn afgeleid van deze principes. In de nieuwe versie zijn deze aanbevelingen aangepast en uitgebreid, met name om in lijn te blijven met de nieuwe EU-richtlijnen en -verordeningen zoals het PSI, de eIDAS en de GDPR.</p>.
+<p>De 47 <a href='/eif3/recommendation.nl.html'>aanbevelingen</a> worden in het kader van BelgIF ook onderschreven als een waardevolle basis voor de definitie van architectuur, toepassingen en oplossingen voor gegevensuitwisseling en interoperabiliteit binnen en tussen de federale overheid en de gemeenschappen en gewesten.</p>
+"""@nl ,
+   """
+<p>Le cadre européen d'interopérabilité (EIF) est un ensemble de recommandations à l'intention des gouvernements nationaux visant à rendre - et à maintenir - l'interopérabilité des services publics numériques au sein de l'UE.
+<p>Le FEI est conçu comme un noyau commun des cadres nationaux d'interopérabilité (NIF) et des cadres d'interopérabilité des domaines (DIF). Pour la Belgique, le BelgIF est le NIF. Le gouvernement fédéral et les régions ont convenu d'utiliser les <a href='/eif3/principe'>12 principes</a> du FEI comme base pour définir leur interopérabilité.</p>
+<p>Un nombre de <a href='/eif3/recommendation.fr.html'>recommandations</a> sont dérivés de ces principes. Dans la nouvelle version, ces recommandations ont été modifiées et étendues, en particulier pour rester en accord avec les nouvelles directives et règlements de l'UE tels que l'ISP, l'eIDAS et le GDPR.</p>
+<p>Les 47 <a href='/eif3/recommendation.fr.html'>recommandations</a> sont également approuvées dans le contexte du BelgIF comme une base précieuse pour la définition de l'architecture, des applications et des solutions pour l'échange de données et l'interopérabilité au sein et entre le gouvernement fédéral et les communautés et régions.</p>
+"""@fr ,
+  """
+<p>Das Europäische Interoperabilitätsrahmenwerk (EIF) ist eine Reihe von Empfehlungen für nationale Regierungen, die darauf abzielen, digitale öffentliche Dienste innerhalb der EU interoperabel zu machen - und zu erhalten.<p>
+<p>EIF ist als gemeinsamer Kern der National Interoperability Frameworks (NIFs) und Domain Interoperability Frameworks (DIFs) gedacht. Für Belgien ist BelgIF das NIF. Die Föderalregierung und die Regionen haben vereinbart, die <a href='/eif3/principle'>12 Prinzipien</a> des EIF als Grundlage für die Definition ihrer Interoperabilität zu verwenden.</p>
+<p>Anzahl von <a href='/eif3/recommendation.de.html'>empfehlungen</a> werden von diesen Prinzipien abgeleitet. In der neuen Version wurden diese Empfehlungen geändert und erweitert, insbesondere um den neuen EU-Richtlinien und Verordnungen wie PSI, eIDAS und GDPR gerecht zu werden.</p>
+<p>Die 47 <a href='/eif3/recommendation.de.html'>recommendations</a> werden auch im Rahmen von BelgIF als wertvolle Grundlage für die Definition von Architektur, Anwendungen und Lösungen für den Datenaustausch und die Interoperabilität innerhalb und zwischen der Bundesregierung und den Gemeinden und Regionen befürwortet.</p>
+"""@de .

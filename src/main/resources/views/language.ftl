@@ -17,6 +17,11 @@
 		</section>
 		<section class="card">
 			<div class="card-body">
+				<h1 class="card-title"><a href="index.de.html">Deutsch</a></h3>
+			</div>
+		</section>
+		<section class="card">
+			<div class="card-body">
 				<h1 class="card-title"><a href="index.en.html">English</a></h3>
 			</div>
 		</section>
