@@ -6,36 +6,23 @@ be-page:conditions a foaf:Document ;
 	dcterms:title "Conditions of use"@en ;
 	dcterms:description  """
 <h3>Purpose of the site</h3>
-
 <p>The information provided on the portal site or on the web sites of the federal public services or public institutions, which are referred to on the portal site, is of a general nature. It is not intended to cover specific or personal situations, and cannot therefore be considered to constitute legal, professional or personal advice for the user.</p>
-
 <p>If you need specific or personal advice, you should always consult the relevant services within the federal government. The government information officers will probably be able to help you find the relevant service or person within the federal administration.</p>
-
 <p>It is important to emphasise that the information and documents, which are available on or via the portal site, cannot be considered to be authentic reproductions of official texts. Only official texts published in the Moniteur Belge (the official Belgian legal journal) are the authentic versions. In the event of differences between the electronic version and the printed text, the official printed text published in the Moniteur Belge will always take precedence.</p>
-
 <h4>Content and availability of the site</h4>
-
 <p>The federal government has taken great care to ensure that the information provided is complete, correct, exhaustive and up-to-date. Despite these efforts, there may still be errors in the information that is made available to you. If the information provided on or via the portal site contains errors, or if certain information is unavailable on or via the portal site, the federal government will do its utmost to rectify the situation as quickly as possible.</p>
-
 <p>The federal government has also taken great care to ensure that, as far as possible, access to the site will not be interrupted as a result of technical problems. However, the federal government cannot guarantee that the portal site will be completely free from interruptions or that it will not be affected by other technical problems.</p>
-
 <p>The federal public services and federal public institutions concerned offer you information via the portal site. If you discover errors in the information provided on or via the portal site, or if you wish to ask any questions on this subject, you can contact the public service concerned. If you do not know which public service this involves you can contact the portal site manager. In this case the manager will refer you to the appropriate public service.</p>
-
 <p>The portal site and the web sites of the federal public services and federal public institutions which are referred to on the portal site may contain links to the web sites of other authorities or organisations, over which the federal government has no control, either from the point of view of the content or the technical functioning of the site. Therefore the federal government cannot offer any guarantee that the content of these web sites will be exhaustive or accurate, nor can it guarantee their availability.</p>
-
 <p>The federal government accepts no liability for direct or indirect damage caused as a result of referring to or using the web sites or the information available on the web sites to which the portal site refers.</p>
-
 <h4>Copyright</h4>
-
 <p>Unless stated otherwise, the information provided on or via the portal site is not subject to copyright law. The information is available free of charge for personal use only, providing that the source is quoted. In cases where prior authorization is needed for the use or reproduction of certain information, the restrictions on usage are explicitly stated. The use and reproduction of multimedia information (in particular images, sounds and software applications) are always subject to prior approval.</p>
-
 <p>The federal government and/or others retain all the intellectual property rights over the portal site. Some software applications and graphics which can be accessed on or via the portal site are supplied by third parties and may be protected by copyright, which means that the use and reproduction of these items are restricted and require prior authorization from the owner of the copyright.</p>
-
 <p>The use of the portal site is governed by certain general conditions which are described below. By accessing this portal site, you are understood to have accepted the general conditions of use.</p>"""@en .
 
 
 be-page:privacy a foaf:Document ;
-	dcterms:title "EIF 3"@en ;
+	dcterms:title "Privacy statement@en ;
 	dcterms:description  """
 	<h3>Privacy statement</h3>
 

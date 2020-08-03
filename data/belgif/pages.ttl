@@ -17,11 +17,11 @@ be-page:home-specs a foaf:Document ;
 		"Technische und semantische Spezifikationen"@de	.
 
 be-page:home-legal a foaf:Document ;
-	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Vereinbarungen"@de ;
+	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Abkommen"@de ;
 	dcterms:description "Agreements and laws supporting interoperability"@en ,
 		"Overeenkomsten en wetten ter ondersteuning van interoperabiliteit"@nl ,
 		"Accords et lois soutenant l'interopérabilité"@fr,
-		"Vereinbarungen und Gesetze zur Unterstützung der Interoperabilität"@de .
+		"Abkommen und Gesetze zur Unterstützung der Interoperabilität"@de .
 
 be-page:home-activities a foaf:Document ;
 	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
@@ -75,7 +75,7 @@ be-page:legislations a foaf:Document ;
 	dcterms:description "Formal and informal agreements, laws, decrees... supporting interoperability"@en ,
 		"Formele en informele overeenkomsten en wetten, decreten... ter ondersteuning van interoperabiliteit"@nl ,
 		"Accords (formels et informels) et lois, décrets... soutenant l'interopérabilité"@fr ,
-		"Formelle und informelle Vereinbarungen, Gesetze, Dekrete... zur Unterstützung der Interoperabilität"@de .
+		"Formelle und informelle Abkommen, Gesetze, Dekrete... zur Unterstützung der Interoperabilität"@de .
 
 be-page:specifications a foaf:Document ;
 	dcterms:title "Specifications"@en, "Specificaties"@nl, "Spécifications"@fr, "Spezifikationen"@de ;

@@ -4,49 +4,61 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 be-spec:cpsvp-ap a doap:Specification ;
-	dcterms:title "CPSV-AP 2.2"@en ;
-	dcterms:subject "Data exchange"@en ;
-	dcterms:description "Common Public Service Vocabulary Application Profile"@en ;
-	dcterms:abstract "The Common Public Service Vocabulary Application Profile (CPSV-AP) is a data model for describing public services and the associated life and business events."@en ;
+	dcterms:title "CPSV-AP 2.2"@en, "CPSV-AP 2.2"@nl, "CPSV-AP 2.2"@fr, "CPSV-AP 2.2"@de ;
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Common Public Service Vocabulary Application Profile"@en, "Common Public Service Vocabulary Application Profile"@nl, "Common Public Service Vocabulary Application Profile"@fr, "Common Public Service Vocabulary Application Profile"@de ;
+	dcterms:abstract 
+		"The Common Public Service Vocabulary Application Profile (CPSV-AP) is a data model for describing public services and the associated life and business events."@en ,
+		"Het Common Public Service Vocabulary Application Profile (CPSV-AP) is een gegevensmodel voor het beschrijven van openbare diensten en de bijbehorende levens- en bedrijfsevenementen."@nl ,
+		"Le Common Public Service Vocabulary Application Profile (CPSV-AP) est un modèle de données pour décrire les services publics et les événements de la vie et des affaires qui y sont associés."@fr ,
+		"Das Common Public Service Vocabulary Application Profile (CPSV-AP) ist ein Datenmodell zur Beschreibung öffentlicher Dienstleistungen und der damit verbundenen Lebens- und Geschäftsereignisse."@de ;
 	foaf:homepage <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
 
 be-spec:dcat-ap a doap:Specification ;
-	dcterms:title "DCAT-AP 1.2.1"@en ;
-	dcterms:subject "Data exchange"@en ;
-	dcterms:description "DCAT Application Profile for data portals"@en ;
-	dcterms:abstract "The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals."@en ;
+	dcterms:title "DCAT-AP 1.2.1"@en, "DCAT-AP 1.2.1"@nl, "DCAT-AP 1.2.1"@fr, "DCAT-AP 1.2.1"@de ;
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "DCAT Application Profile for data portals"@en, "DCAT Application Profile voor dataportalen"@nl, "DCAT Application Profile pour les portails de données"@fr, "DCAT Application Profile für Datenportale"@de ;
+	dcterms:abstract 
+		"The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors."@en ,
+		"Het DCAT Application profile voor dataportalen in Europa (DCAT-AP) is een specificatie op basis van het W3C Data Catalogue vocabulary (DCAT) voor het beschrijven van datasets in de publieke sector. Het is bedoeld om over verschillende dataportal heen te kunnen zoeken naar datasets en om gegevens uit de publieke sector beter doorzoekbaar te maken over de grenzen en sectoren heen."@nl ,
+		"Le DCAT Application profile pour les portails de données (DCAT-AP) est une spécification basée sur le vocabulaire Data Catalogue du W3C (DCAT) pour décrire les ensembles de données dans le secteur public. Il est prévu de pouvoir rechercher des ensembles de données sur différents portails de données et de rendre les données du secteur public plus facilement consultables par-delà les frontières et les secteurs.@fr ,
+		"Das DCAT Application profile für Datenportale in Europa (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de .
 	foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
 
 be-spec:gcloud-rest a doap:Specification ;
-	dcterms:title "GCloud REST guidelines"@en ;
-	dcterms:subject "Data exchange"@en ;
-	dcterms:description "DCAT Application Profile for data portals"@en ;
-	dcterms:abstract "This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ;
+	dcterms:title "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
+	dcterms:abstract 
+		"This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ,
+		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
+		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
+		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
 	foaf:homepage <https://www.gcloud.belgium.be/rest/> .
 
 be-spec:rdf a doap:Specification ;
-	dcterms:title "RDF 1.1"@en ;
+	dcterms:title "RDF 1.1"@en, "RDF 1.1"@nl, "RDF 1.1"@fr, "RDF 1.1"@de ;
 	dcterms:subject "Semantic"@en ;
-	dcterms:description "Resource Description Framework"@en ;
+	dcterms:description "Resource Description Framework"@en, "Resource Description Framework"@nl, "Resource Description Framework"@fr, "Resource Description Framework"@de ;
 	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/rdf11-primer/> .
 
 be-spec:shacl a doap:Specification ;
-	dcterms:title "SHACL"@en ;
-	dcterms:subject "Semantic"@en ;
-	dcterms:description "SHapes Constraints Language"@en ;
+	dcterms:title "SHACL"@en, "SHACL"@nl, "SHACL"@fr, "SHACL"@de ;
+	dcterms:subject "Data validation"@en ;
+	dcterms:description "SHapes Constraints Language"@en, "SHapes Constraints Language"@nl, "SHapes Constraints Language"@fr, "SHapes Constraints Language"@en  ;
 	dcterms:abstract ""@en ;
 	foaf:homepage <https://www.w3.org/TR/shacl/> .
 
 be-spec:skos a doap:Specification ;
-	dcterms:title "SKOS"@en ;
+	dcterms:title "SKOS"@en, "SKOS"@nl, "SKOS"@fr, "SKOS"@de ;
 	dcterms:subject "Semantic"@en ;
-	dcterms:description "Simple Knowledge Organization System"@en ;
+	dcterms:description "Simple Knowledge Organization System"@en, "Simple Knowledge Organization System"@nl, "Simple Knowledge Organization System"@fr, "Simple Knowledge Organization System"@de ;
 	dcterms:abstract "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Semantic Web."@en ;
 	foaf:homepage <https://www.w3.org/TR/skos-reference/> .
 
 be-spec:xml a doap:Specification ;
-	dcterms:title "XML"@en ;
+	dcterms:title "XML"@en, "XML"@nl, "XML"@fr, "XML"@de ;
 	dcterms:subject "Technical"@en ;
 	dcterms:description "Extensible Markup Language"@en ;
 	dcterms:abstract ""@en ;
