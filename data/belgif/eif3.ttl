@@ -293,9 +293,12 @@ eif-recommendation:onceonly a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:accessibility a skos:Concept ;
-	skos:prefLabel "Accessibility"@en ;
+	skos:prefLabel "Accessibility"@en, "Toegankelijkheid"@nl, "Accessibilité"@fr, "Barrierefreiheit"@de ;
 	skos:notation "14"^^xsd:integer ;
-	skos:definition "Ensure that all European public services are accessible to all citizens, including persons with disabilities, the elderly and other disadvantaged groups. For digital public services, public administrations should comply with e-accessibility specifications that are widely recognised at European or international level."@en ;
+	skos:definition "Ensure that all European public services are accessible to all citizens, including persons with disabilities, the elderly and other disadvantaged groups."@en ,
+		"Zorg ervoor dat alle Europese openbare diensten toegankelijk zijn voor alle burgers, inclusief personen met een handicap, ouderen en andere achterstandsgroepen."@nl , 
+		"Veiller à ce que tous les services publics européens soient accessibles à tous les citoyens, y compris les personnes handicapées, les personnes âgées et les autres groupes défavorisés."@fr,
+		"Sorge dafür, dass alle europäischen öffentlichen Dienste allen Bürgern zur Verfügung stehen, auch solchen mit Behinderungen, älteren Menschen und sonstigen benachteiligten Gruppen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:privacy a skos:Concept ;
