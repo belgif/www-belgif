@@ -101,7 +101,7 @@ eif-principle:reusability a skos:Concept ;
 	skos:notation "4"^^xsd:integer ;
 	skos:definition "Reuse means that public administrations confronted with a specific problem seek to benefit from the work of others by looking at what is available, assessing its usefulness or relevance to the problem at hand, and where appropriate, adopting solutions that have proven their value elsewhere."@en ,
 		"Hergebruik houdt in dat overheidsdiensten die worden geconfronteerd met een specifiek probleem, proberen te profiteren van het werk van anderen door te kijken naar wat er beschikbaar is, het nut of de relevantie hiervan te beoordelen voor het onderhavige probleem en in voorkomende gevallen, oplossingen te gebruiken waarvan elders de waarde is gebleken."@nl ,
-		"La réutilisation fait référence au fait que les administrations publiques confrontées à un problème spécifique cherchent à tirer profit du travail réalisé par d’autres en examinant les solutions existantes, en évaluant leur utilité ou leur pertinence par rapport au problème rencontré et en décidant, s’il y a lieu, d’utiliser celles qui ont fait leurs preuves dans d’autres domaines."@fr ,
+		"La réutilisation fait référence au fait que les administrations publiques confrontées à un problème spécifique cherchent à tirer profit du travail réalisé par d'autres en examinant les solutions existantes, en évaluant leur utilité ou leur pertinence par rapport au problème rencontré et en décidant, s'il y a lieu, d'utiliser celles qui ont fait leurs preuves dans d'autres domaines."@fr ,
 		"Weiterverwendung bedeutet, dass öffentliche Verwaltungen, die vor einem bestimmten Problem stehen, versuchen sollten, sich die Arbeit anderer nutzbar zu machen, indem sie vorhandene Lösungen suchen, deren Nützlichkeit und Zweckmäßigkeit prüfen und dort, wo dies sinnvoll ist, Lösungen nutzen, die sich anderweitig bereits bewährt haben."@de ;
 	skos:related eif-recommendation:solutionreuse, eif-recommendation:datareuse ;
 	skos:inScheme eif-principle:  .
@@ -111,7 +111,7 @@ eif-principle:neutrality a skos:Concept ;
 	skos:notation "5"^^xsd:integer ;
 	skos:definition "Focus on functional needs and defer decisions on technology as long as possible in order to minimise technological dependencies, to avoid imposing specific technical implementations or products on their constituents and to be able to adapt to the rapidly evolving technological environment."@en ,
 			"Focus op de functionele behoeften en stel besluiten omtrent technologie zo lang mogelijk uit om de technologische afhankelijkheid zo klein mogelijk te houden, om te vermijden dat zij specifieke technische implementaties of producten opleggen aan hun burgers en om zich aan te kunnen passen aan de zich snel ontwikkelende technologische omgeving."@nl,
-			"Concentrez en priorité sur les besoins fonctionnels et prendre aussi tard que possible les décisions en matière de technologies afin de minimiser les dépendances technologiques, d’éviter d’imposer aux utilisateurs et partenaires des implémentations ou des produits spécifiques et de permettre l’adaptation à un environnement technologique en constante évolution."@fr,
+			"Concentrez en priorité sur les besoins fonctionnels et prendre aussi tard que possible les décisions en matière de technologies afin de minimiser les dépendances technologiques, d'éviter d'imposer aux utilisateurs et partenaires des implémentations ou des produits spécifiques et de permettre l'adaptation à un environnement technologique en constante évolution."@fr,
 			"Fokussierung auf funktionellen Anforderungen und Entscheidungen über die zugrundeliegende Technik so lange wie möglich hinausschieben, damit sie denen, die solche in Anspruch nehmen, nicht von vornherein bestimmte technische Umsetzungen oder Produkte aufzwingen und später noch in der Lage sind, sich an ein sich schnell veränderndes technologisches Umfeld anzupassen."@de ;
 	skos:related eif-recommendation:neutrality, eif-recommendation:dataportability ;
 	skos:inScheme eif-principle:  .
@@ -121,7 +121,7 @@ eif-principle:usercentricity a skos:Concept ;
 	skos:notation "6"^^xsd:integer ;
 	skos:definition "Users' needs should be considered when determining which public services should be provided and how they should be delivered."@en ,
 		"Gebruikersbehoeften dienen in aanmerking genomen te worden bij het bepalen welke openbare diensten moeten worden verleend en hoe zij moeten worden geleverd."@nl ,
-		"Les besoins des utilisateurs doivent être pris en considération pour déterminer quels services publics doivent être fournis et comment ils doivent l’être."@fr ,
+		"Les besoins des utilisateurs doivent être pris en considération pour déterminer quels services publics doivent être fournis et comment ils doivent l'être."@fr ,
 		"Die nutzerseitigen Bedürfnisse sind bei der Festlegung zu berücksichtigen, welche öffentlichen Dienste bereitgestellt werden sollen und auf welche Weise dies geschehen soll."@de ;
 	skos:related eif-recommendation:multichannel, eif-recommendation:spoc, eif-recommendation:userinvolvement, eif-recommendation:onceonly ;
 	skos:inScheme eif-principle:  .
@@ -159,6 +159,10 @@ eif-principle:multilingualism a skos:Concept ;
 eif-principle:simplification a skos:Concept ;
 	skos:prefLabel "Administrative simplification"@en, "Administratieve vereenvoudiging"@nl, "Simplification administrative"@fr, "Verwaltungsvereinfachung"@de ;
 	skos:notation "10"^^xsd:integer ;
+	skos:definition "Where possible, public administrations should seek to streamline and simplify their administrative processes by improving them or eliminating any that does not provide public value."@en ,
+		"Waar mogelijk moeten overheidsdiensten proberen hun administratieve processen te stroomlijnen en te vereenvoudigen door hen te verbeteren of te schrappen, indien zij geen openbaar nut hebben."@nl ,
+		"Dans la mesure du possible, les administrations publiques devraient s'efforcer de rationaliser et de simplifier leurs processus administratifs en les améliorant ou en éliminant ceux qui n'apportent aucune valeur publique."@fr ,
+		"Auf dem Wege von Verbesserungen oder auch der Beseitigung all dessen, was der Öffentlichkeit keinen Nutzwert bietet, sollten öffentliche Verwaltungen ihre administrativen Abläufe so weit wie möglich verschlanken und vereinfachen."@de ;
 	skos:related eif-recommendation:simplification ;
 	skos:inScheme eif-principle:  .
 
@@ -308,13 +312,13 @@ eif-recommendation:privacy a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:multilingualism a skos:Concept ;
-	skos:prefLabel "Multilingualism"@en ;
+	skos:prefLabel "Multilingualism"@en, "Meertaligheid"@nl, "Multilinguisme"@fr, "Mehrsprachigkeit"@de ;
 	skos:notation "16"^^xsd:integer ;
 	skos:definition "Use information systems and technical architectures that cater for multilingualism when establishing a European public service. Decide on the level of multilingualism support based on the needs of the expected users."@en ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:simplification a skos:Concept ;
-	skos:prefLabel "Simplification"@en ;
+	skos:prefLabel"Simplification"@en, "Vereenvoudiging"@nl, "Simplification"@fr, "Vereinfachung"@de ;
 	skos:notation "17"^^xsd:integer ;
 	skos:definition "Simplify processes and use digital channels whenever appropriate for the delivery of European public services, to respond promptly and with high quality to users' requests and reduce the administrative burden on public administrations, businesses and citizens."@en ;
 	skos:inScheme eif-recommendation: .
@@ -410,7 +414,7 @@ eif-recommendation:communities a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:openspecifications2 a skos:Concept ;
-	skos:prefLabel "Open specifications"@en ;
+	skos:prefLabel "Open specifications"@en, "Open specificaties"@nl, "Spécifications ouvertes"@fr, "Offener Spezifikationen"@de ;
 	skos:notation "33"^^xsd:integer ;
 	skos:definition "Use open specifications, where available, to ensure technical interoperability when establishing European public services."@en ;
 	skos:inScheme eif-recommendation: .
