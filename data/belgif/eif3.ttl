@@ -8,171 +8,228 @@
 
 
 eif-level:legal a skos:Concept ;
-	skos:prefLabel "Legal Interoperability"@en, "Juridisch"@nl ;
+	skos:prefLabel "Legal Interoperability"@en, "Wettelijke interoperabiliteit"@nl, "Interopérabilité juridique"@fr, "Rechtliche Interoperabilität"@de  ;
 	skos:notation "1"^^xsd:integer ;
-	skos:definition "Ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ;
+	skos:definition 
+		"Ensuring that organisations operating under different legal frameworks, policies and strategies are able to work together."@en ,
+		"Garantir que des organisations opérant au sein de cadres juridiques, politiques et stratégies différents puissent travailler ensemble."@fr ,
+		"Sichergestellen, dass Organisationen, die bei ihrer Arbeit unterschiedlichen Rechtsrahmen, politischen Konzepten und Strategien unterliegen, zusammenarbeiten können."@de;
 	skos:related eif-recommendation:legislation ;
 	skos:inScheme eif-level:  .
 
 eif-level:organisational a skos:Concept ;
-	skos:prefLabel "Organisational Interoperability"@en, "Organisatorisch"@nl ;
+	skos:prefLabel "Organisational Interoperability"@en, "Organisatorische interoperabiliteit"@nl, "Interopérabilité organisationnelle"@fr, "Organisatorische Interoperabilität"@de ;
 	skos:notation "2"^^xsd:integer ;
-	skos:definition "Documenting and integrating or aligning business processes and relevant information exchanged."@en ;
+	skos:definition "Documenting and integrating or aligning business processes and relevant information exchanged."@en ,
+		"Bedrijfsprocessen en de bijbehorende gegevensuitwisseling documenteren en integreren of op elkaar afstemmen."@nl,
+		"Documenter et intégrer ou harmoniser les processus métier et les informations pertinentes échangées."@fr ,
+		"Geschäftsprozesse und maßgebliche ausgetauschte Informationen dokumentieren und integrieren oder aufeinander abstimmen."@de ;
 	skos:related eif-recommendation:processalignment, eif-recommendation:relationships ;
 	skos:inScheme eif-level: .
 	
 eif-level:semantic a skos:Concept ;
-	skos:prefLabel "Semantic Interoperability"@en, "Semantisch"@nl ;
+	skos:prefLabel "Semantic Interoperability"@en, "Semantische interoperabiliteit"@nl, "Interopérabilité sémantique"@fr, "Semantische Interoperabilität"@de ;
 	skos:notation "3"^^xsd:integer ;
-	skos:definition "Ensuring that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ;
+	skos:definition "Ensuring that the precise format and meaning of exchanged data and information is preserved and understood throughout exchanges between parties."@en ,
+		"Garanderen dat de precieze bestandsindeling en betekenis van uitgewisselde gegevens en informatie wordt behouden en begrepen gedurende de gehele uitwisselingsprocedure tussen partijen."@nl ,
+		"Garantir que le format et le sens précis des données et informations échangées sont préservés et compris dans les échanges entre les parties."@fr ,
+		"Sicherstellen, dass das Format und die Bedeutung der ausgetauschten Daten und Informationen in ihrer ursprünglichen Form bewahrt und bei allen Austauschvorgängen zwischen Parteien verstanden werden."@de ;
 	skos:related eif-recommendation:datamanagement, eif-recommendation:informationmanagement, eif-recommendation:communities ;
 	skos:inScheme eif-level: .
 	
 eif-level:technical a skos:Concept ;
-	skos:prefLabel "Technical Interoperability"@en, "Technisch"@nl ;
+	skos:prefLabel "Technical Interoperability"@en, "Technische interoperabiliteit"@nl, "Interopérabilité technique"@fr, "Technische Interoperabilität"@de ;
 	skos:notation "4"^^xsd:integer ;
-	skos:definition "Interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ;
+	skos:definition "Interface specifications, interconnection and data integration services, data presentation and secure communication protocols."@en ,
+		"Specificaties van interfaces, interconnectiediensten, gegevensintegratiediensten, presentatie en uitwisseling van gegevens en protocollen voor een veilige communicatie."@nl ,
+		"Les spécifications d'interface, les services d'interconnexion, les services d'intégration des données, la présentation et l'échange des données et les protocoles de communication sécurisés."@fr ,
+		"Schnittstellenspezifikationen, Verbunddienste, Datenintegrationsdienste, Datendarstellung und austausch sowie Protokolle für eine gesicherte Kommunikation."@de ;
 	skos:related eif-recommendation:openspecifications2 ;
 	skos:inScheme eif-level: .
 
 eif-governance:governance a skos:Concept ;
-	skos:prefLabel "Interoperability Governance"@en ;
-	skos:definition "Decisions on interoperability frameworks, roles and responsibilities, agreements and other aspects of ensuring and monitoring interoperability at national and EU levels."@en ;
+	skos:prefLabel "Interoperability Governance"@en, "Governance van interoperabiliteit"@nl, "Gouvernance de l'interopérabilité"@fr, "Interoperabilitätsgovernance"@de ;
+	skos:definition "Decisions on interoperability frameworks, roles and responsibilities, agreements and other aspects of ensuring and monitoring interoperability at national and EU levels."@en ,
+		"Besluiten omtrent interoperabiliteitskaders, taken en verantwoordelijkheden, overeenkomsten en andere aspecten van het waarborgen en bewaken van interoperabiliteit op nationaal en EU-niveau."@nl ,
+		"Décisions sur les cadres d'interopérabilité, les rôles et responsabilités, les accords et les autres aspects liés à la mise en œuvre et au suivi de l'interopérabilité aux niveaux national et de l'EC."@fr ,
+		"Entscheidungen über Interoperabilitätsrahmen, Aufgabenfelder und Zuständigkeiten, Übereinkommen und sonstige Aspekte der Gewährleistung und Überwachung der Interoperabilität auf einzelstaatlicher und auf EU-Ebene."@de ;
 	skos:related eif-recommendation:holisticgovernance, eif-recommendation:standardsprocess, eif-recommendation:standardsassessment, eif-recommendation:standardscatalogues, eif-recommendation:standardsparticipation ;
 	skos:inScheme eif-level: .
 
 eif-governance:integration a skos:Concept ;
-	skos:prefLabel "Service Integration"@en ;
-	skos:definition "Services should be governed to ensure integration, seamless execution, reuse of services and data, and development of new services and building blocks."@en ;
+	skos:prefLabel "Service Integration"@en, "Dienstenintegratie"@nl, "Intégration de services"@fr, "Dienstintegration"@de ;
+	skos:definition "Services should be governed to ensure integration, seamless execution, reuse of services and data, and development of new services and 'building blocks'."@en ,
+		"Deze diensten dienen te worden bestuurd teneinde de integratie, rimpelloze uitvoering, het hergebruik van diensten en gegevens en het ontwikkelen van nieuwe diensten en 'bouwstenen' te waarborgen."@nl ,
+		"Les services doivent faire l'objet d'une gouvernance pour assurer l'intégration, l'exécution sans discontinuité apparente, la réutilisation des services et des données et le développement de nouveaux services et 'modules'."@fr ,
+		"Die Governance der Dienste sollte in einer Weise erfolgen, welche die Integration, reibungslose Abwicklung, Weiterverwendung von Dienstleistungen und Daten und die Entwicklung neuer Dienste und 'Bausteine' sicherstellt."@de ;
 	skos:related eif-recommendation:governancestructure, eif-recommendation:agreements ;
 	skos:inScheme eif-level: .
 
 
 eif-principle:subsidiarity a skos:Concept ;
-	skos:prefLabel "Subsidiarity and proportionality"@en ;
+	skos:prefLabel "Subsidiarity and proportionality"@en, "Subsidiariteit en evenredigheid"@nl, "Subsidiarité et proportionnalité"@fr, "Subsidiarität und Verhältnismäßigkeit"@de ;
 	skos:notation "1"^^xsd:integer ;
+	skos:definition "The subsidiarity principle requires EU decisions to be taken as closely as possible to the citizen. In other words, the EU does not take action unless this is more effective than the same action taken at national level."@en ,
+		"Op grond van het subsidiariteitsbeginsel wordt vereist dat besluiten van de Unie zo dicht mogelijk bij de burger worden genomen. Met andere woorden, de Unie neemt geen maatregelen, tenzij dit effectiever is dan dat dezelfde maatregelen op nationaal niveau worden genomen."@nl ,
+		"Selon le principe de subsidiarité, les décisions de l’UE doivent être prises au plus près du citoyen. En d’autres termes, l’Union européenne ne doit mettre en place une mesure que si elle est plus efficace qu’une même mesure prise au niveau national."@fr ,
+		"Der Grundsatz der Subsidiarität besagt, dass EU-Entscheidungen möglichst bürgernah getroffen werden müssen. Das heißt, dass die EU nur dann tätig werden darf, wenn dies wirksamer ist, als wenn die gleichen Maßnahmen auf einzelstaatlicher Ebene ergriffen würden."@de ;
 	skos:related eif-recommendation:alignment ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:openness a skos:Concept ;
-	skos:prefLabel "Openness"@en ;
+	skos:prefLabel "Openness"@en, "Openheid"@nl, "Ouverture"@fr, "Offenheit"@de ;
 	skos:notation "2"^^xsd:integer ;
+	skos:definition "In the context of interoperable public services, the concept of openness mainly relates to data, specifications and software."@en ,
+		"In de context van interoperabele openbare diensten heeft het concept van openheid vooral betrekking op gegevens, specificaties en software."@nl ,
+		"Dans le contexte de services publics interopérables, le concept d’ouverture concerne principalement les données, les spécifications et les logiciels."@fr ,
+		"Im Kontext interoperabler öffentlicher Dienste bezieht sich der Begriff der Offenheit in erster Linie auf Daten, Spezifikationen und Software."@de ;
 	skos:related eif-recommendation:opendata, eif-recommendation:opensource, eif-recommendation:openspecifications ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:transparency a skos:Concept ;
-	skos:prefLabel "Transparency"@en ;
+	skos:prefLabel "Transparency"@en, "Transparantie"@nl, "Transparence"@fr, "Transparenz"@de ;
 	skos:notation "3"^^xsd:integer ;
+	skos:definition "Allowing other public administrations, citizens and businesses to view and understand administrative rules, processes, data, services and decision-making."@en ,
+		"In staat stellen van andere overheidsdiensten, burgers en ondernemingen om administratieve regels, processen 11 , gegevens, diensten en besluitvorming te bekijken en te doorgronden."@nl ,
+		"Permettre aux autres administrations publiques, aux citoyens et aux entreprises de visualiser et de comprendre les règles administratives, les processus, les données, les services et le processus décisionnel."@fr ,
+		"Anderen öffentlichen Verwaltungen, Bürgern und Unternehmen Einblick in Bestimmungen, Abläufe, Daten, Dienstleistungen und Entscheidungsprozesse der Verwaltung zu geben und diese verständlich zu machen."@de ;
 	skos:related eif-recommendation:interfaces ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:reusability a skos:Concept ;
-	skos:prefLabel "Reusability"@en ;
+	skos:prefLabel "Reusability"@en, "Herbruikbaarheid"@nl, "Possibilité de réutilisation"@fr, "Weiterverwendbarkeit"@de ;
 	skos:notation "4"^^xsd:integer ;
 	skos:related eif-recommendation:solutionreuse, eif-recommendation:datareuse ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:neutrality a skos:Concept ;
-	skos:prefLabel "Technological neutrality and data portability"@en ;
+	skos:prefLabel "Technological neutrality and data portability"@en, "Technologische neutraliteit en gegevensportabiliteit"@nl, "Neutralité technologique et portabilité des données"@fr, "Technologieneutralität und Datenportabilität"@de ;
 	skos:notation "5"^^xsd:integer ;
+	skos:definition "Focus on functional needs and defer decisions on technology as long as possible in order to minimise technological dependencies, to avoid imposing specific technical implementations or products on their constituents and to be able to adapt to the rapidly evolving technological environment."@en ,
+			"Focus op de functionele behoeften en stel besluiten omtrent technologie zo lang mogelijk uit om de technologische afhankelijkheid zo klein mogelijk te houden, om te vermijden dat zij specifieke technische implementaties of producten opleggen aan hun burgers en om zich aan te kunnen passen aan de zich snel ontwikkelende technologische omgeving."@nl ;
 	skos:related eif-recommendation:neutrality, eif-recommendation:dataportability ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:usercentricity a skos:Concept ;
-	skos:prefLabel "User-centricity"@en ;
+	skos:prefLabel "User-centricity"@en, "Gebruikersgerichtheid"@nl, "Approche centrée sur l'utilisateur"@fr, "Nutzerorientierung"@de ;
 	skos:notation "6"^^xsd:integer ;
+	skos:definition "Users’ needs should be considered when determining which public services should be provided and how they should be delivered."@en ,
+		"Gebruikersbehoeften dienen in aanmerking genomen te worden bij het bepalen welke openbare diensten moeten worden verleend en hoe zij moeten worden geleverd."@nl ;
 	skos:related eif-recommendation:multichannel, eif-recommendation:spoc, eif-recommendation:userinvolvement, eif-recommendation:onceonly ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:inclusion a skos:Concept ;
-	skos:prefLabel "Inclusion and accessibility"@en ;
+	skos:prefLabel "Inclusion and accessibility"@en, "Inclusiviteit en toegankelijkheid"@nl, "Inclusion et accessibilité"@fr, "Inklusion und Barrierefreiheit"@de ;
 	skos:notation "7"^^xsd:integer ;
 	skos:related eif-recommendation:accessibility ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:security a skos:Concept ;
-	skos:prefLabel "Security and privacy"@en ;
+	skos:prefLabel "Security and privacy"@en, "Veiligheid en privacy"@nl, "Sécurité et protection de la vie privée"@fr, "Sicherheit und Privatsphäre"@de ;
 	skos:notation "8"^^xsd:integer ;
 	skos:related eif-recommendation:privacy ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:multilingualism a skos:Concept ;
-	skos:prefLabel "Multilingualism"@en ;
+	skos:prefLabel "Multilingualism"@en, "Meertaligheid"@nl, "Multilinguisme"@fr, "Mehrsprachigkeit"@de ;
 	skos:notation "9"^^xsd:integer ;
 	skos:related eif-recommendation:multilingualism ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:simplification a skos:Concept ;
-	skos:prefLabel "Administrative simplification"@en ;
+	skos:prefLabel "Administrative simplification"@en, "Administratieve vereenvoudiging"@nl, "Simplification administrative"@fr, "Verwaltungsvereinfachung"@de ;
 	skos:notation "10"^^xsd:integer ;
 	skos:related eif-recommendation:simplification ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:preservation a skos:Concept ;
-	skos:prefLabel "Preservation of information"@en ;
+	skos:prefLabel "Preservation of information"@en, "Behoud van informatie"@nl, "Préservation des informations"@fr, "Informationsbewahrung"@de ;
 	skos:notation "11"^^xsd:integer ;
 	skos:related eif-recommendation:preservation ;
 	skos:inScheme eif-principle:  .
 
 eif-principle:assessment a skos:Concept ;
-	skos:prefLabel "Assessment of effectiveness and efficiency"@en ;
+	skos:prefLabel "Assessment of effectiveness and efficiency"@en, "Beoordelen van doeltreffendheid en efficiëntie"@nl, "Évaluation de l'efficacité et de l'efficience"@fr, "Bewertung von Effektivität und Effizienz"@de ;
 	skos:notation "12"^^xsd:integer ;
 	skos:related eif-recommendation:assessment ;
 	skos:inScheme eif-principle:  .
 
 
 eif-recommendation:alignment a skos:Concept ;
-	skos:prefLabel "NIFO alignment"@en ;
+	skos:prefLabel "NIFO alignment"@en, "NIFO alignieren" ;
 	skos:notation "1"^^xsd:integer ;
-	skos:definition "Ensure that national interoperability frameworks and interoperability strategies are aligned with the EIF and, if needed, tailor and extend them to address the national context and needs."@en ;
+	skos:definition "Ensure that national interoperability frameworks and interoperability strategies are aligned with the EIF and, if needed, tailor and extend them to address the national context and needs."@en ,
+		"Zorg ervoor dat nationale interoperabiliteitskaders en -strategieën afgestemd zijn op het EIF en, in voorkomende gevallen, dat zij aangepast en uitgebreid worden om rekening te houden met de nationale context en nationale behoeften."@nl ,
+		"Veiller à ce que les stratégies d’interopérabilité et les cadres nationaux d’interopérabilité soient alignés sur l’EIF et, le cas échéant, les adapter et les étendre en fonction du contexte et des besoins nationaux."@fr ,
+		"Sicherstellen, dass nationale Interoperabilitätsrahmen und strategien an den EIF angeglichen sind, und diese im erforderlichen Umfang auf den Kontext und die spezifischen Bedürfnisse des betreffenden Mitgliedstaates hin zuschneiden und erweitern."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:opendata a skos:Concept ;
-	skos:prefLabel "Open data"@en ;
+	skos:prefLabel "Open data"@en, "Open data"@nl, Données ouvertes"@fr, "Offene Daten"@de ;
 	skos:notation "2"^^xsd:integer ;
-	skos:definition "Publish the data you own as open data unless certain restrictions apply."@en ;
+	skos:definition "Publish the data you own as open data unless certain restrictions apply."@en ,
+		"Publiceer de gegevens die u bezit als open gegevens, tenzij er beperkingen gelden."@nl ,
+		"Publier ses propres données en tant que données ouvertes, sauf si des restrictions s’appliquent."@fr ,
+		"Veröffentlichen der in eigenem Besitz befindlichen Daten als offene Daten, sofern diese nicht gewissen Beschränkungen unterliegen."@de	;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:opensource a skos:Concept ;
-	skos:prefLabel "Open source"@en ;
+	skos:prefLabel "Open source"@en, "Open source"@nl, "Open source"@fr, "Quelloffen"@de ;
 	skos:notation "3"^^xsd:integer ;
-	skos:definition "Ensure a level playing field for open source software and demonstrate active and fair consideration of using open source software, taking into account the total cost of ownership of the solution."@en ;
+	skos:definition "Ensure a level playing field for open source software and demonstrate active and fair consideration of using open source software, taking into account the total cost of ownership of the solution."@en,
+		"Zorg voor gelijke randvoorwaarden voor openbronsoftware en laat blijken dat het gebruik van openbronsoftware op een actieve, faire manier wordt overwogen, rekening houdend met de totale kosten van het eigendom van de IT-oplossing."@nl ,
+		"Assurer des conditions équitables pour les logiciels open source et prendre activement et équitablement en considération le recours à des logiciels open source, en tenant compte du coût total de possession de la solution."@fr ,
+		"Sorge für gleiche Wettbewerbsbedingungen für quelloffene Software und Nachweis einer aktiven und fairen Erwägung einer Nutzung quelloffener Software unter Berücksichtigung der Gesamtbetriebskosten der Lösung."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:openspecifications a skos:Concept ;
-	skos:prefLabel "Open specifications"@en ;
+	skos:prefLabel "Open specifications"@en, "Open specificaties"@nl, "Spécifications ouvertes"@fr, "Offener Spezifikationen"@de ;
 	skos:notation "4"^^xsd:integer ;
-	skos:definition "Give preference to open specifications, taking due account of the coverage of functional needs, maturity and market support and innovation."@en ;
+	skos:definition "Give preference to open specifications, taking due account of the coverage of functional needs, maturity and market support and innovation."@en ,
+		"Geef de voorkeur aan open specificaties, terdege rekening houdend met de functionele behoeften, de gebruiksklaarheid, de ondersteuning door de markt en innovatie."@nl ,
+		"Donner la préférence aux spécifications ouvertes en tenant dûment compte de la couverture des besoins fonctionnels, de la maturité, de l’adoption par le marché et des innovations du marché."@fr,
+		"Bevorzugen offener Spezifikationen bei angemessener Berücksichtigung der Erfüllung der funktionalen Anforderungen, der Ausgereiftheit, der Marktunterstützung und der Innovation."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:interfaces a skos:Concept ;
-	skos:prefLabel "External interfaces"@en ;
+	skos:prefLabel "External interfaces"@en, "Externe interfaces"@nl, "Interfaces externes"@fr, "Externer Schnittstellen"@de ;
 	skos:notation "5"^^xsd:integer ;
-	skos:definition "Ensure internal visibility and provide external interfaces for European public services."@en ;
+	skos:definition "Ensure internal visibility and provide external interfaces for European public services."@en,
+		"Waarborg de interne zichtbaarheid en zorg voor externe interfaces voor Europese openbare diensten."@nl ,
+		"Assurer la visibilité interne et fournir des interfaces externes pour les services publics européens."@fr ,
+		"Sorge für interne Sichtbarkeit und Bereitstellung externer Schnittstellen für europäische öffentliche Dienste."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:solutionreuse a skos:Concept ;
-	skos:prefLabel "Solution reuse"@en ;
+	skos:prefLabel "Solution reuse"@en, "Hergebruik van oplossingen"@nl, "Réutilisation de solutions"@fr, "Weiterverwenden von Lösungen"@de ;
 	skos:notation "6"^^xsd:integer ;
-	skos:definition "Reuse and share solutions, and cooperate in the development of joint solutions when implementing European public services."@en ;
+	skos:definition "Reuse and share solutions, and cooperate in the development of joint solutions when implementing European public services."@en,
+		"Hergebruik en deel oplossingen en werk samen aan de ontwikkeling van gemeenschappelijke oplossingen bij de tenuitvoerlegging van Europese openbare diensten."@nl ,
+		"Réutiliser et échanger les solutions, et collaborer au développement de solutions conjointes lors de la mise en place de services publics européens."@fr,
+		"Mit- und Weiterverwenden bestehender Lösungen sowie Zusammenarbeit bei der Entwicklung gemeinsamer Lösungen bei der Einführung europäischer öffentlicher Dienste."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:datareuse a skos:Concept ;
-	skos:prefLabel "Solution reuse"@en ;
+	skos:prefLabel "Information reuse"@en, "Hergebruik van informatie"@nl, "Réutilisation d'informations"@fr, "Weiterverwenden von Informationen"@de ;
 	skos:notation "7"^^xsd:integer ;
-	skos:definition "Reuse and share information and data when implementing European public services, unless certain privacy or confidentiality restrictions apply."@en ;
+	skos:definition "Reuse and share information and data when implementing European public services, unless certain privacy or confidentiality restrictions apply."@en,
+		"Hergebruik en deel informatie en gegevens bij de tenuitvoerlegging van Europese openbare diensten, tenzij er bepaalde beperkingen gelden ten aanzien van de privacy of vertrouwelijkheid."@nl,
+		"Réutiliser et échanger informations et données lors de la mise en œuvre de services publics européens, sauf lorsque des restrictions en matière de confidentialité ou de respect de la vie privée ne s’appliquent."@fr ,
+		"Mit- und Weiterverwenden von Informationen und Daten bei der Einführung europäischer öffentlicher Dienste, insoweit diese nicht bestimmten datenschutzrechtlichen oder vertraulichkeitsbezogenen Beschränkungen unterliegen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:neutrality a skos:Concept ;
-	skos:prefLabel "Technological neutrality"@en ;
+	skos:prefLabel "Technological neutrality"@en, "Technologische neutraliteit"@nl ;
 	skos:notation "8"^^xsd:integer ;
-	skos:definition "Do not impose any technological solutions on citizens, businesses and other administrations that are technology-specific or disproportionate to their real needs."@en ;
+	skos:definition "Do not impose any technological solutions on citizens, businesses and other administrations that are technology-specific or disproportionate to their real needs."@en ,
+		"Dring geen enkele technologische oplossing op aan burgers, ondernemingen en andere overheidsdiensten die technologiespecifiek is of niet in verhouding staat tot hun daadwerkelijke behoeften."@nl ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:dataportability a skos:Concept ;
-	skos:prefLabel "Data portability"@en ;
+	skos:prefLabel "Data portability"@en, "Gegevensportabiliteit"@nl ;
 	skos:notation "9"^^xsd:integer ;
-	skos:definition "Ensure data portability, namely that data is easily transferable between systems and applications supporting the implementation and evolution of European public services without unjustified restrictions, if legally possible."@en ;
+	skos:definition "Ensure data portability, namely that data is easily transferable between systems and applications supporting the implementation and evolution of European public services without unjustified restrictions, if legally possible."@en ,
+		"Zorg voor gegevensportabiliteit, dat wil zeggen dat gegevens eenvoudig en zonder ongerechtvaardigde beperkingen over te hevelen zijn naar systemen en applicaties die de implementatie en ontwikkeling van Europese openbare diensten ondersteunen, indien dit wettelijk gezien mogelijk is."@nl ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:multichannel a skos:Concept ;
@@ -184,7 +241,7 @@ eif-recommendation:multichannel a skos:Concept ;
 eif-recommendation:spoc a skos:Concept ;
 	skos:prefLabel "SPOC"@en ;
 	skos:notation "11"^^xsd:integer ;
-	skos:definition "Provide a single point of contact in order to hide internal administrative complexity and facilitate users’ access to European public services."@en ;
+	skos:definition "Provide a single point of contact in order to hide internal administrative complexity and facilitate users' access to European public services."@en ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:userinvolvement a skos:Concept ;
@@ -280,7 +337,7 @@ eif-recommendation:agreements a skos:Concept ;
 eif-recommendation:legislation a skos:Concept ;
 	skos:prefLabel "Digital legislation"@en ;
 	skos:notation "27"^^xsd:integer ;
-	skos:definition "Ensure that legislation is screened by means of 'interoperability checks', to identify any barriers to interoperability. When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a ‘digital check’ and consider data protection requirements."@en ;
+	skos:definition "Ensure that legislation is screened by means of 'interoperability checks', to identify any barriers to interoperability. When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a ‘digital check' and consider data protection requirements."@en ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:processalignment a skos:Concept ;

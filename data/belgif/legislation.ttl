@@ -8,7 +8,7 @@
 
 be-legislation:inspire a schema:Legislation ;
 	dcterms:issued "2010-04-02"^^xsd:date ;
-	dcterms:title "Partial transposition INSPIRE directive"@en ;
+	dcterms:title "Partial transposition INSPIRE directive"@en, "Gedeeltelijke omzetting INSPIRE richtlijn"@nl, "Transposition partielle de la directive INSPIRE"@fr, "Teilweise Umsetzung der INSPIRE-Richtlinie"@de ;
 	dcterms:description """
 <p>Cooperation agreement of 2 April 2010 between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region for the coordination of an infrastructure for spatial information</p>
 <p>This cooperation agreement is the partial transposition of Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an infrastructure for spatial information in the Community (INSPIRE).</p>"""@en ;
@@ -18,7 +18,7 @@ be-legislation:inspire a schema:Legislation ;
 
 be-legislation:iceg a schema:Legislation ;
 	dcterms:issued "2013-08-26"^^xsd:date ;
-	dcterms:title "Cooperation Agreement (ICEG) 2013"@en ;
+	dcterms:title "eGov Cooperation Agreement (ICEG) 2013"@en, "eGov Samenwerkingsakkoord (ICEG) 2013"@nl, "Accord de coopération eGov (ICEG) 2013"@fr, "eGov-Kooperationsabkommen (ICEG) 2013"@de ;
 	dcterms:description "Cooperation agreement between the federal, regional and community administrations on the harmonization and alignment of initiatives aiming to realize an integrated e-government."@en ;
 	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
 	dcterms:relation eif-recommendation:alignment, eif-recommendation:agreements, eif-recommendation:opendata ;

@@ -7,12 +7,11 @@
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
 be-action:opendataportals a foaf:Project ;
-	dcterms:title "Open data portals meeting"@en ;
-	dcterms:description """
-Open data meeting with Regions, Federal State and other stakeholders.
-
-Meeting reports are only available in French and Dutch.
-"""@en ;
+	dcterms:title "Open data portals meeting"@en, "Open data portalen vergadering"@nl, "Réunion portails de données ouvertes"@fr, "Offene Datenportale Treffen"@de ;
+	dcterms:description "Informal meetings uniting the maintainers of the various open data portals in Belgium at national, regional and local level + invited experts."@en ,
+		"Informele vergaderingen die de beheerders samenbrengen van de verschillende open dataportalen in België op nationaal, regionaal en lokaal niveau + uitgenodigde deskundigen."@nl ,
+		"Réunions informelles rassemblant les gestionnaires des différents portails de données ouverts en Belgique au niveau national, régional et local + experts invités."@fr ,
+		"Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten."@de ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:opendata ;
 	foaf:website <https://data.gov.be/nl/dcat-werkgroep> .
