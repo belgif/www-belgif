@@ -308,7 +308,10 @@ eif-recommendation:accessibility a skos:Concept ;
 eif-recommendation:privacy a skos:Concept ;
 	skos:prefLabel "Privacy framework"@en ;
 	skos:notation "15"^^xsd:integer ;
-	skos:definition "Define a common security and privacy framework and establish processes for public services to ensure secure and trustworthy data exchange between public administrations and in interactions with citizens and businesses."@en ;
+	skos:definition "Define a common security and privacy framework and establish processes for public services to ensure secure and trustworthy data exchange between public administrations and in interactions with citizens and businesses."@en ,
+		"Definieer een gemeenschappelijk veiligheids- en privacykader en voer processen in voor openbare diensten die een veilige en betrouwbare gegevensuitwisseling waarborgen tussen overheidsdiensten onderling en in het contact met burgers en ondernemingen."@nl ,
+		"Définir un cadre commun de sécurité et de protection de la vie privée et établir des processus applicables aux services publics afin d’assurer des échanges de données sûrs et fiables entre les administrations publiques et lors de leurs interactions avec les citoyens et les entreprises."@fr ,
+		"Festlegen eines gemeinsamen Rahmens für Sicherheit und Datenschutz und Festlegen von Verfahren, nach denen öffentliche Dienste einen gesicherten und vertrauenswürdigen Datenaustausch zwischen öffentlichen Verwaltungen und bei Interaktionen mit Bürgern und Unternehmen gewährleisten."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:multilingualism a skos:Concept ;
