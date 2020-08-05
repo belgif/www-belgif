@@ -169,6 +169,10 @@ eif-principle:simplification a skos:Concept ;
 eif-principle:preservation a skos:Concept ;
 	skos:prefLabel "Preservation of information"@en, "Behoud van informatie"@nl, "Préservation des informations"@fr, "Informationsbewahrung"@de ;
 	skos:notation "11"^^xsd:integer ;
+	skos:definition "Records and information in electronic form held by public administrations for the purpose of documenting procedures and decisions must be preserved and be converted, where necessary, to new media when old media become obsolete."@en ,
+		"Records en informatie in elektronische vorm die overheidsdiensten aanhouden voor het documenteren van procedures en besluiten, moeten worden bewaard en, in voorkomende gevallen, worden omgezet naar nieuwe media wanneer de oude media in onbruik raken."@nl, 
+		"Les enregistrements et les informations conservés dans un format électronique par les administrations publiques aux fins de la documentation des procédures et des décisions doivent être préservés et être convertis, le cas échéant, dans des formats adaptés aux nouveaux médias lorsque les anciens médias deviennent obsolètes."@fr ,
+		"Aufzeichnungen und Angaben in elektronischer Form, die sich zum Zwecke der Dokumentierung von Abläufen und Entscheidungen von öffentlichen Verwaltungen in deren Besitz befinden, müssen aufbewahrt und im Falle, dass die bislang genutzten Speichermedien veralten sollten, auf neue Medien übertragen werden."@de ;
 	skos:related eif-recommendation:preservation ;
 	skos:inScheme eif-principle:  .
 
@@ -317,25 +321,37 @@ eif-recommendation:privacy a skos:Concept ;
 eif-recommendation:multilingualism a skos:Concept ;
 	skos:prefLabel "Multilingualism"@en, "Meertaligheid"@nl, "Multilinguisme"@fr, "Mehrsprachigkeit"@de ;
 	skos:notation "16"^^xsd:integer ;
-	skos:definition "Use information systems and technical architectures that cater for multilingualism when establishing a European public service. Decide on the level of multilingualism support based on the needs of the expected users."@en ;
+	skos:definition "Use information systems and technical architectures that cater for multilingualism when establishing a European public service. Decide on the level of multilingualism support based on the needs of the expected users."@en ,
+		"Gebruik bij het tot stand brengen van een Europese openbare dienst informatiesystemen en technische architecturen die geschikt zijn voor meertaligheid. Kies het niveau van meertaligheidsondersteuning op basis van de behoeften van de verwachte gebruikers."@nl ,
+		"Utiliser des systèmes d’information et des architectures techniques qui tiennent compte du multilinguisme lors de l’établissement d’un service public européen. Déterminer dans quelle mesure un service sera multilingue en fonction des besoins des utilisateurs escomptés."@fr , 
+		"Verwenden von Informationssystemen und technischen Architekturen, die Mehrsprachigkeit beim Aufbau europäischer öffentlicher Dienste zulassen. Entscheiden über den Grad an Unterstützung von Mehrsprachigkeit auf Grundlage der Bedürfnisse der voraussichtlichen Nutzer."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:simplification a skos:Concept ;
 	skos:prefLabel"Simplification"@en, "Vereenvoudiging"@nl, "Simplification"@fr, "Vereinfachung"@de ;
 	skos:notation "17"^^xsd:integer ;
-	skos:definition "Simplify processes and use digital channels whenever appropriate for the delivery of European public services, to respond promptly and with high quality to users' requests and reduce the administrative burden on public administrations, businesses and citizens."@en ;
+	skos:definition "Simplify processes and use digital channels whenever appropriate for the delivery of European public services, to respond promptly and with high quality to users' requests and reduce the administrative burden on public administrations, businesses and citizens."@en ,
+		"Vereenvoudig processen en gebruik waar mogelijk digitale kanalen voor het verlenen van Europese openbare diensten, om direct een adequaat antwoord te hebben op verzoeken van gebruikers en de administratieve lasten voor overheidsdiensten, ondernemingen en burgers te verlagen."@nl ,
+		"Simplifier les processus et utiliser des modes d’accès numériques chaque fois que c’est approprié pour la prestation de services publics européens, afin de fournir une réponse rapide et de qualité aux demandes des utilisateurs et de réduire la charge administrative pesant sur les administrations publiques, les entreprises et les citoyens."@fr ,
+		"Vereinfachen von Prozessen und Nutzen digitaler Kanäle für die Bereitstellung europäischer öffentlicher Dienste im gebotenen Umfang, um unverzüglich und in hochwertiger Form auf Anfragen von Nutzern zu reagieren und den Verwaltungsaufwand für die öffentlichen Verwaltungen, Unternehmen und Bürger zu vermindern."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:preservation a skos:Concept ;
 	skos:prefLabel "Long-term preservation"@en ;
 	skos:notation "18"^^xsd:integer ;
-	skos:definition "Formulate a long-term preservation policy for information related to European public services and especially for information that is exchanged across borders."@en ;
+	skos:definition "Formulate a long-term preservation policy for information related to European public services and especially for information that is exchanged across borders."@en,
+		"Ontwikkel een beleid voor het op de lange termijn bewaren van informatie met betrekking tot Europese openbare diensten en in het bijzonder voor informatie die wordt uitgewisseld over de grenzen heen."@nl,
+		"Formuler une politique de préservation à long terme des informations relatives aux services publics européens, en particulier pour les informations échangées au-delà des frontières."@fr,
+		"Formulieren einer langfristigen Bewahrungspolitik für Informationen in Bezug auf europäische öffentliche Dienste und insbesondere für Informationen, die grenzüberschreitend ausgetauscht werden."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:assessment a skos:Concept ;
 	skos:prefLabel "Assessment"@en ;
 	skos:notation "19"^^xsd:integer ;
-	skos:definition "Evaluate the effectiveness and efficiency of different interoperability solutions and technological options considering user needs, proportionality and balance between costs and benefits."@en ;
+	skos:definition "Evaluate the effectiveness and efficiency of different interoperability solutions and technological options considering user needs, proportionality and balance between costs and benefits."@en,
+		"Beoordeel de doeltreffendheid en efficiëntie van verschillende interoperabiliteitsoplossingen en technologische mogelijkheden, rekening houdend met gebruikersbehoeften, evenredigheid en het evenwicht tussen kosten en baten."@nl,
+		"Évaluer l’efficacité et l’efficience des différentes solutions d’interopérabilité et options technologiques en tenant compte des besoins des utilisateurs et de la proportionnalité et mettant en balance coûts et avantages."@fr ,
+		"Bewerten der Effektivität und Effizienz unterschiedlicher Interoperabilitätslösungen und technischer Optionen unter Berücksichtigung der Nutzerbedürfnisse, der Verhältnismäßigkeit und des Kosten-Nutzen-Verhältnisses."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:holisticgovernance a skos:Concept ;
