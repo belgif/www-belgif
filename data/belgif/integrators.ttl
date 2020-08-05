@@ -6,38 +6,56 @@
 @prefix be-integrator: <http://www.belgif.be/id/org/> .
 
 be-integrator:bced a org:Organization ;
-	skos:prefLabel "BCED"@en, "BCED"@nl, "BCED"@fr ;
-	dcterms:description "The Banque Carrefour d’Échange de Données (BCED) is the regional service integrator for Wallonia"@en ;
+	skos:prefLabel "BCED"@en, "BCED"@nl, "BCED"@fr, "BCED"@de ;
+	dcterms:description "The Banque Carrefour d'Échange de Données (BCED) is the regional service integrator for Wallonia"@en,
+		"De Banque Carrefour d'Échange de Données (BCED) is de gewestelijke dienstenintegrator voor Wallonië"@nl , 
+		"La Banque Carrefour d'Échange de Données (BCED) est l'intégrateur de services régional pour la Wallonie"@fr ,
+		"Die Banque Carrefour d'Échange de Données (BCED) ist der regionale Dienstleistungsintegrator für Wallonien"@de ;
 	foaf:depiction <file:/bced.png> ;
 	foaf:homepage <http://www.ensemblesimplifions.be/node/20> .
 
 be-integrator:bcss a org:Organization ;
-	skos:prefLabel "CBSS"@en, "KSZ"@nl, "BCSS"@fr ;
-	dcterms:description "The Crossroads Bank for Social Security is the driver and coordinator of e-government in the social sector"@en ;
+	skos:prefLabel "CBSS"@en, "KSZ"@nl, "BCSS"@fr, "ZDSS"@de;
+	dcterms:description "The Crossroads Bank for Social Security is the driver and coordinator of e-government in the social sector"@en ,
+		"De Kruispuntbank van de Sociale Zekerheid is de drijvende kracht en coordinator van e-government in de sociale sector"@nl ,
+		"La Banque Carrefour de la Sécurité Sociale est le moteur et le coordinateur de l'e-government dans le secteur social"@fr ,
+		"Die Zentrale Datenbank der sozialen Sicherheit ist die treibende Kraft und Koordinator von E-Government im sozialen Sektor"@de ;
 	foaf:depiction <file:/cbss.png> ;
 	foaf:homepage <https://www.ksz-bcss.fgov.be/en> .
 
 be-integrator:bosa a org:Organization ;
-	skos:prefLabel "FPS BOSA"@en, "FOD BOSA"@nl, "SPF BOSA"@fr ;
-	dcterms:description "The FPS Bosa is the federal services integrator (except for the social security services)."@en ;
+	skos:prefLabel "FPS BOSA"@en, "FOD BOSA"@nl, "SPF BOSA"@fr, "FÖD BOSA"@de ;
+	dcterms:description "The FPS BOSA is the federal service integrator (except for the Social Security services)"@en,
+		"De FOD BOSA is de federale dienstenintegrator (behalve voor de diensten van Sociale Zekerheid)"@nl ,
+		"Le SPF BOSA est l'intégrateur de services fédéral (sauf pour les services de Sécurité Sociale)"@fr ,
+		"Der FÖD BOSA ist der föderale Dienstintegrator (mit Ausnahme der Dienste der sozialen Sicherheit)"@de ;
 	foaf:depiction <file:/bosa.png> ;
 	foaf:homepage <https://bosa.belgium.be/> .
 
 be-integrator:ehealth a org:Organization ;
-	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr ;
-	dcterms:description "EHealth portal"@en ;
+	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr, "eGesundheit"@de ;
+	dcterms:description "EHealth portal"@en ,
+		"Portaal van de eGezondheid diensten@nl ,
+		"Portail des services de l'eSanté"@fr ,
+		"Portal der Dienstleistungen eGesundheit"@de ;
 	foaf:depiction <file:/ehealth.png> ;
 	foaf:homepage <https://www.ehealth.fgov.be> .
 
 be-integrator:fidus a org:Organization ;
-	skos:prefLabel "Fidus"@en, "Fidus"@nl, "Fidus"@fr ;
-	dcterms:description "Fidus is the name given to the regional services integrator for the Brussels-Capital Region"@en ;
+	skos:prefLabel "Fidus"@en, "Fidus"@nl, "Fidus"@fr, "Fidus"@de ;
+	dcterms:description "Fidus is the name given to the regional service integrator for the Brussels-Capital Region"@en,
+		"Fidus is de naam die gegeven werd aan de gewestelijke dienstenintegrator voor het Brussels Gewest"@nl ,
+		"Fidus est le nom donné à l'intégrateur de services régional pour la Région de Bruxelles-Capitale"@fr ,
+		"Fidus ist der Name, den der regionale Dienstintegrator für die Region Brüssel-Hauptstadt trägt"@de ;
 	foaf:depiction <file:/fidus.png> ;
 	foaf:homepage <http://bric.brussels/en/our-solutions/authentic-sources/fidus> .
 
 be-integrator:vdi a org:Organization ;
-	skos:prefLabel "VDI"@en, "VDI"@nl, "VDI"@fr ;
-	dcterms:description "Flanders Information is is the regional service integrator for Flanders"@en ;
+	skos:prefLabel "VDI"@en, "VDI"@nl, "VDI"@fr, "VDI"@de ;
+	dcterms:description "InformatieVlaanderen is the regional service integrator for Flanders"@en,
+		"InformatieVlaanderen is de gewestelijk dienstenintegrator voor Vlaanderen"@nl, 
+		"InformatieVlaanderen est l'intégrateur de services régional pour la Flandre"@fr ,
+		"InformatieVlaanderen ist der regionale Dienstintegrator für Flandern"@de ;
 	foaf:depiction <file:/vdi.png> ; ;
 	foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> .
 
