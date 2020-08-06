@@ -548,21 +548,30 @@ eif-recommendation:quality a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:opendataprocesses a skos:Concept ;
-	skos:prefLabel "Open data processes"@en ;
+	skos:prefLabel "Open data processes"@en, "Open data processen"@nl, "Processus données ouverts"@fr, "Offene Datenprozesse"@de ;
 	skos:notation "41"^^xsd:integer ;
-	skos:definition "Establish procedures and processes to integrate the opening of data in your common business processes, working routines, and in the development of new information systems."@en ;
+	skos:definition "Establish procedures and processes to integrate the opening of data in your common business processes, working routines, and in the development of new information systems."@en,
+		"Breng procedures en processen tot stand, zodat het openstellen van gegevens wordt geïntegreerd in uw gemeenschappelijke bedrijfsprocessen, werkroutines en in de ontwikkeling van nieuwe informatiesystemen."@nl,
+		"Établir des procédures et des processus visant à intégrer l'ouverture des données dans les processus métier communs et les procédures de travail et dans le développement de nouveaux systèmes d'information."@fr ,
+		"Ausarbeiten von Verfahren und Prozessen zur Integration der Zugänglichmachung von Daten in Ihren üblichen Geschäftsprozessen, Arbeitsabläufen und bei der Entwicklung neuer Informationssysteme."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:machinereadable a skos:Concept ;
-	skos:prefLabel "Machine-readable data"@en ;
+	skos:prefLabel "Machine-readable data"@en, "Machineleesbare data"@nl, "Données lisibles par machine"@fr, "Maschinenlesbare Daten"@de ;
 	skos:notation "42"^^xsd:integer ;
-	skos:definition "Publish open data in machine-readable, non-proprietary formats. Ensure that open data is accompanied by high quality, machine-readable metadata in non-proprietary formats, including a description of their content, the way data is collected and its level of quality and the licence terms under which it is made available. The use of common vocabularies for expressing metadata is recommended."@en ;
+	skos:definition "Publish open data in machine-readable, non-proprietary formats. Ensure that open data is accompanied by high quality, machine-readable metadata in non-proprietary formats, including a description of their content and the licence terms under which it is made available."@en ,
+		"Publiceer open gegevens in machineleesbare, niet-beschermde formats. Zorg ervoor dat open gegevens vergezeld gaan van hoogwaardige, machineleesbare metagegevens in niet-beschermde formats, met inbegrip van een beschrijving van de inhoud en de licentievoorwaarden waaronder zij beschikbaar zijn gesteld."@nl ,
+		"Publier des données ouvertes dans des formats non propriétaires lisibles par machine. Veiller à ce que les données ouvertes soient accompagnées de métadonnées de haute qualité et lisibles par machine dans des formats non propriétaires, y compris une description de leur contenu ainsi que la licence sous laquelle elles sont mises à disposition."@fr ,
+		"Veröffentlichen offener Daten in maschinenlesbaren, nichtproprietären Formaten. Sorge dafür, dass offene Daten von hochwertigen, maschinenlesbaren Metadaten in nichtproprietären Formaten begleitet werden, einschließlich einer Beschreibung ihres Inhalts und der Lizenzbestimmungen, nach denen diese zur Verfügung gestellt werden."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:openlicenses a skos:Concept ;
-	skos:prefLabel "Open licenses"@en ;
+	skos:prefLabel "Standardised licenses"@en, "Genormaliseerde licenties"@nl, "Licences normalisées"@fr, "Standardisierte Lizenzen"@de ;
 	skos:notation "43"^^xsd:integer ;
-	skos:definition "Communicate clearly the right to access and reuse open data. The legal regimes for facilitating access and reuse, such as licences, should be standardised as much as possible."@en ;
+	skos:definition "Communicate clearly the right to access and reuse open data. The legal regimes for facilitating access and reuse, such as licences, should be standardised as much as possible."@en ,
+		"Maak het recht op de toegang tot open gegevens en het hergebruik ervan duidelijk kenbaar. De wettelijke regelingen voor het vergemakkelijken van de toegang en het hergebruik, zoals licenties, dienen zoveel mogelijk te worden genormaliseerd."@nl ,
+		"Communiquer clairement le droit d'accès et de réutilisation des données ouvertes. Les régimes juridiques, tels que les licences, qui visent à faciliter l'accès et la réutilisation devraient être normalisés autant que possible."@fr ,
+		"Deutliche Kommunikation des Rechts, auf offene Daten zuzugreifen und diese weiterzuverwenden. Die gesetzlichen Regelungen zur Ermöglichung des Zugangs und der Weiterverwendung wie z. B. Lizenzen sind weitestmöglich zu standardisieren."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:publiccatalogues a skos:Concept ;
