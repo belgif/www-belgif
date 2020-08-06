@@ -494,16 +494,21 @@ eif-recommendation:servicesmodel a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:loosecoupling a skos:Concept ;
-	skos:prefLabel "Loose coupling"@en ;
+	skos:prefLabel "Loose coupling"@en, "Losse koppeling"@nl, "Couplage lâche"@fr, "Lose Kopplung"@de ;
 	skos:notation "35"^^xsd:integer ;
 	skos:definition "Decide on a common scheme for interconnecting loosely coupled service components and put in place and maintain the necessary infrastructure for establishing and maintaining European public services."@en,
-		""Convenir d'un projet commun permettant de relier de manière souple les composants de services et mettre en place et maintenir l'infrastructure nécessaire à l'établissement et au maintien des services publics européens."@fr ,;
+		"Kom een gemeenschappelijke benadering overeen voor het onderling verbinden van op losse wijze gekoppelde dienstencomponenten en implementeer een infrastructuur voor het opzetten en handhaven van Europese openbare diensten en houdt deze in stand."@nl,
+		"Convenir d'un projet commun permettant de relier de manière souple les composants de services et mettre en place et maintenir l'infrastructure nécessaire à l'établissement et au maintien des services publics européens."@fr ,
+		"Entscheiden über ein gemeinsames System für den Verbund lose miteinander gekoppelter Dienstekomponenten und Einrichtungen und Pflegen der erforderlichen Infrastrukturen zur Schaffung und Weiterführung europäischer öffentlicher Dienste."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:sharedservices a skos:Concept ;
-	skos:prefLabel "Shared services"@en ;
+	skos:prefLabel "Shared infrastructure"@en, "Gezamelijke infrastructuur"@nl, "Infrastructure partagée"@fr, "Gemeinsamen Infrastruktur"@de ;
 	skos:notation "36"^^xsd:integer ;
-	skos:definition "Develop a shared infrastructure of reusable services and information sources that can be used by all public administrations."@en ;
+	skos:definition "Develop a shared infrastructure of reusable services and information sources that can be used by all public administrations."@en ,
+		"Ontwerp een gezamenlijke infrastructuur van herbruikbare diensten en informatiebronnen die kan worden gebruikt door alle overheidsdiensten."@nl ,
+		"Développer une infrastructure partagée de services et de sources d'information réutilisables et pouvant être utilisés par toutes les administrations publiques."@fr ,
+		"Entwickeln einer gemeinsamen Infrastruktur aus weiterverwendbaren Diensten und Informationsquellen, die von allen öffentlichen Verwaltungen genutzt werden können."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:authenticsources a skos:Concept ;
