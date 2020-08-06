@@ -314,7 +314,7 @@ eif-recommendation:privacy a skos:Concept ;
 	skos:notation "15"^^xsd:integer ;
 	skos:definition "Define a common security and privacy framework and establish processes for public services to ensure secure and trustworthy data exchange between public administrations and in interactions with citizens and businesses."@en ,
 		"Definieer een gemeenschappelijk veiligheids- en privacykader en voer processen in voor openbare diensten die een veilige en betrouwbare gegevensuitwisseling waarborgen tussen overheidsdiensten onderling en in het contact met burgers en ondernemingen."@nl ,
-		"Définir un cadre commun de sécurité et de protection de la vie privée et établir des processus applicables aux services publics afin d’assurer des échanges de données sûrs et fiables entre les administrations publiques et lors de leurs interactions avec les citoyens et les entreprises."@fr ,
+		"Définir un cadre commun de sécurité et de protection de la vie privée et établir des processus applicables aux services publics afin d'assurer des échanges de données sûrs et fiables entre les administrations publiques et lors de leurs interactions avec les citoyens et les entreprises."@fr ,
 		"Festlegen eines gemeinsamen Rahmens für Sicherheit und Datenschutz und Festlegen von Verfahren, nach denen öffentliche Dienste einen gesicherten und vertrauenswürdigen Datenaustausch zwischen öffentlichen Verwaltungen und bei Interaktionen mit Bürgern und Unternehmen gewährleisten."@de ;
 	skos:inScheme eif-recommendation: .
 
@@ -323,7 +323,7 @@ eif-recommendation:multilingualism a skos:Concept ;
 	skos:notation "16"^^xsd:integer ;
 	skos:definition "Use information systems and technical architectures that cater for multilingualism when establishing a European public service. Decide on the level of multilingualism support based on the needs of the expected users."@en ,
 		"Gebruik bij het tot stand brengen van een Europese openbare dienst informatiesystemen en technische architecturen die geschikt zijn voor meertaligheid. Kies het niveau van meertaligheidsondersteuning op basis van de behoeften van de verwachte gebruikers."@nl ,
-		"Utiliser des systèmes d’information et des architectures techniques qui tiennent compte du multilinguisme lors de l’établissement d’un service public européen. Déterminer dans quelle mesure un service sera multilingue en fonction des besoins des utilisateurs escomptés."@fr , 
+		"Utiliser des systèmes d'information et des architectures techniques qui tiennent compte du multilinguisme lors de l'établissement d'un service public européen. Déterminer dans quelle mesure un service sera multilingue en fonction des besoins des utilisateurs escomptés."@fr , 
 		"Verwenden von Informationssystemen und technischen Architekturen, die Mehrsprachigkeit beim Aufbau europäischer öffentlicher Dienste zulassen. Entscheiden über den Grad an Unterstützung von Mehrsprachigkeit auf Grundlage der Bedürfnisse der voraussichtlichen Nutzer."@de ;
 	skos:inScheme eif-recommendation: .
 
@@ -332,12 +332,12 @@ eif-recommendation:simplification a skos:Concept ;
 	skos:notation "17"^^xsd:integer ;
 	skos:definition "Simplify processes and use digital channels whenever appropriate for the delivery of European public services, to respond promptly and with high quality to users' requests and reduce the administrative burden on public administrations, businesses and citizens."@en ,
 		"Vereenvoudig processen en gebruik waar mogelijk digitale kanalen voor het verlenen van Europese openbare diensten, om direct een adequaat antwoord te hebben op verzoeken van gebruikers en de administratieve lasten voor overheidsdiensten, ondernemingen en burgers te verlagen."@nl ,
-		"Simplifier les processus et utiliser des modes d’accès numériques chaque fois que c’est approprié pour la prestation de services publics européens, afin de fournir une réponse rapide et de qualité aux demandes des utilisateurs et de réduire la charge administrative pesant sur les administrations publiques, les entreprises et les citoyens."@fr ,
+		"Simplifier les processus et utiliser des modes d'accès numériques chaque fois que c'est approprié pour la prestation de services publics européens, afin de fournir une réponse rapide et de qualité aux demandes des utilisateurs et de réduire la charge administrative pesant sur les administrations publiques, les entreprises et les citoyens."@fr ,
 		"Vereinfachen von Prozessen und Nutzen digitaler Kanäle für die Bereitstellung europäischer öffentlicher Dienste im gebotenen Umfang, um unverzüglich und in hochwertiger Form auf Anfragen von Nutzern zu reagieren und den Verwaltungsaufwand für die öffentlichen Verwaltungen, Unternehmen und Bürger zu vermindern."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:preservation a skos:Concept ;
-	skos:prefLabel "Long-term preservation"@en ;
+	skos:prefLabel "Long-term preservation"@en, "Bewaring op lange termijn"@nl, "Préservation à long terme"@fr, "Langfristigen Bewahrungspolitik"@de ;
 	skos:notation "18"^^xsd:integer ;
 	skos:definition "Formulate a long-term preservation policy for information related to European public services and especially for information that is exchanged across borders."@en,
 		"Ontwikkel een beleid voor het op de lange termijn bewaren van informatie met betrekking tot Europese openbare diensten en in het bijzonder voor informatie die wordt uitgewisseld over de grenzen heen."@nl,
@@ -346,42 +346,57 @@ eif-recommendation:preservation a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:assessment a skos:Concept ;
-	skos:prefLabel "Assessment"@en ;
+	skos:prefLabel "Assessment"@en, "Evaluatie"@nl, "Évaluation"@fr, "Bewertung"@de ;
 	skos:notation "19"^^xsd:integer ;
 	skos:definition "Evaluate the effectiveness and efficiency of different interoperability solutions and technological options considering user needs, proportionality and balance between costs and benefits."@en,
 		"Beoordeel de doeltreffendheid en efficiëntie van verschillende interoperabiliteitsoplossingen en technologische mogelijkheden, rekening houdend met gebruikersbehoeften, evenredigheid en het evenwicht tussen kosten en baten."@nl,
-		"Évaluer l’efficacité et l’efficience des différentes solutions d’interopérabilité et options technologiques en tenant compte des besoins des utilisateurs et de la proportionnalité et mettant en balance coûts et avantages."@fr ,
+		"Évaluer l'efficacité et l'efficience des différentes solutions d'interopérabilité et options technologiques en tenant compte des besoins des utilisateurs et de la proportionnalité et mettant en balance coûts et avantages."@fr ,
 		"Bewerten der Effektivität und Effizienz unterschiedlicher Interoperabilitätslösungen und technischer Optionen unter Berücksichtigung der Nutzerbedürfnisse, der Verhältnismäßigkeit und des Kosten-Nutzen-Verhältnisses."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:holisticgovernance a skos:Concept ;
-	skos:prefLabel "Holistic governance"@en ;
+	skos:prefLabel "Holistic governance"@en, "Holistische governance"@nl, "Gouvernance globale"@fr, "Ganzheitliche Governance"@de ;
 	skos:notation "20"^^xsd:integer ;
-	skos:definition "Ensure holistic governance of interoperability activities across administrative levels and sectors."@en ;
+	skos:definition "Ensure holistic governance of interoperability activities across administrative levels and sectors."@en,
+		"Zorg voor een holistische governance van interoperabiliteitsactiviteiten op alle bestuursniveaus en in alle sectoren."@nl, 
+		"Assurer une gouvernance globale des activités d'interopérabilité couvrant tous les niveaux et secteurs administratifs."@fr,
+		"Sorge für eine verwaltungsebenen- und sektorübergreifende ganzheitliche Governance von Interoperabilitätsmaßnahmen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:standardsprocess a skos:Concept ;
-	skos:prefLabel "Standards process"@en ;
+	skos:prefLabel "Standards process"@en, "Standaardenproces"@nl, "Processus des normes"@fr, "Normungsprozess"@de ;
 	skos:notation "21"^^xsd:integer ;
-	skos:definition "Put in place processes to select relevant standards and specifications, evaluate them, monitor their implementation, check compliance and test their interoperability."@en ;
+	skos:definition "Put in place processes to select relevant standards and specifications, evaluate them, monitor their implementation, check compliance and test their interoperability."@en,
+		"Zet een systeem op voor het selecteren en beoordelen van relevante normen en specificaties, het toezicht houden op de implementatie en de naleving daarvan en het testen van de interoperabiliteit van deze normen en specificaties."@nl ,
+		"Mettre en place des processus permettant de sélectionner les normes et les spécifications pertinentes, de les évaluer, de suivre leur mise en œuvre, de vérifier leur conformité et de tester leur interopérabilité."@fr ,
+		"Einrichten von Prozessen für die Auswahl der maßgeblichen Normen und Spezifikationen, ihre Bewertung, die Überwachung ihrer Umsetzung, die Kontrolle der Einhaltung und die Überprüfung ihrer Interoperabilität."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:standardsassessment a skos:Concept ;
-	skos:prefLabel "Standards assessment"@en ;
+	skos:prefLabel "Standards assessment"@en, "Evaluatie van normen"@nl, "Évaluation des normes"@fr, "Bewertung von Normen"@de ;
 	skos:notation "22"^^xsd:integer ;
-	skos:definition "Use a structured, transparent, objective and common approach to assessing and selecting standards and specifications. Take into account relevant EU recommendations and seek to make the approach consistent across borders."@en ;
+	skos:definition "Use a structured, transparent, objective and common approach to assessing and selecting standards and specifications. Take into account relevant EU recommendations and seek to make the approach consistent across borders."@en ,
+		"Gebruik een gestructureerde, transparante, objectieve en gemeenschappelijke benadering voor het beoordelen en selecteren van normen en specificaties. Houd rekening met de betrokken EU-aanbevelingen en streef naar een benadering die consistent is over grenzen heen."@nl ,
+		"Utiliser une approche structurée, transparente, objective et commune pour évaluer et sélectionner les normes et les spécifications. Prendre en considération les recommandations applicables de l'Union européenne et chercher à rendre l'approche cohérente au-delà des frontières."@fr,
+		"Anwenden eines strukturierten, transparenten, objektiven und gemeinsamen Konzepts zur Bewertung und Auswahl von Normen und Spezifikationen. Berücksichtigen maßgeblicher EU-Empfehlungen und Bemühen um eine grenzübergreifende Kohärenz des Konzepts."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:standardscatalogues a skos:Concept ;
-	skos:prefLabel "Standards catalogues"@en ;
+	skos:prefLabel "Standards catalogues"@en, "Standaardencatalogi"@nl, "Catalogues de normes"@fr, "Kataloge für Normen"@de ;
 	skos:notation "23"^^xsd:integer ;
-	skos:definition "Consult relevant catalogues of standards, specifications and guidelines at national and EU level, in accordance with your NIF and relevant DIFs, when procuring and developing ICT solutions."@en ;
+	skos:definition "Consult relevant catalogues of standards, specifications and guidelines at national and EU level, in accordance with your NIF and relevant DIFs, when procuring and developing ICT solutions."@en,
+		"Raadpleeg relevante catalogi van normen, specificaties en richtsnoeren op nationaal en uniaal niveau, in overeenstemming met uw NIF en betrokken DIF's, bij het aanschaffen en ontwikkelen van ICT-oplossingen."@nl,
+		"Consulter les catalogues de normes, de spécifications et d'orientations aux niveaux national et européen, en accord avec le NIF et les DIF concernés, lors de l'acquisition et du développement de solutions TIC."@fr ,
+		"Heranziehen der maßgeblichen Kataloge für Normen, Spezifikationen und Leitlinien auf einzelstaatlicher und auf EU-Ebene im Einklang mit dem NIF und den betreffenden DIF bei der Beschaffung und Entwicklung von IKT-Lösungen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:standardsparticipation a skos:Concept ;
-	skos:prefLabel "Participation"@en ;
+	skos:prefLabel "Active participation"@en, "Actieve deelname"@nl, "Participation active"@fr, "Aktive Beteiligung"@de ;
 	skos:notation "24"^^xsd:integer ;
-	skos:definition "Actively participate in standardisation work relevant to your needs to ensure your requirements are met."@en ;
+	skos:definition "Actively participate in standardisation work relevant to your needs to ensure your requirements are met."@en ,
+		"Neem actief deel aan normalisatiewerkzaamheden die relevant zijn voor uw behoeften om ervoor te zorgen dat aan uw vereisten wordt voldaan."@nl ,
+		"Participer activement à des travaux de normalisation qui se rapportent à des besoins propres pour assurer la satisfaction de ses exigences."@fr ,
+		"Aktive Beteiligung an für Ihre Bedürfnisse relevanten Normungsarbeiten um sicherzustellen, dass Ihre Anforderungen erfüllt werden."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:governancestructure a skos:Concept ;
