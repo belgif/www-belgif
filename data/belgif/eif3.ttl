@@ -512,27 +512,39 @@ eif-recommendation:sharedservices a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:authenticsources a skos:Concept ;
-	skos:prefLabel "Authentic sources"@en ;
+	skos:prefLabel "Authoritative sources"@en, "Gezaghebbende bronnen"@nl, "Sources faisant autorité"@fr, "Authentischen Quellen"@de ;
 	skos:notation "37"^^xsd:integer ;
-	skos:definition "Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation."@en ;
+	skos:definition "Make authoritative sources of information available to others while implementing access and control mechanisms to ensure security and privacy in accordance with the relevant legislation."@en,
+		"Stel gezaghebbende informatiebronnen beschikbaar aan anderen, uitgerust met toegangs- en controlemechanismen om de veiligheid en de privacy te waarborgen overeenkomstig de toepasselijke wetgeving."@nl,
+		"Rendre accessibles aux tiers les sources d'information faisant autorité, tout en mettant en œuvre des mécanismes d'accès et de contrôle permettant d'en assurer la sécurité et la confidentialité, conformément à la législation applicable."@fr ,
+		"Zugänglichmachen von authentischen Informationsquellen bei gleichzeitiger Einrichtung von Zugangs- und Kontrollmechanismen zur Gewährleistung von Sicherheit und Datenschutz im Einklang mit der maßgeblichen Rechtsetzung."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:documentation a skos:Concept ;
-	skos:prefLabel "Documentation"@en ;
+	skos:prefLabel "Documentation"@en, "Documentatie"@nl, "Documentation"@fr, "Dokumentation"@de ;
 	skos:notation "38"^^xsd:integer ;
-	skos:definition "Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information."@en ;
+	skos:definition "Develop interfaces with base registries and authoritative sources of information, publish the semantic and technical means and documentation needed for others to connect and reuse available information."@en ,
+		"Ontwikkel interfaces voor basisregisters en gezaghebbende informatiebronnen en maak de semantische en technische middelen en documentatie openbaar die anderen nodig hebben om de beschikbare informatie te koppelen en opnieuw te gebruiken."@nl ,
+		"Développer des interfaces avec les registres de base et les sources d'information faisant autorité et publier les outils sémantiques et techniques et la documentation nécessaires pour que les tiers puissent se connecter et réutiliser les informations."@fr ,
+		"Entwickeln von Schnittstellen zu Basisregistern und authentischen Informationsquellen, Veröffentlichen der semantischen und technischen Mittel und der Dokumentation, die von anderen benötigt wird, um eine Verbindung herzustellen und die zur Verfügung stehenden Informationen weiterzuverwenden."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:metadata a skos:Concept ;
-	skos:prefLabel "Metadata"@en ;
+	skos:prefLabel "Metadata"@en, "Metadata"@nl, "Métadonnées"@fr, "Metadaten"@de ;
 	skos:notation "39"^^xsd:integer ;
-	skos:definition "Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology, a glossary, and information about any master data it uses from other base registries."@en ;
+	skos:definition "Match each base registry with appropriate metadata including the description of its content, service assurance and responsibilities, the type of master data it keeps, conditions of access and the relevant licences, terminology..."@en ,
+		"Koppel elk basisregister aan de juiste metagegevens, met inbegrip van de beschrijving van de inhoud, de servicegarantie en verantwoordelijkheden, het soort stamgegevens die het bevat, de toegangsvoorwaarden en de desbetreffende licenties, de terminologie ..."@nl ,
+		"Associer chaque registre de base à des métadonnées couvrant notamment la description de son contenu, l'assurance de service et les responsabilités, le type de données de référence qu'il stocke, les conditions d'accès et les licences pertinentes, la terminologie..."@fr,
+		"Abgleich jedes Basisregisters mit geeigneten Metadaten einschließlich der Beschreibung von deren Inhalt, der Sicherung der Qualität des angebotenen Dienstes, der Klärung der Zuständigkeiten für den jeweiligen Dienst, der Art der darin gespeicherten Masterdaten, der Zugangsbedingungen und der maßgeblichen Lizenzen, der Terminologie..."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:quality a skos:Concept ;
-	skos:prefLabel "Quality assurance"@en ;
+	skos:prefLabel "Quality assurance"@en, "Kwaliteitsborging"@nl, "Assurance qualité"@fr, "Qualitätssicherung"@de;
 	skos:notation "40"^^xsd:integer ;
-	skos:definition "Create and follow data quality assurance plans for base registries and related master data."@en ;
+	skos:definition "Create and follow data quality assurance plans for base registries and related master data."@en ,
+		"Maak plannen voor de kwaliteitsborging van gegevens voor basisregisters en gerelateerde stamgegevens en voer deze uit."@nl ,
+		"Créer et suivre des plans d'assurance de la qualité des données pour les registres de base et les données de référence connexes."@fr ,
+		"Erstellen und Befolgen eines Datenqualitätssicherungsplans für Basisregister und damit in Zusammenhang stehende Masterdaten."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:opendataprocesses a skos:Concept ;
