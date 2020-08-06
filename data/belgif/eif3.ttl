@@ -458,33 +458,46 @@ eif-recommendation:datamanagement a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:informationmanagement a skos:Concept ;
-	skos:prefLabel "Information management strategy"@en ;
+	skos:prefLabel "Information management strategy"@en, "Informatiebeheerstrategie"@nl, "Stratégie de gestion de l'information"@fr, "Informationsmanagementstrategie"@de ;
 	skos:notation "31"^^xsd:integer ;
 	skos:definition "Put in place an information management strategy at the highest possible level to avoid fragmentation and duplication. Management of metadata, master data and reference data should be prioritised."@en ;
+		"Implementeer een informatiebeheerstrategie op het hoogst mogelijke niveau om versplintering en duplicatie te vermijden. Het beheer van metagegevens, stamgegevens en referentiegegevens verdient prioriteit."@nl ,
+		"Mettre en place une stratégie de gestion de l'information au niveau le plus élevé possible afin d'éviter la fragmentation et la duplication. La priorité devrait être accordée à la gestion des métadonnées et des données de référence."@fr ,
+		"Erarbeiten einer Informationsmanagementstrategie auf höchstmöglicher Ebene zur Vermeidung von Fragmentierung und Doppelarbeit. Dem Management von Metadaten, Masterdaten und Referenzdaten sollte Vorrang eingeräumt werden."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:communities a skos:Concept ;
-	skos:prefLabel "Communities"@en ;
+	skos:prefLabel "Cross-sectoral communities"@en, "Sectoroverschrijdende gemeenschappen"@nl, "Communautés sectorielles et intersectorielles"@fr, "Sektorübergreifender Gemeinschaften"@de ;
 	skos:notation "32"^^xsd:integer ;
-	skos:definition "Support the establishment of sector-specific and cross-sectoral communities that aim to create open information specifications and encourage relevant communities to share their results on national and European platforms."@en ;
+	skos:definition "Support the establishment of sector-specific and cross-sectoral communities that aim to create open information specifications and encourage relevant communities to share their results on national and European platforms."@en,
+		"Ondersteun de oprichting van sectorspecifieke en sectoroverschrijdende gemeenschappen die als doel hebben open informatiespecificaties te ontwerpen en moedig desbetreffende gemeenschappen aan hun resultaten te delen op nationale en Europese platformen."@nl,
+		"Favoriser l'établissement de communautés sectorielles et intersectorielles ayant pour objet de créer des spécifications d'information ouvertes, et encourager ces communautés à échanger leurs résultats sur les plateformes nationales et européennes."@fr ,
+		"Unterstützen des Aufbaus sektorspezifischer und sektorübergreifender Gemeinschaften, deren Ziel darin besteht, Spezifikationen für offene Informationen zu schaffen, und Ermuntern der betreffenden Gemeinschaften zur Weitergabe ihrer Ergebnisse auf nationalen und europäischen Plattformen."@de;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:openspecifications2 a skos:Concept ;
 	skos:prefLabel "Open specifications"@en, "Open specificaties"@nl, "Spécifications ouvertes"@fr, "Offener Spezifikationen"@de ;
 	skos:notation "33"^^xsd:integer ;
-	skos:definition "Use open specifications, where available, to ensure technical interoperability when establishing European public services."@en ;
+	skos:definition "Use open specifications, where available, to ensure technical interoperability when establishing European public services."@en ,
+		"Gebruik, indien beschikbaar, open specificaties bij het tot stand brengen van Europese openbare diensten om de technische interoperabiliteit te waarborgen."@nl ,
+		"Utiliser des spécifications ouvertes lorsqu'elles sont disponibles pour assurer l'interopérabilité technique lors de l'établissement des services publics européens."@fr ,
+		"Verwenden offener Spezifikationen, soweit solche zur Verfügung stehen, um bei der Einrichtung europäischer öffentlicher Dienste für technische Interoperabilität zu sorgen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:servicesmodel a skos:Concept ;
-	skos:prefLabel "Services model"@en ;
+	skos:prefLabel "Services model"@en, "Dienstenmodel"@nl, "Modèle de services"@fr, "Dienstleistungsmodell"@de ;
 	skos:notation "34"^^xsd:integer ;
-	skos:definition "Use the conceptual model for European public services to design new services or reengineer existing ones and reuse, whenever possible, existing service and data components."@en ;
+	skos:definition "Use the conceptual model for European public services to design new services or reengineer existing ones and reuse, whenever possible, existing service and data components."@en,
+		"Gebruik het conceptuele model voor Europese openbare diensten om nieuwe diensten te ontwerpen of bestaande diensten te hervormen en gebruik, waar mogelijk, bestaande diensten- en gegevenscomponenten opnieuw."@nl ,
+		"Utiliser le modèle conceptuel des services publics européens pour concevoir de nouveaux services ou pour réorganiser les services existants et réutiliser, dans la mesure du possible, les services existants et les composants de données."@fr ,
+		"Verwenden des konzeptionellen Modells für europäische öffentliche Dienste zur Gestaltung neuer Dienste oder zur Umgestaltung bestehender und nach Möglichkeit Weiterverwendung bestehender Dienste- und Datenkomponenten."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:loosecoupling a skos:Concept ;
 	skos:prefLabel "Loose coupling"@en ;
 	skos:notation "35"^^xsd:integer ;
-	skos:definition "Decide on a common scheme for interconnecting loosely coupled service components and put in place and maintain the necessary infrastructure for establishing and maintaining European public services."@en ;
+	skos:definition "Decide on a common scheme for interconnecting loosely coupled service components and put in place and maintain the necessary infrastructure for establishing and maintaining European public services."@en,
+		""Convenir d'un projet commun permettant de relier de manière souple les composants de services et mettre en place et maintenir l'infrastructure nécessaire à l'établissement et au maintien des services publics européens."@fr ,;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:sharedservices a skos:Concept ;
