@@ -413,33 +413,48 @@ eif-recommendation:governancestructure a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:agreements a skos:Concept ;
-	skos:prefLabel "Interoperability agreements"@en ;
+	skos:prefLabel "Interoperability agreements"@en, "Interoperabiliteitsovereenkomsten"@nl, "Accords d'interopérabilité"@fr, "Interoperabilitätsvereinbarungen"@de ;
 	skos:notation "26"^^xsd:integer ;
-	skos:definition "Establish interoperability agreements in all layers, complemented by operational agreements and change management procedures."@en ;
+	skos:definition "Establish interoperability agreements in all layers, complemented by operational agreements and change management procedures."@en,
+		"Sluit interoperabiliteitsovereenkomsten op alle niveaus, aangevuld met operationele overeenkomsten en veranderingsbeheerprocessen."@nl,
+		"Établir des accords d'interopérabilité à tous les niveaux, complétés par des accords opérationnels et des procédures de gestion des modifications."@fr,
+		"Schließen von Vereinbarungen auf allen Ebenen, ergänzt durch betriebliche Vereinbarungen und Verfahren für das Änderungsmanagement."@de ;
 	skos:inScheme eif-recommendation: .
 	
 eif-recommendation:legislation a skos:Concept ;
-	skos:prefLabel "Digital legislation"@en ;
+	skos:prefLabel "Digital legislation"@en, "Digitale wetgeving"@nl, "Législation digitale"@fr, "Digitale Rechtsvorschriften"@de ;
 	skos:notation "27"^^xsd:integer ;
-	skos:definition "Ensure that legislation is screened by means of 'interoperability checks', to identify any barriers to interoperability. When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a ‘digital check' and consider data protection requirements."@en ;
+	skos:definition "When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a 'digital check' and consider data protection requirements."@en ,
+		"Bij het ontwerpen van wetgeving voor het tot stand brengen van een Europese openbare dienst dient men ernaar te streven dat dit strookt met de desbetreffende wetgeving, een "digitale check" uit te voeren, alsmede de voorschriften omtrent gegevensbescherming in acht te nemen."@nl ,
+		"Lors de l'élaboration d'une législation pour établir un service public européen, chercher à la rendre compatible avec la législation pertinente, effectuer un 'contrôle numérique' et tenir compte des exigences en matière de protection des données."@fr ,
+		"Bemühen darum, bei der Ausarbeitung von Rechtsvorschriften zur Schaffung eines europäischen öffentlichen Dienstes diese mit der maßgeblichen Gesetzgebung in Einklang zu bringen, Durchführung eines 'digitalen Checks' und Berücksichtigung datenschutzrechtlicher Anforderungen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:processalignment a skos:Concept ;
-	skos:prefLabel "Process alignment"@en ;
+	skos:prefLabel "Process alignment"@en, "Procesafstemming"@nl, "Harmonisation des processus"@fr, "Prozessausrichtung"@de ;
 	skos:notation "28"^^xsd:integer ;
-	skos:definition "Document your business processes using commonly accepted modelling techniques and agree on how these processes should be aligned to deliver a European public service."@en ;
+	skos:definition "Document your business processes using commonly accepted modelling techniques and agree on how these processes should be aligned to deliver a European public service."@en,
+		"Documenteer uw bedrijfsprocessen aan de hand van algemeen aanvaarde modelleringstechnieken en sluit een overeenkomst over de wijze waarop deze processen afgestemd dienen te worden voor het verlenen van een Europese openbare dienst."@nl,
+		"Documenter ses processus métier en utilisant des techniques de modélisation communément acceptées et convenir de la manière dont ces processus doivent être harmonisés pour fournir un service public européen."@fr ,
+		"Dokumentieren der Geschäftsprozesse unter Verwendung allseits anerkannter Modellierungstechniken und Herstellen von Einvernehmen darüber, wie diese Prozesse zur Bereitstellung eines europäischen öffentlichen Dienstes aneinander angeglichen werden sollten."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:relationships a skos:Concept ;
-	skos:prefLabel "Organisational relationships"@en ;
+	skos:prefLabel "Organisational relationships"@en, "Organisatorische verbanden"@nl, "relations organisationnelles"@fr, "Organisatorischen Beziehungen"@de ;
 	skos:notation "29"^^xsd:integer ;
-	skos:definition "Clarify and formalise your organisational relationships for establishing and operating European public services."@en ;
+	skos:definition "Clarify and formalise your organisational relationships for establishing and operating European public services."@en ,
+		"Verduidelijk en formaliseer uw organisatorische verbanden voor het opzetten en exploiteren van Europese openbare diensten."@nl ,
+		"Clarifier et formaliser ses relations organisationnelles pour l'établissement et l'exploitation de services publics européens"@fr ,
+		"Klären und Formalisieren der organisatorischen Beziehungen für die Einrichtung und den Betrieb europäischer öffentlicher Dienste."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:datamanagement a skos:Concept ;
-	skos:prefLabel "Data management"@en ;
+	skos:prefLabel "Data management"@en, "Gegevensbeheer"@nl, "Gestion des données"@fr, "Datenverwaltung"@de ;
 	skos:notation "30"^^xsd:integer ;
-	skos:definition "Perceive data and information as a public asset that should be appropriately generated, collected, managed, shared, protected and preserved."@en ;
+	skos:definition "Perceive data and information as a public asset that should be appropriately generated, collected, managed, shared, protected and preserved."@en ,
+		"Beschouw gegevens en informatie als een openbaar goed dat op passende wijze dient te worden gegenereerd, verzameld, beheerd, gedeeld, beschermd en bewaard."@nl , 
+		"Considérer les données et les informations comme un actif public qui doit être généré, collecté, géré, partagé, protégé et préservé de manière appropriée."@fr ,
+		"Betrachten von Daten und Informationen als ein öffentliches Gut, das in angemessener Weise erzeugt, erhoben, verwaltet, gemeinsam genutzt, geschützt und bewahrt werden sollte."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:informationmanagement a skos:Concept ;
