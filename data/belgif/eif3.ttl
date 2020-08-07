@@ -575,25 +575,37 @@ eif-recommendation:openlicenses a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:publiccatalogues a skos:Concept ;
-	skos:prefLabel "Public catalogues"@en ;
+	skos:prefLabel "Public service catalogues"@en, "Catalogi openbare diensten"@nl, "Catalogues de services publics"@fr, "Katalogen öffentlicher Dienste"@de ;
 	skos:notation "44"^^xsd:integer ;
-	skos:definition "Put in place catalogues of public services, public data, and interoperability solutions and use common models for describing them."@en ;
+	skos:definition "Put in place catalogues of public services, public data, and interoperability solutions and use common models for describing them."@en ,
+		"Stel catalogi samen voor openbare diensten, openbare gegevens en interoperabiliteitsoplossingen en gebruik gemeenschappelijke modellen om deze te beschrijven."@nl ,
+		"Mettre en place des catalogues de services publics, de données publiques et de solutions d'interopérabilité et utiliser des modèles communs pour les décrire."@fr ,
+		"Schaffen von Katalogen öffentlicher Dienste, öffentlicher Daten und von Interoperabilitätslösungen sowie Verwendung gängiger Modelle zu deren Beschreibung."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:externalsources a skos:Concept ;
-	skos:prefLabel "External sources"@en ;
+	skos:prefLabel "External sources"@en, "Externe bronnen"@nl, "Sources externes"@fr, "externer Quellen"@de ;
 	skos:notation "45"^^xsd:integer ;
-	skos:definition "Where useful and feasible to do so, use external information sources and services while developing European public services."@en ;
+	skos:definition "Where useful and feasible to do so, use external information sources and services while developing European public services."@en ,
+		"Gebruik, waar dit nuttig en haalbaar is, externe informatiebronnen en diensten bij het ontwikkelen van Europese openbare diensten."@nl ,
+		"Lorsque c'est possible et utile, utiliser des services et des sources d'information externes lors de l'élaboration de services publics européens."@fr ,
+		"Verwenden externer Informationsquellen und Dienste bei der Entwicklung europäischer öffentlicher Dienste dort, wo dies sinnvoll und machbar ist."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:riskmanagement a skos:Concept ;
-	skos:prefLabel "Risk management"@en ;
+	skos:prefLabel "Risk management"@en, "Risicobeheer"@nl, "Gestion des risques"@fr, "Risikomanagement"@de ;
 	skos:notation "46"^^xsd:integer ;
-	skos:definition "Consider the specific security and privacy requirements and identify measures for the provision of each public service according to risk management plans."@en ;
+	skos:definition "Consider the specific security and privacy requirements and identify measures for the provision of each public service according to risk management plans."@en,
+		"Bestudeer de specifieke veiligheids- en privacyvoorschriften en stel maatregelen vast voor het verlenen van alle openbare diensten volgens de risicobeheerplannen."@nl ,
+		"Examiner les exigences spécifiques en matière de sécurité et de confidentialité et déterminer les mesures à prendre pour assurer la prestation de chaque service public conformément aux plans de gestion des risques."@fr ,
+		"Berücksichtigen der spezifischen Anforderungen in puncto Sicherheit und Schutz der Privatsphäre und Festlegen von Maßnahmen für die Bereitstellung jedes öffentlichen Dienstes nach den Vorgaben von Risikomanagementplänen."@de ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:trustservices a skos:Concept ;
-	skos:prefLabel "Trust services"@en ;
+	skos:prefLabel "Trust services"@en, "Vertrouwensdiensten"@nl, "Services de confiance"@fr , "Vertrauensdiensten"@de ;
 	skos:notation "47"^^xsd:integer ;
-	skos:definition "Use trust services according to the Regulation on eID and Trust Services as mechanisms that ensure secure and protected data exchange in public services."@en ;
+	skos:definition "Use trust services according to the Regulation on eID and Trust Services as mechanisms that ensure secure and protected data exchange in public services."@en,
+		"Maak gebruik van vertrouwensdiensten in overeenstemming met de verordening inzake eID en vertrouwensdiensten als mechanismen voor het waarborgen van een veilige en beschermde gegevensuitwisseling bij openbare diensten."@nl ,
+		"Utiliser les services de confiance conformément au règlement sur l'eID et les services de confiance en tant que mécanismes garantissant l'échange sécurisé et protégé des données dans les services publics."@fr ,
+		"Nutzen von Vertrauensdiensten nach der Verordnung über elektronische Identifizierung und Vertrauensdienste als Mechanismen zur Gewährleitung eines gesicherten und geschützten Datenaustauschs bei öffentlichen Diensten."@de ;
 	skos:inScheme eif-recommendation: .
