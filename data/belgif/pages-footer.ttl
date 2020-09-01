@@ -3,226 +3,147 @@
 @prefix be-page: <http://www.belgif.be/id/page/> .
 
 be-page:conditions a foaf:Document ;
-	dcterms:title "Conditions of use"@en ;
+	dcterms:title "Conditions of use"@en, "Gebruiksvoorwaarden"@nl, "Conditions d'utilisation"@fr, "Nutzungsbedingungen"@de ;
 	dcterms:description  """
-<h3>Purpose of the site</h3>
-<p>The information provided on the portal site or on the web sites of the federal public services or public institutions, which are referred to on the portal site, is of a general nature. It is not intended to cover specific or personal situations, and cannot therefore be considered to constitute legal, professional or personal advice for the user.</p>
-<p>If you need specific or personal advice, you should always consult the relevant services within the federal government. The government information officers will probably be able to help you find the relevant service or person within the federal administration.</p>
-<p>It is important to emphasise that the information and documents, which are available on or via the portal site, cannot be considered to be authentic reproductions of official texts. Only official texts published in the Moniteur Belge (the official Belgian legal journal) are the authentic versions. In the event of differences between the electronic version and the printed text, the official printed text published in the Moniteur Belge will always take precedence.</p>
-<h4>Content and availability of the site</h4>
-<p>The federal government has taken great care to ensure that the information provided is complete, correct, exhaustive and up-to-date. Despite these efforts, there may still be errors in the information that is made available to you. If the information provided on or via the portal site contains errors, or if certain information is unavailable on or via the portal site, the federal government will do its utmost to rectify the situation as quickly as possible.</p>
-<p>The federal government has also taken great care to ensure that, as far as possible, access to the site will not be interrupted as a result of technical problems. However, the federal government cannot guarantee that the portal site will be completely free from interruptions or that it will not be affected by other technical problems.</p>
-<p>The federal public services and federal public institutions concerned offer you information via the portal site. If you discover errors in the information provided on or via the portal site, or if you wish to ask any questions on this subject, you can contact the public service concerned. If you do not know which public service this involves you can contact the portal site manager. In this case the manager will refer you to the appropriate public service.</p>
-<p>The portal site and the web sites of the federal public services and federal public institutions which are referred to on the portal site may contain links to the web sites of other authorities or organisations, over which the federal government has no control, either from the point of view of the content or the technical functioning of the site. Therefore the federal government cannot offer any guarantee that the content of these web sites will be exhaustive or accurate, nor can it guarantee their availability.</p>
-<p>The federal government accepts no liability for direct or indirect damage caused as a result of referring to or using the web sites or the information available on the web sites to which the portal site refers.</p>
-<h4>Copyright</h4>
-<p>Unless stated otherwise, the information provided on or via the portal site is not subject to copyright law. The information is available free of charge for personal use only, providing that the source is quoted. In cases where prior authorization is needed for the use or reproduction of certain information, the restrictions on usage are explicitly stated. The use and reproduction of multimedia information (in particular images, sounds and software applications) are always subject to prior approval.</p>
-<p>The federal government and/or others retain all the intellectual property rights over the portal site. Some software applications and graphics which can be accessed on or via the portal site are supplied by third parties and may be protected by copyright, which means that the use and reproduction of these items are restricted and require prior authorization from the owner of the copyright.</p>
-<p>The use of the portal site is governed by certain general conditions which are described below. By accessing this portal site, you are understood to have accepted the general conditions of use.</p>"""@en .
-
+<h3>Design and follow-up</h3>
+<p>The <a href="https://bosa.belgium.be/en">Federal Public Service Policy and Support</a> of the Belgian Federal Government is responsible for the texts, management and follow-up of the site.</p>
+<h3>Conditions of Reuse (Creative Commons-0 license)</h3>
+<ul>
+<li>The information published on this website is free of rights, unless otherwise stated. It can be reused unconditionally for private, associative, scientific and commercial purposes. The federal government does, however, recommend mentioning the source and date of the reused information.<li>
+<li>Where prior permission is required, or where specific conditions are necessary, the restrictions on reuse are expressly stated. The re-use of multimedia material (photographs, images, sound, videos, etc.), including content contained in downloadable documents (brochures, etc.), is always subject to prior authorization.</li>
+<li>The federal government makes every effort to ensure that this website is correct and up to date. If an error is detected, it undertakes to make the necessary corrections as soon as possible.</li>
+</ul>"""@en ,
+	"""
+<h3>Ontwerp en opvolging</h3>
+<p>De <a href="https://bosa.belgium.be/nl">Federale Overheidsdienst Beleid en Ondersteuning</a> van de Belgische federale overheid is verantwoordelijk voor de teksten, het beheer en de opvolging van de site.</p>
+<h3>Voorwaarden voor het hergebruik (Creative Commons-0 licentie)</h3>
+<ul>
+<li>Tenzij anders vermeld, is de informatie op deze website vrij van rechten. Ze kan onvoorwaardelijk worden hergebruikt voor privé-, verenigings-, wetenschappelijke en commerciële doeleinden. De federale overheid raadt wel aan om de bron en datum van de hergebruikte informatie te vermelden.</li>
+<li>Wanneer voorafgaande toestemming vereist is, of wanneer specifieke voorwaarden noodzakelijk zijn, worden de beperkingen voor hergebruik uitdrukkelijk vermeld. Het hergebruik van multimediamateriaal (foto' s, afbeeldingen, geluid, video' s enz.), met inbegrip van de inhoud die in downloadbare documenten staat (brochures, enz.), is altijd onderworpen aan voorafgaande goedkeuring.</li>
+<li>De federale overheid stelt alles in het werk om ervoor te zorgen dat deze website correct en actueel is. Wordt er toch een fout vastgesteld, dan verbindt ze zich ertoe om zo spoedig mogelijk de nodige correcties aan te brengen.</li>
+</ul>"""@nl,
+	"""
+<h3>Conception et suivi</h3>
+<p>Le <a href="https://bosa.belgium.be/fr">Service public fédéral Stratégie et Appui</a> de l'administration fédérale belge assure la réalisation éditoriale, la gestion et le suivi du site.</p>
+<h3>Conditions de réutilisation (licence Creative Commons-0)</h3>
+<ul>
+<li>Les informations publiées sur ce site internet sont libres de droits, sauf mention contraire. Elles peuvent être réutilisées sans condition à des fins privées, associatives, scientifiques et commerciales. Toutefois, les autorités fédérales recommandent de mentionner la source et la date des informations réutilisées.</li>
+<li>Lorsqu'une autorisation préalable est requise ou lorsque des conditions spécifiques sont nécessaires, les limites de la réutilisation sont explicitement mentionnées. La réutilisation du matériel multimédia (photos, images, sons, vidéos…), y compris celui se trouvant dans les documents téléchargeables (brochures…), est toujours soumise à une approbation préalable.</li>
+<li>Les autorités fédérales mettent tout en œuvre pour que ce site soit exact et à jour. Toutefois, si une erreur est constatée, elles s'engagent à faire les corrections nécessaires dans les meilleurs délais.</li>
+</ul>"""@fr,
+	"""
+<h3>Entwurf und Follow-up</h3>
+<p>Der <a href="https://bosa.belgium.be/de">föderale öffentliche Dienst Politik und Unterstützung</a> der belgischen föderalen Regierung ist für die Texte, die Verwaltung und das Follow-up der Website verantwortlich.</p>
+<h3>Bedingungen für die Nutzung (Creative-Commons-0-Lizenz)</h3>
+<ul>
+<li>Wenn nicht etwas anderes angegeben wird, sind die Informationen auf dieser Website frei von Urheberrechten und können bedingungslos für private, assoziative, wissenschaftliche und kommerzielle Zwecke genutzt werden. Die föderalen Behörden empfehlen allerdings, die Quelle und das Datum der genutzten Informationen anzugeben.</li>
+<li>Wenn eine vorhergehende Zustimmung erforderlich ist oder wenn besondere Bedingungen notwendig sind, werden die Nutzungsbeschränkungen ausdrücklich aufgeführt. Die Nutzung von Multimedienmaterial (Fotos, Abbildungen, Tonaufnahmen, Videos usw.), einschließlich des Inhalts von herunterladbaren Dateien (Broschüren usw.), unterliegt immer einer vorhergehenden Genehmigung.</li>
+<li>Die föderalen Behörden tun alles, um dafür zu sorgen, dass diese Website korrekt und aktuell ist. Wird trotzdem ein Fehler festgestellt, verpflichten sie sich dazu, so schnell wie möglich die erforderlichen Korrekturen vorzunehmen.</li>
+</ul>"""@de ;
 
 be-page:privacy a foaf:Document ;
-	dcterms:title "Privacy statement@en ;
+	dcterms:title "Privacy statement"@en, "Privacyverklaring"@nl, "Déclaration de confidentialité"@fr, "Datenschutzerklärung"@de ;
 	dcterms:description  """
-	<h3>Privacy statement</h3>
-
-<ul><li><a href="#art1">Article 1 – General principles</a></li>
-	<li><a href="#art2">Article 2 – Field of application of the declaration of confidentiality</a></li>
-	<li><a href="#art3">Article 3 – Public and anonymous access</a></li>
-	<li><a href="#art4">Article 4 – Voluntary transfer of information</a></li>
-	<li><a href="#art5">Article 5 – Use of contact information</a></li>
-	<li><a href="#art6">Article 6 – Security and confidentiality</a></li>
-	<li><a href="#art7">Article 7 – Legality and transparency</a></li>
-	<li><a href="#art8">Article 8 – Purpose</a></li>
-	<li><a href="#art9">Article 9 – Proportionality</a></li>
-	<li><a href="#art10">Article 10 – Right of access and correction</a></li>
-	<li><a href="#art11">Article 11 – User’s liability</a></li>
-	<li><a href="#art12">Article 12 – Transfer to third parties</a></li>
-	<li><a href="#art13">Article 13 – Administration’s public accessibility</a></li>
-	<li><a href="#art14">Article 14 – Adaptations to the declaration of confidentiality</a></li>
-</ul><h4>Article 1 – General principles</h4>
-
-<p>The protection of your private life is of the greatest importance to the federal Administration. This declaration of confidentiality describes which measures are taken in order to protect your private life when you are using the services organised by or on the orders of the federal Administration within the framework of e-government, and what rights you have as a user of these services.</p>
-
-<p>You are invited to read through this declaration of confidentiality and to take note of its content. This declaration of confidentiality may be adapted in the future. We therefore ask you to reread the declaration of confidentiality from time to time in order to remain abreast of these adaptations. It goes without saying that all new versions of the declaration of confidentiality will at all times comply with the aforementioned Law relating to the protection of private life.</p>
-
-<p>This general declaration of confidentiality does not provide a detailed examination of the specific characteristics of particular categories of data such as legal or medical data. For this, we refer you to the public services which process this type of data. These services will provide an additional declaration for this type of data.</p>
-
-<p>In this declaration, we start from the principle that the data is not being transferred outside the EU. Nevertheless the public services which do this as part of their tasks must mention this in an additional declaration.</p>
-
-<h4>Article 2 – Field of application of the declaration of confidentiality</h4>
-
-<p>The declaration of confidentiality applies to all the services organised by or on the orders of the federal Administration within the framework of e-government.</p>
-
-<p>Within the context of this declaration of confidentiality, the following are considered to be services:</p>
-
-<p>applications offered to citizens and businesses by or on the orders of the federal Administration, either as independent applications, or as web-based applications which are incorporated in a web site the web sites created and maintained by or on the orders of the federal Administration and which are intended to be used by citizens or businesses, with the exception of internal web sites which are not accessible to the general public any form of electronic communication which is used for the exchange of data between the federal Administration on the one hand and citizens and businesses on the other. Within the context of this declaration of confidentiality, the following are considered to be part of the federal Administration: the federal public services, the federal public services for programming and the federal public institutions.</p>
-
-<p>You should preferably take into account the fact that the various services offered by or on the orders of the federal Administration are also subject, because of their specific nature, to specific declarations of confidentiality. Before you connect up to use a service, you are therefore advised to check whether the service has a separate declaration of confidentiality, which involves more detailed regulations for this specific service. It goes without saying that these specific declarations of confidentiality will also be reconcilable with the aforementioned Law relating to the protection of private life and that they will never contradict this general declaration of confidentiality.</p>
-
-<p>Also note that the web sites created and maintained by or on the orders of the federal Administration can have links with other web sites run by authorities, bodies and organisations over which the federal Administration does not exercise any technical control or control relating to content. The federal Administration cannot therefore offer any guarantee over the policies of these web sites on the subject of private life. The federal Administration does not therefore accept any liability in the event of direct or indirect damage resulting from consulting or using these external web sites. We recommend that you read through the policy of these web sites on the subject of private life.</p>
-
-<h4>Article 3 – Public and anonymous access</h4>
-
-<p>The administration uses different levels of securitising the various services it offers. The lowest level comprises services offered on a public and anonymous basis.</p>
-
-<p>With regard to the services offered on a public and anonymous basis (i.e. without any prior registration procedure or without any subsequent transfer of data), only a limited amount of data can be collected. This data is obtained from the use of cookies and logging.</p>
-
-<p>Cookies are small information files which are automatically recorded onto the hard disk of your computer when you visit a site, and which have a unique identification number. These cookies can simplify access to the site as well as navigation, and increase the speed and efficiency of using sites. They can also be used to customise the site to suit your personal preferences. Cookies also allow you to analyse the use of a site in order to identify and eliminate any problems.</p>
-
-<p>The configuration of most navigators allows you to accept or refuse cookies, and informs you each time a cookie is used. You are free to refuse these cookies, although this may be detrimental to optimum navigation and the functionality of the services on the site. Please consult the aid function on your navigator if you require further information.</p>
-
-<p>On the federal portal site data.gov.be the cookies recording the language selection(s) are not automatically deleted.</p>
-
-<p>In addition, any use you make of the services which are created by or on the orders of the federal Administration can be logged within the framework of e-government. This means that the following data can be collected:</p>
-
-<ul><li>the IP address which was allocated to you at the time of connection;</li>
-	<li>the date and time of accessing the service;</li>
-	<li>any pages consulted over a certain period;</li>
-	<li>any navigator used;</li>
-	<li>the platform and/or the user system installed on your system;</li>
-	<li>the search engine and the passwords used to find the site offering the service;</li>
-	<li>the files downloaded;</li>
-	<li>the choice of language;</li>
-	<li>the site you used to get there.</li>
-</ul><p>This data will only be processed in order to find out about the number of users from the various sections of the services and in order to improve the content of the services. They will never be used to establish a citizen’s profile.</p>
-
-<h4>Article 4 – Voluntary transfer of information</h4>
-
-<p>In order to be able to use certain services with a higher level of securitisation, you will be asked to notify certain data of a personal nature to the federal Administration. To this end, only the data required to be able to provide a top quality service will be requested. The necessary measures will be taken in relation to this data to guarantee the protection of your private life, as will be described below. Note that special services can fulfil these guarantees in a more detailed manner by means of a separate declaration of confidentiality. You are therefore advised to check whether the service has a separate declaration of confidentiality. The level of security used will also be clearly indicated in the declaration of confidentiality or the regulations for use for the users of each service.</p>
-
-<p>The services offered with a higher level of security pose a series of typical requirements relating to your identification and your authentication.</p>
-
-<p>Depending on the level of security, you will be asked to send through a series of data with a view to your registration, identification and authentication.</p>
-
-<p>This means that you can be allocated a user number so that the public services can identify you correctly when you use the electronic services.</p>
-
-<p>You may also be able to use your electronic identity card which is provided with an identity certificate to do this.</p>
-
-<p>In addition to this data which is needed if services are to be supplied, you may also be asked to provide a certain amount of feed-back. Obviously, you are entirely free to accept or refuse to do so. By returning this feed-back, you are giving us authorisation to process the data of a personal nature which you have returned in order to improve user experience or to allow new services to be provided.</p>
-
-<h4>Article 5 – Use of contact information</h4>
-
-<p>In order to be able to use the services, you will sometimes be asked for your contact information (such as e-mail address, telephone number or fax number). This data will only be processed by the federal Administration in order to ensure satisfactory functioning of the service, i.e.:</p>
-
-<p>in order to contact you if necessary for the additional data required to guarantee the satisfactory functioning of the service; or in order to supply you with all the useful and relevant information relating to changes in the provision of services which may affect your user experience in a significant way, such as messages relating to user management or interruptions in services; or possibly in order to notify modifications to the declaration of confidentiality or to the user’s regulations for use which are being applied, in order to keep you up to date with your rights and obligations as a user; or if you explicitly authorise this, your e-mail address will be used by the federal, regional and local authorities in order to communicate electronically with you. This contact information will not under any circumstances be used for advertising purposes or transferred to third parties. The establishments responsible for fulfilling a public service or for carrying out a task of general interest on the basis of an administrative assignment, independently of their legal form, are not considered as third parties within the context of this article if they are directly or indirectly involved in providing the services to which this declaration of confidentiality applies.</p>
-
-<p>It goes without saying that this data will be processed in a confidential way, in accordance with the provisions of the aforementioned Law relating to the protection of private life.</p>
-
-<p>If you contact the federal Administration by e-mail in order to obtain information or to request publications, the administration will automatically obtain certain data of a personal nature. This data will be used to reply to your message. They can also be recorded in a user database, to which the provisions of the Law relating to the protection of private life apply. You are entitled to consult your data, modify it or have it deleted.</p>
-
-<h4>Article 6 – Security and confidentiality</h4>
-
-<p>The federal Administration takes all the steps necessary in order to guarantee the security of your personal data. In order to monitor whether your data is protected, particularly against unauthorised access, unlawful use, loss or unauthorised modifications, the services use various securitisation techniques and procedures. The necessary measures have been taken to guarantee the securitisation and confidentiality of your personal data both from a physical, electronic and organisational point of view.</p>
-
-<p>So, for example, the personal data you provide is registered on servers which are only accessible to the relevant personnel. This personnel has been notified of this declaration of confidentiality and about all the applicable internal directives which have been issued for the protection of your personal data. They are obliged to respect the confidentiality of your personal data.</p>
-
-<p>Sensitive personal data which is sent via the Internet will also be securitised using coding, for example by using the TLS protocol (Transport Layer Security).</p>
-
-<p>Specific information about the measures which have been taken to protect security and confidentiality within a specific service will, if necessary, be repeated in the separate declaration of confidentiality for this service.</p>
-
-<p>Your personal data will only be transferred to third parties following your authorisation or under the conditions described below.</p>
-
-<h4>Article 7 – Legality and transparency</h4>
-
-<p>For each service organised by or on the orders of the federal Administration within the framework of e-government, the following information must be clearly repeated in this service’s additional declaration of confidentiality:</p>
-
-<ul><li>data of a personal nature which is to be processed</li>
-	<li>the purposes of this processing</li>
-	<li>the person responsible for correct processing</li>
-	<li>whether or not the data can be transferred to third parties, and if so, the identity of these third parties</li>
-	<li>the source of any personal data which has not been notified by you, but which has been extracted from authentic sources (such as the national Register)</li>
-	<li>contact information should you wish to exercise your right of access and correction, as described below.</li>
-</ul><p>If data of a personal nature has not been notified by you (for example because the administration already has this data), and the federal Administration is only acting as an intermediate organisation, this notification can be omitted provided that the federal Administration has received by or by virtue of a law the formal assignment to collect and code personal data, and that it is consequently subject to the specific measures established by or by virtue of the law protecting your private life.</p>
-
-<p>Any legal regulation on the basis of which the processing of data for the service is authorised must also be explicitly notified in the declaration of confidentiality of each specific service.</p>
-
-<p>Unless explicitly indicated to the contrary in the declaration of confidentiality for a specific service, the federal Administration is responsible for the processing. Contact information in the event of questions or remarks will also be recorded.</p>
-
-<h4>Article 8 – Purpose</h4>
-
-<p>In each service organised by or on the orders of the federal Administration within the framework of e-government, the additional declaration of confidentiality for this service must clearly describe what specific aim the processing of your personal data serves within the framework of this service, even though this has already been clearly indicated in this declaration of confidentiality. Personal data collected when the service is used can be processed in order to manage and supply the service.</p>
-
-<p>Within the context of the support for services organised by or on the orders of the federal Administration as part of e-government, your personal data can be processed in order to improve your experience as a user and to simplify the use of services as a result of the fact that you do not have to encode the same data on a frequent basis and that the services can be adapted to suit your preferences or interests.</p>
-
-<p>Within the organisation of each service, what is known as « authentic sources » will be used as far as possible. These are data sources (databases) which are kept updated on the orders of the federal Administration and where official data relating to a person or to a business is collected. The federal Administration will make an effort never to ask the citizen or business for this information again after it has been initially collected. If possible, each service therefore uses these sources. Access to data in authentic sources is controlled and authorised by sectorial committees (set up within the Commission for the Protection of Private Life ) which monitor compliance with the legislation relating to the protection of private life.</p>
-
-<p>In concrete terms, this means that data from authentic sources (for example the National Register) is used to identify users, and that after this identification is provided, access can be granted to other databases. The private life of users can thus be protected in an optimum way: since there is only one source, data protection can be centrally organised.</p>
-
-<p>The information collected as a result of a service being used can be combined with personal data which is collected as a result of other services being used, so that your interaction with the federal Administration is as consistent as possible.</p>
-
-<p>The legal regulations which act as a basis for processing data will also be explicitly notified in the declaration of confidentiality for each specific service.</p>
-
-<h4>Article 9 – Proportionality</h4>
-
-<p>The federal Administration ensures that the personal data collected is adequate, relevant and not excessive, taking into account the purpose of the processing as indicated in the declaration of confidentiality for each specific service. Your personal data will not be kept for a duration in excess of that needed for achieving the purpose of the processing, unless the data must be kept in order to comply with the law, a decree or order.</p>
-
-<h4>Article 10 – Right of access and correction</h4>
-
-<p>You are entitled to access your personal data and correct it.</p>
-
-<p>With regard to all services organised by or on the orders of the federal Administration within the framework of e-government, a procedure will be repeated in the declaration of confidentiality for this service to allow you to exercise these rights.</p>
-
-<p>It will repeat the contact information which will allow you to obtain information on the following:</p>
-
-<ul><li>the personal data itself which is processed as part of the service and which relates to you</li>
-	<li>the origin of this data</li>
-	<li>the purposes of the processing</li>
-	<li>the recipients to whom the personal data can be supplied</li>
-	<li>the logic at the basis of any automated processing of this personal data if this processing has legal consequences for you or if it affects you significantly in another way</li>
-	<li>the steps you can take to correct or complete any incorrect or incomplete data</li>
-	<li>the possibility of objecting to the processing, when you have this right. This only applies if the processing is not necessary in order to comply with an obligation to which the person responsible for the processing is subject by or by virtue of a law, a decree or an order, and if you have serious and legitimate reasons for making an objection with regard to your particular situation.</li>
-</ul><h4>Article 11 – User’s liability</h4>
-
-<p>Although the federal Administration makes every possible effort to protect your private life, effective protection is naturally only possible if you yourself take the necessary measures to protect your private life.</p>
-
-<p>With regard to using services organised by or on the orders of the federal Administration as part of e-government, you must:</p>
-
-<ul><li>supply complete, accurate and truthful information ;</li>
-	<li>duly monitor the confidentiality of any user data (such as a user name, a password, a token or a PIN code), so that this data remains accessible only to you. This data is strictly personal and non transmissible;</li>
-	<li>choose a safe password. This means that it must comprise at least 8 characters combining both letters and other characters, which are placed in an order which cannot be easily discovered. Each user is personally liable in the event of discovery and/or abuse of a password which has not been composed in accordance with these rules;</li>
-	<li>send through valid and usable contact information so that you can be contacted within a reasonable period of time and in a reasonably confidential way.</li>
-</ul><h4>Article 12 – Transfer to third parties</h4>
-
-<p>Your personal data will never be made available to third parties unless a transfer of this kind is imposed by or by virtue of a law, a decree or an order.</p>
-
-<p>Establishments responsible for providing a public service or for fulfilling a task of general interest on the basis of an administrative assignment, independently of their legal form, are not considered to be third parties within the context of this article if collaboration with these institutions is essential for the correct implementation of the services to be provided. This collaboration with other branches of the administration (including at other levels, such as communities, regions and municipalities) must be regulated by means of outline agreements or protocol agreements.</p>
-
-<p>If your personal data is passed on to this type of institution, the declaration of confidentiality for the service in question will indicate which personal data is involved, and to what processing it will be subjected by this institution.</p>
-
-<p>Your personal data will never be used for advertising purposes or passed on to third parties who might use this data for these purposes.</p>
-
-<p>Your personal data will never be processed by an institution or a business set up outside the European Union.</p>
-
-<h4>Article 13 – Administration’s public accessibility</h4>
-
-<p>By means of law of 11 April 1994 relating to the administration’s public accessibility, the federal administrative authorities must grant access to the government documents they possess. This means that all citizens have the right to consult the administrative documents of a federal administrative authority and to receive copies of these. All the information which the federal Administration possesses within the framework of the services organised by or on the orders of the federal Administration as part of e-government can be considered to be administrative documents, and are therefore subject to the legal stipulations relating to the administration’s public accessibility.</p>
-
-<p>With regard to administrative documents of a personal nature (that is, documents which contain an evaluation or a judgement on merit relating to an individual designated by name or easily identifiable, or the description of behaviour whose disclosure can clearly cause this person damage), this right to public accessibility only applies, however, if the requesting party can justify a personal, legitimate, current, direct and definite interest.</p>
-
-<p>Requests for access to administrative documents of this kind can be sent to the relevant federal administrative authority which is designated in the declaration of confidentiality for the specific project. This authority can refuse the request, in particular if it is bound by a legal obligation of secrecy, or if it considers that the publication of the government document is prejudicial to the private life of the person concerned, unless the latter has given his or her consent with regard to consultation of the document, explanations relating to it or its communication in the form of a copy. If the federal administrative authority cannot respond immediately to a request for public accessibility or it rejects this, it must inform the party making the request, within a period of thirty days following receipt of the request, of the reasons for the delay or rejection. In the event of delay, the deadline cannot under any circumstances be extended by more than fifteen days.</p>
-
-<p>It goes without saying that these rules only apply to federal government authorities. At other levels of power (such as communities, regions and municipalities), other legal rules may apply. If an authority at another level of power possesses information which you wish to obtain, you are advised to check which rules apply at this level with regard to the administration’s public accessibility.</p>
-
-<p>The information processed as part of the services can, after a certain period of time, also be filed voluntarily in the Kingdom’s Archives on request of the public authority to which they belong, if this information is not longer useful to the administration. After being filed, the information is in principle public. In this case as well, access to the archives remains subject to the legislation relating to the administration’s public accessibility. More specifically access can be refused if the Kingdom’s Archivist considers that it is bound by a legal obligation of secrecy, or if publication of the administrative document is prejudicial to the private life of the person concerned, unless the latter has given his or her approval with regard to consultation of the document, the relating explanations or its communication in the form of a copy.</p>
-
-<p>These archives can be registered for an unlimited duration in the Kingdom’s Archives, and cannot be destroyed without the authorisation of the authority which has sent through the documents.</p>
-
-<h4>Article 14 – Adaptations to the declaration of confidentiality</h4>
-
-<p>This declaration of confidentiality may be adapted in the future. We therefore ask you to reread the declaration of confidentiality from time to time in order to remain abreast of these adaptations. After each adaptation, the date on which this document was most recently updated will also be amended.</p>
-
-<p>It goes without saying that all new versions of the declaration of confidentiality will at all times comply with the aforementioned Law relating to the protection of private life.</p>
-
-<p>If the declaration of confidentiality is amended in a significant way, you will be informed of this as far as possible. To do this, a notification can be sent out on the service’s web site and any contact information you have sent through at the time of registering to use the service may be utilised.</p>
-
-<p>Any use made of the services is subject to the provisions of the version of the declaration of confidentiality which applies at that particular point.</p>
-
-<p>The federal government places a great deal of importance on the private life of users. Although the majority of the information available on or via the portal site does not require the user to provide any personal data, it is possible that users will be asked to enter personal information. In this case, the data will be processed in accordance with the provisions of the act of 8th December 1992 concerning the processing of personal data.</p>
-
-<p>In particular, this means that:</p>
-
-<ul><li>Personal data cannot be recorded or processed except for the purpose of responding to a request for information which you have made.</li>
-	<li>Personal data will not be passed to third parties or used for any commercial purposes.</li>
-	<li>You have the right to refer to your own personal data, to check the accuracy of the data and to have any errors corrected.</li>
-</ul><p>The FPS BOSA DG DT undertakes to put in place the best possible security measures in order to ensure that third parties cannot misuse the personal data which you have provided.</p>"""@en .
+<h3>Protection of your personal data</h3>
+<p>The Federal Public Service Policy and Support (FPS Policy and Support) processes some of your personal data when you visit our website or use one of our services, and in the performance of some of our statutory assignments or duties of public interest. The FPS Policy and Support attaches great importance to your privacy, which is why we are committed to delivering the most accurate and up-to-date information at all times.</p>
+<p>We also want to give you the greatest possible degree of control over what happens to your personal data.</p>
+<p>The present privacy statement is issued by the FPS Policy and Support (registered office at 30 Simon Bolivarlaan (WTC III), 1000 Brussels, company reg. number 0671.516.647).</p>
+<p>If you have any questions about your personal data or about the present privacy statement, please contact us via the details specified below.</p>
+<p>Our policy on the protection of persons in the processing of personal data is based on the General Data Protection Regulation (EU) 2016/679 of the European Parliament and the Council of 27 April 2016, also known in its abbreviated form as the GPDR.</p>
+<h3>For which purposes do we process your personal data ?</h3>
+<p>The processing of your data will either be for purposes of a statutory assignment, a duty of public interest, or based on your express consent which will be asked of you.</p>
+<p>Most processing operations are performed as part of our statutory assignments, which are set out in the Royal Decree of 22 February 2017 establishing the Federal Public Service Policy and Support.</p>
+<p>Some data are exchanged with other institutions for the performance of a statutory assignment or a duty of public interest.</p>
+<p>Where we register your data through the website for an online service or for an assignment, we will ask for your consent at that point, unless the processing is pursuant to a regulatory obligation.</p>
+<p>When processing your data, we will inform you of the exact purposes and of your rights in connection with the processing.</p>
+<h3>Cookies and log files</h3>
+<p>When you visit the  website, we use so-called ‘cookies’: small information files that are stored on your computer by your browser.</p>
+<p>The cookies are used to remember your language of choice, to identify you during your visit to the website where this is necessary for the use of a service, and to gather non-personalised statistics regarding visits to the website.
+<p>You can disable the use of cookies in your browser, although this will mean that some parts of the website or the services will be rendered unusable.</p>
+<p>The session cookie is active only during your visit.</p>
+<p>The cookie that stores your language of choice will remain in place as long as you have not deleted it or have not removed it via the cookie control settings.
+<p>When you visit our website, the FPS Policy and Support will register your IP address, your browser and operating system, the external department that has referred you to our website and the time and date of each page you visit. This information is collected only for statistical purposes and to enable us to continuously improve the website. On no account are any of the data thus gathered linked to your personal data.
+<p>When some web pages of the FPS Policy and Support website gather other data, this is duly stated.</p>
+<h3>Whom do we share your data with ?</h3>
+<p>The data we process about you are treated as confidential. They are transferred only to the institutions that are authorised to receive these data.</p>
+<p>In some cases, the FPS Policy and Support calls on service providers who act as processors and are required to comply with the GDPR in that capacity. In its agreements with such processors, the FPS Policy and Support includes the relevant clauses to protect the personal data. These service providers are not permitted to use the data for any purposes other than those of the FPS Policy and Support.</p>
+<p>These service providers may be located outside of the European Union. In that case, the protection of your data is ensured since the processors are located in countries that hold an adequacy decision delivered by the European Commission, the recipients are located in the United States of America and have signed up to the Privacy Shield, and appropriate contractual safeguards have been agreed with the recipients.</p>
+<h3>How long do we keep your data on file ?</h3>
+<p>The data that are processed for purposes of a statutory assignment or a duty of public interest are retained for the length of time required for the application of legislation and regulations or to perform the duty of public interest.</p>
+<p>The data that are processed based on your consent are retained for the length of time specified upon registration or until such time as you withdraw your consent.</p>
+<h3>How to assert your rights under the GPDR</h3>
+<p>You have the right to request a copy of your personal data to check whether the information that is kept relating to you is accurate and/or to rectify or update this information. Your request will be granted and duly processed, provided it does not conflict with a statutory obligation / the general interest.</p>
+<p>You may also request that your personal data be completely erased if the processing is based on your consent. Your request will be granted and duly processed, provided it does not conflict with a statutory obligation / the general interest.</p>
+<p>If you have any questions or believe that your rights have been violated, you can also let us know.</p>
+<p>To safeguard your privacy and security, we will take the relevant steps to establish your identity before giving you access to your data and/or rectifying them as need be.</p>
+<p>The FPS Policy and Support has appointed a data protection officer, who monitors the confidentiality and protection of the data and compliance with the GPDR requirements. This officer can be contacted at <a href="mailto:DPO@bosa.fgov.be">DPO@bosa.fgov.be</a> for any requests for information or queries regarding your rights in the area of privacy protection.</p>  
+<p>Please feel free to report any incidents or complaints to <a href="mailto:privacyincident@bosa.fgov.be?subject=belgif">privacyincident@bosa.fgov.be</a></p>"""@en,
+	"""
+<h3>Bescherming van je persoonsgegevens</h3>
+<p>Wanneer je een bezoek brengt aan onze website, gebruik maakt van één van onze diensten of bij de uitvoering van sommige van onze wettelijke opdrachten of taken van algemeen belang, verwerkt de Federale Overheidsdienst Beleid en Ondersteuning (FOD BOSA) een aantal persoonsgegevens. FOD BOSA vindt je privacy uiterst belangrijk en we willen je dan ook zo goed mogelijk informeren.</p>
+<p>We willen je ook zoveel mogelijk controle geven over wat er met je persoonsgegevens gebeurt.</p>
+<p>Deze privacyverklaring gaat uit van FOD BOSA, met maatschappelijke zetel gevestigd te Simon Bolivarlaan 30 (WTC III), 1000 Brussel, en ondernemingsnummer 0671.516.647.</p>
+<p>Indien je vragen hebt over je persoonsgegevens of over de privacyverklaring kan je ons bereiken via de contactgegevens hieronder vermeld.</p>
+<p>Ons beleid rond de bescherming van personen bij de verwerking van persoonsgegevens is gebaseerd op de Algemene Verordening Gegevensbescherming (EU) 2016/679 van het Europees Parlement en de Raad van 27 april 2016, ook bekend onder de afkorting AVG.</p>
+<h3>Voor welke doeleinden verwerken wij je persoonsgegevens ?</h3>
+<p>De verwerking van je gegevens zal ofwel gerechtvaardigd zijn op basis van een wettelijke opdracht of een taak van openbaar belang ofwel op basis van je expliciete toestemming die je zal gevraagd worden.</p>
+<p>De meeste verwerkingen gebeuren in het kader van de wettelijke opdrachten die je kan terugvinden in het koninklijk besluit van 22 februari 2017 tot oprichting van de Federale Overheidsdienst Beleid en Ondersteuning.</p>
+<p>Sommige gegevens worden uitgewisseld met andere instanties voor de uitvoering van een wettelijke opdracht of een taak van algemeen belang.</p>
+<p>Wanneer wij via de website, voor een online dienst of voor een opdracht je gegevens registreren vragen we jou op dat moment hiervoor toestemming tenzij deze verwerking door een reglementaire verplichting wordt opgelegd.</p>
+<p>Bij verwerking van je gegevens informeren we je over de precieze doeleinden en over jouw rechten in verband met de verwerking.</p>
+<h3>Cookies en logbestanden</h3>
+<p>Bij bezoek aan de website worden zogenaamde "cookies" gebruikt: kleine deeltjes informatie die door de browser op je computer worden opgeslagen.</p>
+<p>De cookies worden gebruikt om je voorkeurstaal te onthouden, om je te kunnen identificeren tijdens je bezoek aan de website als dit nodig is voor het gebruik van een dienst en om niet-gepersonaliseerde statistieken omtrent het bezoek van de website te verzamelen.</p>
+<p>Je kan in je browser het gebruik van cookies uitschakelen, maar dit leidt ertoe dat bepaalde onderdelen van de website of van diensten onbruikbaar worden.</p>
+<p>Het sessiecookie is enkel geldig tijdens uw bezoek.</p>
+<p>Het cookie voor je voorkeurstaal blijft geldig zolang je niet uitgeschreven bent of zolang je deze niet verwijderd hebt via de instellingen om cookies te beheren.</p>
+<p>FOD BOSA registreert bij een bezoek aan de website jouw IP-adres, je browser en besturingssysteem, de externe dienst die je heeft doorverwezen naar deze dienst en de datum en tijd van elke door jou bezochte pagina. Deze informatie wordt enkel verzameld voor statistische doeleinden en voor de verdere verbetering van de website. De aldus ingezamelde gegevens worden in geen geval gekoppeld aan de persoonsgegevens.</p>
+<p>Wanneer op sommige webpagina's andere gegevens zouden worden verzameld, wordt dit aangeduid.</p>
+<h3>Met wie delen we je gegevens ?</h3>
+<p>De gegevens die wij over jou verwerken, worden vertrouwelijk behandeld. Ze worden alleen overgemaakt aan de instellingen die ertoe gemachtigd zijn om deze gegevens te ontvangen.</p>
+<p>FOD BOSA doet soms beroep op dienstverleners die optreden als verwerker en in die hoedanigheid de AVG dienen te respecteren. FOD BOSA voorziet in het contract met de verwerker de nodige bepalingen ter bescherming van de persoonsgegevens. Deze dienstverlener mag de gegevens niet voor andere doeleinden gebruiken dan de doeleinden van de FOD BOSA.</p>
+<p>Deze dienstverleners kunnen zich bevinden in locaties buiten de Europese Unie. In dat geval wordt de bescherming van je gegevens verzekerd doordat deze zich bevinden in landen die beschikken over een adequaatheidsbesluit van de Europese Commissie, de ontvangers zich bevinden in de Verenigde Staten van Amerika en zijn toegetreden tot het Privacy Shield en er gepaste contractuele bepalingen werden afgesloten met de ontvangers.</p>
+<h3>Hoelang blijven je gegevens bewaard ?</h3>
+<p>De gegevens die worden verwerkt voor de uitvoering van een wettelijke opdracht of een taak van algemeen belang worden bewaard de tijd die nodig is voor de toepassing van de wetgeving of de uitvoering van de taak van algemeen belang.</p>
+<p>De gegevens die op basis van jouw toestemming worden verwerkt worden bewaard de tijd die bij registratie wordt aangeduid of tot intrekking van jouw toestemming.</p>
+<h3>Hoe kan jij je rechten aanwenden in het kader van de AVG ?</h3>
+<p>Je hebt het recht om te allen tijde een kopie van je persoonsgegevens op te vragen om na te gaan of de informatie die wordt bewaard juist is en/of om deze informatie te verbeteren of bij te werken. In de mate dat dit niet tegenstrijdig is met een wettelijke verplichting / het algemeen belang, wordt je verzoek ingewilligd en verwerkt.</p>
+<p>Je kunt ook vragen dat je persoonsgegevens volledig worden gewist als de verwerking gebaseerd is op jouw toestemming. In de mate dat dit niet tegenstrijdig is met een wettelijke verplichting / het algemeen belang, wordt je verzoek ingewilligd en verwerkt.</p>
+<p>Indien je vragen hebt of meent dat je rechten worden geschonden, kan je ons dit ook laten weten.</p>
+<p>Om je privacy en veiligheid te waarborgen, zullen wij de nodige stappen ondernemen om je identiteit na te gaan voordat je gegevens kunt bekijken en eventueel verbeteren.</p>
+<p>FOD BOSA beschikt over een functionaris voor gegevensbescherming die toeziet op de vertrouwelijkheid en de veiligheid van de gegevens, en op de naleving van de vereisten van de AVG. Je kan deze functionaris contacteren via <a href="mailto:DPO@bosa.fgov.be">DPO@bosa.fgov.be</a> voor al je verzoeken tot informatie of vragen tot uitoefening van je rechten inzake privacybescherming.</p>
+<p>Incidenten en klachten mag je sturen naar <a href="mailto:privacyincident@bosa.fgov.be?subject=belgif">privacyincident@bosa.fgov.be</a></p>."""@nl,
+	"""
+<h3>Protection de vos données à caractère personnel</h3>
+<p>Lorsque vous visitez le site web du Service public fédéral Stratégie et Appui (SPF BOSA), que vous utilisez un de ses services ou lorsque le SPF BOSA exécute certaines de ses missions légales ou d'intérêt général, il traite une série de données à caractère personnel. Le SPF BOSA considère que votre vie privée est extrêmement importante et entend dès lors vous informer le mieux possible.</p>
+<p>Nous voulons également vous donner un maximum de contrôle sur ce qui se passe avec vos données à caractère personnel.</p>
+<p>La présente déclaration de confidentialité est publiée par le SPF BOSA, dont le siège social est établi Boulevard Simon Bolivar 30 (WTC III), à 1000 Bruxelles, et dont le numéro d'entreprise est le 0671.516.647.</p>
+<p>Si vous avez des questions sur vos données à caractère personnel ou sur la déclaration de confidentialité, vous pouvez nous contacter (voir coordonnées indiquées ci-dessous).</p>
+<p>Notre politique relative à la protection des personnes à l'égard du traitement des données à caractère personnel se base sur le Règlement général sur la protection des données (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016, aussi connu sous l'abréviation RGPD.</p>
+<h3>À quelles fins traitons-nous vos données à caractère personnel ?</h3>
+<p>Le traitement de vos données sera justifié soit sur la base d'une mission légale ou d'une mission d'intérêt public soit sur la base de votre autorisation explicite qui vous sera demandée.</p>
+<p>La plupart des traitements se font dans le cadre des missions légales reprises dans l'arrêté royal du 22 février 2017 portant création du Service public fédéral Stratégie et Appui.</p>
+<p>Certaines données sont échangées avec d'autres instances pour l'exécution d'une mission légale ou d'une mission d'intérêt public.</p>
+<p>Lorsque nous enregistrerons vos données par le biais du site web, pour un service en ligne ou une mission, nous vous en demanderons l'autorisation à ce moment-là lorsque ce traitement n'est pas imposé par une obligation réglementaire.</p>
+<p>En cas de traitement de vos données, nous vous informerons des finalités précises et de vos droits relatifs au traitement.</p>
+<h3>Cookies et fichiers de journalisation</h3>
+<p>Lorsque vous visitez le site web, des « cookies » sont utilisés. Il s'agit de petites parties d'information qui sont enregistrées sur votre ordinateur par votre navigateur.</p>
+<p>Les cookies sont utilisés sur ce site web pour retenir votre choix de langue, pour pouvoir vous identifier lors de votre visite au site web si cela est nécessaire pour l'utilisation d'un service, et pour recueillir des statistiques non-personnalisées relatives aux visites sur le site web.</p>
+<p>Vous pouvez désactiver l'utilisation de cookies dans votre navigateur, ce qui rendra certaines parties du site web ou des services inutilisables.</p>
+<p>Le cookie de session n'est valable que pendant votre visite.</p>
+<p>Le cookie de votre préférence linguistique reste valable aussi longtemps que vous n'avez pas procédé à votre désinscription ou que vous n'avez pas supprimé ce cookie par le biais des configurations de gestion des cookies.</p>
+<p>Lorsque vous visitez le site web, le SPF BOSA enregistre votre adresse IP, votre navigateur, votre système d'exploitation, le service externe qui vous a transféré jusqu'à ce service, ainsi que la date et l'heure auxquelles vous avez consulté chaque page. Ces informations ne sont collectées qu'à des fins statistiques et dans le but de continuer à améliorer le site web. Les données ainsi collectées ne sont en aucun cas liées aux données à caractère personnel.</p>
+<p>Si d'autres données devaient être collectées sur certaines pages web du SPF BOSA, cela serait indiqué.</p>
+<h3>Avec qui partageons-nous vos données ?</h3>
+<p>Les données que nous traitons à votre sujet sont traitées confidentiellement. Elles sont uniquement transmises aux institutions autorisées à les recevoir.</p>
+<p>Le SPF BOSA fait parfois appel à des prestataires de services qui agissent en tant que sous-traitants et qui, en cette qualité, doivent respecter le RGPD. Le SPF BOSA prévoit dans le contrat avec le sous-traitant les dispositions nécessaires afin de protéger les données à caractère personnel. Ce prestataire de services ne peut utiliser les données à d'autres fins que celles du SPF BOSA.</p>
+<p>Ces prestataires de services peuvent se trouver dans des lieux situés en dehors de l'Union européenne. Dans ce cas, la protection de vos données est assurée en raison du fait que les pays dans lesquels se situent ces prestataires disposent d'une décision d'adéquation de la Commission européenne, que les destinataires se trouvent aux États-Unis d'Amérique et ont adhéré au « Privacy Shield », et que des dispositions contractuelles appropriées ont été conclues avec les destinataires.</p>
+<h3>Pendant combien de temps vos données sont-elles conservées ?</h3>
+<p>Les données traitées pour l'exécution d'une mission légale ou d'une mission d'intérêt public sont conservées le temps nécessaire à l'application de la législation ou à l'exécution de la mission d'intérêt public.
+<p>Les données traitées sur la base de votre autorisation sont conservées pendant le temps indiqué lors de l'enregistrement ou jusqu'au retrait de votre autorisation.</p>
+<h3>Comment appliquer vos droits dans le cadre du RGDP ?</h3>
+<p>Vous avez le droit de demander à tout moment une copie de vos données à caractère personnel pour vérifier l'exactitude des informations qui sont conservées et/ou pour les corriger ou les mettre à jour. Dans la mesure où cela n'est pas contraire à une obligation légale/d'intérêt public, votre demande sera prise en compte et traitée.
+<p>Vous pouvez aussi demander que vos données à caractère personnel soient totalement effacées si le traitement est basé sur votre consentement. Dans la mesure où cela n'est pas contraire à une obligation légale/d'intérêt public, votre demande sera prise en compte et traitée.
+<p>Si vous avez des questions ou si vous estimez que vos droits ont été violés, vous pouvez également nous le faire savoir. Pour garantir votre vie privée et votre sécurité, nous entreprendrons les démarches nécessaires pour vérifier votre identité avant que vous puissiez consulter vos données et éventuellement les corriger.
+<p>Le SPF BOSA dispose d'un délégué à la protection des données qui veille à la confidentialité et à la sécurité des données, ainsi qu'au respect des exigences du RGPD. Vous pouvez contacter ce délégué par e-mail à <a href="mailto:DPO@bosa.fgov.be">DPO@bosa.fgov.be</a> pour toutes vos demandes d'informations ou toutes vos questions relatives à l'exercice de vos droits en matière de protection de la vie privée.
+<p>Vous pouvez communiquer vos incidents et envoyer vos plaintes à <a href="mailto:privacyincident@bosa.fgov.be?subject=belgif">privacyincident@bosa.fgov.be</a></p>."""@fr,
