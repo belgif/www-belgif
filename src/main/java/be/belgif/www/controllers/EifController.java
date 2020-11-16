@@ -79,7 +79,7 @@ public class EifController {
 	public HttpResponse levels(String lang) {	
 		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "name", "lang", "levels", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "lang", "levels", list, "p", page));
 	}
 
 	@View("level")
@@ -96,7 +96,7 @@ public class EifController {
 	public HttpResponse principles(String lang) {	
 		List<EifPrinciple> list = sortBySeq(store.getPrinciples());
 		Page page = store.getPages().get("eif3");
-		return HttpResponse.ok(Map.of("lang", lang, "name", "principles", "principles", list, "eif3", page));
+		return HttpResponse.ok(Map.of("lang", lang, "name", "principles", "principles", list, "p", page));
 	}
 
 	@View("principle")
@@ -118,7 +118,7 @@ public class EifController {
 		List<Activity> activities = store.getActivities().values().stream()
 											.filter(l -> l.getRecommendations().contains(id))
 											.collect(Collectors.toUnmodifiableList());
-		return HttpResponse.ok(Map.of("lang", lang, "name", id, "recommendation", eif, 
+		return HttpResponse.ok(Map.of("lang", lang, "name", id, "p", eif, 
 								"legislations", legislations, "activities", activities));
 	}
 

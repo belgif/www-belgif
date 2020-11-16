@@ -129,7 +129,7 @@ be-page:recommendations a foaf:Document ;
 """@de .
 
 be-page:eif3 a foaf:Document ;
-	dcterms:title "EIF 3"@en ;
+	dcterms:title "EIF 3"@nl, "EIF 3"@fr, "EIF 3"@de, "EIF 3"@en ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
 <p>EIF is intended as a common core of the National Interoperability Frameworks (NIFs) and Domain Interoperability Frameworks (DIFs). For Belgium, BelgIF is the NIF. The federal government and the regions have agreed to use the <a href='/eif3/principle'>12 principles</a> of the EIF as the basis for defining their interoperability.</p>

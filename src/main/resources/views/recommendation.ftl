@@ -4,8 +4,8 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>Recommendation ${recommendation.sequence}: ${recommendation.getTitle(lang)}</h1>
-	<p>${recommendation.getDescription(lang)}</p>
+	<h1>Recommendation ${p.sequence}: ${p.getTitle(lang)}</h1>
+	<p>${p.getDescription(lang)}</p>
 	<#if legislations?has_content>
 		<section>
 		<h2>Legislation and agreements</h2>
