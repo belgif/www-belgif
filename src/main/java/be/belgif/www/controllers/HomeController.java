@@ -59,7 +59,7 @@ public class HomeController {
 		Page legal = store.getPages().get("home-legal");
 		Page specs = store.getPages().get("home-specs");
 
-		return HttpResponse.ok(Map.of("lang", lang, "name", "index", 
+		return HttpResponse.ok(Map.of("lang", lang, "path", "/index", 
 							"eif", eif, "activities", activities, "legal", legal, "specs", specs));
 	}
 }
