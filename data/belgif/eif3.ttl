@@ -188,7 +188,7 @@ eif-principle:assessment a skos:Concept ;
 
 
 eif-recommendation:alignment a skos:Concept ;
-	skos:prefLabel "NIFO alignment"@en, "NIFO alignieren" ;
+	skos:prefLabel  "NIFO afstemming"@nl, "Alignement NIFO"@fr, "NIFO alignment"@en, "NIFO alignieren"@de ;
 	skos:notation "1"^^xsd:integer ;
 	skos:definition "Ensure that national interoperability frameworks and interoperability strategies are aligned with the EIF and, if needed, tailor and extend them to address the national context and needs."@en ,
 		"Zorg ervoor dat nationale interoperabiliteitskaders en -strategieën afgestemd zijn op het EIF en, in voorkomende gevallen, dat zij aangepast en uitgebreid worden om rekening te houden met de nationale context en nationale behoeften."@nl ,
@@ -314,7 +314,7 @@ eif-recommendation:accessibility a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:privacy a skos:Concept ;
-	skos:prefLabel "Privacy framework"@en ;
+	skos:prefLabel "Privacykader"@nl, "Cadre protection de la vie privée"@fr, "Rahmens für Sicherheit und Datenschut"@de, "Privacy framework"@en ;
 	skos:notation "15"^^xsd:integer ;
 	skos:definition "Define a common security and privacy framework and establish processes for public services to ensure secure and trustworthy data exchange between public administrations and in interactions with citizens and businesses."@en ,
 		"Definieer een gemeenschappelijk veiligheids- en privacykader en voer processen in voor openbare diensten die een veilige en betrouwbare gegevensuitwisseling waarborgen tussen overheidsdiensten onderling en in het contact met burgers en ondernemingen."@nl ,
