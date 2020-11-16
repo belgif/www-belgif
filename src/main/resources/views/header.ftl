@@ -1,3 +1,4 @@
+<#ftl encoding="utf-8">
 <#assign home = { "nl": "Home", "fr": "Acceuil", "de": "Home", "en": "Home" }>
 <#assign rec = { "nl": "Aanbevelingen", "fr": "Recommandations", "de": "Empfehlungen", "en": "Recommendations" }>
 <#assign comp = { "nl": "Componenten", "fr": "Composants", "de": "Komponenten", "en": "Components" }>
@@ -7,10 +8,10 @@
 
 <header>
 	<nav id="lang-wrapper" class="nav nav-pills justify-content-end">
-		<a href="#" hreflang="nl" class="nav-link">NL</a>
-		<a href="#" hreflang="fr" class="nav-link">FR</a>
-		<a href="#" hreflang="de" class="nav-link">DE</a>
-		<a href="#" hreflang="en" class="nav-link active">EN</a>
+		<a href="#" hreflang="nl" class="nav-link <#if lang == 'nl'>active</#if>">NL</a>
+		<a href="#" hreflang="fr" class="nav-link <#if lang == 'fr'>active</#if>">FR</a>
+		<a href="#" hreflang="de" class="nav-link <#if lang == 'de'>active</#if>">DE</a>
+		<a href="#" hreflang="en" class="nav-link <#if lang == 'en'>active</#if>">EN</a>
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a href="#" class="navbar-brand"><img id="logo" src="/public/belgif.png" alt="Belgif logo"/></a>
