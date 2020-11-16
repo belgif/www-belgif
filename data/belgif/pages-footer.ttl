@@ -39,7 +39,7 @@ be-page:conditions a foaf:Document ;
 <li>Wenn nicht etwas anderes angegeben wird, sind die Informationen auf dieser Website frei von Urheberrechten und können bedingungslos für private, assoziative, wissenschaftliche und kommerzielle Zwecke genutzt werden. Die föderalen Behörden empfehlen allerdings, die Quelle und das Datum der genutzten Informationen anzugeben.</li>
 <li>Wenn eine vorhergehende Zustimmung erforderlich ist oder wenn besondere Bedingungen notwendig sind, werden die Nutzungsbeschränkungen ausdrücklich aufgeführt. Die Nutzung von Multimedienmaterial (Fotos, Abbildungen, Tonaufnahmen, Videos usw.), einschließlich des Inhalts von herunterladbaren Dateien (Broschüren usw.), unterliegt immer einer vorhergehenden Genehmigung.</li>
 <li>Die föderalen Behörden tun alles, um dafür zu sorgen, dass diese Website korrekt und aktuell ist. Wird trotzdem ein Fehler festgestellt, verpflichten sie sich dazu, so schnell wie möglich die erforderlichen Korrekturen vorzunehmen.</li>
-</ul>"""@de ;
+</ul>"""@de .
 
 be-page:privacy a foaf:Document ;
 	dcterms:title "Privacy statement"@en, "Privacyverklaring"@nl, "Déclaration de confidentialité"@fr, "Datenschutzerklärung"@de ;
@@ -180,4 +180,4 @@ be-page:privacy a foaf:Document ;
 <p>Sie können auch darum bitten, dass Ihre personenbezogenen Daten vollständig gelöscht werden, wenn die Verarbeitung auf Ihrer Einwilligung beruht. Soweit dies nicht gegen eine rechtliche Verpflichtung/das allgemeine Interesse verstößt, wird Ihr Antrag bewilligt und bearbeitet.</p>
 <p>Wenn Sie Fragen haben oder glauben, dass Ihre Rechte verletzt werden, können Sie uns dies auch mitteilen. Zum Schutz Ihrer Privatsphäre und Sicherheit werden wir die notwendigen Schritte einleiten, um Ihre Identität zu prüfen, bevor Sie Ihre Daten einsehen und gegebenenfalls korrigieren können.</p>
 <p>Der FÖD BOSA verfügt über einen Datenschutzbeauftragten, der für die Vertraulichkeit und Sicherheit der Daten sowie die Einhaltung der Anforderungen der Datenschutz-Grundverordnung zuständig ist. Sie können diesen Datenschutzbeauftragten unter <a href="mailto:DPO@bosa.fgov.be">DPO@bosa.fgov.be</a> mit all Ihren Informationsanfragen oder Fragen zur Ausübung Ihrer Rechte im Rahmen des Schutzes Ihrer personenbezogenen Daten kontaktieren.</p>
-<p>Vorfälle und Beschwerden können Sie senden an <a href="mailto:privacyincident@bosa.fgov.be?subject=belgif">privacyincident@bosa.fgov.be</a></p>"""@de ;
+<p>Vorfälle und Beschwerden können Sie senden an <a href="mailto:privacyincident@bosa.fgov.be?subject=belgif">privacyincident@bosa.fgov.be</a></p>"""@de .

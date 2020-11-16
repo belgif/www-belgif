@@ -180,7 +180,7 @@ eif-principle:assessment a skos:Concept ;
 	skos:prefLabel "Assessment of effectiveness and efficiency"@en, "Beoordelen van doeltreffendheid en efficiëntie"@nl, "Évaluation de l'efficacité et de l'efficience"@fr, "Bewertung von Effektivität und Effizienz"@de ;
 	skos:notation "12"^^xsd:integer ;
 	skos:definition "Return on investment, total cost of ownership, level of flexibility and adaptability, reduced administrative burden, efficiency, reduced risk, transparency, simplification, improved working methods, and level of user satisfaction."@en,
-		"Rendement op investering, totale kosten van eigendom, mate van flexibiliteit en aanpasbaarheid, verlaagde administratieve lasten, efficiëntie, lager risico, transparantie, vereenvoudiging, verbeterde werkmethoden en de mate van gebruikerstevredenheid."@nl
+		"Rendement op investering, totale kosten van eigendom, mate van flexibiliteit en aanpasbaarheid, verlaagde administratieve lasten, efficiëntie, lager risico, transparantie, vereenvoudiging, verbeterde werkmethoden en de mate van gebruikerstevredenheid."@nl,
 		"Retour sur investissement, du coût total de possession, du niveau de flexibilité et d'adaptabilité, de la réduction de la charge administrative, de l'efficacité, de la réduction des risques, de la transparence, de la simplification, de l'amélioration des méthodes de travail et du niveau de satisfaction des utilisateurs."@fr,
 		"Rentabilität, Gesamtbetriebskosten, das Maß an Flexibilität und Anpassungsfähigkeit, verringerte Verwaltungslasten, Effizienz, geringeres Risiko, Transparenz, Vereinfachung, verbesserte Arbeitsmethoden und das Maß der Nutzerzufriedenheit."@de ;
 	skos:related eif-recommendation:assessment ;
@@ -197,7 +197,7 @@ eif-recommendation:alignment a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:opendata a skos:Concept ;
-	skos:prefLabel "Open data"@en, "Open data"@nl, Données ouvertes"@fr, "Offene Daten"@de ;
+	skos:prefLabel "Open data"@en, "Open data"@nl, "Données ouvertes"@fr, "Offene Daten"@de ;
 	skos:notation "2"^^xsd:integer ;
 	skos:definition "Publish the data you own as open data unless certain restrictions apply."@en ,
 		"Publiceer de gegevens die u bezit als open gegevens, tenzij er beperkingen gelden."@nl ,
@@ -260,7 +260,7 @@ eif-recommendation:neutrality a skos:Concept ;
 	skos:inScheme eif-recommendation: .
 
 eif-recommendation:dataportability a skos:Concept ;
-	skos:prefLabel "Data portability"@en, "Gegevensportabiliteit"@nl, "Portabilité des données"@fr; "Datenportabilität"@de ;
+	skos:prefLabel "Data portability"@en, "Gegevensportabiliteit"@nl, "Portabilité des données"@fr, "Datenportabilität"@de ;
 	skos:notation "9"^^xsd:integer ;
 	skos:definition "Ensure data portability, namely that data is easily transferable between systems and applications supporting the implementation and evolution of European public services without unjustified restrictions, if legally possible."@en ,
 		"Zorg voor gegevensportabiliteit, dat wil zeggen dat gegevens eenvoudig en zonder ongerechtvaardigde beperkingen over te hevelen zijn naar systemen en applicaties die de implementatie en ontwikkeling van Europese openbare diensten ondersteunen, indien dit wettelijk gezien mogelijk is."@nl ,
@@ -425,7 +425,7 @@ eif-recommendation:legislation a skos:Concept ;
 	skos:prefLabel "Digital legislation"@en, "Digitale wetgeving"@nl, "Législation digitale"@fr, "Digitale Rechtsvorschriften"@de ;
 	skos:notation "27"^^xsd:integer ;
 	skos:definition "When drafting legislation to establish a European public service, seek to make it consistent with relevant legislation, perform a 'digital check' and consider data protection requirements."@en ,
-		"Bij het ontwerpen van wetgeving voor het tot stand brengen van een Europese openbare dienst dient men ernaar te streven dat dit strookt met de desbetreffende wetgeving, een "digitale check" uit te voeren, alsmede de voorschriften omtrent gegevensbescherming in acht te nemen."@nl ,
+		"Bij het ontwerpen van wetgeving voor het tot stand brengen van een Europese openbare dienst dient men ernaar te streven dat dit strookt met de desbetreffende wetgeving, een 'digitale check' uit te voeren, alsmede de voorschriften omtrent gegevensbescherming in acht te nemen."@nl ,
 		"Lors de l'élaboration d'une législation pour établir un service public européen, chercher à la rendre compatible avec la législation pertinente, effectuer un 'contrôle numérique' et tenir compte des exigences en matière de protection des données."@fr ,
 		"Bemühen darum, bei der Ausarbeitung von Rechtsvorschriften zur Schaffung eines europäischen öffentlichen Dienstes diese mit der maßgeblichen Gesetzgebung in Einklang zu bringen, Durchführung eines 'digitalen Checks' und Berücksichtigung datenschutzrechtlicher Anforderungen."@de ;
 	skos:inScheme eif-recommendation: .
@@ -460,7 +460,7 @@ eif-recommendation:datamanagement a skos:Concept ;
 eif-recommendation:informationmanagement a skos:Concept ;
 	skos:prefLabel "Information management strategy"@en, "Informatiebeheerstrategie"@nl, "Stratégie de gestion de l'information"@fr, "Informationsmanagementstrategie"@de ;
 	skos:notation "31"^^xsd:integer ;
-	skos:definition "Put in place an information management strategy at the highest possible level to avoid fragmentation and duplication. Management of metadata, master data and reference data should be prioritised."@en ;
+	skos:definition "Put in place an information management strategy at the highest possible level to avoid fragmentation and duplication. Management of metadata, master data and reference data should be prioritised."@en ,
 		"Implementeer een informatiebeheerstrategie op het hoogst mogelijke niveau om versplintering en duplicatie te vermijden. Het beheer van metagegevens, stamgegevens en referentiegegevens verdient prioriteit."@nl ,
 		"Mettre en place une stratégie de gestion de l'information au niveau le plus élevé possible afin d'éviter la fragmentation et la duplication. La priorité devrait être accordée à la gestion des métadonnées et des données de référence."@fr ,
 		"Erarbeiten einer Informationsmanagementstrategie auf höchstmöglicher Ebene zur Vermeidung von Fragmentierung und Doppelarbeit. Dem Management von Metadaten, Masterdaten und Referenzdaten sollte Vorrang eingeräumt werden."@de ;

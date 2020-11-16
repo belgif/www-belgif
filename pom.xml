@@ -12,8 +12,8 @@
 		<maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
 		<maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
 		<exec.main>be.belgif.www.Application</exec.main>
-		<micronaut.version>2.0.0</micronaut.version>
-		<rdf4j.version>3.2.3</rdf4j.version>
+		<micronaut.version>2.0.1</micronaut.version>
+		<rdf4j.version>3.4.4</rdf4j.version>
 	</properties>
 	<name>Www Belgif</name>
 	<description>Www.Belgif website</description>

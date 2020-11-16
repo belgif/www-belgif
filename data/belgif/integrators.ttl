@@ -35,7 +35,7 @@ be-integrator:bosa a org:Organization ;
 be-integrator:ehealth a org:Organization ;
 	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr, "eGesundheit"@de ;
 	dcterms:description "EHealth portal"@en ,
-		"Portaal van de eGezondheid diensten@nl ,
+		"Portaal van de eGezondheid diensten"@nl ,
 		"Portail des services de l'eSanté"@fr ,
 		"Portal der Dienstleistungen eGesundheit"@de ;
 	foaf:depiction <file:/ehealth.png> ;
