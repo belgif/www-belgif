@@ -4,14 +4,14 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>Legislation: ${legislation.getTitle(lang)}</h1>
-	<p>Date: ${legislation.getDate()}</p>
-	<p>${legislation.getDescription(lang)}</p>
-	<p><a href="${legislation.getWebsite()}" class="btn btn-primary">Text</a></p>
+	<h1>Legislation: ${p.getTitle(lang)}</h1>
+	<p>Date: ${p.getDate()}</p>
+	<p>${p.getDescription(lang)}</p>
+	<p><a href="${p.getWebsite()}" class="btn btn-primary">Text</a></p>
 	<#if principles?has_content>
 	<h2>Principles</h2>
-	<#list principles as p>
-		<a href="/eif3/principle/${p.getLocalId()}.${lang}.html" class="btn btn-secondary">${p.getSequence()}. ${p.getTitle(lang)}</a>
+	<#list principles as e>
+		<a href="/eif3/principle/${e.getLocalId()}.${lang}.html" class="btn btn-secondary">${e.getSequence()}. ${e.getTitle(lang)}</a>
 	</#list>
 	</#if>
 	<#if recommendations?has_content>

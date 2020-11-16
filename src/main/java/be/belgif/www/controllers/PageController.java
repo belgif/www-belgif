@@ -77,7 +77,7 @@ public class PageController {
 	 * Order by date
 	 */
 	private List<Legislation> sortByDate(Map<String,Legislation> map) {
-		return map.values().stream().sorted((a,b) -> a.getDate().compareTo(b.getDate()))
+		return map.values().stream().sorted((a,b) -> - a.getDate().compareTo(b.getDate()))
 												.collect(Collectors.toUnmodifiableList());
 	}
 

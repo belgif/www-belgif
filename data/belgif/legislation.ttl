@@ -6,21 +6,51 @@
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
+be-legislation:best a schema:Legislation ;
+	dcterms:issued "2016-01-22"^^xsd:date ;
+	dcterms:title "Linking address information (BeST)"@en, "Mise en relation des données d'adresses (BeST)"@fr, "Koppeling van adresgegevens (BeST)"@nl, "Verknüpfung von Adressinformationen (BeST)"@de ;
+	dcterms:description """"
+<p>Cooperation agreement between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region regarding the alignment of referencing addresses and the linking of address information.</p>"""@en,
+"""
+<p>Samenwerkingsakkoord tussen de Federale Staat, het Vlaamse Gewest, het Waalse Gewest en het Brusselse Hoofdstedelijk Gewest met betrekking tot de eenmaking van de wijze waarop gerefereerd wordt aan adressen en de koppeling van adresgegevens.</p>"""@nl,
+"""
+<p>Accord de coopération entre l'Etat fédéral, la Région flamande, la Région wallonne et la Région de Bruxelles-Capitale concernant l'unification de la manière de référencer les adresses et de la mise en relation des données d'adresses.</p>"""@fr ,
+	"""
+<p>Kooperationsvereinbarung zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt über die Angleichung von Referenzadressen und die Verknüpfung von Adressinformationen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability ;
+	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
+	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> .
+
 be-legislation:inspire a schema:Legislation ;
 	dcterms:issued "2010-04-02"^^xsd:date ;
 	dcterms:title "Partial transposition INSPIRE directive"@en, "Gedeeltelijke omzetting INSPIRE richtlijn"@nl, "Transposition partielle de la directive INSPIRE"@fr, "Teilweise Umsetzung der INSPIRE-Richtlinie"@de ;
 	dcterms:description """
 <p>Cooperation agreement of 2 April 2010 between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region for the coordination of an infrastructure for spatial information</p>
-<p>This cooperation agreement is the partial transposition of Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an infrastructure for spatial information in the Community (INSPIRE).</p>"""@en ;
+<p>This cooperation agreement is the partial transposition of Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an infrastructure for spatial information in the Community (INSPIRE).</p>"""@en,
+	"""
+<p>Samenwerkingsakkoord van 2 april 2010 tussen de Federale Staat, het Vlaamse Gewest, het Waalse Gewest en het Brussels Hoofdstedelijk Gewest voor de coördinatie van een infrastructuur voor ruimtelijke informatie.</p>
+<p>
+Dit samenwerkingsakkoord is de gedeeltelijke omzetting van de Richtlijn 2007/2/EG van het Europees Parlement en de Raad van 14 maart 2007 tot oprichting van een infrastructuur voor ruimtelijke informatie in de Gemeenschap (INSPIRE).</p>"""@nl,
+	"""
+<p>Accord de coopération du 2 avril 2010 entre l'Etat fédéral, la Région flamande, la Région wallonne et la Région de Bruxelles-Capitale pour la coordination d'une infrastructure d'information géographique.</p>
+<p>
+Le présent accord de coopération transpose partiellement la Directive 2007/2/CE du Parlement européen et du Conseil du 14 mars 2007 établissant une infrastructure d'information géographique dans la Communauté européenne (INSPIRE)"""@fr, 
+	"""
+<p>Kooperationsvereinbarung vom 2. April 2010 zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt zur Koordinierung einer Infrastruktur für geografische Informationen.</p>
+<p>
+Diese Kooperationsvereinbarung setzt die Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates vom 14. März 2007 zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft (INSPIRE) teilweise um.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
-	dcterms:relation eif-recommendation:agreements ;
+	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
 	foaf:homepage <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> .
 
 be-legislation:iceg a schema:Legislation ;
 	dcterms:issued "2013-08-26"^^xsd:date ;
 	dcterms:title "eGov Cooperation Agreement (ICEG) 2013"@en, "eGov Samenwerkingsakkoord (ICEG) 2013"@nl, "Accord de coopération eGov (ICEG) 2013"@fr, "eGov-Kooperationsabkommen (ICEG) 2013"@de ;
-	dcterms:description "Cooperation agreement between the federal, regional and community administrations on the harmonization and alignment of initiatives aiming to realize an integrated e-government."@en ;
+	dcterms:description "<p>Cooperation agreement between the federal, regional and community administrations on the harmonization and alignment of initiatives aiming to realize an integrated e-government.</p>"@en, 
+	"<p>Samenwerkingsakkoord tussen de federale, gewestelijke en gemeenschapsoverheden voor het harmoniseren en uitlijnen van de initiatieven die de realisatie van een geïntegreerd e-government beogen.</p>"@nl,
+	"<p>Accord de coopération entre les administrations fédérales, régionales et communautaires afin d'harmoniser et aligner les initiatives visant à réaliser un e-gouvernement intégré.</p>"@fr ,
+	"<p>Kooperationsvereinbarung zwischen den föderalen, regionalen und kommunalen Behörden zur Harmonisierung und Angleichung der Initiativen, die auf ein integriertes E-Government abzielen.</p>"@de ;
 	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
-	dcterms:relation eif-recommendation:alignment, eif-recommendation:agreements, eif-recommendation:opendata ;
+	dcterms:relation eif-recommendation:alignment, eif-recommendation:datareuse, eif-recommendation:standardsparticipation, eif-recommendation:agreements, eif-recommendation:opendata ;
 	dcterms:contributor eif-recommendation:alignment;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .

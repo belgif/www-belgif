@@ -1,5 +1,5 @@
 <#ftl encoding="utf-8">
-<#assign home = { "nl": "Home", "fr": "Acceuil", "de": "Home", "en": "Home" }>
+<#assign home = { "nl": "Home", "fr": "Accueil", "de": "Home", "en": "Home" }>
 <#assign rec = { "nl": "Aanbevelingen", "fr": "Recommandations", "de": "Empfehlungen", "en": "Recommendations" }>
 <#assign comp = { "nl": "Componenten", "fr": "Composants", "de": "Komponenten", "en": "Components" }>
 <#assign reg = { "nl": "Registers", "fr": "Registres", "de": "Register", "en": "Registries" }>
