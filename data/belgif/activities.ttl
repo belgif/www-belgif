@@ -6,12 +6,26 @@
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
+be-action:webaccessibility a foaf:Project ;
+	dcterms:title "Belgian Web Accessibility"@en, "Belgian Web Accessibility"@nl, "Belgian Web Accessibility"@fr, "Belgian Web Accessibility"@de ;
+	dcterms:description """
+<p>The Federal Public Service BOSA has been designated in the Royal Decree of 5 September 2019 as the control body for the accessibility of websites and mobile applications for the public sector and for defining the control method as provided for in the European Directive (EU) 2016/2102. The Belgian Web Accessibility Office (BWAO) is a steering group set up and led by the FPS BOSA to carry out these tasks properly in consultation with the Regions and Communities.</p>"""@en,
+"""
+<p>De Federale Overheidsdienst BOSA is in het Koninklijk Besluit van 5 september 2019 aangeduid als het controle-orgaan voor de toegankelijkheid van websites en mobiele applicaties voor de publieke sector en met het vastleggen van de controle-methodiek zoals voorzien in de Europese Richtlijn (EU) 2016/2102. Het Belgian Web Accessibility Office (BWAO) is een stuurgroep opgericht en geleid door de FOD BOSA om deze taken goed uit te voeren in samenspraak met de gewesten en gemeenschappen.</p>"""@nl, 
+"""
+<p>Le Service Public Fédéral BOSA a été désigné par l'Arrêté Royal du 5 septembre 2019 comme l'organisme de contrôle de l'accessibilité des sites internet et des applications mobiles des organismes du secteur public, et fixant la méthode de contrôle comme prévus par la Directive européenne (UE) 2016/2102. Le Belgian Web Accessibility Office (BWAO) est un groupe de pilotage créé et piloté par le SPF BOSA pour mener à bien ces tâches en collaboration avec les communautés et les régions.</p>"""@fr, 
+"""
+<p>Der FÖD BOSA wurde eingesetzt, um die Kontroll- und Berichtsfunktionen auszuüben, wie es in der Europäischen Richtlinie (EU) 2016/2102 bestimmt ist. Um diese Aufgaben zu verrichten wurde das „Belgian Web Accessibility Office“ – kurz BWAO – gegründet.Zusammen mit den Gemeinden und Regionen soll das BWAO diese Aufgaben erfüllen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
+	dcterms:relation eif-recommendation:accessibility, eif-recommendation:openspecifications2, eif-recommendation:solutionreuse ;
+	foaf:website <https://accessibility.belgium.be/> .
+
 be-action:opendataportals a foaf:Project ;
 	dcterms:title "Open data portals meeting"@en, "Open data portalen vergadering"@nl, "Réunion portails de données ouvertes"@fr, "Offene Datenportale Treffen"@de ;
-	dcterms:description "Informal meetings uniting the maintainers of the various open data portals in Belgium at national, regional and local level + invited experts."@en ,
-		"Informele vergaderingen die de beheerders samenbrengen van de verschillende open dataportalen in België op nationaal, regionaal en lokaal niveau + uitgenodigde deskundigen."@nl ,
-		"Réunions informelles rassemblant les gestionnaires des différents portails de données ouverts en Belgique au niveau national, régional et local + experts invités."@fr ,
-		"Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten."@de ;
+	dcterms:description "<p>Informal meetings uniting the maintainers of the various open data portals in Belgium at national, regional and local level + invited experts.</p>"@en ,
+		"<p>Informele vergaderingen die de beheerders samenbrengen van de verschillende open dataportalen in België op nationaal, regionaal en lokaal niveau + uitgenodigde deskundigen.</p>"@nl ,
+		"<p>Réunions informelles rassemblant les gestionnaires des différents portails de données ouverts en Belgique au niveau national, régional et local + experts invités.</p>"@fr ,
+		"<p>Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten.</p>"@de ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:opendata ;
 	foaf:website <https://data.gov.be/nl/dcat-werkgroep> .
