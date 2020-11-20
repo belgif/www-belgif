@@ -7,7 +7,7 @@
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
 
-be-action:ai4belgium a foaf:Project ;
+be-action:ai4be a foaf:Project ;
 	dcterms:title "AI4Belgium"@en, "AI4Belgium"@nl, "AI4Belgium"@fr, "AI4Belgium"@de ;
 	dcterms:description """
 <p>AI 4 Belgium is a community-led approach to enable Belgian people and organizations to capture the opportunities of AI while facilitating the ongoing transition responsibly. AI 4 Belgium has the ambition to position Belgium in the European AI landscape.</p>"""@en,
@@ -20,6 +20,21 @@ be-action:ai4belgium a foaf:Project ;
 	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:assessment ;
 	foaf:website <https://www.ai4belgium.be> .
+	
+be-action:gaix4be a foaf:Project ;
+	dcterms:title "GAIA-X for Belgium"@en, "GAIA-X for Belgium"@nl, "GAIA-X for Belgium"@fr, "GAIA-X for Belgium"@de ;
+	dcterms:description """
+<p>Gaia-X is a digital ecosystem, working to create an environment in which data can be shared and stored under the control of data owners and users. Where rules are defined and respected, so that data and services can easily be made available. Gaia-X has the potential to create unprecedented opportunities for innovative, data-driven business models and new solutions that help European companies of all sizes and industries to scale up and compete globally.</p>"""@en,
+"""
+<p>Gaia-X is een digitaal ecosysteem, dat werkt aan een omgeving waarin gegevens kunnen worden gedeeld en opgeslagen onder de controle van de eigenaren en gebruikers van de gegevens. Waar regels worden gedefinieerd en gerespecteerd, zodat gegevens en diensten gemakkelijk beschikbaar kunnen worden gesteld. Gaia-X heeft het potentieel om ongekende mogelijkheden te creëren voor innovatieve, datagestuurde bedrijfsmodellen en nieuwe oplossingen die Europese bedrijven, ongeacht hun omvang en bedrijfstak, helpen om op te schalen en wereldwijd te concurreren.</p>"""@nl, 
+"""
+<p>Gaia-X est un écosystème numérique, qui s'efforce de créer un environnement dans lequel les données peuvent être partagées et stockées sous le contrôle des propriétaires et des utilisateurs. Où des règles sont définies et respectées, de sorte que les données et les services puissent être facilement mis à disposition. Gaia-X a le potentiel de créer des opportunités sans précédent pour des modèles commerciaux innovants, basés sur les données et de nouvelles solutions qui aident les entreprises européennes de toutes tailles et de tous secteurs à se développer et à être compétitives au niveau mondial.</p>"""@fr,
+"""
+<p>Gaia-X ist ein digitales Ökosystem, das an der Schaffung einer Umgebung arbeitet, in der Daten unter der Kontrolle von Datenbesitzern und -nutzern gemeinsam genutzt und gespeichert werden können. Wo Regeln definiert und respektiert werden, so dass Daten und Dienste leicht verfügbar gemacht werden können. Gaia-X hat das Potenzial, beispiellose Möglichkeiten für innovative, datengesteuerte Geschäftsmodelle und neue Lösungen zu schaffen, die europäischen Unternehmen aller Größen und Branchen helfen, sich zu vergrößern und im globalen Wettbewerb zu bestehen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability, eif-principle:security  ;
+	dcterms:relation eif-recommendation:interfaces, eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:dataportability, eif-recommendation:userinvolvement, eif-recommendation:assessment, eif-recommendation:privacy ;
+	foaf:website <https://www.agoria.be/gaia-x/> .
+
 
 be-action:webaccessibility a foaf:Project ;
 	dcterms:title "Belgian Web Accessibility"@en, "Belgian Web Accessibility"@nl, "Belgian Web Accessibility"@fr, "Belgian Web Accessibility"@de ;
