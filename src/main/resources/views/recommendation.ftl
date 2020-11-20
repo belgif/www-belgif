@@ -33,7 +33,7 @@
 	</#if>
 	<#if activities?has_content>
 		<section>
-		<h2>Activities</h2>
+		<h2>${act[lang]}</h2>
 		<div class="row row-cols-1 row-cols-md-3">
 			<#list activities>
 			<#items as a>

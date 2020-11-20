@@ -9,13 +9,13 @@
 	<p>${p.getDescription(lang)}</p>
 	<p><a href="${p.getWebsite()}" class="btn btn-primary">Text</a></p>
 	<#if principles?has_content>
-	<h2>Principles</h2>
+	<h2>${pri[lang]}</h2>
 	<#list principles as e>
 		<a href="/eif3/principle/${e.getLocalId()}.${lang}.html" class="btn btn-secondary">${e.getSequence()}. ${e.getTitle(lang)}</a>
 	</#list>
 	</#if>
 	<#if recommendations?has_content>
-	<h2>Recommendations</h2>
+	<h2>${rec[lang]}</h2>
 	<#list recommendations as r>
 		<a href="/eif3/recommendation/${r.getLocalId()}.${lang}.html" class="btn btn-primary">${r.getSequence()}. ${r.getTitle(lang)}</a>
 	</#list>

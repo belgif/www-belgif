@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<h2>Principles</h2>
+	<h2>${pri[lang]}</h2>
 	<div class="row row-cols-1 row-cols-md-3">
 		<#list principles>
 		<#items as p>

@@ -1,3 +1,8 @@
+<#ftl encoding="utf-8">
+<#assign act = { "nl": "Activiteiten", "fr": "Activités", "de": "Aktivitäten", "en": "Activities" }>
+<#assign pri = { "nl": "Principes", "fr": "Principes", "de": "Prinzipien", "en": "Principles" }>
+<#assign rec = { "nl": "Aanbevelingen", "fr": "Recommandations", "de": "Empfehlungen", "en": "Recommendations" }>
+
 <head>
 <meta charset='UTF-8'>
 <!-- <link rel="stylesheet" type="text/css" href="/public/style.css" /> -->

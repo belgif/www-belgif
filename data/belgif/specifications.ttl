@@ -23,40 +23,58 @@ be-spec:dcat-ap a doap:Specification ;
 		"Das DCAT Application profile für Datenportale in Europa (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de ;
 	foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
 
+be-spec:fedservicesplatform a doap:Specification ;
+	dcterms:title "Federal Service Platform"@en, "Federal Service Platform"@nl, "Federal Service Platform"@fr, "Federal Service Platform"@de ;
+	dcterms:subject "Semantics"@en, "Semantiek"@nl, "Sémantique"@fr, "Semantik"@de ;
+	dcterms:description "Federal Service Platform"@en, "Federal Service Platform"@nl, "Federal Service Platform"@fr, "Federal Service Platform"@de ;
+	dcterms:abstract 
+		"A working group composed of BOSA, eHealth, CBSS, MinFin and Smals worked together to standardize the most common business ontologies (Person, Organization, Location, Temporal, Generic, etc). The end result is a published vocabulary list of classes and properties, with their URIs, accepted by the Federal government as standard vocabulary."@en ,
+		"Een werkgroep bestaande uit BOSA, eHealth, KBSZ, MinFin en Smals werkte samen om de meest voorkomende bedrijfsonologieën te standaardiseren (Persoon, Organisatie, Locatie, Tijdelijk, Generiek, etc). Het eindresultaat is een gepubliceerde woordenlijst van klassen en eigenschappen, met hun URIs, die door de federale overheid als standaard vocabulary wordt geaccepteerd."@nl ,
+		"Un groupe de travail composé de BOSA, eHealth, BCSS, MinFin et Smals a travaillé ensemble pour standardiser les ontologies d'entreprise les plus courantes (Personne, Organisation, Lieu, Temporel, Générique, etc). Le résultat final est une liste de vocabulaire publiée des classes et des propriétés, avec leurs URIs, acceptée par le gouvernement fédéral comme vocabulaire standard."@fr ,
+		"Eine Arbeitsgruppe, bestehend aus BOSA, eHealth, KBSS, MinFin und Smals, arbeitete zusammen, um die gängigsten Business-Ontologien (Person, Organisation, Standort, temporär, generisch usw.) zu standardisieren. Das Endergebnis ist eine veröffentlichte Vokabelliste von Klassen und Eigenschaften mit ihren URIs, die von der Bundesregierung als Standardvokabular akzeptiert wurde."@de ;
+	foaf:homepage <https://github.com/belgif/fedvoc/> .
+
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
-	dcterms:abstract "This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ,
+	dcterms:abstract 
+		"This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ,
 		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
 		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
 		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
 	foaf:homepage <https://www.gcloud.belgium.be/rest/> .
 
-be-spec:rdf a doap:Specification ;
-	dcterms:title "RDF 1.1"@en, "RDF 1.1"@nl, "RDF 1.1"@fr, "RDF 1.1"@de ;
-	dcterms:subject "Semantic"@en ;
-	dcterms:description "Resource Description Framework"@en, "Resource Description Framework"@nl, "Resource Description Framework"@fr, "Resource Description Framework"@de ;
-	dcterms:abstract ""@en ;
-	foaf:homepage <https://www.w3.org/TR/rdf11-primer/> .
+be-spec:peppol-bis a doap:Specification ;
+	dcterms:title "PEPPOL BIS"@en, "PEPPOL BIS"@nl, "PEPPOL BIS"@fr, "PEPPOL BIS"@de ;
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Business Interoperability Specifications"@en, "Business Interoperability Specifications"@nl, "Business Interoperability Specifications"@fr, "Business Interoperability Specifications"@de ;
+	dcterms:abstract 
+		"Pan-European Public Procurement OnLine (PEPPOL) has developed the Business Interoperability Specifications (BIS) for common eProcurement processes to standardise electronic documents exchanged and validated through an open and secure network, between Access Points for public sector buyers and their suppliers across Europe and beyond."@en,
+		"PEPPOL (Pan-European Public Procurement OnLine) heeft de Business Interoperability Specifications (BIS) ontwikkeld voor gemeenschappelijke eProcurement processen om elektronische documenten die worden uitgewisseld en gevalideerd via een open en veilig netwerk te standaardiseren, tussen Access Points voor inkopers in de publieke sector en hun leveranciers in heel Europa en daarbuiten."@nl,
+		"Pan-European Public Procurement OnLine (PEPPOL) a élaboré les spécifications d'interopérabilité commerciale (BIS) pour les processus communs de passation de marchés publics en ligne afin de normaliser les documents électroniques échangés et validés par un réseau ouvert et sécurisé, entre les points d'accès pour les acheteurs du secteur public et leurs fournisseurs en Europe et au-delà"@fr,
+		"Pan-European Public Procurement OnLine (PEPPOL) hat die Business Interoperability Specifications (BIS) für gemeinsame eProcurement-Prozesse entwickelt, um elektronische Dokumente zu standardisieren, die über ein offenes und sicheres Netzwerk zwischen Zugangspunkten für Einkäufer des öffentlichen Sektors und deren Lieferanten in Europa und darüber hinaus ausgetauscht und validiert werden."@de ;
+	foaf:homepage <http://peppol.eu/downloads/post-award/> .	
 
 be-spec:shacl a doap:Specification ;
 	dcterms:title "SHACL"@en, "SHACL"@nl, "SHACL"@fr, "SHACL"@de ;
-	dcterms:subject "Data validation"@en ;
+	dcterms:subject "Data validation"@en, "Data validatie"@nl, "Validation des données"@fr, "Datenvalidierung"@de  ;
 	dcterms:description "SHapes Constraints Language"@en, "SHapes Constraints Language"@nl, "SHapes Constraints Language"@fr, "SHapes Constraints Language"@en  ;
-	dcterms:abstract ""@en ;
+	dcterms:abstract 
+		"SHACL is a language for validating RDF graphs against a set of conditions and constraints (cardinality, value ranges, string patterns, ...)."@en,
+		"SHACL is een taal voor het valideren van RDF-graphs middels een reeks voorwaarden en beperkingen (kardinaliteit, waardebereiken, string patterns, ...)."@nl,
+		"SHACL est un langage permettant de valider des graphes RDF par rapport à un ensemble de conditions et de contraintes (cardinalité, plages de valeurs, string patterns, ...)."@fr,
+		"SHACL ist eine Sprache zur Validierung von RDF-Graphen gegen eine Reihe von Bedingungen und Einschränkungen (Kardinalität, Wertebereiche, String patterns, ...)."@de ;
 	foaf:homepage <https://www.w3.org/TR/shacl/> .
 
 be-spec:skos a doap:Specification ;
 	dcterms:title "SKOS"@en, "SKOS"@nl, "SKOS"@fr, "SKOS"@de ;
-	dcterms:subject "Semantic"@en ;
+	dcterms:subject "Semantics"@en, "Semantiek"@nl, "Sémantique"@fr, "Semantik"@de ;
 	dcterms:description "Simple Knowledge Organization System"@en, "Simple Knowledge Organization System"@nl, "Simple Knowledge Organization System"@fr, "Simple Knowledge Organization System"@de ;
-	dcterms:abstract "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Semantic Web."@en ;
+	dcterms:abstract 
+		"Simple Knowledge Organization System (SKOS) is designed for the representation of thesauri, taxonomies or any other type of structured controlled vocabulary. SKOS is part of the Semantic Web family of standards."@en ,
+		"Simple Knowledge Organization System (SKOS) is ontworpen voor de weergave van thesauri, taxonomieën, of elk ander type van gestructureerde gecontroleerde woordenschat. SKOS maakt deel uit van de Semantic Web-familie van standaarden."@nl ,
+		"Simple Knowledge Organization System (SKOS) est conçu pour représenter des thésaurus, des taxonomies ou tout autre type de vocabulaire structuré contrôlé. SKOS fait partie de la famille de normes du Web sémantique."@fr,
+		"Simple Knowledge Organization System (SKOS) ist für die Darstellung von Thesauri, Taxonomien oder jeder anderen Art von strukturiertem, kontrolliertem Vokabular konzipiert. SKOS ist Teil der Semantic Web-Standardfamilie."@de ;
 	foaf:homepage <https://www.w3.org/TR/skos-reference/> .
 
-be-spec:xml a doap:Specification ;
-	dcterms:title "XML"@en, "XML"@nl, "XML"@fr, "XML"@de ;
-	dcterms:subject "Technical"@en ;
-	dcterms:description "Extensible Markup Language"@en ;
-	dcterms:abstract ""@en ;
-	foaf:homepage <https://www.w3.org/TR/xml/> .
