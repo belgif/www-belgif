@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>${spec[lang]: ${p.getTitle(lang)}</h1>
+	<h1>${spec1[lang]}: ${p.getTitle(lang)}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<h2>${desc[lang]}</h2>
 	<p>${p.getAbstract(lang)}</p>

@@ -9,7 +9,7 @@
 <#assign pri = { "nl": "Principes", "fr": "Principes", "de": "Prinzipien", "en": "Principles" }>
 <#assign rec = { "nl": "Aanbevelingen", "fr": "Recommandations", "de": "Empfehlungen", "en": "Recommendations" }>
 <#assign rec1 = { "nl": "Aanbeveling", "fr": "Recommandation", "de": "Empfehlung", "en": "Recommendation" }>
-<#assign spec = { "nl": "Specificatie", "fr": "Spécification", "de": "Spezifikation", "en": "Specification" }>
+<#assign spec1 = { "nl": "Specificatie", "fr": "Spécification", "de": "Spezifikation", "en": "Specification" }>
 
 <head>
 <meta charset='UTF-8'>

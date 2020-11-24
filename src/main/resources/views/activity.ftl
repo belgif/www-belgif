@@ -4,9 +4,9 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>${act[lang]}: ${activity.getTitle(lang)}</h1>
-	<p>${activity.getDescription(lang)}</p>
-	<p><a href="${activity.getWebsite()}" class="btn btn-primary">More info</a></p>
+	<h1>${act[lang]}: ${p.getTitle(lang)}</h1>
+	<p>${p.getDescription(lang)}</p>
+	<p><a href="${p.website}" class="btn btn-primary">${p.website}</a></p>
 	<#if principles?has_content>
 	<h2>${pri[lang]}</h2>
 	<#list principles as p>

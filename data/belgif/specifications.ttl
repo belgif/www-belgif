@@ -62,7 +62,7 @@ be-spec:peppol-bis a doap:Specification ;
 be-spec:shacl a doap:Specification ;
 	dcterms:title "SHACL"@en, "SHACL"@nl, "SHACL"@fr, "SHACL"@de ;
 	dcterms:subject "Data validation"@en, "Data validatie"@nl, "Validation des données"@fr, "Datenvalidierung"@de  ;
-	dcterms:description "SHapes Constraints Language"@en, "SHapes Constraints Language"@nl, "SHapes Constraints Language"@fr, "SHapes Constraints Language"@en  ;
+	dcterms:description "SHapes Constraints Language"@en, "SHapes Constraints Language"@nl, "SHapes Constraints Language"@fr, "SHapes Constraints Language"@de  ;
 	dcterms:abstract 
 		"SHACL is a language for validating RDF graphs against a set of conditions and constraints (cardinality, value ranges, string patterns, ...)."@en,
 		"SHACL is een taal voor het valideren van RDF-graphs middels een reeks voorwaarden en beperkingen (kardinaliteit, waardebereiken, string patterns, ...)."@nl,

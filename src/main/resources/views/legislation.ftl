@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>${leg[lang]}: ${p.getTitle(lang)}</h1>
+	<h1>${law[lang]}: ${p.getTitle(lang)}</h1>
 	<p>Date: ${p.getDate()}</p>
 	<p>${p.getDescription(lang)}</p>
 	<p><a href="${p.getWebsite()}" class="btn btn-primary">Text</a></p>
