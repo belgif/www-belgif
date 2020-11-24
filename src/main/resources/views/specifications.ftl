@@ -1,7 +1,7 @@
 <#ftl encoding="utf-8">
 
 <#assign name = { "nl": "Naam", "fr": "Nom", "de": "Name", "en": "Name" }>
-<#assign ver = { "nl": "Version", "fr": "Version", "de": "Version", "en": "Version" }>
+<#assign ver = { "nl": "Versie", "fr": "Version", "de": "Version", "en": "Version" }>
 <#assign area = { "nl": "Domein", "fr": "Domaine", "de": "Domäne", "en": "Domain" }>
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@
 			<#items as s>
 			    <tr>
 					<td><a href="/page/specification/${s.localId}.${lang}.html">${s.getTitle(lang)}</a></td>
-					<td>${s.version}!""</td>
+					<td>${s.version!""}</td>
 					<td>${s.getSubject(lang)}</td>
 				</tr>
 		</#items>
