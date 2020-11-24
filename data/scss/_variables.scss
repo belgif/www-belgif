@@ -1,0 +1,59 @@
+/* SCSS Compiled - DO NOT EDIT CSS DIRECTLY */
+/* Variables */
+$blue: #6495ED;
+$pink: #BA55D3;
+$dark-pink: #9900CC;
+$green: #3CB371;
+$orange: #FF8C00;
+$black: #1a1a1a;
+$almost-white: #adb5bd;
+$light-border: #e3e3e3;
+$gray: #757575;
+/* BOSA colors.*/
+$bosa-blue: #0077c4;
+$bosa-green: #008500;
+$bosa-teal: #195065;
+$bosa-teal-light: #0E3848;
+$blue-prussian: #11314c;
+$blue-space: #074374;
+$blue-steel: #9cbbc7;
+$blue-light: #edf8ff;
+$yellow: #D96000;
+$yellow-light: #fff8ce;
+$green-light: #eeffce;
+/* Headings. */
+$heading-1-font-size: size(34);
+$heading-2-font-size: size(27);
+$heading-3-font-size: size(25);
+$heading-4-font-size: size(22);
+$heading-5-font-size: size(19);
+$heading-6-font-size: size(16);
+/* Buttons. */
+.btn {
+  border-radius: 0;
+  @include card(0);
+
+  &:hover {
+    @include card(1);
+  }
+}
+
+.btn-primary {
+  color           : white;
+  background-color: $blue-space;
+  border-color    : $blue-prussian;
+
+  &:hover {
+    background-color: $blue-prussian;
+  }
+}
+
+.btn-secondary {
+  color           : white;
+  background-color: $bosa-teal;
+  border-color    : $bosa-teal;
+
+  &:hover {
+    background-color: $bosa-teal-light;
+  }
+}

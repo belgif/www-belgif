@@ -1,0 +1,254 @@
+// Fonts.
+//
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@300;400;700&display=swap'); // Mixin.
+// Typography.
+//
+// 'Headings' default properties.
+//
+// 1. Use the following '%headings-defaults' placeholder to create
+//    default properties which will be extended to each heading type.
+//
+
+%headings-defaults {
+  margin-bottom: size(20);
+  color        : inherit;
+  font         : {
+    family: inherit;
+    weight: 700;
+  }
+  line-height  : 1.2;
+}
+// Headings 1
+//
+
+h1 {
+  @extend %headings-defaults; // 1
+  font-size: $heading-1-font-size;
+}
+// Headings 2
+//
+
+h2 {
+  @extend %headings-defaults; // 1
+  margin   : 0.7em 0 1em;
+  font-size: $heading-2-font-size;
+}
+// Headings 3
+//
+
+h3 {
+  @extend %headings-defaults; // 1
+  font-size    : $heading-3-font-size;
+  margin-bottom: size(20);
+}
+// Headings 4
+//
+
+h4 {
+  @extend %headings-defaults; // 1
+  font-size: $heading-4-font-size;
+}
+// Headings 5
+//
+
+h5 {
+  @extend %headings-defaults; // 1
+  font-size: $heading-5-font-size;
+}
+// Headings 6
+//
+
+h6 {
+  @extend %headings-defaults; // 1
+  font-size: $heading-6-font-size;
+}
+// Paragraphs
+//
+
+p {
+  margin-bottom: size(15);
+}
+// Links
+//
+
+a {
+  transition     : all 300ms ease-in-out;
+  color          : $blue-space;
+  text-decoration: none;
+  // Links (Hover state)
+  //
+  &:hover {
+    color          : $bosa-blue;
+    text-decoration: underline;
+  }
+  // Links (Focus state)
+  //
+  &:focus {
+    color          : $bosa-blue;
+    text-decoration: underline;
+    outline        : 0;
+  }
+}
+
+*:not(.focus--mouse):focus {
+  outline       : 3px solid $bosa-blue;
+  outline-offset: 2px;
+}
+
+.focus--mouse {
+  outline       : 0 !important;
+  outline-offset: 0 !important;
+}
+// Acronyms
+//
+
+acronym[title] {
+  font-size: size(14);
+}
+// Addresses
+//
+
+address {
+  margin-bottom: size(30);
+  text-align   : center;
+}
+// '(Un)Ordered lists' default properties.
+//
+// 1. Use the following '%lists-defaults' placeholder to create default
+//    properties which will be extended to each list type.
+//
+
+%lists-defaults {
+  margin-bottom: size(30);
+  // Nested unordered lists
+  //
+  ul {
+    margin-bottom: 0;
+  }
+  // Nested ordered lists
+  //
+  ol {
+    margin-bottom: 0;
+  }
+}
+// Unordered lists
+//
+
+ul {
+  @extend %lists-defaults; // 1
+}
+// Ordered lists
+//
+
+ol {
+  @extend %lists-defaults; // 1
+}
+// Definition lists
+//
+
+dl {
+  margin-bottom: size(30);
+  // Definition titles
+  //
+  dt {
+    font-weight: 700;
+  }
+  // Definition data
+  //
+  dd {
+    margin: {
+      bottom: size(15);
+      left  : 0;
+    }
+  }
+}
+// Blockquotes
+//
+/*
+blockquote {
+  padding      : size(40) size(30);
+  margin-bottom: size(15);
+  font         : {
+    size : size(27);
+    style: italic;
+  }
+  border       : 0 none;
+  // Blockquotes (Before & After selector)
+  //
+  &:after,
+  &:before {
+    margin-right: size(15);
+    font-family : $font-family-font-awesome;
+    display     : inline-block;
+    font-weight : 900;
+  }
+
+  p {
+    display: inline;
+  }
+  // Blockquotes (Before selector)
+  //
+  &:before {
+    content     : '\f10d';
+    margin-right: size(8);
+  }
+  // Blockquotes (After selector)
+  //
+  &:after {
+    content    : '\f10e';
+    margin-left: size(8);
+  }
+  // Inner footer (Source identification)
+  //
+  footer {
+    color: $gray;
+    // Inner footer (Source identification / Before selector)
+    //
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+}*/
+// Emphasis
+//
+
+small {
+  font: {
+    size  : size(14);
+    weight: 400;
+  }
+}
+// Emphasis (Bolder text)
+//
+
+strong {
+  font : {
+    weight: 700;
+  }
+  color: inherit;
+}
+// Emphasis (Highlighted text)
+//
+
+mark {
+  padding   : size(3);
+  background: lighten($yellow, 43%);
+}
+// Horizontal rules
+//
+
+hr {
+  height    : size(1);
+  display   : block;
+  width     : 100%;
+  position  : relative;
+  margin    : size(40) 0 size(30);
+  background: lighten($gray, 10%);
+}
+// Override default placeholders
+//
+
+::placeholder {
+  opacity: 1;
+  color  : darken($gray,10%);
+}

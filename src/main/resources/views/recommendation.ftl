@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid bg-light">
-	<h1>Recommendation ${p.sequence}: ${p.getTitle(lang)}</h1>
+	<h1>${rec1[lang]} ${p.sequence}: ${p.getTitle(lang)}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<#if legislations?has_content>
 		<section>

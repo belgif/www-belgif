@@ -1,0 +1,267 @@
+@import 'mixin', 'variables', 'typography', 'root'; // Initial styles. Modified to keep the bare minimum of it. (a11y)
+//
+
+.be-legal {
+  .card-body {
+    border-bottom: 8px solid $blue;
+  }
+}
+
+.be-activities {
+  .card-body {
+    border-bottom: 8px solid $pink;
+  }
+}
+
+.be-eif {
+  .card-body {
+    border-bottom: 8px solid $green;
+  }
+}
+
+.be-specs {
+  .card-body {
+    border-bottom: 8px solid $orange;
+  }
+}
+
+.be-integration {
+  .card-body {
+    border-bottom: 8px solid $green;
+  }
+}
+
+.be-governance {
+  .card-body {
+    border-bottom: 8px solid $dark-pink;
+  }
+}
+// Language selection page.
+//
+
+.language-selection-page {
+  .card-deck,
+  .logo {
+    width  : 100%;
+    padding: size(60);
+  }
+
+  .card {
+    border       : 0;
+    border-radius: 0;
+    position     : relative;
+    height       : size(50);
+
+    a {
+      font-size: size(18);
+      color    : $black;
+      position : absolute;
+      top      : 0;
+      right    : 0;
+      bottom   : 0;
+      left     : 0;
+      padding  : 1rem;
+
+      &:hover {
+        @include card(1);
+        text-decoration: none;
+      }
+    }
+  }
+}
+// Footer background image.
+//
+
+.footer-bg-image {
+  height             : size(225);
+  background-image   : url("../images/splash-wave.svg");
+  background-position: bottom;
+  background-size    : cover;
+  position           : fixed;
+  bottom             : 0;
+  left               : 0;
+  right              : 0;
+}
+// General styles.
+//
+// Language selector.
+//
+
+#lang-wrapper {
+  padding      : size(10) size(15);
+  border-bottom: 1px solid $light-border;
+
+  .nav-link {
+    padding      : size(2) size(6);
+    margin       : 0 size(3);
+    font-size    : size(12);
+    color        : $black;
+    border-radius: 2px;
+
+    &.active,
+    &:hover {
+      background: $black;
+      color     : white;
+    }
+  }
+}
+// Main navigation.
+//
+
+header {
+  padding-bottom: size(60);
+
+  .navbar {
+    font-family: 'Roboto Condensed', sans-serif;
+
+    .nav-link {
+      font-size     : size(26) !important;
+      letter-spacing: 0;
+      color         : $black;
+      font-weight   : 400 !important;
+      padding       : 0 0 size(15) !important;
+      margin        : 0 0 0 size(30) !important;
+      border-bottom : 1px solid transparent;
+      transition    : all 300ms ease-in-out;
+
+      &:hover {
+        color        : $bosa-blue;
+        border-bottom: 1px solid $bosa-blue;
+      }
+    }
+  }
+}
+// Main section.
+//
+
+main {
+  min-height: 45vh;
+}
+
+.homepage {
+  main {
+    background-image   : url("../images/first-wave.svg");
+    background-position: center top;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    position           : relative;
+    padding-bottom     : size(120);
+    margin-bottom      : size(370);
+
+    &:after {
+      content            : "";
+      display            : block;
+      height             : size(120);
+      position           : absolute;
+      bottom             : 0;
+      left               : 0;
+      right              : 0;
+      background         : url("../images/first-wave-white.svg");
+      background-position: center bottom;
+      background-size    : cover;
+      background-repeat  : no-repeat;
+    }
+  }
+}
+// Grid.
+//
+
+.row {
+  margin-top   : size(30);
+  margin-bottom: size(30);
+
+  .col {
+    margin-bottom: size(30) !important;
+  }
+}
+// Cards.
+//
+
+.card {
+  @include card(1);
+  border       : 0 !important;
+  border-radius: 0 !important;
+  transition   : all 300ms ease-in-out;
+
+  &:hover {
+    @include card(3);
+  }
+
+  a,
+  i {
+    color: $bosa-teal;
+  }
+
+  .card-img-top {
+    img {
+      margin-top: size(30);
+    }
+  }
+}
+// Footer section + footer navigation + BOSA styled link.
+//
+
+footer {
+  position  : relative;
+  text-align: center;
+  margin-top: 20rem;
+
+  &:after {
+    content            : "";
+    display            : block;
+    background         : url("../images/footer.svg");
+    background-position: center 0;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    position           : absolute;
+    bottom             : 0;
+    left               : 0;
+    right              : 0;
+    height             : 24vw;
+    min-height         : 20rem;
+    max-height         : 30rem;
+    width              : 100vw;
+    z-index            : -1;
+  }
+
+  .navbar {
+    color     : $almost-white !important;
+    background: black !important;
+
+    .nav-link {
+      color: $almost-white;
+
+      &:hover {
+        color          : $almost-white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bosa-logo-link {
+    display: inline-block;
+
+    img {
+      width     : size(80);
+      margin    : size(30);
+      transition: all 300ms ease-in-out;
+      padding   : size(10);
+    }
+
+    &:hover {
+      img {
+        border: 5px solid white;
+      }
+    }
+  }
+}
+// Bootstrap overrides. (so as not to change too much html).
+//
+
+.bg-dark {
+  background-color: $bosa-teal !important;
+}
+
+.bg-light {
+  background-color: white !important;
+}

@@ -1,0 +1,10 @@
+// Root overrides.
+//
+
+body {
+  min-height             : 100vh;
+  color                  : $black;
+  font-family            : 'Lato', sans-serif;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

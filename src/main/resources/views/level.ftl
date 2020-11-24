@@ -4,7 +4,7 @@
 <body>
 <#include "header.ftl">
 <main class="container-fluid">
-	<h1>Level ${p.getTitle(lang)}</h1>
+	<h1>${niv1[lang]} ${p.getTitle(lang)}</h1>
 	<h3>${rec[lang]}</h3>
 	<div class="row row-cols-1 row-cols-md-4">
 		<#list recommendations>

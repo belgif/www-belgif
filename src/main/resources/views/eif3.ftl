@@ -7,7 +7,7 @@
 	<h1>${p.getTitle(lang)!""}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<section>
-	<h2>Principles</h2>
+	<h2>${pri[lang]}</h2>
 	<div class="row row-cols-1 row-cols-md-4">
 		<#list principles>
 		<#items as e>
@@ -26,7 +26,7 @@
 	</div>
 	</section>
 	<section>
-	<h2>Interoperability Levels</h2>
+	<h2>${niv[lang]}</h2>
 	<div class="row row-cols-1 row-cols-md-4">
 		<#list levels>
 		<#items as l>
