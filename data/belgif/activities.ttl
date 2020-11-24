@@ -19,7 +19,7 @@ be-action:ai4be a foaf:Project ;
 <p>AI 4 Belgien ist ein von der Gemeinschaft geführter Ansatz, der es belgischen Menschen und Organisationen ermöglicht, die Möglichkeiten der KI zu nutzen und gleichzeitig den laufenden Übergang verantwortungsvoll zu erleichtern. AI 4 Belgien hat den Ehrgeiz, Belgien in der europäischen KI-Landschaft zu positionieren.</p>"""@de ;
 	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:assessment ;
-	foaf:website <https://www.ai4belgium.be> .
+	foaf:homepage <https://www.ai4belgium.be> .
 	
 be-action:gaix4be a foaf:Project ;
 	dcterms:title "GAIA-X for Belgium"@en, "GAIA-X for Belgium"@nl, "GAIA-X for Belgium"@fr, "GAIA-X for Belgium"@de ;
@@ -33,7 +33,7 @@ be-action:gaix4be a foaf:Project ;
 <p>Gaia-X ist ein digitales Ökosystem, das an der Schaffung einer Umgebung arbeitet, in der Daten unter der Kontrolle von Datenbesitzern und -nutzern gemeinsam genutzt und gespeichert werden können. Wo Regeln definiert und respektiert werden, so dass Daten und Dienste leicht verfügbar gemacht werden können. Gaia-X hat das Potenzial, beispiellose Möglichkeiten für innovative, datengesteuerte Geschäftsmodelle und neue Lösungen zu schaffen, die europäischen Unternehmen aller Größen und Branchen helfen, sich zu vergrößern und im globalen Wettbewerb zu bestehen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability, eif-principle:security  ;
 	dcterms:relation eif-recommendation:interfaces, eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:dataportability, eif-recommendation:userinvolvement, eif-recommendation:assessment, eif-recommendation:privacy ;
-	foaf:website <https://www.agoria.be/gaia-x/> .
+	foaf:homepage <https://www.agoria.be/gaia-x/> .
 
 
 be-action:webaccessibility a foaf:Project ;
@@ -58,4 +58,4 @@ be-action:opendataportals a foaf:Project ;
 		"<p>Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten.</p>"@de ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:opendata ;
-	foaf:website <https://data.gov.be/nl/dcat-werkgroep> .
+	foaf:homepage <https://data.gov.be/nl/dcat-werkgroep> .
