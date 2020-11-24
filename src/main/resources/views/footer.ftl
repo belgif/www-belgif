@@ -4,7 +4,7 @@
 <#assign priv = { "nl": "Privacyverklaring", "fr": "Déclaration de confidentialité", "de": "Datenschutzerklärung", "en": "Privacy statement" }>
 
 <footer>
-	<nav class="navbar navbar-light bg-light justify-content-center">
+	<nav class="navbar justify-content-center">
 		<span>&copy; 2020</span>
 		<a href="http://bosa.belgium.be" class="nav-link">${fod[lang]}</a>
 		<a href="http://github.com/belgif/www-belgif" class="nav-link">GitHub</a>
