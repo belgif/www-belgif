@@ -2,9 +2,11 @@
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix be-spec: <http://www.belgif.be/id/spec/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 be-spec:cpsvp-ap a doap:Specification ;
-	dcterms:title "CPSV-AP 2.2"@en, "CPSV-AP 2.2"@nl, "CPSV-AP 2.2"@fr, "CPSV-AP 2.2"@de ;
+	dcterms:title "CPSV-AP"@en, "CPSV-AP"@nl, "CPSV-AP"@fr, "CPSV-AP"@de ;
+	owl:versionInfo "2.2";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "Common Public Service Vocabulary Application Profile"@en, "Common Public Service Vocabulary Application Profile"@nl, "Common Public Service Vocabulary Application Profile"@fr, "Common Public Service Vocabulary Application Profile"@de ;
 	dcterms:abstract "The Common Public Service Vocabulary Application Profile (CPSV-AP) is a data model for describing public services and the associated life and business events."@en ,
@@ -14,7 +16,8 @@ be-spec:cpsvp-ap a doap:Specification ;
 	foaf:homepage <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
 
 be-spec:dcat-ap a doap:Specification ;
-	dcterms:title "DCAT-AP 1.2.1"@en, "DCAT-AP 1.2.1"@nl, "DCAT-AP 1.2.1"@fr, "DCAT-AP 1.2.1"@de ;
+	dcterms:title "DCAT-AP"@en, "DCAT-AP"@nl, "DCAT-AP"@fr, "DCAT-AP"@de ;
+	owl:versionInfo "1.2.1";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "DCAT Application Profile for data portals"@en, "DCAT Application Profile voor dataportalen"@nl, "DCAT Application Profile pour les portails de données"@fr, "DCAT Application Profile für Datenportale"@de ;
 	dcterms:abstract "The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors."@en ,

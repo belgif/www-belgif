@@ -11,8 +11,6 @@
 <#assign rec1 = { "nl": "Aanbeveling", "fr": "Recommandation", "de": "Empfehlung", "en": "Recommendation" }>
 <#assign spec = { "nl": "Specificatie", "fr": "Spécification", "de": "Spezifikation", "en": "Specification" }>
 
-
-
 <head>
 <meta charset='UTF-8'>
 <link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.13.0/css/all.min.css" />

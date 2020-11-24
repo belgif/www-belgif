@@ -32,6 +32,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
+import org.eclipse.rdf4j.model.vocabulary.OWL;
 
 /**
  * Technical or semantic specification
@@ -42,8 +43,9 @@ public class Specification extends Dao {
 	private final Map<String, String> description;
 	private final Map<String, String> longdesc;
 	private final Map<String, String> subject;
+	private final String version;
 	private final String website;
-
+	
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
@@ -56,6 +58,10 @@ public class Specification extends Dao {
 		return subject.get(lang);
 	}
 
+	public String getVersion() {
+		return version;
+	}
+
 	public String getWebsite() {
 		return website;
 	}
@@ -66,6 +72,7 @@ public class Specification extends Dao {
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
 		longdesc = langMap(m, iri, DCTERMS.ABSTRACT);
 		subject = langMap(m, iri, DCTERMS.SUBJECT);
+		version = firstString(m, iri, OWL.VERSIONINFO);
 		website = firstString(m, iri, FOAF.HOMEPAGE);
 	}
 }

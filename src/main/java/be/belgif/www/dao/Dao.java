@@ -32,6 +32,7 @@ import org.eclipse.rdf4j.model.IRI;
 
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
+import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 
@@ -64,8 +65,8 @@ public class Dao {
 
 	protected static String firstString(Model m, IRI iri, IRI predicate) {
 		return m.filter(iri, predicate, null).objects().stream().findFirst()
-					.map(IRI.class::cast)
-					.map(IRI::stringValue)
+					.map(Value.class::cast)
+					.map(Value::stringValue)
 					.orElse("");
 	}
 

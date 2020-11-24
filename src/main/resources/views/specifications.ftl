@@ -1,3 +1,9 @@
+<#ftl encoding="utf-8">
+
+<#assign name = { "nl": "Naam", "fr": "Nom", "de": "Name", "en": "Name" }>
+<#assign ver = { "nl": "Version", "fr": "Version", "de": "Version", "en": "Version" }>
+<#assign area = { "nl": "Domein", "fr": "Domaine", "de": "Domäne", "en": "Domain" }>
+
 <!DOCTYPE html>
 <html>
 <#include "head.ftl">
@@ -9,16 +15,16 @@
 	<div class="table-responsive">
 		<table class="table table-sm table-striped">
 		<thead class="bg-dark text-light">
-			<tr><th scope="col">Name</th>
-				<th scope="col">Version</th>
-				<th scope="col">Area</th></tr>
+			<tr><th scope="col">${name[lang]}</th>
+				<th scope="col">${ver[lang]}</th>
+				<th scope="col">${area[lang]}</th></tr>
 		</thead>
 		<tbody>
 			<#list specifications>
 			<#items as s>
 			    <tr>
 					<td><a href="/page/specification/${s.localId}.${lang}.html">${s.getTitle(lang)}</a></td>
-					<td></td>
+					<td>${s.version}!""</td>
 					<td>${s.getSubject(lang)}</td>
 				</tr>
 		</#items>
