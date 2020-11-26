@@ -48,6 +48,18 @@ be-spec:gcloud-rest a doap:Specification ;
 		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
 	foaf:homepage <https://www.gcloud.belgium.be/rest/> .
 
+be-spec:oslo a doap:Specification ;
+	dcterms:title "OSLO"@en, "OSLO"@nl, "OSLO"@fr, "OSLO"@de ;
+	owl:versionInfo "2";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Open Standards for Linkend Organisations"@en, "Open Standaarden voor Linkende Organisaties"@nl, "Open Standards for Linkend Organisations"@fr, "Open Standards for Linkend Organisations"@de ;
+	dcterms:abstract 
+		"With OSLO, InformatieVlaanderen focuses on semantic interoperability. The vocabularies and application profiles in this project were developed in co-creation with Flemish administrations, local governments, federal partners, the European Commission and private partners."@en ,
+		"Met OSLO zet InformatieVlaanderen in op semantische interoperabiliteit. De vocabularia en applicatieprofielen in dit project werden ontwikkeld in co-creatie met Vlaamse administraties, lokale besturen, federale partners, de Europese Commissie en private partners."@nl ,
+		"Avec OSLO, InformatieVlaanderen se concentre sur l'interopérabilité sémantique. Les vocabulaires et les profils d'application de ce projet ont été développés en co-création avec les administrations flamandes, les gouvernements locaux, les partenaires fédéraux, la Commission européenne et des partenaires privés."@fr ,
+		"Mit OSLO konzentriert sich InformatieVlaanderen auf die semantische Interoperabilität. Die Vokabulare und Anwendungsprofile in diesem Projekt wurden in Zusammenarbeit mit flämischen Verwaltungen, lokalen Regierungen, föderalen Partnern, der Europäischen Kommission und privaten Partnern entwickelt."@de ;
+	foaf:homepage <https://overheid.vlaanderen.be/oslo-wat-is-oslo> .
+
 be-spec:peppol-bis a doap:Specification ;
 	dcterms:title "PEPPOL BIS"@en, "PEPPOL BIS"@nl, "PEPPOL BIS"@fr, "PEPPOL BIS"@de ;
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;

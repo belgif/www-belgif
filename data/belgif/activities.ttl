@@ -35,6 +35,19 @@ be-action:gaix4be a foaf:Project ;
 	dcterms:relation eif-recommendation:interfaces, eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:dataportability, eif-recommendation:userinvolvement, eif-recommendation:assessment, eif-recommendation:privacy ;
 	foaf:homepage <https://www.agoria.be/gaia-x/> .
 
+be-action:begeo a foaf:Project;
+	dcterms:title "BeGeo"@en, "BeGeo"@nl, "BeGeo"@fr, "BeGeo"@de ;
+	dcterms:description """
+<p>Every year, the National Geographical Institute organizes BeGeo, the national geo-information fair that brings together government, the private sector and the research community.</p>"""@en,
+"""
+<p>Het Nationaal Geografisch Instituut organiseert jaarlijks BeGeo, hét nationaal congres met beurs rond geo-informatie waar zowel de overheid, de privésector als de onderzoekswereld elkaar ontmoeten.</p>"""@nl, 
+"""
+<p>L'Institut géographique national organise annuellement BeGeo, LE congrès national avec salon consacré aux informations géographiques rassemblant à la fois les pouvoirs publics, le secteur privé et le monde de la recherche.</p>"""@fr, 
+"""
+<p>Das National Geographical Institute organisiert jedes Jahr die BeGeo, die nationale Geoinformationsmesse, die Regierung, Privatwirtschaft und Forschungsgemeinschaft zusammenbringt.</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability  ;
+	dcterms:relation eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:userinvolvement, eif-recommendation:solutionreuse ;
+	foaf:website <https://begeo2019.be> .
 
 be-action:webaccessibility a foaf:Project ;
 	dcterms:title "Belgian Web Accessibility"@en, "Belgian Web Accessibility"@nl, "Belgian Web Accessibility"@fr, "Belgian Web Accessibility"@de ;
