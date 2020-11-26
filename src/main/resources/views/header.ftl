@@ -8,10 +8,10 @@
 
 <header>
 	<nav id="lang-wrapper" class="nav nav-pills justify-content-end">
-		<a href="${path}.nl.html" hreflang="nl" class="nav-link <#if lang == 'nl'>active</#if>">NL</a>
-		<a href="${path}.fr.html" hreflang="fr" class="nav-link <#if lang == 'fr'>active</#if>">FR</a>
-		<a href="${path}.de.html" hreflang="de" class="nav-link <#if lang == 'de'>active</#if>">DE</a>
-		<a href="${path}.en.html" hreflang="en" class="nav-link <#if lang == 'en'>active</#if>">EN</a>
+		<a href="${path}.nl.html" onclick="Cookies.set('lang', 'nl');" hreflang="nl" class="nav-link <#if lang == 'nl'>active</#if>">NL</a>
+		<a href="${path}.fr.html" onclick="Cookies.set('lang', 'fr');" hreflang="fr" class="nav-link <#if lang == 'fr'>active</#if>">FR</a>
+		<a href="${path}.de.html" onclick="Cookies.set('lang', 'de');" hreflang="de" class="nav-link <#if lang == 'de'>active</#if>">DE</a>
+		<a href="${path}.en.html" onclick="Cookies.set('lang', 'en');" hreflang="en" class="nav-link <#if lang == 'en'>active</#if>">EN</a>
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a href="#" class="navbar-brand"><img id="logo" src="/public/belgif.png" alt="Belgif logo"/></a>
