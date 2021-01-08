@@ -87,27 +87,26 @@ be-page:specifications a foaf:Document ;
 be-page:components a foaf:Document ;
 	dcterms:title "Components"@en, "Componenten"@nl, "Composants"@fr, "Komponenten"@de ;
 	dcterms:description 
-		"The <a href='https://ict-reuse.be'>ICT Reuse catalogue</a> contains an overview of existing reusable components, it is an initiative of the Belgian social security institutions."@en ,
-		"De <a href='https://ict-reuse.be'>ICT Reuse catalogus</a>  bevat een overzicht van bestaande herbruikbare compontent, het is een initiatief van de Belgische instellingen van de sociale zekerheid"@nl ,
-		"Le <a href='https://ict-reuse.be'>ICT Reuse catalogue</a> contient un aperçu des composants réutilisables existants, c'est une initiative des institutions de sécurité sociale belges."@fr ,
-		"Der <a href='https://ict-reuse.be'>ICT Reuse Katalog</a> enthält eine Übersicht der vorhandenen wiederverwendbaren Komponenten, er ist eine Initiative der belgischen Institutionen der Sozialen Sicherheit."@de .
+		"The <a href='https://ict-reuse.be' target='_blank'>ICT Reuse catalogue</a> contains an overview of existing reusable components, it is an initiative of the Belgian social security institutions."@en ,
+		"De <a href='https://ict-reuse.be' target='_blank'>ICT Reuse catalogus</a>  bevat een overzicht van bestaande herbruikbare compontent, het is een initiatief van de Belgische instellingen van de sociale zekerheid"@nl ,
+		"Le <a href='https://ict-reuse.be' target='_blank'>ICT Reuse catalogue</a> contient un aperçu des composants réutilisables existants, c'est une initiative des institutions de sécurité sociale belges."@fr ,
+		"Der <a href='https://ict-reuse.be' target='_blank'>ICT Reuse Katalog</a> enthält eine Übersicht der vorhandenen wiederverwendbaren Komponenten, er ist eine Initiative der belgischen Institutionen der Sozialen Sicherheit."@de .
 	
 be-page:registries a foaf:Document ;
 	dcterms:title "Base Registries and Authentic Sources"@en, "Basisregisters en authentieke bronnen"@nl, "Registres de base et sources authentiques"@fr, "Basisregister und authentische Quellen"@de ;
 	dcterms:description 
-		"FPS BOSA maintains a <a href='https://sources-authentiques.belgium.be'>catalogue</a> providing an overview of the data contained in authentic sources and other administrative data sources."@en ,
-		"De FOD BOSA onderhoudt een <a href='https://sources-authentiques.belgium.be/'>catalogus</a> die een overzicht geeft van de gegevens in authentieke bronnen en andere administratieve gegevensbronnen."@nl ,
-		"Le SPF BOSA tient un <a href='https://sources-authentiques.belgium.be/'>catalogue</a> qui donne un aperçu des données contenues dans les sources authentiques et d'autres sources de données administratives."@fr ,
-		"FPS BOSA unterhält einen <a href='https://sources-authentiques.belgium.be'>Katalog</a>, der einen Überblick über die in authentische Quellen und anderen administrativen Datenquellen enthaltenen Daten bietet."@de .
+		"FPS BOSA maintains a <a href='https://sources-authentiques.belgium.be' target='_blank'>catalogue</a> providing an overview of the data contained in authentic sources and other administrative data sources."@en ,
+		"De FOD BOSA onderhoudt een <a href='https://sources-authentiques.belgium.be/' target='_blank'>catalogus</a> die een overzicht geeft van de gegevens in authentieke bronnen en andere administratieve gegevensbronnen."@nl ,
+		"Le SPF BOSA tient un <a href='https://sources-authentiques.belgium.be/' target='_blank'>catalogue</a> qui donne un aperçu des données contenues dans les sources authentiques et d'autres sources de données administratives."@fr ,
+		"FPS BOSA unterhält einen <a href='https://sources-authentiques.belgium.be' target='_blank'>Katalog</a>, der einen Überblick über die in authentische Quellen und anderen administrativen Datenquellen enthaltenen Daten bietet."@de .
 	
 be-page:contact a foaf:Document ;
 	dcterms:title "Contact"@en, "Contact"@nl, "Contact"@fr, "Kontakt"@de ;
 	dcterms:description 
-		"<p>This website is hosted by the FPS BOSA, DG Digital Transformation.</p><p>Please send your questions and comments to <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@en ,
-		"<p>Deze website wordt beheerd door de FOD BOSA, DG Digital Transformatie.</p><p>Zend uw vragen en opmerkingen naar <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@nl ,
-		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@fr ,
-		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@fr ,
-		"<p>Diese Website wird vom FÖD BOSA, GD Digitale Transformation.</p><p>Bitte senden Sie Ihre Fragen und Kommentare an <a href='mailto:contact@belgif.be'>contact@belgif.be</a></p>"@de .
+		"<p>This website is hosted by the FPS BOSA, DG Digital Transformation.</p><p>Please send your questions and comments to <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@en ,
+		"<p>Deze website wordt beheerd door de FOD BOSA, DG Digital Transformatie.</p><p>Zend uw vragen en opmerkingen naar <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@nl ,
+		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@fr ,
+		"<p>Diese Website wird vom FÖD BOSA, GD Digitale Transformation.</p><p>Bitte senden Sie Ihre Fragen und Kommentare an <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@de .
 
 be-page:recommendations a foaf:Document ;
 	dcterms:title "Recommendations"@en, "Aanbevelingen"@nl, "Recommandations"@fr, "Empfehlungen"@de ;
