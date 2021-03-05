@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <#include "head.ftl">
 <script>
 	var lang = Cookies.get('lang');

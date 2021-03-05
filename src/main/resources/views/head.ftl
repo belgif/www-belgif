@@ -13,8 +13,8 @@
 
 <head>
 <meta charset='UTF-8'>
-<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.13.0/css/all.min.css" />
-<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.15.2/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.6.0/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/public/style.css" />
 <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
 <script src="/webjars/js-cookie/2.2.1/js.cookie.min.js"></script>

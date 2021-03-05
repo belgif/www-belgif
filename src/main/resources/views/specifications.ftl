@@ -5,7 +5,7 @@
 <#assign area = { "nl": "Domein", "fr": "Domaine", "de": "Domäne", "en": "Domain" }>
 
 <!DOCTYPE html>
-<html>
+<html lang="${lang}">
 <#include "head.ftl">
 <body>
 <#include "header.ftl">

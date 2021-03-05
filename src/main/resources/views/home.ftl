@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="${lang}">
 <#include "head.ftl">
 <body class="homepage">
 <#include "header.ftl">

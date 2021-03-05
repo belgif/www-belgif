@@ -103,14 +103,14 @@
     </plugins>
   </build>
   <properties>
-    <micronaut.version>2.0.1</micronaut.version>
+    <micronaut.version>2.2.1</micronaut.version>
     <maven.compiler.target>11</maven.compiler.target>
     <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
     <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     <maven.compiler.source>11</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <exec.main>be.belgif.www.Application</exec.main>
-    <rdf4j.version>3.4.4</rdf4j.version>
+    <rdf4j.version>3.6.0</rdf4j.version>
   </properties>
 </project>
 
