@@ -12,9 +12,9 @@ Wet van 19 juli 2018 betreffende de toegankelijkheid van websites en mobiele app
 <ul><li>Website: <a href="https://www.belgif.be">https://www.belgif.be</a></li></ul>
 <h3>Nalevingsstatus</h3>
 <p>Deze website is volledig compliant zoals hieronder beschreven.</p>
-<h3>Uw verklaring voorbereiden</h3>
+<h3>Voorbereiding van de verklaring</h3>
 <p>Er is een interne toegankelijkheidsaudit uitgevoerd. Deze audit was een vereenvoudigde analyse.</p>
-<h3>Feedback en contactgegevens</h3>
+<h3>Contactgegevens</h3>
 <p>Voor alle vragen en opmerkingen over de toegankelijkheid van de website www.belgif.be kunt u contact opnamen met de FOD BOSA <a href="mailto:belgif@bosa.fgov.be">via e-mail</a>.
 </p>
 <h3>Klachtenprocedure</h3>
@@ -33,9 +33,9 @@ La présente déclaration d'accessibilité s'applique à :</p>
 <ul><li>Site web: <a href="https://www.belgif.be">https://www.belgif.be</a></li></ul>
 <h3>Niveau de conformité</h3>
 <p>Ce site web est totalement conforme à la description ci-dessous.</p>
-<h3>Préparation de votre déclaration</h3>
+<h3>Préparation de la déclaration</h3>
 <p>Un audit interne de l'accessibilité a été effectué. Cet audit consistait en une analyse simplifiée.</p>
-<h3>Retour d'information et coordonnées de contact</h3>
+<h3>Coordonnées de contact</h3>
 <p>Pour toutes questions et commentaires sur l'accessibilité du site www.belgif.be, vous pouvez contacter le SPF BOSA <a href="mailto:belgif@bosa.fgov.be">par email</a>.
 </p>
 <h3>Procédure de plainte</h3>
@@ -44,7 +44,49 @@ La présente déclaration d'accessibilité s'applique à :</p>
 1000 Bruxelles</p>
 <p><a href="contact@mediateurfederal.be">contact@mediateurfederal.be</a></p>
 <p><a href="http://www.federaalombudsman.be/fr/">Site du médiateur fédéral</a></p>
-"""@fr .
+"""@fr ,
+"""
+<p>FÖD BOSA, verpflichtet sich, diese Website in Übereinstimmung mit der folgenden Gesetzgebung zugänglich zu machen: 
+Gesetz vom 19. Juli 2018 über die barrierefreien Zugang zu den Websites und mobilen Anwendungen von Organisationen des öffentlichen Sektors.
+</p>
+<p>
+Diese Zugänglichkeitserklärung gilt für :</p>
+<ul><li>Website: <a href="https://www.belgif.be">https://www.belgif.be</a></li></ul>
+<h3>Grad der Einhaltung</h3>
+<p>Diese Website ist vollständig konform wie unten beschrieben.</p>
+<h3>Vorbereitung der Erklärung</h3>
+<p>Es wurde ein internes Zugänglichkeitsaudit durchgeführt. Diese Prüfung war eine vereinfachte Analyse.</p>
+<h3>Kontaktdaten</h3>
+<p>Für alle Fragen und Kommentare zur Barrierefreiheit der Website www.belgif.be können Sie sich an den FÖD BOSA <a href="mailto:belgif@bosa.fgov.be">per E-Mail</a> wenden.
+</p>
+<h3>Beschwerdeverfahren</h3>
+<p>Im Falle einer fehlenden oder unbefriedigenden Antwort über die Rückmeldung können Sie sich an den Föderalen Ombudsmann wenden:</p>
+<p>Rue de Louvain 48 bte 6</br />
+1000 Brüssel</p>
+<p><a href="contact@mediateurfederal.be">contact@foderalerombudsmann.be</a></p>
+<p><a href="http://www.federaalombudsman.be/de/">Seite des föderalen Ombudsmann</a></p>
+"""@de ,
+"""
+<p>The SSPF BOSA, is committed to making this site accessible, in accordance with the following legislation: 
+Law of 19 July 2018 on the accessibility of websites and mobile applications of public sector bodies.
+</p>
+<p>
+This accessibility statement applies to :</p>
+<ul><li>Website: <a href="https://www.belgif.be">https://www.belgif.be</a></li></ul>
+<h3>Compliance level</h3>
+<p>This website is fully compliant with the description below.</p>
+<h3>Preparement of the statement</h3>
+<p>An internal audit of accessibility has been performed. This audit consisted of a simplified analysis.</p>
+<h3>Contact information</h3>
+<p>For any questions and comments on the accessibility of the www.belgif.be website, you can contact the FPS BOSA <a href="mailto:belgif@bosa.fgov.be">by email</a>.
+</p>
+<h3>Complaint procedure</h3>
+<p>In case of no response or unsatisfactory response via feedback, you can contact the Federal Ombudsman:</p>.
+<p>Rue de Louvain 48 bte 6<br />
+1000 Brussels</p>
+<p><a href="contact@mediateurfederal.be">contact@mediateurfederal.be</a></p>
+<p><a href="http://www.federaalombudsman.be/en/">Site of the federal ombudsman</a></p>
+"""@en .
 
 be-page:conditions a foaf:Document ;
 	dcterms:title "Conditions of use"@en, "Gebruiksvoorwaarden"@nl, "Conditions d'utilisation"@fr, "Nutzungsbedingungen"@de ;
