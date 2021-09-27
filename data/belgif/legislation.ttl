@@ -64,6 +64,21 @@ be-legislation:iceg a schema:Legislation ;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
 
 be-legislation:inspire a schema:Legislation ;
+	dcterms:issued "2011-12-15"^^xsd:date ;
+	dcterms:title "Transposition INSPIRE directive"@en, "Omzetting INSPIRE richtlijn"@nl, "Transposition de la directive INSPIRE"@fr, "Umsetzung der INSPIRE-Richtlinie"@de ;
+	dcterms:description """
+<p>Law transposing Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)<p>"""@en,
+	"""
+<p>Wet tot omzetting van de Richtlijn 2007/2/EG van het Europees Parlement en de Raad van 14 maart 2007 tot oprichting van een infrastructuur voor ruimtelijke informatie in de Gemeenschap (INSPIRE)</p>"""@nl,
+	"""
+<p>Loi transposant la Directive 2007/2/CE du Parlement européen et du Conseil du 14 mars 2007 établissant une infrastructure d'information géographique dans la Communauté européenne (INSPIRE)"""@fr, 
+	"""
+<p>Gesetz zur Umsetzung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates vom 14. März 2007 zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft (INSPIRE)<p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability ;
+	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
+	foaf:homepage <http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> .
+
+be-legislation:inspire a schema:Legislation ;
 	dcterms:issued "2010-04-02"^^xsd:date ;
 	dcterms:title "Partial transposition INSPIRE directive"@en, "Gedeeltelijke omzetting INSPIRE richtlijn"@nl, "Transposition partielle de la directive INSPIRE"@fr, "Teilweise Umsetzung der INSPIRE-Richtlinie"@de ;
 	dcterms:description """
