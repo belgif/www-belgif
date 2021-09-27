@@ -9,7 +9,7 @@
 be-legislation:best2019 a schema:Legislation ;
 	dcterms:issued "2019-17-07"^^xsd:date ;
 	dcterms:title "Linking address information (BeST 2019)"@en, "Mise en relation des données d'adresses (BeST 2019)"@fr, "Koppeling van adresgegevens (BeST 2019)"@nl, "Verknüpfung von Adressinformationen (BeST 2019)"@de ;
-	dcterms:description """"
+	dcterms:description """
 	<p>Cooperation agreement between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region regarding the alignment of referencing addresses and the linking of address information.</p>"""@en,
 """
 <p>Samenwerkingsakkoord tussen de Federale Staat, het Vlaamse Gewest, het Waalse Gewest en het Brusselse Hoofdstedelijk Gewest met betrekking tot de eenmaking van de wijze waarop gerefereerd wordt aan adressen en de koppeling van adresgegevens.</p>"""@nl,
@@ -24,7 +24,7 @@ be-legislation:best2019 a schema:Legislation ;
 be-legislation:healthdata a schema:Legislation ;
 	dcterms:issued "2017-11-20"^^xsd:date ;
 	dcterms:title "Data processing in health policy"@en, "Traitement de données dans la politique de santé"@fr, "Gegevensverwerking in het gezondheidsbeleid"@nl, "Verknüpfung von Adressinformationen (BeST 2019)"@de ;
-	dcterms:description """"
+	dcterms:description """
 <p>Cooperation agreement between between the federal, regional and community governments for coordinating data processing in health policy and assistance to individuals.</p>"""@en,
 """
 <p>Samenwerkingsakkoord tussen de federale, gewestelijke en gemeenschapsoverheden voor het coördineren van de gegevensverwerking in het gezondheidsbeleid en de bijstand aan personen.</p>"""@nl,
@@ -39,7 +39,7 @@ be-legislation:healthdata a schema:Legislation ;
 be-legislation:best a schema:Legislation ;
 	dcterms:issued "2016-01-22"^^xsd:date ;
 	dcterms:title "Linking address information"@en, "Mise en relation des données d'adresses"@fr, "Koppeling van adresgegevens"@nl, "Verknüpfung von Adressinformationen"@de ;
-	dcterms:description """"
+	dcterms:description """
 <p>Cooperation agreement between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region regarding the alignment of referencing addresses and the linking of address information.</p>"""@en,
 """
 <p>Samenwerkingsakkoord tussen de Federale Staat, het Vlaamse Gewest, het Waalse Gewest en het Brusselse Hoofdstedelijk Gewest met betrekking tot de eenmaking van de wijze waarop gerefereerd wordt aan adressen en de koppeling van adresgegevens.</p>"""@nl,
