@@ -26,7 +26,7 @@ be-legislation:best2019 a schema:Legislation ;
 
 be-legislation:healthdata a schema:Legislation ;
 	dcterms:issued "2017-11-20"^^xsd:date ;
-	dcterms:title "Data processing in health policy"@en, "Traitement de données dans la politique de santé"@fr, "Gegevensverwerking in het gezondheidsbeleid"@nl, "Verknüpfung von Adressinformationen (BeST 2019)"@de ;
+	dcterms:title "Data processing in health policy"@en, "Traitement de données dans la politique de santé"@fr, "Gegevensverwerking in het gezondheidsbeleid"@nl, "Verknüpfung von Datenverarbeitung in der Gesundheitspolitik"@de ;
 	dcterms:description """
 <p>Cooperation agreement between between the federal, regional and community governments for coordinating data processing in health policy and assistance to individuals.</p>"""@en,
 """
@@ -69,7 +69,6 @@ be-legislation:iceg a schema:Legislation ;
 	"<p>Kooperationsvereinbarung zwischen den föderalen, regionalen und kommunalen Behörden zur Harmonisierung und Angleichung der Initiativen, die auf ein integriertes E-Government abzielen.</p>"@de ;
 	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
 	dcterms:relation eif-recommendation:alignment, eif-recommendation:datareuse, eif-recommendation:standardsparticipation, eif-recommendation:agreements, eif-recommendation:opendata ;
-	dcterms:contributor eif-recommendation:alignment;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
 
 <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> a foaf:Document ;
