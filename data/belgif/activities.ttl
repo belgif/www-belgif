@@ -30,8 +30,8 @@ be-action:icegwg a foaf:Project ;
 <p>Thematische datastandaardisatie werkgroepen binnen ICEG (ICEG is een samenwerkingsakkoord tussen de federale, gewestelijke en gemeenschapsoverheden voor het harmoniseren en uitlijnen van de initiatieven die de realisatie van een geïntegreerd e-government beogen).</p>"""@nl, 
 """
 <p>Thematische Arbeitsgruppen zur Datenstandardisierung im Rahmen von ICEG (ICEG ist eine Kooperationsvereinbarung zwischen Bund, Ländern und Gemeinden zur Harmonisierung und Abstimmung von Initiativen zur Verwirklichung eines integrierten E-Government).</p>"""@de ;
-	dcterms:conformsTo eif-principle:reusability, eif-principle:neutrality  ;
-	dcterms:relation eif-recommendation:communities, eif-recommendation:openspecifications  ;
+	dcterms:conformsTo eif-principle:reusability, eif-principle:neutrality ;
+	dcterms:relation eif-recommendation:communities, eif-recommendation:openspecifications, eif-recommendation:standardsprocess   ;
 	foaf:homepage <https://github.com/belgif/thematic> .
 		
 be-action:ai4be a foaf:Project ;
