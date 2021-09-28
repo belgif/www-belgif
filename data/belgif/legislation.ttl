@@ -21,6 +21,9 @@ be-legislation:best2019 a schema:Legislation ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> .
 
+<http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> a foaf:Document ;
+	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
+
 be-legislation:healthdata a schema:Legislation ;
 	dcterms:issued "2017-11-20"^^xsd:date ;
 	dcterms:title "Data processing in health policy"@en, "Traitement de données dans la politique de santé"@fr, "Gegevensverwerking in het gezondheidsbeleid"@nl, "Verknüpfung von Adressinformationen (BeST 2019)"@de ;
@@ -36,6 +39,9 @@ be-legislation:healthdata a schema:Legislation ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:governancestructure ;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2018/03/16/138161.pdf> .
 
+<http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2018/03/16/138161.pdf> a foaf:Document ;
+	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
+
 be-legislation:best a schema:Legislation ;
 	dcterms:issued "2016-01-22"^^xsd:date ;
 	dcterms:title "Linking address information"@en, "Mise en relation des données d'adresses"@fr, "Koppeling van adresgegevens"@nl, "Verknüpfung von Adressinformationen"@de ;
@@ -50,6 +56,9 @@ be-legislation:best a schema:Legislation ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> .
+	
+<http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> a foaf:Document ;
+	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
 
 be-legislation:iceg a schema:Legislation ;
 	dcterms:issued "2013-08-26"^^xsd:date ;
@@ -62,6 +71,9 @@ be-legislation:iceg a schema:Legislation ;
 	dcterms:relation eif-recommendation:alignment, eif-recommendation:datareuse, eif-recommendation:standardsparticipation, eif-recommendation:agreements, eif-recommendation:opendata ;
 	dcterms:contributor eif-recommendation:alignment;
 	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
+
+<http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> a foaf:Document ;
+	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
 
 be-legislation:inspire a schema:Legislation ;
 	dcterms:issued "2011-12-15"^^xsd:date ;
@@ -78,7 +90,10 @@ be-legislation:inspire a schema:Legislation ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
 	foaf:homepage <http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> .
 
-be-legislation:inspire a schema:Legislation ;
+<http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> a foaf:Document ;
+	dcterms:title "Tekst in Justel database"@nl, "Texte dans la base de données Justel"@fr, "Text in der Databank Justel"@de, "Text in Justel database"@en .
+
+be-legislation:partinspire a schema:Legislation ;
 	dcterms:issued "2010-04-02"^^xsd:date ;
 	dcterms:title "Partial transposition INSPIRE directive"@en, "Gedeeltelijke omzetting INSPIRE richtlijn"@nl, "Transposition partielle de la directive INSPIRE"@fr, "Teilweise Umsetzung der INSPIRE-Richtlinie"@de ;
 	dcterms:description """
@@ -99,3 +114,6 @@ Diese Kooperationsvereinbarung setzt die Richtlinie 2007/2/EG des Europäischen 
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
 	foaf:homepage <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> .
+
+<http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> a foaf:Document ;
+	dcterms:title "Tekst in Justel database"@nl, "Texte dans la base de données Justel"@fr, "Text in der Databank Justel"@de, "Text in Justel database"@en .

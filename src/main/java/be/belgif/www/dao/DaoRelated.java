@@ -25,12 +25,10 @@
  */
 package be.belgif.www.dao;
 
-import static be.belgif.www.dao.Dao.firstString;
 import java.util.List;
 import java.util.Map;
 
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
@@ -41,7 +39,7 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
  */
 public class DaoRelated extends Dao {
 	private final Map<String, String> description;
-	private final String website;
+	private final List<String> websites;
 	private final List<String> principles;
 	private final List<String> recommendations;
 	private final List<String> organizations;
@@ -50,8 +48,8 @@ public class DaoRelated extends Dao {
 		return description.get(lang);
 	}
 
-	public String getWebsite() {
-		return website;
+	public List<String> getWebsites() {
+		return websites;
 	}
 
 	public List<String> getPrinciples() {
@@ -70,7 +68,7 @@ public class DaoRelated extends Dao {
 		super(m, iri, DCTERMS.TITLE);
 
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
-		website = firstString(m, iri, FOAF.HOMEPAGE);
+		websites = listString(m, iri, FOAF.HOMEPAGE);
 		principles = listString(m, iri, DCTERMS.CONFORMS_TO);
 		recommendations = listString(m, iri, DCTERMS.RELATION);
 		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);

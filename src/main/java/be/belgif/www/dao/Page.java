@@ -34,7 +34,7 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 /**
  * A (part of a) webpage
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class Page extends Dao {
 	private final Map<String, String> description;

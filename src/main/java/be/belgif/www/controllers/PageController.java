@@ -102,14 +102,28 @@ public class PageController {
 		return HttpResponse.ok(Map.of( "lang", lang, "p", page, "path", "/page/integrators", "integrators", integrators));
 	}
 
+	@View("legislations")
+	@Get("/legislations.{lang}.html")
+	public HttpResponse legislations(String lang) {
+		Page page = store.getPages().get("legislations");
+		List<Legislation> legislations = sortByDate(store.getLegislations());
+		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislations", "p", page, "legislations", legislations));
+	}
+
 	@View("legislation")
 	@Get("/legislation/{id}.{lang}.html")
 	public HttpResponse legislation(String id, String lang) {
 		Legislation legislation = store.getLegislations().get(id);
+		
+		Map<String, Page> pages = store.getPages();
+		List<String> urls = legislation.getWebsites();
+		List<Page> sites = urls.stream().map(u -> pages.get(u)).collect(Collectors.toUnmodifiableList());
+		
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), legislation.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		legislation.getRecommendations()));
 		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislation/" + id, "p", legislation, 
+										"sites", sites,
 										"principles", principles, "recommendations", recommendations));
 	}
 
@@ -132,13 +146,6 @@ public class PageController {
 										"principles", principles, "recommendations", recommendations));
 	}
 
-	@View("legislations")
-	@Get("/legislations.{lang}.html")
-	public HttpResponse legislations(String lang) {
-		Page page = store.getPages().get("legislations");
-		List<Legislation> legislations = sortByDate(store.getLegislations());
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislations", "p", page, "legislations", legislations));
-	}
 
 	@View("specification")
 	@Get("/specification/{id}.{lang}.html")
