@@ -6,6 +6,20 @@
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
+be-action:gba a foaf:Project ;
+	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
+	dcterms:description """
+<p>The Data Protection Authority (DPA) is an independent supervisory body responsible for ensuring compliance with the fundamental principles of personal data protection. The Authority was created within the Belgian House of Representatives by the Act of 3 December 2017 establishing the Data Protection Authority and is the successor to the Privacy Commission.</p>"""@en,
+"""
+<p>De Gegevensbeschermingsautoriteit (GBA) is een onafhankelijk orgaan dat erop toeziet dat de grondbeginselen van de bescherming van de persoonsgegevens correct worden nageleefd. De Gegevensbeschermingsautoriteit werd opgericht door de Belgische Federale Kamer van volksvertegenwoordigers bij Wet van 3 december 2017 tot oprichting van de Gegevensbeschermingsautoriteit en is de opvolger van de voormalige Privacycommissie.</p>"""@nl,
+"""
+<p>L'Autorité de protection des données (APD) est un organe de contrôle indépendant chargé de veiller au respect des principes fondamentaux de la protection des données à caractère personnel. L'Autorité a été créée au sein de la Chambre des représentants belge par la loi du 3 décembre 2017 portant création de l'Autorité de protection des données et succède à la Commission de la protection de la vie privée.</p>"""@fr,
+"""
+<p>Die Datenschutzbehörde (DSB) ist eine unabhängige Kontrollinstanz, die für die Einhaltung der Grundprinzipien des Schutzes personenbezogener Daten verantwortlich ist. Die Behörde wurde innerhalb der belgischen Abgeordnetenkammer durch das Gesetz vom 3. Dezember 2017 zur Einrichtung der Datenschutzbehörde geschaffen und ist die Nachfolgerin der Datenschutzkommission.</p>"""@de ;
+	dcterms:conformsTo eif-principle:security ;
+	dcterms:relation  eif-recommendation:privacy ;
+	foaf:homepage <https://www.dataprotectionauthority.be> .
+
 be-action:icegwg a foaf:Project ;
 	dcterms:title "ICEG Working Groups"@en, "ICEG werkgroepen"@nl, "Groupes de travail ICEG"@fr, "ICEG Arbeitsgruppen"@de ;
 	dcterms:description """
