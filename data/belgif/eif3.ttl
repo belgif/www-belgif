@@ -389,7 +389,7 @@ eif-recommendation:standardscatalogues a skos:Concept ;
 	skos:prefLabel "Standards catalogues"@en, "Standaardencatalogi"@nl, "Catalogues de normes"@fr, "Kataloge für Normen"@de ;
 	skos:notation "23"^^xsd:integer ;
 	skos:definition "Consult relevant catalogues of standards, specifications and guidelines at national and EU level, in accordance with your NIF and relevant DIFs, when procuring and developing ICT solutions."@en,
-		"Raadpleeg relevante catalogi van normen, specificaties en richtsnoeren op nationaal en uniaal niveau, in overeenstemming met uw NIF en betrokken DIF's, bij het aanschaffen en ontwikkelen van ICT-oplossingen."@nl,
+		"Raadpleeg relevante catalogi van normen, specificaties en richtsnoeren op nationaal en EU niveau, in overeenstemming met uw NIF en betrokken DIF's, bij het aanschaffen en ontwikkelen van ICT-oplossingen."@nl,
 		"Consulter les catalogues de normes, de spécifications et d'orientations aux niveaux national et européen, en accord avec le NIF et les DIF concernés, lors de l'acquisition et du développement de solutions TIC."@fr ,
 		"Heranziehen der maßgeblichen Kataloge für Normen, Spezifikationen und Leitlinien auf einzelstaatlicher und auf EU-Ebene im Einklang mit dem NIF und den betreffenden DIF bei der Beschaffung und Entwicklung von IKT-Lösungen."@de ;
 	skos:inScheme eif-recommendation: .
