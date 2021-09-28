@@ -15,7 +15,7 @@
 	</#list>
 	</#if>
 	<#if recommendations?has_content>
-	<h2>${home[lang]}</h2>
+	<h2>${rec[lang]}</h2>
 	<#list recommendations as r>
 		<a href="/eif3/recommendation/${r.getLocalId()}.${lang}.html" class="btn btn-primary">${r.getSequence()}. ${r.getTitle(lang)}</a>
 	</#list>
