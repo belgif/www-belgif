@@ -6,6 +6,20 @@
 @prefix eif-principle: <http://www.belgif.be/id/eif3/principle/> .
 @prefix eif-recommendation: <http://www.belgif.be/id/eif3/recommendation/> .
 
+be-action:inspirecc a foaf:Project ;
+	dcterms:title "INSPIRE-coördinatiecomité"@nl, "INSPIRE coordination committee"@en, "Comité de coordination INSPIRE"@fr, "INSPIRE Koordinationskomitee"@de ;
+	dcterms:description """
+<p>Coordination committee set up by the Cooperation Agreement of April 2 between the Federal State and the three Regions for the coordination of a geographic information infrastructure (INSPIRE).</p>"""@en,
+"""
+<p>Comité de coordination mis en place par l'Accord de coopération du 2 avril entre l'Etat fédéral et les trois Régions pour la coordination d'une infrastructure d'information géographique (INSPIRE).</p>"""@fr ,
+"""
+<p>Coördinatiecomité opgericht door het Samenwerkingsakkoord van 2 april tussen de Federale Staat en de drie Gewesten voor de coördinatie van een geografische informatie-infrastructuur (INSPIRE).</p>"""@nl,
+"""
+<p>Durch die Kooperationsvereinbarung vom 2. April zwischen der Föderalbehörde und den drei Regionen eingesetzter Koordinierungsausschuss zur Koordinierung einer Geoinformationsinfrastruktur (INSPIRE).</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability ;
+	dcterms:relation eif-recommendation:datareuse, eif-recommendation:communities, eif-recommendation:interfaces .
+	
+
 be-action:gba a foaf:Project ;
 	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
 	dcterms:description """
@@ -31,7 +45,7 @@ be-action:icegwg a foaf:Project ;
 """
 <p>Thematische Arbeitsgruppen zur Datenstandardisierung im Rahmen von ICEG (ICEG ist eine Kooperationsvereinbarung zwischen Bund, Ländern und Gemeinden zur Harmonisierung und Abstimmung von Initiativen zur Verwirklichung eines integrierten E-Government).</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability, eif-principle:neutrality ;
-	dcterms:relation eif-recommendation:communities, eif-recommendation:openspecifications, eif-recommendation:standardsprocess   ;
+	dcterms:relation eif-recommendation:communities, eif-recommendation:openspecifications, eif-recommendation:standardsparticipation, eif-recommendation:standardsprocess   ;
 	foaf:homepage <https://github.com/belgif/thematic> .
 		
 be-action:ai4be a foaf:Project ;
