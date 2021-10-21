@@ -39,7 +39,7 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
  */
 public class DaoRelated extends Dao {
 	private final Map<String, String> description;
-	private final List<String> websites;
+	private final List<String> links;
 	private final List<String> principles;
 	private final List<String> recommendations;
 	private final List<String> organizations;
@@ -48,8 +48,8 @@ public class DaoRelated extends Dao {
 		return description.get(lang);
 	}
 
-	public List<String> getWebsites() {
-		return websites;
+	public List<String> getLinks() {
+		return links;
 	}
 
 	public List<String> getPrinciples() {
@@ -68,9 +68,9 @@ public class DaoRelated extends Dao {
 		super(m, iri, DCTERMS.TITLE);
 
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
-		websites = listString(m, iri, FOAF.HOMEPAGE);
-		principles = listString(m, iri, DCTERMS.CONFORMS_TO);
-		recommendations = listString(m, iri, DCTERMS.RELATION);
-		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR);
+		links = listString(m, iri, FOAF.PAGE, false);
+		principles = listString(m, iri, DCTERMS.CONFORMS_TO, true);
+		recommendations = listString(m, iri, DCTERMS.RELATION, true);
+		organizations = listString(m, iri, DCTERMS.CONTRIBUTOR, true);
 	}
 }

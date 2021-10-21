@@ -31,14 +31,14 @@ be-action:bestwg a foaf:Project;
 <p>Kooperationsvereinbarung zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt über die Angleichung von Referenzadressen und die Verknüpfung von Adressinformationen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
-	foaf:homepage <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> ;
-	foaf:homepage <https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> .
+	foaf:page <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> ,
+			<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> .
 
 <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> a foaf:Document ;
-	dcterms:title "Gids voor het vastellen en toekennen van adressen"  .
+	dcterms:title "(NL) Gids voor het vastellen en toekennen van adressen"  .
 
 <https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> a foaf:Document ;
-	dcterms:title "Guide en matière de constatation et attribution d'adresses" .
+	dcterms:title "(FR) Guide en matière de constatation et attribution d'adresses" .
 
 be-action:gba a foaf:Project ;
 	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
@@ -52,7 +52,7 @@ be-action:gba a foaf:Project ;
 <p>Die Datenschutzbehörde (DSB) ist eine unabhängige Kontrollinstanz, die für die Einhaltung der Grundprinzipien des Schutzes personenbezogener Daten verantwortlich ist. Die Behörde wurde innerhalb der belgischen Abgeordnetenkammer durch das Gesetz vom 3. Dezember 2017 zur Einrichtung der Datenschutzbehörde geschaffen und ist die Nachfolgerin der Datenschutzkommission.</p>"""@de ;
 	dcterms:conformsTo eif-principle:security ;
 	dcterms:relation  eif-recommendation:privacy ;
-	foaf:homepage <https://www.dataprotectionauthority.be> .
+	foaf:page <https://www.dataprotectionauthority.be> .
 
 be-action:icegwg a foaf:Project ;
 	dcterms:title "ICEG Working Groups"@en, "ICEG werkgroepen"@nl, "ICEG groupes de travail"@fr, "ICEG Arbeitsgruppen"@de ;
@@ -66,7 +66,7 @@ be-action:icegwg a foaf:Project ;
 <p>Thematische Arbeitsgruppen zur Datenstandardisierung im Rahmen von ICEG (ICEG ist eine Kooperationsvereinbarung zwischen Bund, Ländern und Gemeinden zur Harmonisierung und Abstimmung von Initiativen zur Verwirklichung eines integrierten E-Government).</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability, eif-principle:neutrality ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:openspecifications, eif-recommendation:standardsparticipation, eif-recommendation:standardsprocess   ;
-	foaf:homepage <https://github.com/belgif/thematic> .
+	foaf:page <https://github.com/belgif/thematic> .
 		
 be-action:ai4be a foaf:Project ;
 	dcterms:title "AI4Belgium"@en, "AI4Belgium"@nl, "AI4Belgium"@fr, "AI4Belgium"@de ;
@@ -80,7 +80,7 @@ be-action:ai4be a foaf:Project ;
 <p>AI 4 Belgien ist ein von der Gemeinschaft geführter Ansatz, der es belgischen Menschen und Organisationen ermöglicht, die Möglichkeiten der KI zu nutzen und gleichzeitig den laufenden Übergang verantwortungsvoll zu erleichtern. AI 4 Belgien hat den Ehrgeiz, Belgien in der europäischen KI-Landschaft zu positionieren.</p>"""@de ;
 	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:assessment ;
-	foaf:homepage <https://www.ai4belgium.be> .
+	foaf:page <https://www.ai4belgium.be> .
 
 be-action:gaix4be a foaf:Project ;
 	dcterms:title "GAIA-X for Belgium"@en, "GAIA-X for Belgium"@nl, "GAIA-X for Belgium"@fr, "GAIA-X for Belgium"@de ;
@@ -94,7 +94,7 @@ be-action:gaix4be a foaf:Project ;
 <p>Gaia-X ist ein digitales Ökosystem, das an der Schaffung einer Umgebung arbeitet, in der Daten unter der Kontrolle von Datenbesitzern und -nutzern gemeinsam genutzt und gespeichert werden können. Wo Regeln definiert und respektiert werden, so dass Daten und Dienste leicht verfügbar gemacht werden können. Gaia-X hat das Potenzial, beispiellose Möglichkeiten für innovative, datengesteuerte Geschäftsmodelle und neue Lösungen zu schaffen, die europäischen Unternehmen aller Größen und Branchen helfen, sich zu vergrößern und im globalen Wettbewerb zu bestehen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability, eif-principle:security  ;
 	dcterms:relation eif-recommendation:interfaces, eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:dataportability, eif-recommendation:userinvolvement, eif-recommendation:assessment, eif-recommendation:privacy ;
-	foaf:homepage <https://www.agoria.be/gaia-x/> .
+	foaf:page <https://www.agoria.be/gaia-x/> .
 
 be-action:begeo a foaf:Project;
 	dcterms:title "BeGeo"@en, "BeGeo"@nl, "BeGeo"@fr, "BeGeo"@de ;
@@ -108,7 +108,7 @@ be-action:begeo a foaf:Project;
 <p>Das National Geographical Institute organisiert jedes Jahr die BeGeo, die nationale Geoinformationsmesse, die Regierung, Privatwirtschaft und Forschungsgemeinschaft zusammenbringt.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:userinvolvement, eif-recommendation:solutionreuse ;
-	foaf:homepage <https://begeo2019.be> .
+	foaf:page <https://begeo2019.be> .
 
 be-action:webaccessibility a foaf:Project ;
 	dcterms:title "Belgian Web Accessibility"@en, "Belgian Web Accessibility"@nl, "Belgian Web Accessibility"@fr, "Belgian Web Accessibility"@de ;
@@ -122,7 +122,7 @@ be-action:webaccessibility a foaf:Project ;
 <p>Der FÖD BOSA wurde eingesetzt, um die Kontroll- und Berichtsfunktionen auszuüben, wie es in der Europäischen Richtlinie (EU) 2016/2102 bestimmt ist. Um diese Aufgaben zu verrichten wurde das „Belgian Web Accessibility Office“ – kurz BWAO – gegründet.Zusammen mit den Gemeinden und Regionen soll das BWAO diese Aufgaben erfüllen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:accessibility, eif-recommendation:openspecifications2, eif-recommendation:solutionreuse ;
-	foaf:homepage <https://accessibility.belgium.be> .
+	foaf:page <https://accessibility.belgium.be> .
 
 be-action:opendataportals a foaf:Project ;
 	dcterms:title "Open data portals meeting"@en, "Open data portalen vergadering"@nl, "Réunion portails de données ouvertes"@fr, "Offene Datenportale Treffen"@de ;
@@ -132,4 +132,4 @@ be-action:opendataportals a foaf:Project ;
 		"<p>Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten.</p>"@de ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:opendata ;
-	foaf:homepage <https://data.gov.be/nl/dcat-werkgroep> .
+	foaf:page <https://data.gov.be/nl/dcat-werkgroep> .

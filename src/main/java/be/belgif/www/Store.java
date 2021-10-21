@@ -26,10 +26,12 @@
 package be.belgif.www;
 
 import be.belgif.www.dao.Activity;
+import be.belgif.www.dao.Dao;
 import be.belgif.www.dao.EifLevel;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
 import be.belgif.www.dao.Legislation;
+import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
@@ -52,6 +54,8 @@ import javax.inject.Singleton;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
+import org.eclipse.rdf4j.model.util.Values;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -78,6 +82,7 @@ public class Store implements AutoCloseable {
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
+	private Map<String,Link> links = new HashMap<>();
 	private Map<String,Page> pages = new HashMap<>();
 	private Map<String,Organization> integrators = new HashMap<>();
 	private Map<String,Specification> specifications = new HashMap<>();
@@ -94,6 +99,10 @@ public class Store implements AutoCloseable {
 
 	public Map<String,EifRecommendation> getRecommendations() {
 		return recommendations;
+	}
+
+	public Map<String,Link> getLinks() {
+		return links;
 	}
 
 	public Map<String,Page> getPages() {
@@ -116,10 +125,22 @@ public class Store implements AutoCloseable {
 		return activities;
 	}
 
-	private <T> Map<String,T> filter(String name, Model m, IRI predicate, IRI object, Function<IRI,T> func) {
+	/**
+	 * Turn model in a map of specific data types
+	 * 
+	 * @param <T>
+	 * @param name (display) name of the type
+	 * @param m full RDF model
+	 * @param predicate predicate to be used for filtering
+	 * @param object object to be used for filtering
+	 * @param local use local name as key or full IRI
+	 * @param func mapping function
+	 * @return map
+	 */
+	private <T extends Dao> Map<String,T> filter(String name, Model m, IRI predicate, IRI object, boolean local, Function<IRI,T> func) {
 		Map<String,T> map = m.filter(null, predicate, object).subjects().stream()
 							.map(IRI.class::cast)
-							.collect(Collectors.toMap(IRI::getLocalName, func));
+							.collect(Collectors.toMap(local ? IRI::getLocalName : IRI::stringValue, func));
 		LOG.info("{} : {}", name, map.size());
 		return map;
 	}
@@ -130,16 +151,33 @@ public class Store implements AutoCloseable {
 	 * @param m model containing all data
 	 */
 	private void processAll(Model m) {
-		integrators = filter("Integrators", m, RDF.TYPE, ORG.ORGANIZATION, s -> new Organization(m, s));
-		levels = filter("EIF levels", m, SKOS.IN_SCHEME, StoreHelper.level, s -> new EifLevel(m, s));
-		principles = filter("EIF principles", m, SKOS.IN_SCHEME, StoreHelper.principle, s -> new EifPrinciple(m, s));
-		recommendations = filter("EIF recommendations", m, SKOS.IN_SCHEME, StoreHelper.recommendation, s -> new EifRecommendation(m, s));
-		pages = filter("Pages", m, RDF.TYPE, FOAF.DOCUMENT, s -> new Page(m, s));
-		specifications = filter("Specifications", m, RDF.TYPE, StoreHelper.specification, s -> new Specification(m, s));
-		legislations = filter("Legislations", m, RDF.TYPE, StoreHelper.legislation, s -> new Legislation(m, s));
-		activities = filter("Activities", m, RDF.TYPE, FOAF.PROJECT, s -> new Activity(m, s));
+		integrators = filter("Integrators", m, RDF.TYPE, ORG.ORGANIZATION, true, s -> new Organization(m,s));
+		levels = filter("EIF levels", m, SKOS.IN_SCHEME, StoreHelper.level, true,  s -> new EifLevel(m,s));
+		principles = filter("EIF principles", m, SKOS.IN_SCHEME, StoreHelper.principle, true, s -> new EifPrinciple(m,s));
+		recommendations = filter("EIF recommendations", m, SKOS.IN_SCHEME, StoreHelper.recommendation, true,  s -> new EifRecommendation(m,s));
+		pages = filter("Pages", m, RDF.TYPE, Values.iri("http://purl.org/dc/dcmitype/Text"), true, s -> new Page(m,s));
+		specifications = filter("Specifications", m, RDF.TYPE, StoreHelper.specification, true, s -> new Specification(m,s));
+		legislations = filter("Legislations", m, RDF.TYPE, StoreHelper.legislation, true, s -> new Legislation(m,s));
+		activities = filter("Activities", m, RDF.TYPE, FOAF.PROJECT, true, s -> new Activity(m,s));
+		links = filter("Links", m, RDF.TYPE, FOAF.DOCUMENT, false, s -> new Link(m,s));
 	}
 	
+	/**
+	 * Fix foaf:page without class and title
+	 * 
+	 * @param m 
+	 */
+	private void fixFoafPage(Model m) {
+		m.filter(null, FOAF.PAGE, null).objects().forEach(o -> {
+			
+			IRI iri = (IRI) o;
+			m.add(iri, RDF.TYPE, FOAF.DOCUMENT);
+			if (m.filter(iri, DCTERMS.TITLE, null).objects().isEmpty()) {
+				m.add(iri, DCTERMS.TITLE, Values.literal(o.stringValue()));
+			}
+		});
+	}
+
 	@PostConstruct
 	public void load() throws Exception {
 		LOG.info("Loading data from directory {}", dataPath);
@@ -160,6 +198,7 @@ public class Store implements AutoCloseable {
 				LOG.error("Could not parse / load data", ioe.getMessage());
 			}
 		}
+		fixFoafPage(m);
 		processAll(m);
 	}
 

@@ -12,7 +12,7 @@ be-integrator:bced a org:Organization ;
 		"La Banque Carrefour d'Échange de Données (BCED) est l'intégrateur de services régional pour la Wallonie"@fr ,
 		"Die Banque Carrefour d'Échange de Données (BCED) ist der regionale Dienstleistungsintegrator für Wallonien"@de ;
 	foaf:depiction <file:/bced.png> ;
-	foaf:homepage <http://www.ensemblesimplifions.be/node/20> .
+	foaf:page <http://www.ensemblesimplifions.be/node/20> .
 
 be-integrator:bcss a org:Organization ;
 	skos:prefLabel "CBSS"@en, "KSZ"@nl, "BCSS"@fr, "ZDSS"@de;
@@ -21,7 +21,7 @@ be-integrator:bcss a org:Organization ;
 		"La Banque Carrefour de la Sécurité Sociale est le moteur et le coordinateur de l'e-government dans le secteur social"@fr ,
 		"Die Zentrale Datenbank der sozialen Sicherheit ist die treibende Kraft und Koordinator von E-Government im sozialen Sektor"@de ;
 	foaf:depiction <file:/cbss.png> ;
-	foaf:homepage <https://www.ksz-bcss.fgov.be/en> .
+	foaf:page <https://www.ksz-bcss.fgov.be/en> .
 
 be-integrator:bosa a org:Organization ;
 	skos:prefLabel "FPS BOSA"@en, "FOD BOSA"@nl, "SPF BOSA"@fr, "FÖD BOSA"@de ;
@@ -30,7 +30,7 @@ be-integrator:bosa a org:Organization ;
 		"Le SPF BOSA est l'intégrateur de services fédéral (sauf pour les services de Sécurité Sociale)"@fr ,
 		"Der FÖD BOSA ist der föderale Dienstintegrator (mit Ausnahme der Dienste der sozialen Sicherheit)"@de ;
 	foaf:depiction <file:/bosa.png> ;
-	foaf:homepage <https://bosa.belgium.be/> .
+	foaf:page <https://bosa.belgium.be/> .
 
 be-integrator:ehealth a org:Organization ;
 	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr, "eGesundheit"@de ;
@@ -39,7 +39,7 @@ be-integrator:ehealth a org:Organization ;
 		"Portail des services de l'eSanté"@fr ,
 		"Portal der Dienstleistungen eGesundheit"@de ;
 	foaf:depiction <file:/ehealth.png> ;
-	foaf:homepage <https://www.ehealth.fgov.be> .
+	foaf:page <https://www.ehealth.fgov.be> .
 
 be-integrator:fidus a org:Organization ;
 	skos:prefLabel "Fidus"@en, "Fidus"@nl, "Fidus"@fr, "Fidus"@de ;
@@ -48,7 +48,7 @@ be-integrator:fidus a org:Organization ;
 		"Fidus est le nom donné à l'intégrateur de services régional pour la Région de Bruxelles-Capitale"@fr ,
 		"Fidus ist der Name, den der regionale Dienstintegrator für die Region Brüssel-Hauptstadt trägt"@de ;
 	foaf:depiction <file:/fidus.png> ;
-	foaf:homepage <http://bric.brussels/en/our-solutions/authentic-sources/fidus> .
+	foaf:page <http://bric.brussels/en/our-solutions/authentic-sources/fidus> .
 
 be-integrator:vdi a org:Organization ;
 	skos:prefLabel "VDI"@en, "VDI"@nl, "VDI"@fr, "VDI"@de ;
@@ -57,5 +57,5 @@ be-integrator:vdi a org:Organization ;
 		"InformatieVlaanderen est l'intégrateur de services régional pour la Flandre"@fr ,
 		"InformatieVlaanderen ist der regionale Dienstintegrator für Flandern"@de ;
 	foaf:depiction <file:/vdi.png> ; ;
-	foaf:homepage <https://overheid.vlaanderen.be/informatie-vlaanderen> .
+	foaf:page <https://overheid.vlaanderen.be/informatie-vlaanderen> .
 

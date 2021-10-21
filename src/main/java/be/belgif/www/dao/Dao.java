@@ -41,7 +41,7 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
  * 
  * @author Bart Hanssens
  */
-public abstract class Dao {
+public class Dao {
 	private final String id;
 	private final String localId;
 	private final Map<String, String> title;
@@ -102,12 +102,13 @@ public abstract class Dao {
 	 * @param m full RDF model
 	 * @param iri subject IRI
 	 * @param predicate property
+	 * @param local local name or full IRI
 	 * @return string value or empty string
 	 */
-	protected static List<String> listString(Model m, IRI iri, IRI predicate) {
+	protected static List<String> listString(Model m, IRI iri, IRI predicate, boolean local) {
 		return m.filter(iri, predicate, null).objects().stream()
 							.map(IRI.class::cast)
-							.map(i -> i.getLocalName())
+							.map(i -> local ? i.getLocalName() : i.stringValue())
 							.collect(Collectors.toList());
 	}
 

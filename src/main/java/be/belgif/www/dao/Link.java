@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2021, Bart Hanssens <bart.hanssens@bosa.fgov.be>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -30,39 +30,22 @@ import java.util.Map;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
-import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
- *
- * @author Bart.Hanssens
+ * A (part of a) link / external webpage
+ * 
+ * @author Bart Hanssens
  */
-public class Organization extends Dao {
+public class Link extends Dao {
 	private final Map<String, String> description;
-	private final String logo;
-	private final String website;
-	
+
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
 
-	public String getLogo() {
-		return logo;
-	}
-
-	public String getWebsite() {
-		return website;
-	}
-
-	public Organization(Model m, IRI iri) {
-		super(m, iri);
+	public Link(Model m, IRI iri) {
+		super(m, iri, DCTERMS.TITLE);
 
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
-		website = firstString(m, iri, FOAF.PAGE);
-
-		logo = m.filter(iri, FOAF.DEPICTION, null).objects().stream().findFirst()
-			.map(IRI.class::cast)
-			.map(IRI::stringValue)
-			.map(s -> s.replaceFirst("file:/", ""))
-			.orElse("");
 	}
 }

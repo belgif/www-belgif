@@ -73,6 +73,6 @@ public class Specification extends Dao {
 		longdesc = langMap(m, iri, DCTERMS.ABSTRACT);
 		subject = langMap(m, iri, DCTERMS.SUBJECT);
 		version = firstString(m, iri, OWL.VERSIONINFO);
-		website = firstString(m, iri, FOAF.HOMEPAGE);
+		website = firstString(m, iri, FOAF.PAGE);
 	}
 }

@@ -32,7 +32,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 
 /**
- * A (part of a) webpage
+ * A (part of a) belgif webpage
  * 
  * @author Bart Hanssens
  */

@@ -1,8 +1,8 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcmi: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix be-page: <http://www.belgif.be/id/page/> .
 
-be-page:accessibility a foaf:Document ;
+be-page:accessibility a dcmi:Text ;
 	dcterms:title "Toegankelijkheidsverklaring"@nl, "Déclaration d'accessibilité"@fr, "Erklärung zur Barrierefreiheit"@de, "Accessibility statement"@en ;
 	dcterms:description """
 <p>FOD BOSA, verbindt zich ertoe deze site toegankelijk te maken, in overeenstemming met de volgende wetgeving: 
@@ -88,7 +88,7 @@ This accessibility statement applies to :</p>
 <p><a href="http://www.federaalombudsman.be/en/">Site of the federal ombudsman</a></p>
 """@en .
 
-be-page:conditions a foaf:Document ;
+be-page:conditions a dcmi:Text ;
 	dcterms:title "Conditions of use"@en, "Gebruiksvoorwaarden"@nl, "Conditions d'utilisation"@fr, "Nutzungsbedingungen"@de ;
 	dcterms:description  """
 <h3>Design and follow-up</h3>
@@ -127,7 +127,7 @@ be-page:conditions a foaf:Document ;
 <li>Die föderalen Behörden tun alles, um dafür zu sorgen, dass diese Website korrekt und aktuell ist. Wird trotzdem ein Fehler festgestellt, verpflichten sie sich dazu, so schnell wie möglich die erforderlichen Korrekturen vorzunehmen.</li>
 </ul>"""@de .
 
-be-page:privacy a foaf:Document ;
+be-page:privacy a dcmi:Text ;
 	dcterms:title "Privacy statement"@en, "Privacyverklaring"@nl, "Déclaration de confidentialité"@fr, "Datenschutzerklärung"@de ;
 	dcterms:description  """
 <h3>Protection of your personal data</h3>

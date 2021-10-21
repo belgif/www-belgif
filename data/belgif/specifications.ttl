@@ -9,7 +9,7 @@ be-spec:best a doap:Specification ;
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "Data model Belgian Streets and Addresses"@en, "Data model Belgian Streets and Addresses"@nl, "Modèle de données Belgian Streets and Addresses"@fr, "Datenmodell Belgian Streets and Addresses"@de ;
 	dcterms:abstract "Data model Belgian Streets and Addresses"@en, "Data model Belgian Streets and Addresses"@nl, "Modèle de données Belgian Streets and Addresses"@fr, "Datenmodell Belgian Streets and Addresses"@de ;
-	foaf:homepage <https://vocab.belgif.be/ns> .
+	foaf:page <https://vocab.belgif.be/ns> .
 	
 be-spec:cpsvp-ap a doap:Specification ;
 	dcterms:title "CPSV-AP"@en, "CPSV-AP"@nl, "CPSV-AP"@fr, "CPSV-AP"@de ;
@@ -20,7 +20,7 @@ be-spec:cpsvp-ap a doap:Specification ;
 		"Het Common Public Service Vocabulary Application Profile (CPSV-AP) is een gegevensmodel voor het beschrijven van openbare diensten en de bijbehorende levens- en bedrijfsevenementen."@nl ,
 		"Le Common Public Service Vocabulary Application Profile (CPSV-AP) est un modèle de données pour décrire les services publics et les événements de la vie et des affaires qui y sont associés."@fr ,
 		"Das Common Public Service Vocabulary Application Profile (CPSV-AP) ist ein Datenmodell zur Beschreibung öffentlicher Dienstleistungen und der damit verbundenen Lebens- und Geschäftsereignisse."@de ;
-	foaf:homepage <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
+	foaf:page <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
 
 be-spec:dcat-ap a doap:Specification ;
 	dcterms:title "DCAT-AP"@en, "DCAT-AP"@nl, "DCAT-AP"@fr, "DCAT-AP"@de ;
@@ -31,7 +31,7 @@ be-spec:dcat-ap a doap:Specification ;
 		"Het DCAT Application profile voor dataportalen in Europa (DCAT-AP) is een specificatie op basis van het W3C Data Catalogue vocabulary (DCAT) voor het beschrijven van datasets in de publieke sector. Het is bedoeld om over verschillende dataportal heen te kunnen zoeken naar datasets en om gegevens uit de publieke sector beter doorzoekbaar te maken over de grenzen en sectoren heen."@nl ,
 		"Le DCAT Application profile pour les portails de données (DCAT-AP) est une spécification basée sur le vocabulaire Data Catalogue du W3C (DCAT) pour décrire les ensembles de données dans le secteur public. Il est prévu de pouvoir rechercher des ensembles de données sur différents portails de données et de rendre les données du secteur public plus facilement consultables par-delà les frontières et les secteurs."@fr ,
 		"Das DCAT Application profile für Datenportale in Europa (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de ;
-	foaf:homepage <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
+	foaf:page <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
 
 be-spec:fedservicesplatform a doap:Specification ;
 	dcterms:title "Federal Service Platform"@en, "Federal Service Platform"@nl, "Federal Service Platform"@fr, "Federal Service Platform"@de ;
@@ -42,7 +42,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 		"Een werkgroep bestaande uit BOSA, eHealth, KBSZ, MinFin en Smals werkte samen om de meest voorkomende bedrijfsonologieën te standaardiseren (Persoon, Organisatie, Locatie, Tijdelijk, Generiek, etc). Het eindresultaat is een gepubliceerde woordenlijst van klassen en eigenschappen, met hun URIs, die door de federale overheid als standaard vocabulary wordt geaccepteerd."@nl ,
 		"Un groupe de travail composé de BOSA, eHealth, BCSS, MinFin et Smals a travaillé ensemble pour standardiser les ontologies d'entreprise les plus courantes (Personne, Organisation, Lieu, Temporel, Générique, etc). Le résultat final est une liste de vocabulaire publiée des classes et des propriétés, avec leurs URIs, acceptée par le gouvernement fédéral comme vocabulaire standard."@fr ,
 		"Eine Arbeitsgruppe, bestehend aus BOSA, eHealth, KBSS, MinFin und Smals, arbeitete zusammen, um die gängigsten Business-Ontologien (Person, Organisation, Standort, temporär, generisch usw.) zu standardisieren. Das Endergebnis ist eine veröffentlichte Vokabelliste von Klassen und Eigenschaften mit ihren URIs, die von der Bundesregierung als Standardvokabular akzeptiert wurde."@de ;
-	foaf:homepage <https://github.com/belgif/fedvoc/> .
+	foaf:page <https://github.com/belgif/fedvoc/> .
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
@@ -53,7 +53,7 @@ be-spec:gcloud-rest a doap:Specification ;
 		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
 		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
 		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
-	foaf:homepage <https://www.gcloud.belgium.be/rest/> .
+	foaf:page <https://www.gcloud.belgium.be/rest/> .
 
 be-spec:oslo a doap:Specification ;
 	dcterms:title "OSLO"@en, "OSLO"@nl, "OSLO"@fr, "OSLO"@de ;
@@ -65,7 +65,7 @@ be-spec:oslo a doap:Specification ;
 		"Met OSLO zet InformatieVlaanderen in op semantische interoperabiliteit. De vocabularia en applicatieprofielen in dit project werden ontwikkeld in co-creatie met Vlaamse administraties, lokale besturen, federale partners, de Europese Commissie en private partners."@nl ,
 		"Avec OSLO, InformatieVlaanderen se concentre sur l'interopérabilité sémantique. Les vocabulaires et les profils d'application de ce projet ont été développés en co-création avec les administrations flamandes, les gouvernements locaux, les partenaires fédéraux, la Commission européenne et des partenaires privés."@fr ,
 		"Mit OSLO konzentriert sich InformatieVlaanderen auf die semantische Interoperabilität. Die Vokabulare und Anwendungsprofile in diesem Projekt wurden in Zusammenarbeit mit flämischen Verwaltungen, lokalen Regierungen, föderalen Partnern, der Europäischen Kommission und privaten Partnern entwickelt."@de ;
-	foaf:homepage <https://overheid.vlaanderen.be/oslo-wat-is-oslo> .
+	foaf:page <https://overheid.vlaanderen.be/oslo-wat-is-oslo> .
 
 be-spec:peppol-bis a doap:Specification ;
 	dcterms:title "PEPPOL BIS"@en, "PEPPOL BIS"@nl, "PEPPOL BIS"@fr, "PEPPOL BIS"@de ;
@@ -76,7 +76,7 @@ be-spec:peppol-bis a doap:Specification ;
 		"PEPPOL (Pan-European Public Procurement OnLine) heeft de Business Interoperability Specifications (BIS) ontwikkeld voor gemeenschappelijke eProcurement processen om elektronische documenten die worden uitgewisseld en gevalideerd via een open en veilig netwerk te standaardiseren, tussen Access Points voor inkopers in de publieke sector en hun leveranciers in heel Europa en daarbuiten."@nl,
 		"Pan-European Public Procurement OnLine (PEPPOL) a élaboré les spécifications d'interopérabilité commerciale (BIS) pour les processus communs de passation de marchés publics en ligne afin de normaliser les documents électroniques échangés et validés par un réseau ouvert et sécurisé, entre les points d'accès pour les acheteurs du secteur public et leurs fournisseurs en Europe et au-delà"@fr,
 		"Pan-European Public Procurement OnLine (PEPPOL) hat die Business Interoperability Specifications (BIS) für gemeinsame eProcurement-Prozesse entwickelt, um elektronische Dokumente zu standardisieren, die über ein offenes und sicheres Netzwerk zwischen Zugangspunkten für Einkäufer des öffentlichen Sektors und deren Lieferanten in Europa und darüber hinaus ausgetauscht und validiert werden."@de ;
-	foaf:homepage <http://peppol.eu/downloads/post-award/> .	
+	foaf:page <http://peppol.eu/downloads/post-award/> .	
 
 be-spec:shacl a doap:Specification ;
 	dcterms:title "SHACL"@en, "SHACL"@nl, "SHACL"@fr, "SHACL"@de ;
@@ -87,7 +87,7 @@ be-spec:shacl a doap:Specification ;
 		"SHACL is een taal voor het valideren van RDF-graphs middels een reeks voorwaarden en beperkingen (kardinaliteit, waardebereiken, string patterns, ...)."@nl,
 		"SHACL est un langage permettant de valider des graphes RDF par rapport à un ensemble de conditions et de contraintes (cardinalité, plages de valeurs, string patterns, ...)."@fr,
 		"SHACL ist eine Sprache zur Validierung von RDF-Graphen gegen eine Reihe von Bedingungen und Einschränkungen (Kardinalität, Wertebereiche, String patterns, ...)."@de ;
-	foaf:homepage <https://www.w3.org/TR/shacl/> .
+	foaf:page <https://www.w3.org/TR/shacl/> .
 
 be-spec:skos a doap:Specification ;
 	dcterms:title "SKOS"@en, "SKOS"@nl, "SKOS"@fr, "SKOS"@de ;
@@ -98,5 +98,5 @@ be-spec:skos a doap:Specification ;
 		"Simple Knowledge Organization System (SKOS) is ontworpen voor de weergave van thesauri, taxonomieën, of elk ander type van gestructureerde gecontroleerde woordenschat. SKOS maakt deel uit van de Semantic Web-familie van standaarden."@nl ,
 		"Simple Knowledge Organization System (SKOS) est conçu pour représenter des thésaurus, des taxonomies ou tout autre type de vocabulaire structuré contrôlé. SKOS fait partie de la famille de normes du Web sémantique."@fr,
 		"Simple Knowledge Organization System (SKOS) ist für die Darstellung von Thesauri, Taxonomien oder jeder anderen Art von strukturiertem, kontrolliertem Vokabular konzipiert. SKOS ist Teil der Semantic Web-Standardfamilie."@de ;
-	foaf:homepage <https://www.w3.org/TR/skos-reference/> .
+	foaf:page <https://www.w3.org/TR/skos-reference/> .
 

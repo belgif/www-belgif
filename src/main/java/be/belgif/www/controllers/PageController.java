@@ -29,9 +29,11 @@ import be.belgif.www.Store;
 import be.belgif.www.dao.Activity;
 import be.belgif.www.dao.Dao;
 import be.belgif.www.dao.DaoEif;
+import be.belgif.www.dao.DaoRelated;
 import be.belgif.www.dao.EifPrinciple;
 import be.belgif.www.dao.EifRecommendation;
 import be.belgif.www.dao.Legislation;
+import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
@@ -43,6 +45,7 @@ import io.micronaut.views.View;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -81,10 +84,25 @@ public class PageController {
 												.collect(Collectors.toUnmodifiableList());
 	}
 
+	/**
+	 * Lookup a list of items in a map
+	 */
 	private <T extends DaoEif> Map<String,T> lookup(Map<String,T> a, List<String> b) {
 		return a.values().stream()
 				.filter(f -> b.contains(f.getLocalId()))
-				.collect(Collectors.toMap(f -> f.getLocalId(), f -> f));
+				.collect(Collectors.toMap(f -> f.getLocalId(),  f -> f));
+	}
+
+	/**
+	 * Get list of links
+	 * 
+	 * @param t
+	 * @return list of websites
+	 */
+	private List<Link> getLinks(DaoRelated t) {
+		Map<String, Link> links = store.getLinks();
+		List<String> urls = t.getLinks();
+		return urls.stream().map(u -> links.get(u)).filter(Objects::nonNull).collect(Collectors.toUnmodifiableList());		
 	}
 
 	@View("page")
@@ -114,16 +132,13 @@ public class PageController {
 	@Get("/legislation/{id}.{lang}.html")
 	public HttpResponse legislation(String id, String lang) {
 		Legislation legislation = store.getLegislations().get(id);
-		
-		Map<String, Page> pages = store.getPages();
-		List<String> urls = legislation.getWebsites();
-		List<Page> sites = urls.stream().map(u -> pages.get(u)).collect(Collectors.toUnmodifiableList());
-		
+
+		List<Link> links = getLinks(legislation);
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), legislation.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		legislation.getRecommendations()));
 		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislation/" + id, "p", legislation, 
-										"sites", sites,
+										"links", links,
 										"principles", principles, "recommendations", recommendations));
 	}
 
@@ -140,15 +155,12 @@ public class PageController {
 	public HttpResponse activity(String id, String lang) {
 		Activity activity = store.getActivities().get(id);
 
-		Map<String, Page> pages = store.getPages();
-		List<String> urls = activity.getWebsites();
-		List<Page> sites = urls.stream().map(u -> pages.get(u)).filter(u -> u != null).collect(Collectors.toUnmodifiableList());
-		
+		List<Link> links = getLinks(activity);
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), activity.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		activity.getRecommendations()));
 		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/activity/" + id, "p", activity, 
-										"sites", sites,
+										"links", links,
 										"principles", principles, "recommendations", recommendations));
 	}
 

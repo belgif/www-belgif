@@ -1,29 +1,29 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcmi: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix be-page: <http://www.belgif.be/id/page/> .
 
-be-page:home-eif a foaf:Document ;
+be-page:home-eif a dcmi:Text ;
 	dcterms:title "EIF 3"@en, "EIF 3"@nl, "EIF 3"@fr, "EIF 3"@de ;
 	dcterms:description "Third version of the European Interoperability Framework"@en ,
 		"Derde versie van het European Interoperability Framework"@nl , 
 		"Troisième version de l'European Interoperability Framework"@fr,
 		"Dritte Version des European Interoperability Framework"@de	.
 
-be-page:home-specs a foaf:Document ;
+be-page:home-specs a dcmi:Text ;
 	dcterms:title "Specifications"@en, "Specificaties"@nl, "Spécifications"@fr, "Spezifikationen"@de ;
 	dcterms:description "Technical and semantic specifications"@en ,
 		"Technische en semantische specificaties"@nl ,
 		"Spécifications techniques et sémantiques"@fr,
 		"Technische und semantische Spezifikationen"@de	.
 
-be-page:home-legal a foaf:Document ;
+be-page:home-legal a dcmi:Text ;
 	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Abkommen"@de ;
 	dcterms:description "Agreements and laws supporting interoperability"@en ,
 		"Overeenkomsten en wetten ter ondersteuning van interoperabiliteit"@nl ,
 		"Accords et lois soutenant l'interopérabilité"@fr,
 		"Abkommen und Gesetze zur Unterstützung der Interoperabilität"@de .
 
-be-page:home-activities a foaf:Document ;
+be-page:home-activities a dcmi:Text ;
 	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
 	dcterms:description "Working groups, meetings and other initiatives"@en ,
 		"Werkgroepen, vergaderingen en andere initiatieven"@nl , 
@@ -31,7 +31,7 @@ be-page:home-activities a foaf:Document ;
 		"Arbeitsgruppen, Treffen und andere Initiativen"@de	.
 
 	
-be-page:integrators a foaf:Document ;
+be-page:integrators a dcmi:Text ;
 	dcterms:title "What is a service integrator ?"@en, "Wat is een dienstenintegrator ?"@nl, "Qu'est-ce qu'un intégrateur de services ?"@fr, "Was ist ein Service Integrator ?"@de ;
 	dcterms:description  """
 <p>According to the law of 15 August 2012, a service integrator is an institution which, by or under a law, is responsible for the integration of services at a given level of authority or in a given sector. 
@@ -63,28 +63,28 @@ In diesem Zusammenhang bietet sie einen integrierten Zugriff auf Daten.</p>
 """@de .
 
 
-be-page:activities a foaf:Document ;
+be-page:activities a dcmi:Text ;
 	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
 	dcterms:description "Working groups, meetings and other initiatives"@en ,
 		"Werkgroepen, vergaderingen en andere initiatieven"@nl , 
 		"Groupes de travail, réunions et autres initiatives"@fr ,
 		"Arbeitsgruppen, Treffen und andere Initiativen"@de	.
 
-be-page:legislations a foaf:Document ;
+be-page:legislations a dcmi:Text ;
 	dcterms:title "Agreements"@en, "Akkoorden"@nl, "Accords"@fr, "Vereinbarungen"@de ;
 	dcterms:description "Formal and informal agreements, laws, decrees... supporting interoperability"@en ,
 		"Formele en informele overeenkomsten en wetten, decreten... ter ondersteuning van interoperabiliteit"@nl ,
 		"Accords (formels et informels) et lois, décrets... soutenant l'interopérabilité"@fr ,
 		"Formelle und informelle Abkommen, Gesetze, Dekrete... zur Unterstützung der Interoperabilität"@de .
 
-be-page:specifications a foaf:Document ;
+be-page:specifications a dcmi:Text ;
 	dcterms:title "Specifications"@en, "Specificaties"@nl, "Spécifications"@fr, "Spezifikationen"@de ;
 	dcterms:description "Technical and semantic specifications"@en ,
 		"Technische en semantische specificaties"@nl ,
 		"Spécifications techniques et sémantiques"@fr ,
 		"Technische und semantische Spezifikationen"@de	.
 
-be-page:components a foaf:Document ;
+be-page:components a dcmi:Text ;
 	dcterms:title "Components"@en, "Componenten"@nl, "Composants"@fr, "Komponenten"@de ;
 	dcterms:description 
 		"The <a href='https://ict-reuse.be' target='_blank'>ICT Reuse catalogue</a> contains an overview of existing reusable components, it is an initiative of the Belgian social security institutions."@en ,
@@ -92,7 +92,7 @@ be-page:components a foaf:Document ;
 		"Le <a href='https://ict-reuse.be' target='_blank'>ICT Reuse catalogue</a> contient un aperçu des composants réutilisables existants, c'est une initiative des institutions de sécurité sociale belges."@fr ,
 		"Der <a href='https://ict-reuse.be' target='_blank'>ICT Reuse Katalog</a> enthält eine Übersicht der vorhandenen wiederverwendbaren Komponenten, er ist eine Initiative der belgischen Institutionen der Sozialen Sicherheit."@de .
 	
-be-page:registries a foaf:Document ;
+be-page:registries a dcmi:Text ;
 	dcterms:title "Base Registries and Authentic Sources"@en, "Basisregisters en authentieke bronnen"@nl, "Registres de base et sources authentiques"@fr, "Basisregister und authentische Quellen"@de ;
 	dcterms:description 
 		"FPS BOSA maintains a <a href='https://sources-authentiques.belgium.be' target='_blank'>catalogue</a> providing an overview of the data contained in authentic sources and other administrative data sources."@en ,
@@ -100,7 +100,7 @@ be-page:registries a foaf:Document ;
 		"Le SPF BOSA tient un <a href='https://sources-authentiques.belgium.be/' target='_blank'>catalogue</a> qui donne un aperçu des données contenues dans les sources authentiques et d'autres sources de données administratives."@fr ,
 		"FPS BOSA unterhält einen <a href='https://sources-authentiques.belgium.be' target='_blank'>Katalog</a>, der einen Überblick über die in authentische Quellen und anderen administrativen Datenquellen enthaltenen Daten bietet."@de .
 	
-be-page:contact a foaf:Document ;
+be-page:contact a dcmi:Text ;
 	dcterms:title "Contact"@en, "Contact"@nl, "Contact"@fr, "Kontakt"@de ;
 	dcterms:description 
 		"<p>This website is hosted by the FPS BOSA, DG Digital Transformation.</p><p>Please send your questions and comments to <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@en ,
@@ -108,7 +108,7 @@ be-page:contact a foaf:Document ;
 		"<p>Ce site est hébergé par le SPF BOSA, DG Transformation digitale.</p><p>Veuillez envoyer vos questions et commentaires à <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@fr ,
 		"<p>Diese Website wird vom FÖD BOSA, GD Digitale Transformation.</p><p>Bitte senden Sie Ihre Fragen und Kommentare an <a href='mailto:belgif@bosa.fgov.be'>belgif@bosa.fgov.be</a></p>"@de .
 
-be-page:recommendations a foaf:Document ;
+be-page:recommendations a dcmi:Text ;
 	dcterms:title "Recommendations"@en, "Aanbevelingen"@nl, "Recommandations"@fr, "Empfehlungen"@de ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>
@@ -127,7 +127,7 @@ be-page:recommendations a foaf:Document ;
 <p>Die 47 Empfehlungen werden auch im Rahmen des belgischen Interoperabilitätsrahmens als wertvolle Grundlage für die Definition von Architektur, Anwendungen und Lösungen für den Datenaustausch und die Interoperabilität innerhalb und zwischen der föderalen Regierung und den Gemeinschaften und Regionen gebilligt.</p>
 """@de .
 
-be-page:eif3 a foaf:Document ;
+be-page:eif3 a dcmi:Text ;
 	dcterms:title "EIF 3"@nl, "EIF 3"@fr, "EIF 3"@de, "EIF 3"@en ;
 	dcterms:description  """
 <p>The European Interoperability Framework (EIF) is a set of recommendations for national governments aimed at making - and keeping - digital public services within the EU interoperable.<p>

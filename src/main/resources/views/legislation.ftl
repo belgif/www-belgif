@@ -7,8 +7,9 @@
 	<h1>${law[lang]}: ${p.getTitle(lang)}</h1>
 	<p>Date: ${p.getDate()}</p>
 	<p>${p.getDescription(lang)}</p>
-	<#list sites as s>
-		<p><a href="${s.getId()}" class="btn btn-primary">${s.getTitle(lang)}</a></p>
+	<h2>${link[lang]}</h2>
+	<#list links as l>
+		<p><a href="${l.getId()}" class="ext">${l.getTitle(lang)}</a></p>
 	</#list>
 	<#if principles?has_content>
 	<h2>${pri[lang]}</h2>

@@ -19,7 +19,7 @@ be-legislation:best2019 a schema:Legislation ;
 <p>Kooperationsvereinbarung zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt über die Angleichung von Referenzadressen und die Verknüpfung von Adressinformationen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
-	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> .
+	foaf:page <http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> .
 
 <http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> a foaf:Document ;
 	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
@@ -37,7 +37,7 @@ be-legislation:healthdata a schema:Legislation ;
 <p>Kooperationsvereinbarung zwischen der Föderal-, Regional- und Gemeinschaftsregierung zur Koordinierung der Datenverarbeitung in den Bereichen Gesundheitspolitik und persönliche Assistenz.</p>"""@de ;
 	dcterms:conformsTo eif-principle:usercentricity, eif-principle:inclusion, eif-principle:security ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:governancestructure ;
-	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2018/03/16/138161.pdf> .
+	foaf:page <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2018/03/16/138161.pdf> .
 
 <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2018/03/16/138161.pdf> a foaf:Document ;
 	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
@@ -55,7 +55,7 @@ be-legislation:best a schema:Legislation ;
 <p>Kooperationsvereinbarung zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt über die Angleichung von Referenzadressen und die Verknüpfung von Adressinformationen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
-	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> .
+	foaf:page <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> .
 	
 <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2016/02/15/132692.pdf> a foaf:Document ;
 	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
@@ -69,7 +69,7 @@ be-legislation:iceg a schema:Legislation ;
 	"<p>Kooperationsvereinbarung zwischen den föderalen, regionalen und kommunalen Behörden zur Harmonisierung und Angleichung der Initiativen, die auf ein integriertes E-Government abzielen.</p>"@de ;
 	dcterms:conformsTo eif-principle:multilingualism, eif-principle:simplification ;
 	dcterms:relation eif-recommendation:alignment, eif-recommendation:datareuse, eif-recommendation:standardsparticipation, eif-recommendation:agreements, eif-recommendation:opendata ;
-	foaf:homepage <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
+	foaf:page <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> .
 
 <http://reflex.raadvst-consetat.be/reflex/pdf/Mbbs/2013/10/08/125379.pdf> a foaf:Document ;
 	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
@@ -87,7 +87,7 @@ be-legislation:inspire a schema:Legislation ;
 <p>Gesetz zur Umsetzung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates vom 14. März 2007 zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft (INSPIRE)<p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
-	foaf:homepage <http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> .
+	foaf:page <http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> .
 
 <http://www.ejustice.just.fgov.be/eli/loi/2011/12/15/2011007288/justel> a foaf:Document ;
 	dcterms:title "Tekst in Justel database"@nl, "Texte dans la base de données Justel"@fr, "Text in der Databank Justel"@de, "Text in Justel database"@en .
@@ -112,7 +112,7 @@ Le présent accord de coopération transpose partiellement la Directive 2007/2/C
 Diese Kooperationsvereinbarung setzt die Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates vom 14. März 2007 zur Schaffung einer Geodateninfrastruktur in der Europäischen Gemeinschaft (INSPIRE) teilweise um.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:authenticsources, eif-recommendation:sharedservices, eif-recommendation:quality, eif-recommendation:publiccatalogues ;
-	foaf:homepage <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> .
+	foaf:page <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> .
 
 <http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&table_name=wet&cn=2010040214> a foaf:Document ;
 	dcterms:title "Tekst in Justel database"@nl, "Texte dans la base de données Justel"@fr, "Text in der Databank Justel"@de, "Text in Justel database"@en .
