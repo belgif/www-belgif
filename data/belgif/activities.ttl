@@ -133,3 +133,13 @@ be-action:opendataportals a foaf:Project ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:opendata ;
 	foaf:page <https://data.gov.be/nl/dcat-werkgroep> .
+	
+be-action:kafka a foaf:Project ;
+	dcterms:title "Kafka website"@en, "Kafka website"@nl, "Kafka site web"@fr, "Kafka Webseite"@de ;
+	dcterms:description "<p>This website informs you about the Only Once Act, the federal government's accomplishments in implementing it, and gives you the opportunity to notify authorities if you need to transfer information that you have already provided to the federal government.</p>"@en ,
+		"<p>Deze website informeert u over de Only Once-wet, de verwezenlijkingen van de federale overheid op het vlak van de implementatie ervan en geeft u de mogelijkheid om een melding te maken indien u dezelfde informatie herhaaldelijk (of via papier) moet overmaken aan de federale overheid.</p>"@nl ,
+		"<p>Ce site Web vous informe sur la loi Only Once, les réalisations du gouvernement fédéral dans son implémentation et vous donne l'occasion de notifier les autorités si vous devez transférer une information que vous avez déjà fournie au gouvernement fédéral.</p>"@fr ,
+		"<p>Diese Website informiert Sie über das Once-Only-Prinzip, die Leistungen der föderalen Regierung bei seiner Umsetzung und gibt Ihnen die Möglichkeit, den Behörden mitzuteilen, wenn Sie Informationen, die Sie bereits an die föderale Regierung übermittelt haben, weitergeben müssen.</p>"@de ;
+	dcterms:conformsTo eif-principle:simplification  ;
+	dcterms:relation eif-recommendation:simplification ;
+	foaf:page <https://kafka.be> .
