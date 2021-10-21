@@ -19,6 +19,26 @@ be-action:inspirecc a foaf:Project ;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:datareuse, eif-recommendation:communities, eif-recommendation:interfaces .
 	
+be-action:bestwg a foaf:Project;
+	dcterms:title "BeST Address Working Group"@en, "BeST-Address werkgroep"@nl, "BeST-Address groupe de travail"@fr, "BeST-Address Arbeitsgruppe"@de ;
+	dcterms:description """
+	<p>Cooperation agreement between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region regarding the alignment of referencing addresses and the linking of address information.</p>"""@en,
+"""
+<p>Samenwerkingsakkoord tussen de Federale Staat, het Vlaamse Gewest, het Waalse Gewest en het Brusselse Hoofdstedelijk Gewest met betrekking tot de eenmaking van de wijze waarop gerefereerd wordt aan adressen en de koppeling van adresgegevens.</p>"""@nl,
+"""
+<p>Accord de coopération entre l'Etat fédéral, la Région flamande, la Région wallonne et la Région de Bruxelles-Capitale concernant l'unification de la manière de référencer les adresses et de la mise en relation des données d'adresses.</p>"""@fr ,
+"""
+<p>Kooperationsvereinbarung zwischen dem Föderalstaat, der Flämischen Region, der Wallonischen Region und der Region Brüssel-Hauptstadt über die Angleichung von Referenzadressen und die Verknüpfung von Adressinformationen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability ;
+	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
+	foaf:homepage <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> ;
+	foaf:homepage <https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> .
+
+<https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> a foaf:Document ;
+	dcterms:title "Gids voor het vastellen en toekennen van adressen"  .
+
+<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> a foaf:Document ;
+	dcterms:title "Guide en matière de constatation et attribution d'adresses" .
 
 be-action:gba a foaf:Project ;
 	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
@@ -35,7 +55,7 @@ be-action:gba a foaf:Project ;
 	foaf:homepage <https://www.dataprotectionauthority.be> .
 
 be-action:icegwg a foaf:Project ;
-	dcterms:title "ICEG Working Groups"@en, "ICEG werkgroepen"@nl, "Groupes de travail ICEG"@fr, "ICEG Arbeitsgruppen"@de ;
+	dcterms:title "ICEG Working Groups"@en, "ICEG werkgroepen"@nl, "ICEG groupes de travail"@fr, "ICEG Arbeitsgruppen"@de ;
 	dcterms:description """
 <p>Thematic working groups on data standardization within ICEG (ICEG is a cooperative agreement between federal, regional and community governments for the harmonization and alignment of initiatives to achieve integrated e-government).</p>"""@en ,
 """
@@ -88,7 +108,7 @@ be-action:begeo a foaf:Project;
 <p>Das National Geographical Institute organisiert jedes Jahr die BeGeo, die nationale Geoinformationsmesse, die Regierung, Privatwirtschaft und Forschungsgemeinschaft zusammenbringt.</p>"""@de ;
 	dcterms:conformsTo eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:communities, eif-recommendation:datareuse, eif-recommendation:userinvolvement, eif-recommendation:solutionreuse ;
-	foaf:website <https://begeo2019.be> .
+	foaf:homepage <https://begeo2019.be> .
 
 be-action:webaccessibility a foaf:Project ;
 	dcterms:title "Belgian Web Accessibility"@en, "Belgian Web Accessibility"@nl, "Belgian Web Accessibility"@fr, "Belgian Web Accessibility"@de ;
@@ -102,7 +122,7 @@ be-action:webaccessibility a foaf:Project ;
 <p>Der FÖD BOSA wurde eingesetzt, um die Kontroll- und Berichtsfunktionen auszuüben, wie es in der Europäischen Richtlinie (EU) 2016/2102 bestimmt ist. Um diese Aufgaben zu verrichten wurde das „Belgian Web Accessibility Office“ – kurz BWAO – gegründet.Zusammen mit den Gemeinden und Regionen soll das BWAO diese Aufgaben erfüllen.</p>"""@de ;
 	dcterms:conformsTo eif-principle:inclusion, eif-principle:reusability  ;
 	dcterms:relation eif-recommendation:accessibility, eif-recommendation:openspecifications2, eif-recommendation:solutionreuse ;
-	foaf:website <https://accessibility.belgium.be> .
+	foaf:homepage <https://accessibility.belgium.be> .
 
 be-action:opendataportals a foaf:Project ;
 	dcterms:title "Open data portals meeting"@en, "Open data portalen vergadering"@nl, "Réunion portails de données ouvertes"@fr, "Offene Datenportale Treffen"@de ;

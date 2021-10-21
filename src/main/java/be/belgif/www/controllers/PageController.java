@@ -139,10 +139,16 @@ public class PageController {
 	@Get("/activity/{id}.{lang}.html")
 	public HttpResponse activity(String id, String lang) {
 		Activity activity = store.getActivities().get(id);
+
+		Map<String, Page> pages = store.getPages();
+		List<String> urls = activity.getWebsites();
+		List<Page> sites = urls.stream().map(u -> pages.get(u)).filter(u -> u != null).collect(Collectors.toUnmodifiableList());
+		
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), activity.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		activity.getRecommendations()));
 		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/activity/" + id, "p", activity, 
+										"sites", sites,
 										"principles", principles, "recommendations", recommendations));
 	}
 

@@ -26,26 +26,17 @@
 package be.belgif.www.dao;
 
 
-import static be.belgif.www.dao.Dao.firstString;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.FOAF;
 
 /**
- * An activity like a meeting, workgroup, ...
+ * An activity like a meeting, working group, ...
  * 
  * @author Bart.Hanssens
  */
 public class Activity extends DaoRelated {
-	private final String website;
-
-	public String getWebsite() {
-		return website;
-	}
 
 	public Activity(Model m, IRI iri) {
 		super(m, iri);
-		
-		website = firstString(m, iri, FOAF.HOMEPAGE);
 	}
 }

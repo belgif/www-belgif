@@ -28,8 +28,8 @@ package be.belgif.www.dao;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import org.eclipse.rdf4j.model.IRI;
 
+import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Value;
@@ -37,24 +37,42 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 
 /**
- *
- * @author Bart.Hanssens
+ * Global class
+ * 
+ * @author Bart Hanssens
  */
-public class Dao {
+public abstract class Dao {
 	private final String id;
 	private final String localId;
 	private final Map<String, String> title;
 
+	/**
+	 * Get ID for this document / page
+	 * 
+	 * @return 
+	 */
 	public String getId() {
 		return id;
 	}
 
+	/**
+	 * Get local ID (without namespace / domain name)
+	 * 
+	 * @return 
+	 */
 	public String getLocalId() {
 		return localId;
 	}
 
+	/**
+	 * Get title for a document / page.
+	 * This can either be the language specific title or (if missing) the language neutral title.
+	 * 
+	 * @param lang language code
+	 * @return string or null
+	 */
 	public String getTitle(String lang) {
-		return title.get(lang);
+		return title.getOrDefault(lang, title.get(""));
 	}
 
 	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
@@ -63,13 +81,29 @@ public class Dao {
 				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
 	}
 
+	/**
+	 * Get first property value for a specific subject as a string
+	 * 
+	 * @param m full RDF model
+	 * @param iri subject IRI
+	 * @param predicate property
+	 * @return string value or empty string
+	 */
 	protected static String firstString(Model m, IRI iri, IRI predicate) {
 		return m.filter(iri, predicate, null).objects().stream().findFirst()
 					.map(Value.class::cast)
 					.map(Value::stringValue)
 					.orElse("");
 	}
-
+	
+	/**
+	 * Get a property values for a specific subject as a list of strings
+	 * 
+	 * @param m full RDF model
+	 * @param iri subject IRI
+	 * @param predicate property
+	 * @return string value or empty string
+	 */
 	protected static List<String> listString(Model m, IRI iri, IRI predicate) {
 		return m.filter(iri, predicate, null).objects().stream()
 							.map(IRI.class::cast)
@@ -77,12 +111,25 @@ public class Dao {
 							.collect(Collectors.toList());
 	}
 
+	/**
+	 * Constructor
+	 * 
+	 * @param m
+	 * @param iri
+	 * @param prop 
+	 */
 	public Dao(Model m, IRI iri, IRI prop) {
 		id = iri.toString();
 		localId = iri.getLocalName();
 		title = langMap(m, iri, prop);
 	}
-	
+
+	/**
+	 * Constructor
+	 * 
+	 * @param m
+	 * @param iri 
+	 */
 	public Dao(Model m, IRI iri) {
 		this(m, iri, SKOS.PREF_LABEL);
 	}

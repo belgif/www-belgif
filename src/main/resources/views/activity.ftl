@@ -7,7 +7,9 @@
 	<h1>${act[lang]}: ${p.getTitle(lang)}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<h2>${link[lang]}</h2>
-	<p><a href="${p.website}" class="ext">${p.website}</a></p>
+	<#list sites as s>
+		<p><a href="${s.getId()}" class="ext">${s.getTitle(lang)}</a></p>
+	</#list>
 	<#if principles?has_content>
 	<h2>${pri[lang]}</h2>
 	<#list principles as p>

@@ -8,6 +8,7 @@ be-spec:best a doap:Specification ;
 	dcterms:title "BeST"@en, "BeST"@nl, "BeST"@fr, "BeST"@de ;
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "Data model Belgian Streets and Addresses"@en, "Data model Belgian Streets and Addresses"@nl, "Modèle de données Belgian Streets and Addresses"@fr, "Datenmodell Belgian Streets and Addresses"@de ;
+	dcterms:abstract "Data model Belgian Streets and Addresses"@en, "Data model Belgian Streets and Addresses"@nl, "Modèle de données Belgian Streets and Addresses"@fr, "Datenmodell Belgian Streets and Addresses"@de ;
 	foaf:homepage <https://vocab.belgif.be/ns> .
 	
 be-spec:cpsvp-ap a doap:Specification ;
