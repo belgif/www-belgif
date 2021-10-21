@@ -24,6 +24,21 @@ be-legislation:best2019 a schema:Legislation ;
 <http://reflex.raadvst-consetat.be/reflex/index.reflex?page=chrono&c=detail_get&d=detail&docid=143446> a foaf:Document ;
 	dcterms:title "Tekst Raad van State"@nl, "Texte Conseil d'Etat"@fr, "Text Staatsrat"@de, "Text Council of State"@en .
 
+be-legislation:ivc a schema:Legislation ;
+	dcterms:issued "2018-09-05"^^xsd:date ;
+	dcterms:title "Information Security Committee"@en, "Informatieveiligheidscomité (IVC)"@nl, "Comité de sécurité de l'information (CSI)"@fr, "Ausschuss für Informationssicherheit"@de ;
+	dcterms:description """
+<p>Wet tot oprichting van het informatieveiligheidscomité en tot wijziging van diverse wetten betreffende de uitvoering van verordening (EU) 2016/679 van 27 april 2016 van het Europees Parlement en de Raad betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens en betreffende het vrije verkeer van die gegevens en tot intrekking van richtlijn 95/46/EG</p>"""@nl,
+"""
+<p>Loi instituant le comité de sécurité de l'information et modifiant diverses lois concernant la mise en oeuvre du Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données, et abrogeant la directive 95/46/CE</p>"""@fr,
+"""
+<p>Law establishing the Information Security Committee and amending various laws regarding the implementation of Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of individuals with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC</p>"""@en,
+"""
+<p>Gesetz zur Einsetzung des Ausschusses für Informationssicherheit und zur Änderung verschiedener Rechtsakte zur Durchführung der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG</p>"""@de ;
+	dcterms:conformsTo eif-principle:security ;
+	dcterms:relation eif-recommendation:riskmanagement ; 
+	foaf:page <http://www.ejustice.just.fgov.be/eli/wet/2018/09/05/2018203892/justel> .
+
 be-legislation:healthdata a schema:Legislation ;
 	dcterms:issued "2017-11-20"^^xsd:date ;
 	dcterms:title "Data processing in health policy"@en, "Traitement de données dans la politique de santé"@fr, "Gegevensverwerking in het gezondheidsbeleid"@nl, "Verknüpfung von Datenverarbeitung in der Gesundheitspolitik"@de ;
