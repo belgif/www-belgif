@@ -1,3 +1,7 @@
+<#ftl encoding="utf-8">
+
+<#assign date = { "nl": "Datum", "fr": "Date", "de": "Aktivitäten", "en": "Datum" }>
+
 <!DOCTYPE html>
 <html lang="${lang}">
 <#include "head.ftl">
@@ -5,7 +9,7 @@
 <#include "header.ftl">
 <main class="container-fluid bg-light">
 	<h1>${law[lang]}: ${p.getTitle(lang)}</h1>
-	<p>Date: ${p.getDate()}</p>
+	<p>${date[lang]}: ${p.getDate()}</p>
 	<p>${p.getDescription(lang)}</p>
 	<h2>${link[lang]}</h2>
 	<#list links as l>
