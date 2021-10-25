@@ -100,3 +100,15 @@ be-spec:skos a doap:Specification ;
 		"Simple Knowledge Organization System (SKOS) ist für die Darstellung von Thesauri, Taxonomien oder jeder anderen Art von strukturiertem, kontrolliertem Vokabular konzipiert. SKOS ist Teil der Semantic Web-Standardfamilie."@de ;
 	foaf:page <https://www.w3.org/TR/skos-reference/> .
 
+be-spec:kmehr a doap:Specification ;
+	dcterms:title "KMEHR"@en, "KMEHR"@nl, "KMEHR"@fr, "KMEHR"@de ;
+	owl:versionInfo "1.34";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Kind Messages for Electronic Healthcare Record"@en, "Kind Messages for Electronic Healthcare Record"@nl, "Kind Messages for Electronic Healthcare Record"@fr, "Kind Messages for Electronic Healthcare Record"@de ;
+	dcterms:abstract
+		"KMEHR was introduced in 2002. It is an implementation of the fourth recommendation of the Belgian Healthcare Telematics Commission, enabling the exchange of structured clinical information."@en,
+		"KMEHR werd in 2002 ingevoerd. Het is een implementatie van de vierde aanbeveling van de Belgische Commissie voor Gezondheidszorg Telematica, die de uitwisseling van gestructureerde klinische informatie mogelijk maakt."@nl,
+		"Le KMEHR a été introduit en 2002. Il s'agit d'une mise en œuvre de la quatrième recommandation de la Commission belge de télématique des soins de santé, permettant l'échange d'informations cliniques structurées."@fr,
+		"KMEHR wurde im Jahr 2002 eingeführt. Es ist eine Umsetzung der vierten Empfehlung der belgischen Kommission für Telematik im Gesundheitswesen und ermöglicht den Austausch strukturierter klinischer Informationen."@de ;
+	foaf:page <https://www.ehealth.fgov.be/standards/kmehr/en> .
+
