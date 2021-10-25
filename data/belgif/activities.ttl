@@ -20,7 +20,7 @@ be-action:inspirecc a foaf:Project ;
 	dcterms:relation eif-recommendation:datareuse, eif-recommendation:communities, eif-recommendation:interfaces .
 	
 be-action:bestwg a foaf:Project;
-	dcterms:title "BeST Address Working Group"@en, "BeST-Address werkgroep"@nl, "BeST-Address groupe de travail"@fr, "BeST-Address Arbeitsgruppe"@de ;
+	dcterms:title "BeST Address Committee"@en, "BeST-Address comité"@nl, "BeST-Address comité"@fr, "BeST-Address Komitee"@de ;
 	dcterms:description """
 	<p>Cooperation agreement between the Federal State, the Flemish Region, the Walloon Region and the Brussels-Capital Region regarding the alignment of referencing addresses and the linking of address information.</p>"""@en,
 """
@@ -35,10 +35,16 @@ be-action:bestwg a foaf:Project;
 			<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> .
 
 <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> a foaf:Document ;
-	dcterms:title "(NL) Gids voor het vastellen en toekennen van adressen"  .
+	dcterms:title "(NL) Gids voor het vaststellen en toekennen van adressen"  .
 
 <https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> a foaf:Document ;
 	dcterms:title "(FR) Guide en matière de constatation et attribution d'adresses" .
+
+<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_werkdocument.pdf> a foaf:Document ;
+	dcterms:title "(NL) Richtlijnen en aanbevelingen voor het vaststellen en toekennen van een adres en huisnummer" .
+
+<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_groupe_de_travail.pdf> a foaf:Document ;
+	dcterms:title "(FR)Directives et recommandations pour la détermination et l'attribution d'une adresse et d'un numéro d'habitation" .
 
 be-action:gba a foaf:Project ;
 	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
