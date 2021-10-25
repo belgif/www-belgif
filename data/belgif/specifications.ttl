@@ -34,7 +34,7 @@ be-spec:dcat-ap a doap:Specification ;
 	foaf:page <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
 
 be-spec:fedservicesplatform a doap:Specification ;
-	dcterms:title "Federal Service Platform"@en, "Federal Service Platform"@nl, "Federal Service Platform"@fr, "Federal Service Platform"@de ;
+	dcterms:title "Federal Vocabularies"@en, "Federal Vocabularies"@nl, "Federal Vocabularies"@fr, "Federal Vocabularies"@de ;
 	dcterms:subject "Semantics"@en, "Semantiek"@nl, "Sémantique"@fr, "Semantik"@de ;
 	dcterms:description "Federal Service Platform"@en, "Federal Service Platform"@nl, "Federal Service Platform"@fr, "Federal Service Platform"@de ;
 	dcterms:abstract 
