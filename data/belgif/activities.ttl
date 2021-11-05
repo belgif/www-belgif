@@ -46,7 +46,7 @@ be-action:bestwg a foaf:Project;
 	dcterms:title "(NL) Richtlijnen en aanbevelingen voor het vaststellen en toekennen van een adres en huisnummer" .
 
 <https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_groupe_de_travail.pdf> a foaf:Document ;
-	dcterms:title "(FR)Directives et recommandations pour la détermination et l'attribution d'une adresse et d'un numéro d'habitation" .
+	dcterms:title "(FR) Directives et recommandations pour la détermination et l'attribution d'une adresse et d'un numéro d'habitation" .
 
 be-action:gba a foaf:Project ;
 	dcterms:title "Data Protection Authority"@en, "Gegevensbeschermingsautoriteit"@nl, "L'Autorité de protection des données"@fr, "Datenschutzbehörde"@de ;
