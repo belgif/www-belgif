@@ -32,7 +32,9 @@ be-action:bestwg a foaf:Project;
 	dcterms:conformsTo eif-principle:reusability ;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
 	foaf:page <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> ,
-			<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> .
+			<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf>, 
+			<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_werkdocument.pdf>,
+			<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_groupe_de_travail.pdf> .
 
 <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> a foaf:Document ;
 	dcterms:title "(NL) Gids voor het vaststellen en toekennen van adressen"  .
