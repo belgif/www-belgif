@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,8 +36,6 @@ import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
 
-import io.micronaut.context.annotation.Value;
-
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
@@ -47,9 +45,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.inject.Singleton;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -69,13 +64,11 @@ import org.slf4j.LoggerFactory;
 /**
  * Simple data store, based upon reading a series of RDF data files
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
-@Singleton
-public class Store implements AutoCloseable {
+public class Store  {
 	private final Logger LOG = LoggerFactory.getLogger(Store.class);
 
-	@Value("${be.belgif.www.data:.}")
 	protected String dataPath;
 	
 	/** Various types of data */
@@ -88,39 +81,83 @@ public class Store implements AutoCloseable {
 	private Map<String,Specification> specifications = new HashMap<>();
 	private Map<String,Legislation> legislations = new HashMap<>();
 	private Map<String,Activity> activities = new HashMap<>();
-	
+
+	/**
+	 * Get EIF Levels as a map
+	 * @return 
+	 */
 	public Map<String,EifLevel> getLevels() {
 		return levels;
 	}
 
+	/**
+	 * Get EIF Principles as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,EifPrinciple> getPrinciples() {
 		return principles;
 	}
 
+	/**
+	 * Get EIF Recommendations as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,EifRecommendation> getRecommendations() {
 		return recommendations;
 	}
 
+	/**
+	 * Get links as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Link> getLinks() {
 		return links;
 	}
 
+	/**
+	 * Get static pages as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Page> getPages() {
 		return pages;
 	}
 
+	/**
+	 * Get service integrators as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Organization> getIntegrators() {
 		return integrators;
 	}
 
+	/**
+	 * Get specifications as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Specification> getSpecifications() {
 		return specifications;
 	}
 
+	/**
+	 * Get legislation as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Legislation> getLegislations() {
 		return legislations;
 	}
 
+	/**
+	 * Get activities as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Activity> getActivities() {
 		return activities;
 	}
@@ -178,8 +215,7 @@ public class Store implements AutoCloseable {
 		});
 	}
 
-	@PostConstruct
-	public void load() throws Exception {
+	public void init() throws Exception {
 		LOG.info("Loading data from directory {}", dataPath);
 
 		Model m = new LinkedHashModel();
@@ -200,11 +236,5 @@ public class Store implements AutoCloseable {
 		}
 		fixFoafPage(m);
 		processAll(m);
-	}
-
-	@PreDestroy
-	@Override
-	public void close() throws Exception {
-
 	}
 }

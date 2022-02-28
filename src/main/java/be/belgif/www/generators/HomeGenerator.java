@@ -23,56 +23,50 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www.dao;
+package be.belgif.www.generators;
+
+import be.belgif.www.Store;
+import be.belgif.www.dao.Page;
+import java.io.IOException;
 
 import java.util.Map;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
-
 /**
- * Base class for EIF things
+ * Language page and homepage controller
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
-public abstract class DaoEif extends Dao {
-	private final int seq;
-
-	private final Map<String, String> description;
+public class HomeGenerator extends Generator {
+	private final Store store;
 
 	/**
-	 * Get sequence number / order
-	 * @return 
-	 */
-	public int getSequence() {
-		return seq;
-	}
-
-	/**
-	 * Get description in a specific language
+	 * Homepage
 	 * 
 	 * @param lang language code
-	 * @return 
+	 * @throws IOException 
 	 */
-	public String getDescription(String lang) {
-		return description.get(lang);
+	private void index(String lang) throws IOException {
+		Page eif = store.getPages().get("home-eif");
+		Page activities = store.getPages().get("home-activities");
+		Page legal = store.getPages().get("home-legal");
+		Page specs = store.getPages().get("home-specs");
+
+		write("home", Map.of("lang", lang, "path", "/index", 
+			"eif", eif, "activities", activities, "legal", legal, "specs", specs),
+			"/index." + lang + ".html");
+	}
+
+	@Override
+	public void generate(String lang) throws IOException {
+		index(lang);
 	}
 
 	/**
 	 * Constructor
 	 * 
-	 * @param m RDF model
-	 * @param iri ID
+	 * @param store 
 	 */
-	public DaoEif(Model m, IRI iri) {
-		super(m, iri);
-
-		description = langMap(m, iri, SKOS.DEFINITION);
-
-		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
-			.map(Literal.class::cast)
-			.map(Literal::intValue).orElse(0);
+	public HomeGenerator(Store store) {
+		this.store = store;
 	}
 }

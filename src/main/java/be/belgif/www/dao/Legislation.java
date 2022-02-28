@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,16 +34,26 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 /**
  * Legislation or agreement
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class Legislation extends DaoRelated {
 	private final String date;
 
+	/**
+	 * Get (publication) date of this agreement
+	 * 
+	 * @return 
+	 */
 	public String getDate() {
 		return date;
 	}
 
-
+	/**
+	 * Constructor
+	 * 
+	 * @param m RDF model
+	 * @param iri ID
+	 */
 	public Legislation(Model m, IRI iri) {
 		super(m, iri);
 

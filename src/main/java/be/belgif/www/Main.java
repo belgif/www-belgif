@@ -23,56 +23,29 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www.dao;
+package be.belgif.www;
 
-import java.util.Map;
+import be.belgif.www.generators.EifGenerator;
+import be.belgif.www.generators.HomeGenerator;
+import be.belgif.www.generators.PageGenerator;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
+import java.io.IOException;
 
 /**
- * Base class for EIF things
- * 
- * @author Bart.Hanssens
+ *
+ * @author Bart Hanssens
  */
-public abstract class DaoEif extends Dao {
-	private final int seq;
+public class Main {
+	public static void main(String[] args) throws IOException {
+		Store store = new Store();
+		
+		EifGenerator eifGenerator = new EifGenerator(store);
+		eifGenerator.generate();
 
-	private final Map<String, String> description;
+		HomeGenerator homeGenerator = new HomeGenerator(store);
+		homeGenerator.generate();
 
-	/**
-	 * Get sequence number / order
-	 * @return 
-	 */
-	public int getSequence() {
-		return seq;
-	}
-
-	/**
-	 * Get description in a specific language
-	 * 
-	 * @param lang language code
-	 * @return 
-	 */
-	public String getDescription(String lang) {
-		return description.get(lang);
-	}
-
-	/**
-	 * Constructor
-	 * 
-	 * @param m RDF model
-	 * @param iri ID
-	 */
-	public DaoEif(Model m, IRI iri) {
-		super(m, iri);
-
-		description = langMap(m, iri, SKOS.DEFINITION);
-
-		seq = m.filter(iri, SKOS.NOTATION, null).objects().stream().findFirst()
-			.map(Literal.class::cast)
-			.map(Literal::intValue).orElse(0);
-	}
+		PageGenerator pageGenerator = new PageGenerator(store);
+		pageGenerator.generate();
+    }
 }

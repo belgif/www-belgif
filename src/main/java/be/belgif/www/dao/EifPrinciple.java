@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -35,15 +35,26 @@ import org.eclipse.rdf4j.model.vocabulary.SKOS;
 /**
  *  EIF 3 "Interoperability Principle"
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
 public class EifPrinciple extends DaoEif {
 	private final List<String> recommendations;
 
+	/**
+	 * List of recommendations linked to this EIF Principle
+	 * 
+	 * @return 
+	 */
 	public List<String> getRecommendations() {
 		return recommendations;
 	}
 
+	/**
+	 * Constructor
+	 * 
+	 * @param m
+	 * @param iri 
+	 */
 	public EifPrinciple(Model m, IRI iri) {
 		super(m, iri);
 

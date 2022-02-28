@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -39,10 +39,22 @@ import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 public class Page extends Dao {
 	private final Map<String, String> description;
 
+	/**
+	 * Get description in a specific language
+	 * 
+	 * @param lang language code
+	 * @return 
+	 */
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
 
+	/**
+	 * Constructor
+	 * 
+	 * @param m RDF model
+	 * @param iri ID
+	 */
 	public Page(Model m, IRI iri) {
 		super(m, iri, DCTERMS.TITLE);
 

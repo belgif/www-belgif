@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -115,9 +115,9 @@ public class Dao {
 	/**
 	 * Constructor
 	 * 
-	 * @param m
-	 * @param iri
-	 * @param prop 
+	 * @param m RDF model
+	 * @param iri ID
+	 * @param prop property
 	 */
 	public Dao(Model m, IRI iri, IRI prop) {
 		id = iri.toString();
@@ -128,8 +128,8 @@ public class Dao {
 	/**
 	 * Constructor
 	 * 
-	 * @param m
-	 * @param iri 
+	 * @param m RDF model
+	 * @param iri ID
 	 */
 	public Dao(Model m, IRI iri) {
 		this(m, iri, SKOS.PREF_LABEL);
