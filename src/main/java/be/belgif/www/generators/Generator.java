@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022, Bart.Hanssens
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,6 +25,7 @@
  */
 package be.belgif.www.generators;
 
+import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -49,6 +50,7 @@ public abstract class Generator {
 	static {
 		cfg = new Configuration(Configuration.VERSION_2_3_31);
         cfg.setDefaultEncoding("UTF-8");
+		cfg.setTemplateLoader(new ClassTemplateLoader(be.belgif.www.Main.class, "/templates"));
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
         cfg.setLogTemplateExceptions(false);
         cfg.setWrapUncheckedExceptions(true);

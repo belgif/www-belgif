@@ -29,6 +29,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -54,14 +55,14 @@ public class DirectoryCopier {
 	private void copySubdir(String rootsrc, String rootdest, String subdir) throws IOException {
 		List<Path> sources;
 		try(Stream<Path> files = Files.walk(Paths.get(rootsrc, subdir))) {
-			sources = files.toList();
+			sources = files.filter(p -> p.toFile().isFile()).toList();
 		}
 
 		for(Path src: sources) {
 			Path dest = Paths.get(rootdest, src.toString().substring(rootsrc.length()));
-			Files.createDirectories(dest);
+			Files.createDirectories(dest.getParent());
 			LOG.info("Copying file {} to {}", src, dest);
-			Files.copy(src, dest);
+			Files.copy(src, dest, StandardCopyOption.REPLACE_EXISTING);
 		}
 	}
 
