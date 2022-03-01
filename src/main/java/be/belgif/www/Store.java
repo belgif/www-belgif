@@ -45,6 +45,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
@@ -62,16 +63,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Simple data store, based upon reading a series of RDF data files
+ * Simple data store, populated by reading a series of RDF data files
  * 
  * @author Bart Hanssens
  */
 public class Store  {
 	private final Logger LOG = LoggerFactory.getLogger(Store.class);
 
-	protected String dataPath;
-	
-	/** Various types of data */
+	/** Various types of pages */
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
@@ -215,15 +214,25 @@ public class Store  {
 		});
 	}
 
-	public void init() throws Exception {
-		LOG.info("Loading data from directory {}", dataPath);
+	/**
+	 * Constructor
+	 * 
+	 * @param indir input directory
+	 * @throws java.io.IOException
+	 * @throws Exception 
+	 */
+	public Store(Path indir) throws IOException {
+		LOG.info("Loading data from directory {}", indir);
 
 		Model m = new LinkedHashModel();
 		
-		/** Load all files from the data directory into a memory model */
-		List<Path> files = Files.list(Path.of(dataPath))
-								.filter(p -> p.toFile().isFile())
-								.collect(Collectors.toList());
+		List<Path> files;
+	
+		// Load all files from the data directory into a memory model
+		try (Stream<Path> s = Files.list(Path.of(indir.toString(), "belgif"))) {
+			files = s.filter(p -> p.toFile().isFile()).collect(Collectors.toList());
+		}
+	
 		for (Path p: files ) {
 			LOG.info("Loading data from {}", p);
 			

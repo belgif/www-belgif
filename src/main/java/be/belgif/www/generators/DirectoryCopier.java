@@ -23,63 +23,62 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www;
-
-import be.belgif.www.generators.DirectoryCopier;
-import be.belgif.www.generators.EifGenerator;
-import be.belgif.www.generators.HomeGenerator;
-import be.belgif.www.generators.PageGenerator;
+package be.belgif.www.generators;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
+import java.util.stream.Stream;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- *
+ * Copy a directory
+ * 
  * @author Bart Hanssens
  */
-public class Main {
-	private final static Logger LOG = LoggerFactory.getLogger(Main.class);
+public class DirectoryCopier {
+	private final static Logger LOG = LoggerFactory.getLogger(DirectoryCopier.class);
 
-	public static void main(String[] args) throws IOException {
-		if (args.length < 1) {
-			System.err.println("Usage: belgif.jar data_dir output_dir");
-			System.exit(-1);
+	/**
+	 * Copy all files in a subdirectory to a new subdirectory
+	 * 
+	 * @param rootsrc
+	 * @param rootdest
+	 * @param subdir
+	 * @throws IOException 
+	 */
+	private void copySubdir(String rootsrc, String rootdest, String subdir) throws IOException {
+		List<Path> sources;
+		try(Stream<Path> files = Files.walk(Paths.get(rootsrc, subdir))) {
+			sources = files.toList();
 		}
 
-		Path indir = Paths.get(args[0]);
-		if (!Files.exists(indir)) {
-			LOG.error("Input dir {} does not exist", indir);
-			System.exit(-2);
+		for(Path src: sources) {
+			Path dest = Paths.get(rootdest, src.toString().substring(rootsrc.length()));
+			Files.createDirectories(dest);
+			LOG.info("Copying file {} to {}", src, dest);
+			Files.copy(src, dest);
 		}
+	}
 
-		Path outdir = Paths.get(args[1]);
-
-		if (!Files.exists(outdir)) {
-			LOG.info("Creating directory {}", outdir);
-			Files.createDirectories(outdir);
-		}
-
-		// Copy download files, css, etc
-		DirectoryCopier copier = new DirectoryCopier();
-		copier.copy(indir, outdir);
-
-		Store store = new Store(indir);
+	/**
+	 * Recursively copy source directory to destination directory
+	 * 
+	 * @param srcdir source directory
+	 * @param destdir destination directory
+	 * @throws IOException 
+	 */
+	public void copy(Path srcdir, Path destdir) throws IOException {
+		String from = srcdir.toString();
+		String to = destdir.toString();
 		
-		// Generate EIF levels, principles, ... based on data in the store
-		EifGenerator eifGenerator = new EifGenerator(store);
-		eifGenerator.generate();
-
-		// Generate home page
-		HomeGenerator homeGenerator = new HomeGenerator(store);
-		homeGenerator.generate();
-
-		// Generate other pages
-		PageGenerator pageGenerator = new PageGenerator(store);
-		pageGenerator.generate();
-    }
+		for (String subdir: new String[] {"css", "downloads", "images"}) {
+			copySubdir(from, to, subdir);
+		}
+		
+	}
 }
