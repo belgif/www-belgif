@@ -28,6 +28,7 @@ package be.belgif.www.generators;
 import be.belgif.www.Store;
 import be.belgif.www.dao.Page;
 import java.io.IOException;
+import java.nio.file.Path;
 
 import java.util.Map;
 
@@ -37,8 +38,6 @@ import java.util.Map;
  * @author Bart Hanssens
  */
 public class HomeGenerator extends Generator {
-	private final Store store;
-
 	/**
 	 * Homepage
 	 * 
@@ -65,8 +64,9 @@ public class HomeGenerator extends Generator {
 	 * Constructor
 	 * 
 	 * @param store 
+	 * @param outdir 
 	 */
-	public HomeGenerator(Store store) {
-		this.store = store;
+	public HomeGenerator(Store store, Path outdir) {
+		super(store, outdir);
 	}
 }

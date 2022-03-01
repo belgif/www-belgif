@@ -37,7 +37,9 @@ import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
 import be.belgif.www.dao.Specification;
+
 import java.io.IOException;
+import java.nio.file.Path;
 
 import java.util.List;
 import java.util.Map;
@@ -52,8 +54,6 @@ import java.util.stream.Collectors;
  */
 
 public class PageGenerator extends Generator {
-	private final Store store;
-
 	/** 
 	 * Order by sequence number
 	 */
@@ -191,13 +191,15 @@ public class PageGenerator extends Generator {
 			specification(key, lang);
 		}
 	}
+	
 
 	/**
 	 * Constructor
 	 * 
 	 * @param store 
+	 * @param outdir 
 	 */
-	public PageGenerator(Store store) {
-		this.store = store;
+	public PageGenerator(Store store, Path outdir) {
+		super(store, outdir);
 	}
 }

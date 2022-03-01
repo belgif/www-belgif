@@ -35,6 +35,7 @@ import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Page;
 
 import java.io.IOException;
+import java.nio.file.Path;
 
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,6 @@ import java.util.stream.Stream;
  * @author Bart.Hanssens
  */
 public class EifGenerator extends Generator {
-	private final Store store;
 
 	/** 
 	 * Order by sequence number
@@ -153,8 +153,9 @@ public class EifGenerator extends Generator {
 	 * Constructor
 	 * 
 	 * @param store 
+	 * @param outdir 
 	 */
-	public EifGenerator(Store store) {
-		this.store = store;
+	public EifGenerator(Store store, Path outdir) {
+		super(store, outdir);
 	}
 }

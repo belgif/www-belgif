@@ -71,15 +71,15 @@ public class Main {
 		Store store = new Store(indir);
 		
 		// Generate EIF levels, principles, ... based on data in the store
-		EifGenerator eifGenerator = new EifGenerator(store);
+		EifGenerator eifGenerator = new EifGenerator(store, outdir);
 		eifGenerator.generate();
 
 		// Generate home page
-		HomeGenerator homeGenerator = new HomeGenerator(store);
+		HomeGenerator homeGenerator = new HomeGenerator(store, outdir);
 		homeGenerator.generate();
 
 		// Generate other pages
-		PageGenerator pageGenerator = new PageGenerator(store);
+		PageGenerator pageGenerator = new PageGenerator(store, outdir);
 		pageGenerator.generate();
     }
 }

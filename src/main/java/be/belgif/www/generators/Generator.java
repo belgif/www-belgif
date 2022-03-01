@@ -25,6 +25,7 @@
  */
 package be.belgif.www.generators;
 
+import be.belgif.www.Store;
 import freemarker.cache.ClassTemplateLoader;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -37,14 +38,22 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author Bart Hanssens
  */
 public abstract class Generator {
+	private final static Logger LOG = LoggerFactory.getLogger(Generator.class);
+		
+	protected final Store store;
+	protected final String outdir;
+
 	private static final Configuration cfg;
 	
 	static {
@@ -59,6 +68,11 @@ public abstract class Generator {
 
 	public abstract void generate(String lang) throws IOException;
 
+	/**
+	 * Generate static HTML into output directory
+	 * 
+	 * @throws IOException 
+	 */
 	public void generate() throws IOException {
 		for (String lang: new String[] {"nl","fr","de","en"}) {
 			generate(lang);
@@ -75,13 +89,27 @@ public abstract class Generator {
 	 */
 	protected void write(String ftl, Map map, String out) throws IOException {
 		Template template = cfg.getTemplate(ftl + ".ftl");
-		Files.createDirectories(Paths.get(out).getParent());
 		
-		try (FileOutputStream fout = new FileOutputStream(out); 
+		Path p = Paths.get(outdir, out);
+		Files.createDirectories(p.getParent());
+		
+		try (FileOutputStream fout = new FileOutputStream(p.toFile());
 			Writer w = new OutputStreamWriter(fout, StandardCharsets.UTF_8)) {
+			LOG.info("Writing to {}", p);
 			template.process(map, w);
 		} catch (TemplateException te) {
 			throw new IOException(te);
 		}
+	}
+	
+	/**
+	 * Constructor
+	 * 
+	 * @param store
+	 * @param outdir 
+	 */
+	public Generator(Store store, Path outdir) {
+		this.store = store;
+		this.outdir = outdir.toString();
 	}
 }
