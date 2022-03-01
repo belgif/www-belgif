@@ -75,7 +75,7 @@ public abstract class Generator {
 	 */
 	protected void write(String ftl, Map map, String out) throws IOException {
 		Template template = cfg.getTemplate(ftl + ".ftl");
-		Files.createDirectory(Paths.get(out).getParent());
+		Files.createDirectories(Paths.get(out).getParent());
 		
 		try (FileOutputStream fout = new FileOutputStream(out); 
 			Writer w = new OutputStreamWriter(fout, StandardCharsets.UTF_8)) {

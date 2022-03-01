@@ -72,15 +72,15 @@ public class EifGenerator extends Generator {
 			Map.of("lang", lang, "path", "/eif3/about", "p", page, "levels", levels, "principles", principles),
 			"/eif3/about." + lang + ".html");
 	}
-
+/*
 	private void levels(String lang) throws IOException {	
 		List<EifLevel> list = sortBySeq(store.getLevels());
 		Page page = store.getPages().get("eif3");
-		write("level",
+		write("levels",
 			Map.of("lang", lang, "path", "/eif3/levels", "levels", list, "p", page),
 			"/eif3/levels." + lang + ".html");
 	}
-
+*/
 	private void level(String id, String lang) throws IOException {
 		EifLevel eif = store.getLevels().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
@@ -135,7 +135,7 @@ public class EifGenerator extends Generator {
 	public void generate(String lang) throws IOException {
 		eif(lang);
 
-		levels(lang);
+	//	levels(lang);
 		for(String key: store.getLevels().keySet()) {
 			level(key, lang);
 		}
