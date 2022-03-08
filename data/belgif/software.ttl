@@ -3,21 +3,29 @@
 
 be-soft:eid-mw a doap:Project ;
 	doap:name "EID MW"@nl, "EID MW"@fr, "EID MW"@de, "EID MW"@en ;
-	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:description "Middleware voor de elektronische identiteitskaart"@nl, 
+					"Middleware pour la carte d'identité électronique"@fr, 
+					"Middleware for the electronic identity card"@en, 
+					"Middleware für den elektronischen Personalausweis"@de ;
 	doap:repository <https://github.com/fedict/eid-mw> .
 
 be-soft:best-tools a doap:Project ;
 	doap:name "BeST Tools"@nl, "BeST Tools"@fr, "BeST Tools"@de, "BeST Tools"@en ;
-	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:description "Tools voor het verwerken van BeST adressen"@nl, 
+			"Outils de traitement des adresses BeST"@fr, "Tools für die Bearbeitung von BeST-Adressen"@de, 
+			"Tools for processing BeST addresses"@en ;
 	doap:repository <https://github.com/fedict/best-tools> .
 
 be-soft:acccheck a doap:Project ;
 	doap:name "AccessibilityCheck"@nl, "AccessibilityCheck"@fr, "AccessibilityCheck"@de, "AccessibilityCheck"@en ;
-	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:description "Browsertool om de toegankelijkheid van een webpagina te verifiëren"@nl, 
+					"Outil de navigateur permettant de vérifier l'accessibilité d'une page web"@fr, 
+					"Browser-Tool zur Überprüfung der Zugänglichkeit einer Webseite"@de, 
+					"Browser tool to verify the accessibility of a web page"@en ;
 	doap:repository <https://github.com/openfed/AccessibilityCheck> .
 
 be-soft:openfed a doap:Project ;
 	doap:name "OpenFed"@nl, "OpenFed"@fr, "OpenFed"@de, "OpenFed"@en ;
-	doap:description "OpenFed Drupal WCMS distribution"@nl, "OpenFed Drupal WCMS distribution"@fr, 
-					"OpenFed Drupal WCMS distribution"@de, "OpenFed Drupal WCMS distribution"@en ;
+	doap:description "OpenFed Drupal WCMS distributie"@nl, "OpenFed Drupal WCMS distribution"@fr, 
+					"OpenFed Drupal WCMS Distribution"@de, "OpenFed Drupal WCMS distribution"@en ;
 	doap:repository <https://github.com/openfed/openfed8> .

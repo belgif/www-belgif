@@ -69,7 +69,7 @@ public class Software extends Dao {
 		super(m, iri, DOAP.NAME);
 
 		description = langMap(m, iri, DOAP.DESCRIPTION);
-		repo = m.filter(iri, DOAP.REPOSITORY, null).objects().stream().findFirst()
+		repo = m.filter(iri, DOAP.REPOSITORY_PROP, null).objects().stream().findFirst()
 			.map(IRI.class::cast)
 			.map(IRI::stringValue)
 			.orElse("");

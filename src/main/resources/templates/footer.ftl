@@ -6,7 +6,7 @@
 
 <footer>
 	<nav class="navbar justify-content-center">
-		<span>&copy; 2020</span>
+		<span>&copy; 2020 - 2022</span>
 		<a href="http://bosa.belgium.be" class="nav-link">${fod[lang]}</a>
 		<a href="http://github.com/belgif/www-belgif" class="nav-link">GitHub</a>
 		<a href="/page/accessibility.${lang}.html" class="nav-link">${wcag[lang]}</a>
