@@ -25,7 +25,6 @@
  */
 package be.belgif.www.dao;
 
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 

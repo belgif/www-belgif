@@ -36,6 +36,7 @@ import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Software;
 import be.belgif.www.dao.Specification;
 
 import java.io.IOException;
@@ -114,6 +115,14 @@ public class PageGenerator extends Generator {
 			"/page/integrators." + lang + ".html");
 	}
 
+	private void software(String lang) throws IOException {
+		Page page = store.getPages().get("components");
+		List<Software> components = sortByTitle(store.getSoftware(), lang);
+		write("components",
+			Map.of("lang", lang, "p", page, "path", "/page/components", "components", components),
+			"/page/components." + lang + ".html");
+	}
+
 	private void legislations(String lang) throws IOException {
 		Page page = store.getPages().get("legislations");
 		List<Legislation> legislations = sortByDate(store.getLegislations());
@@ -182,6 +191,7 @@ public class PageGenerator extends Generator {
 			activity(key, lang);
 		}
 		integrators(lang);
+
 		legislations(lang);
 		for(String key: store.getLegislations().keySet()) {
 			legislation(key, lang);
@@ -191,6 +201,7 @@ public class PageGenerator extends Generator {
 		for(String key: store.getSpecifications().keySet()) {
 			specification(key, lang);
 		}
+		software(lang);
 	}
 	
 

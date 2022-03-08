@@ -1,0 +1,23 @@
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix be-soft: <http://www.belgif.be/id/software/> .
+
+be-soft:eid-mw a doap:Project ;
+	doap:name "EID MW"@nl, "EID MW"@fr, "EID MW"@de, "EID MW"@en ;
+	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:repository <https://github.com/fedict/eid-mw> .
+
+be-soft:best-tools a doap:Project ;
+	doap:name "BeST Tools"@nl, "BeST Tools"@fr, "BeST Tools"@de, "BeST Tools"@en ;
+	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:repository <https://github.com/fedict/best-tools> .
+
+be-soft:acccheck a doap:Project ;
+	doap:name "AccessibilityCheck"@nl, "AccessibilityCheck"@fr, "AccessibilityCheck"@de, "AccessibilityCheck"@en ;
+	doap:description "EID middleware"@nl, "EID middleware"@fr, "EID middleware"@de, "EID middleware"@en ;
+	doap:repository <https://github.com/openfed/AccessibilityCheck> .
+
+be-soft:openfed a doap:Project ;
+	doap:name "OpenFed"@nl, "OpenFed"@fr, "OpenFed"@de, "OpenFed"@en ;
+	doap:description "OpenFed Drupal WCMS distribution"@nl, "OpenFed Drupal WCMS distribution"@fr, 
+					"OpenFed Drupal WCMS distribution"@de, "OpenFed Drupal WCMS distribution"@en ;
+	doap:repository <https://github.com/openfed/openfed8> .

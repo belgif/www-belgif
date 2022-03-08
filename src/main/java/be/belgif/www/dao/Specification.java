@@ -25,7 +25,6 @@
  */
 package be.belgif.www.dao;
 
-import static be.belgif.www.dao.Dao.firstString;
 import java.util.Map;
 
 import org.eclipse.rdf4j.model.IRI;

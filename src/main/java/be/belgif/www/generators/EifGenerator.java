@@ -98,7 +98,6 @@ public class EifGenerator extends Generator {
 			"/eif3/principles." + lang + ".html");
 	}
 
-
 	private void principle(String id, String lang) throws IOException {
 		EifPrinciple eif = store.getPrinciples().get(id);
 		List<EifRecommendation> list = sortBySeq(eif.getRecommendations().stream()
@@ -107,7 +106,6 @@ public class EifGenerator extends Generator {
 			Map.of("lang", lang, "path", "/eif3/principle/" + id, "p", eif, "recommendations", list),
 			"/eif3/principle/" + id + "." + lang + ".html");
 	}
-
 
 	private void recommendation(String id, String lang) throws IOException {
 		EifRecommendation eif = store.getRecommendations().get(id);

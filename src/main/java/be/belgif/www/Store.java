@@ -34,6 +34,7 @@ import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Software;
 import be.belgif.www.dao.Specification;
 
 import java.io.IOException;
@@ -52,6 +53,7 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.util.Values;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.DOAP;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -80,6 +82,7 @@ public class Store  {
 	private Map<String,Specification> specifications = new HashMap<>();
 	private Map<String,Legislation> legislations = new HashMap<>();
 	private Map<String,Activity> activities = new HashMap<>();
+	private Map<String,Software> software = new HashMap<>();
 
 	/**
 	 * Get EIF Levels as a map
@@ -162,6 +165,15 @@ public class Store  {
 	}
 
 	/**
+	 * Get software components as a map
+	 * 
+	 * @return 
+	 */
+	public Map<String,Software> getSoftware() {
+		return software;
+	}
+
+	/**
 	 * Turn model in a map of specific data types
 	 * 
 	 * @param <T>
@@ -196,6 +208,7 @@ public class Store  {
 		legislations = filter("Legislations", m, RDF.TYPE, StoreHelper.legislation, true, s -> new Legislation(m,s));
 		activities = filter("Activities", m, RDF.TYPE, FOAF.PROJECT, true, s -> new Activity(m,s));
 		links = filter("Links", m, RDF.TYPE, FOAF.DOCUMENT, false, s -> new Link(m,s));
+		software = filter("Software", m, RDF.TYPE, DOAP.PROJECT, true, s -> new Software(m,s));
 	}
 	
 	/**
