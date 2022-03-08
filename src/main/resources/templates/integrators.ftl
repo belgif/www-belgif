@@ -3,27 +3,24 @@
 <#include "head.ftl">
 <body>
 <#include "header.ftl">
-<main class="container-fluid">
-	<h2>${p.getTitle(lang)}</h2>
+<main class="container-fluid bg-light">
+	<h1>${p.getTitle(lang)}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
-		<#list legislations>
-		<#items as l>
+		<#list integrators as org>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
-				<div class="card-header">
-					${l.getDate()}
+				<div class="card-img-top text-center">
+					<a href="${org.getWebsite()}" class="stretched-link">
+						<img src="/images/${org.getLogo()}" alt="logo"/>
+					</a>
 				</div>
 				<div class="card-body">
-					<h5 class="card-title">
-					<a href="/page/legislation/${l.localId}.${lang}.html" class="stretched-link">
-					${l.getTitle(lang)}</a>
-					</h5>
-					<p class="lead">${l.getDescription(lang)}</p>
+					<h5 class="card-title">${org.getTitle(lang)}</h5>
+					<p class="lead">${org.getDescription(lang)}</p>
 				</div>
 			</section>
 			</div>
-		</#items>
 		</#list>
 	</div>
 </main>

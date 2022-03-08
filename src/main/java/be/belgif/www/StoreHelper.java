@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,44 +25,9 @@
  */
 package be.belgif.www;
 
-import be.belgif.www.dao.Activity;
-import be.belgif.www.dao.EifLevel;
-import be.belgif.www.dao.EifPrinciple;
-import be.belgif.www.dao.EifRecommendation;
-import be.belgif.www.dao.Legislation;
-import be.belgif.www.dao.Organization;
-import be.belgif.www.dao.Page;
-import be.belgif.www.dao.Specification;
-
-import io.micronaut.context.annotation.Value;
-
-import java.io.IOException;
-import java.io.Reader;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.inject.Singleton;
-
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.ValueFactory;
-import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.impl.SimpleValueFactory;
-import org.eclipse.rdf4j.model.vocabulary.FOAF;
-import org.eclipse.rdf4j.model.vocabulary.ORG;
-import org.eclipse.rdf4j.model.vocabulary.RDF;
-import org.eclipse.rdf4j.model.vocabulary.SKOS;
-import org.eclipse.rdf4j.rio.RDFFormat;
-import org.eclipse.rdf4j.rio.Rio;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  *

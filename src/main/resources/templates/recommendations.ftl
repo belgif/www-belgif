@@ -7,8 +7,7 @@
 	<h1>${page.getTitle(lang)}</h1>
 	<p>${page.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-4">
-		<#list recommendations>
-		<#items as r>
+		<#list recommendations as r>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
 				<div class="card-header bg-dark">
@@ -22,7 +21,6 @@
 				</div>
 			</section>
 			</div>
-		</#items>
 		</#list>
 	</div>
 </main>

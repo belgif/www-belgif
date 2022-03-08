@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c)2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,7 +25,6 @@
  */
 package be.belgif.www.dao;
 
-
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 
@@ -36,6 +35,12 @@ import org.eclipse.rdf4j.model.Model;
  */
 public class Activity extends DaoRelated {
 
+	/**
+	 * Constructor
+	 * 
+	 * @param m RDF model
+	 * @param iri ID of the activity
+	 */
 	public Activity(Model m, IRI iri) {
 		super(m, iri);
 	}

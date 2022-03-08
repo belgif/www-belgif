@@ -14,7 +14,7 @@
 		<a href="${path}.en.html" onclick="Cookies.set('lang', 'en');" hreflang="en" class="nav-link <#if lang == 'en'>active</#if>">EN</a>
 	</nav>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="#" class="navbar-brand"><img id="logo" src="/public/belgif.png" alt="Belgif logo"/></a>
+		<a href="#" class="navbar-brand"><img id="logo" src="/images/belgif.png" alt="Belgif logo"/></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" 
 				aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>

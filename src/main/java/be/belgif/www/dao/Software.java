@@ -25,26 +25,38 @@
  */
 package be.belgif.www.dao;
 
+import java.util.Map;
+
 import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.DOAP;
 
 /**
- * Legislation or agreement
+ * An (open source) component
  * 
  * @author Bart Hanssens
  */
-public class Legislation extends DaoRelated {
-	private final String date;
+public class Software extends Dao {
+	private final Map<String, String> description;
+	private final String repo;
 
 	/**
-	 * Get (publication) date of this agreement
+	 * Get description in a specific language
+	 * 
+	 * @param lang language code
+	 * @return 
+	 */
+	public String getDescription(String lang) {
+		return description.get(lang);
+	}
+
+	/**
+	 * Get URL of the repository
 	 * 
 	 * @return 
 	 */
-	public String getDate() {
-		return date;
+	public String getRepository() {
+		return repo;
 	}
 
 	/**
@@ -53,11 +65,13 @@ public class Legislation extends DaoRelated {
 	 * @param m RDF model
 	 * @param iri ID
 	 */
-	public Legislation(Model m, IRI iri) {
-		super(m, iri);
+	public Software(Model m, IRI iri) {
+		super(m, iri, DOAP.NAME);
 
-		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst()
-				.map(Literal.class::cast)
-				.map(Literal::stringValue).orElse("");
+		description = langMap(m, iri, DOAP.DESCRIPTION);
+		repo = m.filter(iri, DOAP.REPOSITORY, null).objects().stream().findFirst()
+			.map(IRI.class::cast)
+			.map(IRI::stringValue)
+			.orElse("");
 	}
 }

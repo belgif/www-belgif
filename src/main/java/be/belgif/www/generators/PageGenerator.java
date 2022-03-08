@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -23,7 +23,7 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www.controllers;
+package be.belgif.www.generators;
 
 import be.belgif.www.Store;
 import be.belgif.www.dao.Activity;
@@ -36,30 +36,25 @@ import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Software;
 import be.belgif.www.dao.Specification;
 
-import io.micronaut.http.HttpResponse;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.views.View;
+import java.io.IOException;
+import java.nio.file.Path;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import javax.inject.Inject;
 
 /**
  * Controller for most (non-EIF3) webpages
  * 
  * @author Bart.Hanssens
  */
-@Controller("/page")
-public class PageController {
-	@Inject
-	Store store;
 
+public class PageGenerator extends Generator {
 	/** 
 	 * Order by sequence number
 	 */
@@ -105,78 +100,118 @@ public class PageController {
 		return urls.stream().map(u -> links.get(u)).filter(Objects::nonNull).collect(Collectors.toUnmodifiableList());		
 	}
 
-	@View("page")
-	@Get("/{id}.{lang}.html")
-	public HttpResponse page(String id, String lang) {
+	private void page(String id, String lang) throws IOException {
 		Page page = store.getPages().get(id);
-		return HttpResponse.ok(Map.of( "lang", lang, "path", "/page/" + id, "p", page));
+		write("page",
+			Map.of("lang", lang, "path", "/page/" + id, "p", page),
+			"/page/" + id + "." + lang + ".html");
 	}
-	
-	@View("integrators")
-	@Get("/integrators.{lang}.html")
-	public HttpResponse integrators(String lang) {
+
+	private void integrators(String lang) throws IOException {
 		Page page = store.getPages().get("integrators");
 		List<Organization> integrators = sortByTitle(store.getIntegrators(), lang);
-		return HttpResponse.ok(Map.of( "lang", lang, "p", page, "path", "/page/integrators", "integrators", integrators));
+		write("integrators",
+			Map.of("lang", lang, "p", page, "path", "/page/integrators", "integrators", integrators),
+			"/page/integrators." + lang + ".html");
 	}
 
-	@View("legislations")
-	@Get("/legislations.{lang}.html")
-	public HttpResponse legislations(String lang) {
+	private void software(String lang) throws IOException {
+		Page page = store.getPages().get("components");
+		List<Software> components = sortByTitle(store.getSoftware(), lang);
+		write("components",
+			Map.of("lang", lang, "p", page, "path", "/page/components", "components", components),
+			"/page/components." + lang + ".html");
+	}
+
+	private void legislations(String lang) throws IOException {
 		Page page = store.getPages().get("legislations");
 		List<Legislation> legislations = sortByDate(store.getLegislations());
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislations", "p", page, "legislations", legislations));
+		write("legislations",
+			Map.of("lang", lang, "path", "/page/legislations", "p", page, "legislations", legislations),
+			"/page/legislations." + lang + ".html");
 	}
 
-	@View("legislation")
-	@Get("/legislation/{id}.{lang}.html")
-	public HttpResponse legislation(String id, String lang) {
+	private void legislation(String id, String lang) throws IOException {
 		Legislation legislation = store.getLegislations().get(id);
-
 		List<Link> links = getLinks(legislation);
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), legislation.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		legislation.getRecommendations()));
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/legislation/" + id, "p", legislation, 
+		write("legislation",
+			Map.of("lang", lang, "path", "/page/legislation/" + id, "p", legislation, 
 										"links", links,
-										"principles", principles, "recommendations", recommendations));
+										"principles", principles, "recommendations", recommendations),
+			"/page/legislation/" + id + "." + lang + ".html");
 	}
 
-	@View("activitys")
-	@Get("/activities.{lang}.html")
-	public HttpResponse activities(String lang) {
+	private void activities(String lang) throws IOException {
 		Page page = store.getPages().get("activities");
 		List<Activity> activities = sortByTitle(store.getActivities(), lang);
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/activities", "p", page, "activities", activities));
+		write("activitys",
+			Map.of("lang", lang, "path", "/page/activities", "p", page, "activities", activities),
+			"/page/activities." + lang + ".html");
 	}
 
-	@View("activity")
-	@Get("/activity/{id}.{lang}.html")
-	public HttpResponse activity(String id, String lang) {
+	private void activity(String id, String lang) throws IOException {
 		Activity activity = store.getActivities().get(id);
-
 		List<Link> links = getLinks(activity);
 		List<EifPrinciple> principles = sortBySeq(lookup(store.getPrinciples(), activity.getPrinciples()));	
 		List<EifRecommendation> recommendations = sortBySeq(lookup(store.getRecommendations(), 
 																		activity.getRecommendations()));
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/activity/" + id, "p", activity, 
+		write("activity",
+			Map.of("lang", lang, "path", "/page/activity/" + id, "p", activity, 
 										"links", links,
-										"principles", principles, "recommendations", recommendations));
+										"principles", principles, "recommendations", recommendations),
+			"/page/activity/" + id + "." + lang + ".html");
 	}
 
-
-	@View("specification")
-	@Get("/specification/{id}.{lang}.html")
-	public HttpResponse specification(String id, String lang) {
+	private void specification(String id, String lang) throws IOException {
 		Specification specification = store.getSpecifications().get(id);
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/specification/" + id, "p", specification));
+		write("specification",
+			Map.of("lang", lang, "path", "/page/specification/" + id, "p", specification),
+			"/page/specification/" + id + "." + lang + ".html");
 	}
 
-	@View("specifications")
-	@Get("/specifications.{lang}.html")
-	public HttpResponse specifications(String lang) {
+	private void specifications(String lang) throws IOException {
 		Page page = store.getPages().get("specifications");
 		List<Specification> specifications = sortByTitle(store.getSpecifications(), lang);
-		return HttpResponse.ok(Map.of("lang", lang, "path", "/page/specifications", "p", page, "specifications", specifications));
+		write("specifications",
+			Map.of("lang", lang, "path", "/page/specifications", "p", page, "specifications", specifications),
+			"/page/specifications." + lang + ".html");
+	}
+	
+
+	@Override
+	public void generate(String lang) throws IOException {
+		for(String key: store.getPages().keySet()) {
+			page(key, lang);
+		}
+		activities(lang);
+		for(String key: store.getActivities().keySet()) {
+			activity(key, lang);
+		}
+		integrators(lang);
+
+		legislations(lang);
+		for(String key: store.getLegislations().keySet()) {
+			legislation(key, lang);
+		}
+
+		specifications(lang);
+		for(String key: store.getSpecifications().keySet()) {
+			specification(key, lang);
+		}
+		software(lang);
+	}
+	
+
+	/**
+	 * Constructor
+	 * 
+	 * @param store 
+	 * @param outdir 
+	 */
+	public PageGenerator(Store store, Path outdir) {
+		super(store, outdir);
 	}
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -34,9 +34,8 @@ import be.belgif.www.dao.Legislation;
 import be.belgif.www.dao.Link;
 import be.belgif.www.dao.Organization;
 import be.belgif.www.dao.Page;
+import be.belgif.www.dao.Software;
 import be.belgif.www.dao.Specification;
-
-import io.micronaut.context.annotation.Value;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -47,15 +46,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.inject.Singleton;
+import java.util.stream.Stream;
 
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.impl.LinkedHashModel;
 import org.eclipse.rdf4j.model.util.Values;
 import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import org.eclipse.rdf4j.model.vocabulary.DOAP;
 import org.eclipse.rdf4j.model.vocabulary.FOAF;
 import org.eclipse.rdf4j.model.vocabulary.ORG;
 import org.eclipse.rdf4j.model.vocabulary.RDF;
@@ -67,18 +65,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Simple data store, based upon reading a series of RDF data files
+ * Simple data store, populated by reading a series of RDF data files
  * 
- * @author Bart.Hanssens
+ * @author Bart Hanssens
  */
-@Singleton
-public class Store implements AutoCloseable {
+public class Store  {
 	private final Logger LOG = LoggerFactory.getLogger(Store.class);
 
-	@Value("${be.belgif.www.data:.}")
-	protected String dataPath;
-	
-	/** Various types of data */
+	/** Various types of pages */
 	private Map<String,EifLevel> levels = new HashMap<>();
 	private Map<String,EifPrinciple> principles = new HashMap<>();
 	private Map<String,EifRecommendation> recommendations = new HashMap<>();
@@ -88,41 +82,95 @@ public class Store implements AutoCloseable {
 	private Map<String,Specification> specifications = new HashMap<>();
 	private Map<String,Legislation> legislations = new HashMap<>();
 	private Map<String,Activity> activities = new HashMap<>();
-	
+	private Map<String,Software> software = new HashMap<>();
+
+	/**
+	 * Get EIF Levels as a map
+	 * @return 
+	 */
 	public Map<String,EifLevel> getLevels() {
 		return levels;
 	}
 
+	/**
+	 * Get EIF Principles as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,EifPrinciple> getPrinciples() {
 		return principles;
 	}
 
+	/**
+	 * Get EIF Recommendations as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,EifRecommendation> getRecommendations() {
 		return recommendations;
 	}
 
+	/**
+	 * Get links as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Link> getLinks() {
 		return links;
 	}
 
+	/**
+	 * Get static pages as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Page> getPages() {
 		return pages;
 	}
 
+	/**
+	 * Get service integrators as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Organization> getIntegrators() {
 		return integrators;
 	}
 
+	/**
+	 * Get specifications as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Specification> getSpecifications() {
 		return specifications;
 	}
 
+	/**
+	 * Get legislation as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Legislation> getLegislations() {
 		return legislations;
 	}
 
+	/**
+	 * Get activities as a map
+	 * 
+	 * @return 
+	 */
 	public Map<String,Activity> getActivities() {
 		return activities;
+	}
+
+	/**
+	 * Get software components as a map
+	 * 
+	 * @return 
+	 */
+	public Map<String,Software> getSoftware() {
+		return software;
 	}
 
 	/**
@@ -160,6 +208,7 @@ public class Store implements AutoCloseable {
 		legislations = filter("Legislations", m, RDF.TYPE, StoreHelper.legislation, true, s -> new Legislation(m,s));
 		activities = filter("Activities", m, RDF.TYPE, FOAF.PROJECT, true, s -> new Activity(m,s));
 		links = filter("Links", m, RDF.TYPE, FOAF.DOCUMENT, false, s -> new Link(m,s));
+		software = filter("Software", m, RDF.TYPE, DOAP.PROJECT, true, s -> new Software(m,s));
 	}
 	
 	/**
@@ -178,16 +227,24 @@ public class Store implements AutoCloseable {
 		});
 	}
 
-	@PostConstruct
-	public void load() throws Exception {
-		LOG.info("Loading data from directory {}", dataPath);
+	/**
+	 * Constructor
+	 * 
+	 * @param indir input directory
+	 * @throws IOException 
+	 */
+	public Store(Path indir) throws IOException {
+		LOG.info("Loading data from directory {}", indir);
 
 		Model m = new LinkedHashModel();
 		
-		/** Load all files from the data directory into a memory model */
-		List<Path> files = Files.list(Path.of(dataPath))
-								.filter(p -> p.toFile().isFile())
-								.collect(Collectors.toList());
+		List<Path> files;
+	
+		// Load all files from the data directory into a memory model
+		try (Stream<Path> s = Files.list(Path.of(indir.toString(), "belgif"))) {
+			files = s.filter(p -> p.toFile().isFile()).collect(Collectors.toList());
+		}
+	
 		for (Path p: files ) {
 			LOG.info("Loading data from {}", p);
 			
@@ -200,11 +257,5 @@ public class Store implements AutoCloseable {
 		}
 		fixFoafPage(m);
 		processAll(m);
-	}
-
-	@PreDestroy
-	@Override
-	public void close() throws Exception {
-
 	}
 }

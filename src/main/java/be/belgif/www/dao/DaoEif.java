@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020, Bart Hanssens <bart.hanssens@bosa.fgov.be>
+ * Copyright (c) 2022, FPS BOSA
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -33,22 +33,39 @@ import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 /**
- *
+ * Base class for EIF things
+ * 
  * @author Bart.Hanssens
  */
-public class DaoEif extends Dao {
+public abstract class DaoEif extends Dao {
 	private final int seq;
 
 	private final Map<String, String> description;
 
+	/**
+	 * Get sequence number / order
+	 * @return 
+	 */
 	public int getSequence() {
 		return seq;
 	}
 
+	/**
+	 * Get description in a specific language
+	 * 
+	 * @param lang language code
+	 * @return 
+	 */
 	public String getDescription(String lang) {
 		return description.get(lang);
 	}
 
+	/**
+	 * Constructor
+	 * 
+	 * @param m RDF model
+	 * @param iri ID
+	 */
 	public DaoEif(Model m, IRI iri) {
 		super(m, iri);
 

@@ -62,7 +62,6 @@ In diesem Zusammenhang bietet sie einen integrierten Zugriff auf Daten.</p>
 <p>Gegenwärtig sind in Belgien 6 Integratoren des öffentlichen Dienstes tätig.</p>
 """@de .
 
-
 be-page:activities a dcmi:Text ;
 	dcterms:title "Activities"@en, "Activiteiten"@nl, "Activités"@fr, "Aktivitäten"@de ;
 	dcterms:description "Working groups, meetings and other initiatives"@en ,

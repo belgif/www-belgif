@@ -23,41 +23,50 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-package be.belgif.www.dao;
+package be.belgif.www.generators;
 
-import org.eclipse.rdf4j.model.IRI;
-import org.eclipse.rdf4j.model.Literal;
-import org.eclipse.rdf4j.model.Model;
-import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
+import be.belgif.www.Store;
+import be.belgif.www.dao.Page;
+import java.io.IOException;
+import java.nio.file.Path;
+
+import java.util.Map;
 
 /**
- * Legislation or agreement
+ * Language page and homepage controller
  * 
  * @author Bart Hanssens
  */
-public class Legislation extends DaoRelated {
-	private final String date;
-
+public class HomeGenerator extends Generator {
 	/**
-	 * Get (publication) date of this agreement
+	 * Homepage
 	 * 
-	 * @return 
+	 * @param lang language code
+	 * @throws IOException 
 	 */
-	public String getDate() {
-		return date;
+	private void index(String lang) throws IOException {
+		Page eif = store.getPages().get("home-eif");
+		Page activities = store.getPages().get("home-activities");
+		Page legal = store.getPages().get("home-legal");
+		Page specs = store.getPages().get("home-specs");
+
+		write("home", Map.of("lang", lang, "path", "/index", 
+			"eif", eif, "activities", activities, "legal", legal, "specs", specs),
+			"/index." + lang + ".html");
+	}
+
+	@Override
+	public void generate(String lang) throws IOException {
+		index(lang);
 	}
 
 	/**
 	 * Constructor
 	 * 
-	 * @param m RDF model
-	 * @param iri ID
+	 * @param store 
+	 * @param outdir 
 	 */
-	public Legislation(Model m, IRI iri) {
-		super(m, iri);
-
-		date = m.filter(iri, DCTERMS.ISSUED, null).objects().stream().findFirst()
-				.map(Literal.class::cast)
-				.map(Literal::stringValue).orElse("");
+	public HomeGenerator(Store store, Path outdir) {
+		super(store, outdir);
 	}
 }

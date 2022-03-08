@@ -6,8 +6,7 @@
 <main class="container-fluid">
 	<h2>${pri[lang]}</h2>
 	<div class="row row-cols-1 row-cols-md-3">
-		<#list principles>
-		<#items as p>
+		<#list principles as p>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
 				<div class="card-body">
@@ -18,7 +17,6 @@
 				</div>
 			</section>
 			</div>
-		</#items>
 		</#list>
 	</div>
 </main>
