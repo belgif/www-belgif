@@ -13,12 +13,13 @@
 
 <head>
 <meta charset='UTF-8'>
-<link rel="stylesheet" type="text/css" href="/webjars/font-awesome/5.15.4/css/all.min.css" />
-<link rel="stylesheet" type="text/css" href="/webjars/bootstrap/4.6.1/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/public/style.css" />
-<script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
-<script src="/webjars/js-cookie/2.2.1/js.cookie.min.js"></script>
-<script src="/webjars/bootstrap/4.6.0-1/js/bootstrap.bundle.min.js"></script>
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/css/font-awesome/all.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<script src="/js/jquery/jquery.min.js"></script>
+<script src="/js/js-cookie/js.cookie.min.js"></script>
+<script src="/js/bootstrap/bootstrap.bundle.min.js"></script>
 
 <#if p?has_content>
 	<title>Belgif | ${p.getTitle(lang)}</title>

@@ -20,15 +20,13 @@
 				<th scope="col">${area[lang]}</th></tr>
 		</thead>
 		<tbody>
-			<#list specifications>
-			<#items as s>
+			<#list specifications as s>
 			    <tr>
 					<td><a href="/page/specification/${s.localId}.${lang}.html">${s.getTitle(lang)}</a></td>
 					<td>${s.version!""}</td>
 					<td>${s.getSubject(lang)}</td>
 				</tr>
-		</#items>
-		</#list>
+			</#list>
 		</tbody>
 		</table>
 	</div>

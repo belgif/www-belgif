@@ -218,8 +218,7 @@ public class Store  {
 	 * Constructor
 	 * 
 	 * @param indir input directory
-	 * @throws java.io.IOException
-	 * @throws Exception 
+	 * @throws IOException 
 	 */
 	public Store(Path indir) throws IOException {
 		LOG.info("Loading data from directory {}", indir);

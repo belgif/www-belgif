@@ -77,7 +77,7 @@ public class DirectoryCopier {
 		String from = srcdir.toString();
 		String to = destdir.toString();
 		
-		for (String subdir: new String[] {"css", "downloads", "images"}) {
+		for (String subdir: new String[] {"css", "js", "downloads", "images"}) {
 			copySubdir(from, to, subdir);
 		}
 		

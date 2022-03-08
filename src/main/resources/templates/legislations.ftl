@@ -7,8 +7,7 @@
 	<h2>${p.getTitle(lang)}</h2>
 	<p>${p.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
-		<#list legislations>
-		<#items as l>
+		<#list legislations as l>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
 				<div class="card-header">
@@ -23,7 +22,6 @@
 				</div>
 			</section>
 			</div>
-		</#items>
 		</#list>
 	</div>
 </main>

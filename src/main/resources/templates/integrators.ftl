@@ -7,8 +7,7 @@
 	<h1>${p.getTitle(lang)}</h1>
 	<p>${p.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
-		<#list integrators>
-		<#items as org>
+		<#list integrators as org>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">
 				<div class="card-img-top text-center">
@@ -22,7 +21,6 @@
 				</div>
 			</section>
 			</div>
-		</#items>
 		</#list>
 	</div>
 </main>

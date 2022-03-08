@@ -11,7 +11,7 @@
 <body class="language-selection-page">
 <main class="container-fluid">
 	<div class="logo">
-		<img src="public/belgif.png" class="mx-auto d-block" alt="Belgif logo"/>
+		<img src="/images/belgif.png" class="mx-auto d-block" alt="Belgif logo"/>
 	</div>
 	<div class="row bg-light">
 	<div class="card-deck w-100 text-center mx-auto">

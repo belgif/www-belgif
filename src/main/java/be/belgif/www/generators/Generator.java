@@ -49,7 +49,7 @@ import org.slf4j.LoggerFactory;
  * @author Bart Hanssens
  */
 public abstract class Generator {
-	private final static Logger LOG = LoggerFactory.getLogger(Generator.class);
+	protected final static Logger LOG = LoggerFactory.getLogger(Generator.class);
 		
 	protected final Store store;
 	protected final String outdir;
