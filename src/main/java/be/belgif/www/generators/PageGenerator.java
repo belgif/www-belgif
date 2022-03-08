@@ -102,7 +102,7 @@ public class PageGenerator extends Generator {
 	private void page(String id, String lang) throws IOException {
 		Page page = store.getPages().get(id);
 		write("page",
-			Map.of( "lang", lang, "path", "/page/" + id, "p", page),
+			Map.of("lang", lang, "path", "/page/" + id, "p", page),
 			"/page/" + id + "." + lang + ".html");
 	}
 
@@ -110,7 +110,7 @@ public class PageGenerator extends Generator {
 		Page page = store.getPages().get("integrators");
 		List<Organization> integrators = sortByTitle(store.getIntegrators(), lang);
 		write("integrators",
-			Map.of( "lang", lang, "p", page, "path", "/page/integrators", "integrators", integrators),
+			Map.of("lang", lang, "p", page, "path", "/page/integrators", "integrators", integrators),
 			"/page/integrators." + lang + ".html");
 	}
 
@@ -174,6 +174,9 @@ public class PageGenerator extends Generator {
 
 	@Override
 	public void generate(String lang) throws IOException {
+		for(String key: store.getPages().keySet()) {
+			page(key, lang);
+		}
 		activities(lang);
 		for(String key: store.getActivities().keySet()) {
 			activity(key, lang);
@@ -183,9 +186,7 @@ public class PageGenerator extends Generator {
 		for(String key: store.getLegislations().keySet()) {
 			legislation(key, lang);
 		}
-		for(String key: store.getPages().keySet()) {
-			page(key, lang);
-		}
+
 		specifications(lang);
 		for(String key: store.getSpecifications().keySet()) {
 			specification(key, lang);

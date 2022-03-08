@@ -7,7 +7,6 @@
 	<h2>${p.getTitle(lang)}</h2>
 	<p>${p.getDescription(lang)}</p>
 	<div class="row row-cols-1 row-cols-md-3">
-		<p>Size: ${activities?size}</p>
 		<#list activities as a>
 			<div class="col mb-4">
 			<section class="card bg-light h-100">

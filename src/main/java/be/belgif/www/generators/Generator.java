@@ -57,7 +57,7 @@ public abstract class Generator {
 	private static final Configuration cfg;
 	
 	static {
-		cfg = new Configuration(Configuration.VERSION_2_3_31);
+		cfg = new Configuration(Configuration.getVersion());
         cfg.setDefaultEncoding("UTF-8");
 		cfg.setTemplateLoader(new ClassTemplateLoader(be.belgif.www.Main.class, "/templates"));
         cfg.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER);
@@ -87,7 +87,7 @@ public abstract class Generator {
 	 * @param out name of output file
 	 * @throws IOException 
 	 */
-	protected void write(String ftl, Map map, String out) throws IOException {
+	protected void write(String ftl, Map<String,Object> map, String out) throws IOException {
 		Template template = cfg.getTemplate(ftl + ".ftl");
 		
 		Path p = Paths.get(outdir, out);
