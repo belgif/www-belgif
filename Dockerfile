@@ -23,7 +23,7 @@ RUN cd /home/belgif && \
   git clone https://github.com/belgif/rest-security && \
   cd /home/belgif/rest-security && \
   mvn clean site && \
-  mv /home/belgif/rest-security/target/site/doc /tmp/belgif/specification/security-guide
+  mv /home/belgif/rest-security/target/site/doc /tmp/belgif/specification/rest/security-guide
 
 
 RUN cd /home/belgif && \
