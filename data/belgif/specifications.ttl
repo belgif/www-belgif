@@ -46,6 +46,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
+	owl:versionInfo "2022-03-31";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
 	dcterms:abstract 
@@ -53,7 +54,7 @@ be-spec:gcloud-rest a doap:Specification ;
 		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
 		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
 		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
-	foaf:page <https://www.gcloud.belgium.be/rest/> .
+	foaf:page <https://www.belgif.be/specification/gcloud/rest/> .
 
 be-spec:oslo a doap:Specification ;
 	dcterms:title "OSLO"@en, "OSLO"@nl, "OSLO"@fr, "OSLO"@de ;
