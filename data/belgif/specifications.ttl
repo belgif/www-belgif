@@ -58,7 +58,7 @@ be-spec:gcloud-rest a doap:Specification ;
 
 be-spec:gcloud-security a doap:Specification ;
 	dcterms:title "REST security guidelines"@en, "REST beveiligingsrichtlijnen"@nl, "REST sécurité lignes directrices"@fr, "REST Sicherheitsrichtlinien"@de ;
-	owl:versionInfo "2022-04-23";
+	owl:versionInfo "2022-04-28 (draft)";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "REST security guidelines"@en, "REST beveiligingsrichtlijnen"@nl, "REST sécurité lignes directrices"@fr, "REST Sicherheitsrichtlinien"@de ;
 	dcterms:abstract 
