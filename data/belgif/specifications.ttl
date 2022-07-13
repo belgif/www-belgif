@@ -72,7 +72,7 @@ be-spec:oslo a doap:Specification ;
 	dcterms:title "OSLO"@en, "OSLO"@nl, "OSLO"@fr, "OSLO"@de ;
 	owl:versionInfo "2";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
-	dcterms:description "Open Standards for Linkend Organisations"@en, "Open Standaarden voor Linkende Organisaties"@nl, "Open Standards for Linkend Organisations"@fr, "Open Standards for Linkend Organisations"@de ;
+	dcterms:description "Open Standards for Linked Organisations"@en, "Open Standaarden voor Linkende Organisaties"@nl, "Open Standards for Linked Organisations"@fr, "Open Standards for Linked Organisations"@de ;
 	dcterms:abstract 
 		"With OSLO, InformatieVlaanderen focuses on semantic interoperability. The vocabularies and application profiles in this project were developed in co-creation with Flemish administrations, local governments, federal partners, the European Commission and private partners."@en ,
 		"Met OSLO zet InformatieVlaanderen in op semantische interoperabiliteit. De vocabularia en applicatieprofielen in dit project werden ontwikkeld in co-creatie met Vlaamse administraties, lokale besturen, federale partners, de Europese Commissie en private partners."@nl ,
