@@ -46,7 +46,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
-	owl:versionInfo "2022-03-31";
+	owl:versionInfo "2022-10-27";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
 	dcterms:abstract 
