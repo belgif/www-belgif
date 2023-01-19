@@ -45,21 +45,34 @@ be-spec:fedservicesplatform a doap:Specification ;
 	foaf:page <https://github.com/belgif/fedvoc/> .
 
 be-spec:gcloud-rest a doap:Specification ;
-	dcterms:title "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
+	dcterms:title "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
+	owl:versionInfo "2022-10-27";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
-	dcterms:description "GCloud REST guidelines"@en, "GCloud REST richtlijnen"@nl, "Lignes directrices GCloud REST"@fr, "GCloud REST Richtlinien"@de ;
+	dcterms:description "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
 	dcterms:abstract 
 		"This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ,
 		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
 		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
 		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
-	foaf:page <https://www.gcloud.belgium.be/rest/> .
+	foaf:page <https://www.belgif.be/specification/rest/api-guide> .
+
+be-spec:gcloud-security a doap:Specification ;
+	dcterms:title "REST security guidelines"@en, "REST beveiligingsrichtlijnen"@nl, "REST sécurité lignes directrices"@fr, "REST Sicherheitsrichtlinien"@de ;
+	owl:versionInfo "2022-04-28 (draft)";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "REST security guidelines"@en, "REST beveiligingsrichtlijnen"@nl, "REST sécurité lignes directrices"@fr, "REST Sicherheitsrichtlinien"@de ;
+	dcterms:abstract 
+		"This style guide for RESTful services is a collaborative effort by several Belgian government institutions. It aims to improve compatibility between RESTful services offered by government institutions or any other organization adopting the guidelines."@en ,
+		"Deze stijlgids voor RESTful services is een samenwerking van verschillende Belgische overheidsinstellingen. Het is bedoeld om de compatibiliteit te verbeteren tussen RESTful-services die worden aangeboden door overheidsinstellingen of andere organisaties die de richtlijnen toepassen."@nl ,
+		"Ce guide de style pour les services RESTful est un effort collaboratif de plusieurs institutions gouvernementales belges. Il vise à améliorer la compatibilité entre les services RESTful proposés par les institutions gouvernementales ou toute autre organisation adoptant les directives."@fr ,
+		"Dieser Styleguide für RESTful-Services ist eine Zusammenarbeit mehrerer belgischer Regierungsinstitutionen. Ziel ist es, die Kompatibilität zwischen RESTful-Diensten zu verbessern, die von staatlichen Institutionen oder anderen Organisationen angeboten werden, die die Richtlinien übernehmen."@de ;
+	foaf:page <https://www.belgif.be/specification/rest/security-guide> .
 
 be-spec:oslo a doap:Specification ;
 	dcterms:title "OSLO"@en, "OSLO"@nl, "OSLO"@fr, "OSLO"@de ;
 	owl:versionInfo "2";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
-	dcterms:description "Open Standards for Linkend Organisations"@en, "Open Standaarden voor Linkende Organisaties"@nl, "Open Standards for Linkend Organisations"@fr, "Open Standards for Linkend Organisations"@de ;
+	dcterms:description "Open Standards for Linked Organisations"@en, "Open Standaarden voor Linkende Organisaties"@nl, "Open Standards for Linked Organisations"@fr, "Open Standards for Linked Organisations"@de ;
 	dcterms:abstract 
 		"With OSLO, InformatieVlaanderen focuses on semantic interoperability. The vocabularies and application profiles in this project were developed in co-creation with Flemish administrations, local governments, federal partners, the European Commission and private partners."@en ,
 		"Met OSLO zet InformatieVlaanderen in op semantische interoperabiliteit. De vocabularia en applicatieprofielen in dit project werden ontwikkeld in co-creatie met Vlaamse administraties, lokale besturen, federale partners, de Europese Commissie en private partners."@nl ,
