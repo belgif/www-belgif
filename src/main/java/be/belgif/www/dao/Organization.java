@@ -39,7 +39,7 @@ import org.eclipse.rdf4j.model.vocabulary.FOAF;
 public class Organization extends Dao {
 	private final Map<String, String> description;
 	private final String logo;
-	private final String website;
+	private final Map<String, String>  website;
 
 	/**
 	 * Get description in a specific language
@@ -61,12 +61,12 @@ public class Organization extends Dao {
 	}
 
 	/**
-	 * Get URL of the website
+	 * Get language-specific URL of the website
 	 * 
 	 * @return 
 	 */
-	public String getWebsite() {
-		return website;
+	public String getWebsite(String lang) {
+		return website.getOrDefault(lang, website.get(""));
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class Organization extends Dao {
 		super(m, iri);
 
 		description = langMap(m, iri, DCTERMS.DESCRIPTION);
-		website = firstString(m, iri, FOAF.PAGE);
+		website = langMapIRI(m, iri, FOAF.PAGE);
 
 		logo = m.filter(iri, FOAF.DEPICTION, null).objects().stream().findFirst()
 			.map(IRI.class::cast)

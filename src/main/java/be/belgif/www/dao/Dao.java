@@ -33,6 +33,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Model;
 import org.eclipse.rdf4j.model.Value;
+import org.eclipse.rdf4j.model.vocabulary.DCTERMS;
 import org.eclipse.rdf4j.model.vocabulary.SKOS;
 
 
@@ -75,10 +76,42 @@ public class Dao {
 		return title.getOrDefault(lang, title.get(""));
 	}
 
+	/**
+	 * Get a language-keyed map for literal values for a specific predicate
+	 * 
+	 * @param m
+	 * @param iri
+	 * @param predicate
+	 * @return 
+	 */
 	protected static Map<String,String> langMap(Model m, IRI iri, IRI predicate) {
 		return m.filter(iri, predicate, null).objects().stream()
 				.map(Literal.class::cast)
 				.collect(Collectors.toMap(l -> l.getLanguage().orElse(""), Literal::stringValue));
+	}
+	/**
+	 * Get a language-keyed map for literal values for a specific predicate
+	 * 
+	 * @param m
+	 * @param iri
+	 * @param predicate
+	 * @return 
+	 */
+	protected static Map<String,String> langMapIRI(Model m, IRI iri, IRI predicate) {
+		return m.filter(iri, predicate, null).objects().stream()
+				.map(IRI.class::cast)
+				.map(u -> {
+					Map<String,String> pages = m.filter(u, DCTERMS.LANGUAGE, null)
+						.stream()
+						.collect(
+							Collectors.toMap(s -> s.getObject().stringValue(), s -> s.getSubject().stringValue()));
+					if (pages == null || pages.isEmpty()) {
+						pages = Map.of("", u.stringValue());
+					}
+					return pages;
+				})
+				.flatMap(map -> map.entrySet().stream())
+				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 	}
 
 	/**

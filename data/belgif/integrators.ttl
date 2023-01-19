@@ -21,7 +21,13 @@ be-integrator:bcss a org:Organization ;
 		"La Banque Carrefour de la Sécurité Sociale est le moteur et le coordinateur de l'e-government dans le secteur social"@fr ,
 		"Die Zentrale Datenbank der sozialen Sicherheit ist die treibende Kraft und Koordinator von E-Government im sozialen Sektor"@de ;
 	foaf:depiction <file:/cbss.png> ;
-	foaf:page <https://www.ksz-bcss.fgov.be/en> .
+	foaf:page <https://www.ksz-bcss.fgov.be/en>, <https://www.ksz-bcss.fgov.be/nl>, <https://www.ksz-bcss.fgov.be/fr> .
+
+<https://www.ksz-bcss.fgov.be/fr> dcterms:language "fr" .
+<https://www.ksz-bcss.fgov.be/nl> dcterms:language "nl" .
+<https://www.ksz-bcss.fgov.be/fr> dcterms:language "de" .
+<https://www.ksz-bcss.fgov.be/en> dcterms:language "en" .
+
 
 be-integrator:bosa a org:Organization ;
 	skos:prefLabel "FPS BOSA"@en, "FOD BOSA"@nl, "SPF BOSA"@fr, "FÖD BOSA"@de ;
@@ -30,7 +36,10 @@ be-integrator:bosa a org:Organization ;
 		"Le SPF BOSA est l'intégrateur de services fédéral (sauf pour les services de Sécurité Sociale)"@fr ,
 		"Der FÖD BOSA ist der föderale Dienstintegrator (mit Ausnahme der Dienste der sozialen Sicherheit)"@de ;
 	foaf:depiction <file:/bosa.png> ;
-	foaf:page <https://bosa.belgium.be/> .
+	foaf:page <https://bosa.belgium.be/fr/services/integrateur-de-services-federal>, <https://bosa.belgium.be/nl/services/federale-dienstenintegrator> .
+	
+<https://bosa.belgium.be/nl/services/federale-dienstenintegrator> dcterms:language "nl", "en" .
+<https://bosa.belgium.be/fr/services/integrateur-de-services-federal> dcterms:language "fr", "de" .
 
 be-integrator:ehealth a org:Organization ;
 	skos:prefLabel "eHealth"@en, "eGezondheid"@nl, "eSanté"@fr, "eGesundheit"@de ;
@@ -52,10 +61,10 @@ be-integrator:fidus a org:Organization ;
 
 be-integrator:vdi a org:Organization ;
 	skos:prefLabel "VDI"@en, "VDI"@nl, "VDI"@fr, "VDI"@de ;
-	dcterms:description "InformatieVlaanderen is the regional service integrator for Flanders"@en,
-		"InformatieVlaanderen is de gewestelijk dienstenintegrator voor Vlaanderen"@nl, 
-		"InformatieVlaanderen est l'intégrateur de services régional pour la Flandre"@fr ,
-		"InformatieVlaanderen ist der regionale Dienstintegrator für Flandern"@de ;
+	dcterms:description "DigitaalVlaanderen is the regional service integrator for Flanders"@en,
+		"DigitaalVlaanderen is de gewestelijk dienstenintegrator voor Vlaanderen"@nl, 
+		"DigitaalVlaanderen est l'intégrateur de services régional pour la Flandre"@fr ,
+		"DigitaalVlaanderen ist der regionale Dienstintegrator für Flandern"@de ;
 	foaf:depiction <file:/vdi.png> ; ;
-	foaf:page <https://overheid.vlaanderen.be/informatie-vlaanderen> .
+	foaf:page <https://www.vlaanderen.be/digitaal-vlaanderen> .
 
