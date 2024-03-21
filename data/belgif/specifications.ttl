@@ -23,15 +23,15 @@ be-spec:cpsvp-ap a doap:Specification ;
 	foaf:page <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
 
 be-spec:dcat-ap a doap:Specification ;
-	dcterms:title "DCAT-AP"@en, "DCAT-AP"@nl, "DCAT-AP"@fr, "DCAT-AP"@de ;
-	owl:versionInfo "1.2.1";
+	dcterms:title "BE DCAT-AP"@en, "BE DCAT-AP"@nl, "BE DCAT-AP"@fr, "BE DCAT-AP"@de ;
+	owl:versionInfo "2.1";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
-	dcterms:description "DCAT Application Profile for data portals"@en, "DCAT Application Profile voor dataportalen"@nl, "DCAT Application Profile pour les portails de données"@fr, "DCAT Application Profile für Datenportale"@de ;
-	dcterms:abstract "The DCAT Application profile for data portals in Europe (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors."@en ,
-		"Het DCAT Application profile voor dataportalen in Europa (DCAT-AP) is een specificatie op basis van het W3C Data Catalogue vocabulary (DCAT) voor het beschrijven van datasets in de publieke sector. Het is bedoeld om over verschillende dataportal heen te kunnen zoeken naar datasets en om gegevens uit de publieke sector beter doorzoekbaar te maken over de grenzen en sectoren heen."@nl ,
+	dcterms:description "Federal DCAT Application Profile for data portals"@en, "Federaal DCAT Application Profile voor dataportalen"@nl, "DCAT Application Profile fédéral pour les portails de données"@fr, "Föderales DCAT Application Profile für Datenportale"@de ;
+	dcterms:abstract "The DCAT Application profile for data portals (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors."@en ,
+		"Het DCAT Application profile voor dataportalen (DCAT-AP) is een specificatie op basis van het W3C Data Catalogue vocabulary (DCAT) voor het beschrijven van datasets in de publieke sector. Het is bedoeld om over verschillende dataportal heen te kunnen zoeken naar datasets en om gegevens uit de publieke sector beter doorzoekbaar te maken over de grenzen en sectoren heen."@nl ,
 		"Le DCAT Application profile pour les portails de données (DCAT-AP) est une spécification basée sur le vocabulaire Data Catalogue du W3C (DCAT) pour décrire les ensembles de données dans le secteur public. Il est prévu de pouvoir rechercher des ensembles de données sur différents portails de données et de rendre les données du secteur public plus facilement consultables par-delà les frontières et les secteurs."@fr ,
-		"Das DCAT Application profile für Datenportale in Europa (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de ;
-	foaf:page <https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe/release/121> .
+		"Das DCAT Application profile für Datenportale (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de ;
+	foaf:page <https://github.com/belgif/inspire-dcat> .
 
 be-spec:fedservicesplatform a doap:Specification ;
 	dcterms:title "Federal Vocabularies"@en, "Federal Vocabularies"@nl, "Federal Vocabularies"@fr, "Federal Vocabularies"@de ;
@@ -46,7 +46,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
-	owl:versionInfo "2022-10-27";
+	owl:versionInfo "2023-06";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
 	dcterms:abstract 

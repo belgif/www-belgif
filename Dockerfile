@@ -19,7 +19,7 @@ RUN cd /home/belgif && \
   git clone https://github.com/belgif/rest-guide && \
   cd /home/belgif/rest-guide && \
   mvn clean compile && \
-  mv /home/belgif/rest-guide/target/generated-docs /tmp/belgif/specification/rest/api-guide
+  mv /home/belgif/rest-guide/guide/target/generated-docs /tmp/belgif/specification/rest/api-guide
 
 RUN cd /home/belgif && \
   git clone https://github.com/belgif/rest-security && \
