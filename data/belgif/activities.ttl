@@ -33,8 +33,8 @@ be-action:bestwg a foaf:Project;
 	dcterms:relation eif-recommendation:agreements, eif-recommendation:datareuse, eif-recommendation:opendata, eif-recommendation:communities, eif-recommendation:authenticsources ;
 	foaf:page <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> ,
 			<https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf>, 
-			<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_werkdocument.pdf>,
-			<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_document_de_travail.pdf> .
+			<https://www.belgif.be/downloads/best/20240318_BEST_Address_WG_werkdocument.pdf>,
+			<https://www.belgif.be/downloads/best/20240318_BEST_Address_GT_document_de_travail.pdf> .
 
 <https://www.belgif.be/downloads/best/20211019_Gids_voor_het_vaststellen_en_toekennen_van_adressen.pdf> a foaf:Document ;
 	dcterms:title "(NL) Gids voor het vaststellen en toekennen van adressen"  .
@@ -42,10 +42,10 @@ be-action:bestwg a foaf:Project;
 <https://www.belgif.be/downloads/best/20211019_Guide_en_matière_de_constatation_et_attribution_d_adresses.pdf> a foaf:Document ;
 	dcterms:title "(FR) Guide en matière de constatation et attribution d'adresses" .
 
-<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_werkdocument.pdf> a foaf:Document ;
+<https://www.belgif.be/downloads/best/20240318_BEST_Address_WG_werkdocument.pdf> a foaf:Document ;
 	dcterms:title "(NL) Richtlijnen en aanbevelingen voor het vaststellen en toekennen van een adres en huisnummer" .
 
-<https://www.belgif.be/downloads/best/20200924_BEST_Address_WG_document_de_travail.pdf> a foaf:Document ;
+<https://www.belgif.be/downloads/best/20240318_BEST_Address_GT_document_de_travail.pdf>  a foaf:Document ;
 	dcterms:title "(FR) Directives et recommandations pour la détermination et l'attribution d'une adresse et d'un numéro d'habitation" .
 
 be-action:gba a foaf:Project ;

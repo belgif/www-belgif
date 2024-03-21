@@ -12,7 +12,7 @@
             <properties>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>c</exec.workingdir>
+                <exec.workingdir></exec.workingdir>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.appArgs>C:\Java\projects\www\data C:\data\wwwbelgif</exec.appArgs>
                 <exec.mainClass>be.belgif.www.Main</exec.mainClass>
@@ -31,7 +31,7 @@
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
-                <exec.workingdir>c</exec.workingdir>
+                <exec.workingdir></exec.workingdir>
                 <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
                 <exec.appArgs>C:\Java\projects\www\data C:\data\wwwbelgif</exec.appArgs>
                 <exec.mainClass>be.belgif.www.Main</exec.mainClass>
@@ -49,7 +49,7 @@
             <properties>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.workingdir>c</exec.workingdir>
+                <exec.workingdir></exec.workingdir>
                 <exec.vmArgs></exec.vmArgs>
                 <exec.appArgs>C:\Java\projects\www\data C:\data\wwwbelgif</exec.appArgs>
                 <exec.mainClass>be.belgif.www.Main</exec.mainClass>
