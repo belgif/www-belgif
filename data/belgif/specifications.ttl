@@ -13,26 +13,81 @@ be-spec:best a doap:Specification ;
 	
 be-spec:cpsvp-ap a doap:Specification ;
 	dcterms:title "CPSV-AP"@en, "CPSV-AP"@nl, "CPSV-AP"@fr, "CPSV-AP"@de ;
-	owl:versionInfo "2.2";
+	owl:versionInfo "3.0.0";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "Common Public Service Vocabulary Application Profile"@en, "Common Public Service Vocabulary Application Profile"@nl, "Common Public Service Vocabulary Application Profile"@fr, "Common Public Service Vocabulary Application Profile"@de ;
 	dcterms:abstract "The Common Public Service Vocabulary Application Profile (CPSV-AP) is a data model for describing public services and the associated life and business events."@en ,
 		"Het Common Public Service Vocabulary Application Profile (CPSV-AP) is een gegevensmodel voor het beschrijven van openbare diensten en de bijbehorende levens- en bedrijfsevenementen."@nl ,
 		"Le Common Public Service Vocabulary Application Profile (CPSV-AP) est un modèle de données pour décrire les services publics et les événements de la vie et des affaires qui y sont associés."@fr ,
 		"Das Common Public Service Vocabulary Application Profile (CPSV-AP) ist ein Datenmodell zur Beschreibung öffentlicher Dienstleistungen und der damit verbundenen Lebens- und Geschäftsereignisse."@de ;
-	foaf:page <https://joinup.ec.europa.eu/solution/core-public-service-vocabulary-application-profile/release/22> .
+	foaf:page <https://semiceu.github.io/CPSV-AP/releases/3.0.0/> .
 
 be-spec:dcat-ap a doap:Specification ;
-	dcterms:title "BE DCAT-AP"@en, "BE DCAT-AP"@nl, "BE DCAT-AP"@fr, "BE DCAT-AP"@de ;
-	owl:versionInfo "2.1";
+	dcterms:title "DCAT-AP"@en, "DCAT-AP"@nl, "DCAT-AP"@fr, "DCAT-AP"@de ;
+	owl:versionInfo "3.0.1";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "Federal DCAT Application Profile for data portals"@en, "Federaal DCAT Application Profile voor dataportalen"@nl, "DCAT Application Profile fédéral pour les portails de données"@fr, "Föderales DCAT Application Profile für Datenportale"@de ;
 	dcterms:abstract "The DCAT Application profile for data portals (DCAT-AP) is a specification based on W3C's Data Catalogue vocabulary (DCAT) for describing public sector datasets. Its basic use case is to enable a cross-data portal search for data sets and make public sector data better searchable across borders and sectors."@en ,
 		"Het DCAT Application profile voor dataportalen (DCAT-AP) is een specificatie op basis van het W3C Data Catalogue vocabulary (DCAT) voor het beschrijven van datasets in de publieke sector. Het is bedoeld om over verschillende dataportal heen te kunnen zoeken naar datasets en om gegevens uit de publieke sector beter doorzoekbaar te maken over de grenzen en sectoren heen."@nl ,
 		"Le DCAT Application profile pour les portails de données (DCAT-AP) est une spécification basée sur le vocabulaire Data Catalogue du W3C (DCAT) pour décrire les ensembles de données dans le secteur public. Il est prévu de pouvoir rechercher des ensembles de données sur différents portails de données et de rendre les données du secteur public plus facilement consultables par-delà les frontières et les secteurs."@fr ,
 		"Das DCAT Application profile für Datenportale (DCAT-AP) ist eine auf dem W3C Data Catalogue Vocabulary (DCAT) basierende Spezifikation zur Beschreibung von Datensätzen im öffentlichen Sektor. Es soll in der Lage sein, über verschiedene Datenportale hinweg nach Datensätzen zu suchen und Daten aus dem öffentlichen Sektor grenzüberschreitend und sektorübergreifend besser durchsuchbar zu machen."@de ;
-	foaf:page <https://github.com/belgif/inspire-dcat> .
+	foaf:page <https://semiceu.github.io/DCAT-AP/releases/3.0.1/> .
 
+be-spec:icegbuilding a doap:Specification ;
+	dcterms:title "ICEG Building"@en, "ICEG Building"@nl, "ICEG Building"@fr, "ICEG Building"@de ;
+	owl:versionInfo "2023-09-07";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Buildings"@en, "Gebouwen"@nl, "Bâtiments"@fr, "Gebäude"@de ;
+	dcterms:abstract "The Building Vocabulary is designed to support the exchange of basic information about buildings and building units. Using the vocabulary – with sector- or country-specific information – will make it easier for institutions publishing data about these topics."@en ,
+		"De Building Vocabulary is bedoeld om de uitwisseling van basisinformatie over gebouwen en bouweenheden te ondersteunen. Het gebruik van deze terminologie – met sector- of landspecifieke informatie – zal het voor instellingen die gegevens over deze onderwerpen publiceren, gemakkelijker maken."@nl ,
+		"Le vocabulaire Building est conçu pour faciliter l'échange d'informations de base sur les bâtiments et les unités de construction. L'utilisation de ce vocabulaire, associé à des informations spécifiques à un secteur ou à un pays, facilitera la tâche des institutions qui publient des données sur ces sujets."@fr ,
+		"Das Building-Vokabular soll den Austausch grundlegender Informationen über Gebäude und Gebäudeeinheiten unterstützen. Die Verwendung des Vokabulars – mit branchen- oder länderspezifischen Informationen – wird es Institutionen erleichtern, Daten zu diesen Themen zu veröffentlichen."@de ;
+	foaf:page <https://belgif.github.io/thematic/models/building/ICEG_Building_HTML_en.html> .
+
+be-spec:iceghydrant a doap:Specification ;
+	dcterms:title "ICEG Hydrants"@en, "ICEG Hydrants"@nl, "ICEG Hydrants"@fr, "ICEG Hydrants"@de ;
+	owl:versionInfo "2023-12-05 (public review)";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Hydranten"@de ;
+	dcterms:description "Fire Hydrants"@en, "Brandkranen"@nl, "Bouches d'incendie"@fr, "Gebäude"@de ;
+	dcterms:abstract "The Hydrants Vocabulary is designed to support the exchange of basic information about fire hydrants."@en ,
+		"De Hydrants Vocabulary is bedoeld om de uitwisseling van basisinformatie over brandkranen te ondersteunen."@nl ,
+		"Le vocabulaire Hydrants est conçu pour faciliter l'échange d'informations de base sur les bouches d'incendie."@fr ,
+		"Das Hydrants-Vokabular soll den Austausch grundlegender Informationen über Hydranten unterstützen."@de ;
+	foaf:page <https://belgif.github.io/thematic/models/building/ICEG_Building_HTML_en.html> .
+	
+be-spec:icegimkl a doap:Specification ;
+	dcterms:title "ICEG IMKL"@en, "ICEG IMKL"@nl, "ICEG IMKL"@fr, "ICEG IMKL"@de ;
+	owl:versionInfo "3.0";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Cables and Pipes"@en, "Kabels en leidingen"@nl, "Câbles et conduits"@fr, "Kabel und Rohre"@de ;
+	dcterms:abstract "The ICEG specification 'Cables and Pipes' aims at facilitating the collaboration of various stakeholders by semantically modeling data flows related to cables and pipes information, as well as standardizing the data structure."@en ,
+		"De ICEG-specificatie 'Kabels en leidingen' heeft tot doel de samenwerking tussen verschillende belanghebbenden te vergemakkelijken door gegevensstromen met betrekking tot informatie over kabels en leidingen semantisch te modelleren en de gegevensstructuur te standaardiseren."@nl ,
+		"La spécification ICEG 'Câbles et conduites' vise à faciliter la collaboration entre les différentes parties prenantes en modélisant sémantiquement les flux de données liés aux informations sur les câbles et les conduites, ainsi qu'en normalisant la structure des données."@fr ,
+		"Die ICEG-Spezifikation 'Kabel und Rohre' zielt darauf ab, die Zusammenarbeit verschiedener Interessengruppen zu erleichtern, indem Datenflüsse im Zusammenhang mit Kabel- und Rohrainformationen semantisch modelliert und die Datenstruktur standardisiert werden."@de ;
+	foaf:page <https://belgif.github.io/thematic/models/cable-pipe/> .
+
+be-spec:icegpuborg a doap:Specification ;
+	dcterms:title "ICEG Public Organization"@en, "ICEG Public Organization"@nl, "ICEG Public Organization"@fr, "ICEG Public Organization"@de ;
+	owl:versionInfo "2021-12-22 (draft)";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Public Organizations"@en, "Publieke organisaties"@nl, "Organismes publics"@fr, "Öffentliche Einrichtungen"@de ;
+	dcterms:abstract "The model is an application profile of Core Public Organization Vocabulary (CPOV), built in the context of the ICEG thematic working group regrouping experts from the federal and regional level as well as communities. It was designed through a series of workshops and a final open consultation."@en ,
+		"Het onderstaande model is een toepassingsprofiel van Core Public Organization Vocabulary (CPOV), opgesteld in het kader van de thematische werkgroep van ICEG, waarin deskundigen van het federale en regionale niveau en van de gemeenschappen zijn vertegenwoordigd. Het is tot stand gekomen na een reeks workshops en een laatste openbare raadpleging."@nl ,
+		"Le modèle est un profil d'application du Core Public Organization Vocabulary (CPOV), élaboré dans le cadre du groupe de travail thématique de l'ICEG qui regroupe des experts des niveaux fédéral et régional ainsi que des communautés. Il a été conçu à l'issue d'une série d'ateliers et d'une consultation publique finale."@fr ,
+		"Das Modell ist ein Anwendungsprofil des Core Public Organization Vocabulary (CPOV), das im Rahmen der thematischen Arbeitsgruppe der ICEG unter Beteiligung von Experten auf Bundes- und regionaler Ebene sowie aus den Gemeinden erstellt wurde. Es wurde im Rahmen einer Reihe von Workshops und einer abschließenden offenen Konsultation entwickelt."@de ;
+	foaf:page <https://belgif.github.io/thematic/models/public%20organisation/index_en.html> .
+
+be-spec:icegpubserv a doap:Specification ;
+	dcterms:title "ICEG Public Service"@en, "ICEG Public Service"@nl, "ICEG Public Service"@fr, "ICEG Public Service"@de ;
+	owl:versionInfo "2021-12-22 (draft)";
+	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
+	dcterms:description "Public Services"@en, "Publieke diensten"@nl, "Services publics"@fr, "Öffentliche Dienste"@de ;
+	dcterms:abstract "The model is an application profile of Core Public Service Vocabulary (CPSV), built in the context of the ICEG thematic working group regrouping experts from the federal and regional level as well as communities. It was designed through a series of workshops and a final open consultation."@en ,
+		"Het onderstaande model is een toepassingsprofiel van Core Public Service Vocabulary (CPSV)), opgesteld in het kader van de thematische werkgroep van ICEG, waarin deskundigen van het federale en regionale niveau en van de gemeenschappen zijn vertegenwoordigd. Het is tot stand gekomen na een reeks workshops en een laatste openbare raadpleging."@nl ,
+		"Le modèle est un profil d'application du Core Public Service Vocabulary (CPSV), élaboré dans le cadre du groupe de travail thématique de l'ICEG qui regroupe des experts des niveaux fédéral et régional ainsi que des communautés. Il a été conçu à l'issue d'une série d'ateliers et d'une consultation publique finale."@fr ,
+		"Das Modell ist ein Anwendungsprofil des Core Public Service Vocabulary (CPSV), das im Rahmen der thematischen Arbeitsgruppe der ICEG unter Beteiligung von Experten auf Bundes- und regionaler Ebene sowie aus den Gemeinden erstellt wurde. Es wurde im Rahmen einer Reihe von Workshops und einer abschließenden offenen Konsultation entwickelt."@de ;
+	foaf:page <https://belgif.github.io/thematic/models/public%20services/index_en.html> .
+	
 be-spec:fedservicesplatform a doap:Specification ;
 	dcterms:title "Federal Vocabularies"@en, "Federal Vocabularies"@nl, "Federal Vocabularies"@fr, "Federal Vocabularies"@de ;
 	dcterms:subject "Semantics"@en, "Semantiek"@nl, "Sémantique"@fr, "Semantik"@de ;
@@ -46,7 +101,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
-	owl:versionInfo "2023-06";
+	owl:versionInfo "2025-11";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
 	dcterms:abstract 

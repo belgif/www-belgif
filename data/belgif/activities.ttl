@@ -142,8 +142,47 @@ be-action:opendataportals a foaf:Project ;
 <p>Réunions informelles rassemblant les gestionnaires des différents portails de données ouverts en Belgique au niveau national, régional et local + experts invités.</p>"""@fr ,
 """<p>Informelle Treffen, die die Manager der verschiedenen offenen Datenportale in Belgien auf nationaler, regionaler und lokaler Ebene zusammenbringen + eingeladene Experten.</p>"""@de ;
 	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
-	dcterms:relation eif-recommendation:opendata ;
+	dcterms:relation eif-recommendation:opendata, eif-recommendation:communities ;
 	foaf:page <https://data.gov.be/nl/dcat-werkgroep> .
+	
+be-action:datagovbe a foaf:Project ;
+	dcterms:title "Data portal"@en, "Data portaal"@nl, "Portail de données"@fr, "Datenportale"@de ;
+	dcterms:description """
+<p>Data portal with aggregated metada about reusable datasets and data services from federal, regional, local administrations, non-profits, companies and universities.</p>"""@en ,
+"""
+<p>dataportaal met geaggregeerde metadata over herbruikbare datasets en datadiensten van federale, regionale en lokale overheden, non-profitorganisaties, bedrijven en universiteiten.</p>"""@nl ,
+"""
+<p>Portail de données contenant des métadonnées agrégées sur les ensembles de données réutilisables et les services de données provenant d'administrations fédérales, régionales et locales, d'organisations à but non lucratif, d'entreprises et d'universités.</p>"""@fr ,
+"""<p>Datenportal mit aggregierten Metadaten zu wiederverwendbaren Datensätzen und Datendiensten von Bundes-, Landes- und Kommunalverwaltungen, gemeinnützigen Organisationen, Unternehmen und Universitäten.</p>"""@de ;
+	dcterms:conformsTo eif-principle:openness, eif-principle:reusability  ;
+	dcterms:relation eif-recommendation:opendata, eif-recommendation:publiccatalogues ;
+	foaf:page <https://data.gov.be> .
+	
+be-action:authbron a foaf:Project ;
+	dcterms:title "Authentic Sources website"@en, "Authentieke bronnen website"@nl, "Site web sources authentiques"@fr, "Website Authentische Quellen"@de ;
+	dcterms:description """
+<p>Portal with a list of official authentic sources.</p>"""@en ,
+"""
+<p>Portaal met een lijst van officiële authentieke bronnen.</p>"""@nl ,
+"""
+<p>Portail de données avec une liste de sources officielles authentiques.</p>"""@fr ,
+"""<p>Datenportal mit einer Liste offizieller authentischer Quellen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:reusability, eif-principle:simplification ;
+	dcterms:relation eif-recommendation:authenticsources, eif-recommendation:publiccatalogues ;
+	foaf:page <https://authentieke-bronnen.belgium.be> .
+	
+be-action:mydata a foaf:Project ;
+	dcterms:title "MyData"@en, "MyData"@nl, "MyData"@fr, "MyData"@de ;
+	dcterms:description """
+<p>The federal authorities have several databases in which citizens' personal data is stored. The databases are used by the federal authorities to carry out their day-to-day business. In order to improve transparency and strengthen citizens' trust in the administration, the federal public institutions use this website to provide an overview of the personal data they process.</p>"""@en ,
+"""
+<p>De federale overheid beschikt over diverse databanken waar sommige persoonsgegevens van de burgers in worden verzameld. Deze gegevens zijn nodig voor de uitvoering van de dagelijkse taken van de overheid. Uit het streven naar transparantie en om het vertrouwen van de burger in de overheid te bevestigen, geven de federale overheidsinstellingen via deze website het overzicht van je gegevens die zij verwerken.D</p>"""@nl ,
+"""
+<p>Les autorités fédérales disposent de plusieurs bases de données dans lesquelles sont collectées certaines données à caractère personnel des citoyens. Cette collecte permet aux autorités de mener à bien leurs tâches quotidiennes. Dans un souci de transparence et pour confirmer la confiance des citoyens dans les autorités, les institutions publiques fédérales fournissent par le biais de ce site web un aperçu des données qu'elles traitent à votre sujet.</p>"""@fr ,
+"""<p>Die Föderalbehörden verfügen über mehrere Datenbanken, in denen personenbezogene Daten von Bürgerinnen und Bürgern gespeichert sind. Die Datenbanken werden von den Föderalbehörden zur Erledigung ihres Tagesgeschäfts gebraucht. Zur Verbesserung der Transparenz und zur Stärkung des Vertrauens von Bürgerinnen und Bürgern in die Verwaltung stellen die föderalen öffentlichen Einrichtungen mithilfe dieser Website eine Übersicht über die von ihnen verarbeiteten personenbezogenen Daten bereit.</p>"""@de ;
+	dcterms:conformsTo eif-principle:transparency ;
+	dcterms:relation eif-recommendation:authenticsources ;
+	foaf:page <https://mydata.belgium.be> .
 	
 be-action:kafka a foaf:Project ;
 	dcterms:title "Kafka website"@en, "Kafka website"@nl, "Kafka site web"@fr, "Kafka Webseite"@de ;
@@ -177,3 +216,31 @@ be-action:ivc a foaf:Project ;
 	dcterms:conformsTo eif-principle:security ;
 	dcterms:relation eif-recommendation:riskmanagement ; 
 	foaf:page <https://dt.bosa.be/nl/ivc> .
+
+be-action:csam a foaf:Project ;
+	dcterms:title "CSAM Identity / Access Management"@en, "CSAM Identity / Access Management"@nl, "CSAM Gestion des identités et des accès"@fr, "CSAM Identitäts-/Zugriffsmanagement"@de ;
+	dcterms:description """
+<p>CSAM is a set of agreements and rules to organise identity and access management within e-Government. CSAM provides both citizens and companies identification, authentication, authorisation, mandate management.</p>"""@en ,
+"""
+<p>CSAM is een reeks overeenkomsten en regels voor het organiseren van identiteits- en toegangsbeheer binnen e-overheid. CSAM biedt zowel burgers als bedrijven identificatie, authenticatie, autorisatie en mandaatbeheer.</p>"""@nl,
+"""
+<p>Le CSAM est un ensemble d'accords et de règles visant à organiser la gestion des identités et des accès dans le cadre de l'administration en ligne. Le CSAM assure l'identification, l'authentification, l'autorisation et la gestion des mandats tant pour les citoyens que pour les entreprises."""@fr,
+"""
+<p>CSAM ist eine Reihe von Vereinbarungen und Regeln zur Organisation der Identitäts- und Zugriffsverwaltung innerhalb der elektronischen Verwaltung. CSAM bietet sowohl Bürgern als auch Unternehmen Identifizierung, Authentifizierung, Autorisierung und Mandatsverwaltung."""@de ;
+	dcterms:conformsTo eif-principle:security ;
+	dcterms:relation eif-recommendation:trustservices, eif-recommendation:sharedservices, eif-recommendation:governancestructure, eif-recommendation:solutionreuse  ; 
+	foaf:page <https://csam.be> .
+
+be-action:belgifstds a foaf:Project ;
+	dcterms:title "BELGIF list of standards"@en, "BELGIF standaardenlijst"@nl, "BELGIF liste de normes"@fr, "BELGIF Standardliste"@de ;
+	dcterms:description """
+<p>List of recommended open standards and specifications.</p>"""@en ,
+"""
+<p>Lijst van aanbevolen open standaarden en specificaties.</p>"""@nl,
+"""
+<p>Liste des normes et spécifications ouvertes recommandées.</p>"""@fr,
+"""
+<p>Liste empfohlener offener Standards und Spezifikationen.</p>"""@de ;
+	dcterms:conformsTo eif-principle:neutrality ;
+	dcterms:relation eif-recommendation:openspecifications , eif-recommendation:openspecifications2, eif-recommendation:standardsprocess, eif-recommendation:standardscatalogues ;
+	foaf:page <https://www.belgif.be/page/specifications.en.html> .
