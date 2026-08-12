@@ -46,14 +46,14 @@ be-spec:icegbuilding a doap:Specification ;
 
 be-spec:iceghydrant a doap:Specification ;
 	dcterms:title "ICEG Hydrants"@en, "ICEG Hydrants"@nl, "ICEG Hydrants"@fr, "ICEG Hydrants"@de ;
-	owl:versionInfo "2023-12-05 (public review)";
+	owl:versionInfo "2026-06-18";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Hydranten"@de ;
 	dcterms:description "Fire Hydrants"@en, "Brandkranen"@nl, "Bouches d'incendie"@fr, "Gebäude"@de ;
 	dcterms:abstract "The Hydrants Vocabulary is designed to support the exchange of basic information about fire hydrants."@en ,
 		"De Hydrants Vocabulary is bedoeld om de uitwisseling van basisinformatie over brandkranen te ondersteunen."@nl ,
 		"Le vocabulaire Hydrants est conçu pour faciliter l'échange d'informations de base sur les bouches d'incendie."@fr ,
 		"Das Hydrants-Vokabular soll den Austausch grundlegender Informationen über Hydranten unterstützen."@de ;
-	foaf:page <https://belgif.github.io/thematic/models/building/ICEG_Building_HTML_en.html> .
+	foaf:page <https://belgif.github.io/thematic/models/hydrants/index_en.html> .
 	
 be-spec:icegimkl a doap:Specification ;
 	dcterms:title "ICEG IMKL"@en, "ICEG IMKL"@nl, "ICEG IMKL"@fr, "ICEG IMKL"@de ;
@@ -101,7 +101,7 @@ be-spec:fedservicesplatform a doap:Specification ;
 
 be-spec:gcloud-rest a doap:Specification ;
 	dcterms:title "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
-	owl:versionInfo "2025-11";
+	owl:versionInfo "2026-06";
 	dcterms:subject "Data exchange"@en, "Gegevensuitwisseling"@nl, "Échange de données"@fr, "Datenaustausch"@de ;
 	dcterms:description "REST guidelines"@en, "REST richtlijnen"@nl, "REST lignes directrices"@fr, "REST Richtlinien"@de ;
 	dcterms:abstract 
